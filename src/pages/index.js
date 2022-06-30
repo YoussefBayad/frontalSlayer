@@ -14,8 +14,8 @@ export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
-        <SEO title="Impeerforyou" />
-        {/* <Banner /> */}
+        <SEO title="Frontal Slayer" />
+        <Banner />
         {/* <Stats /> */}
         <Features />
         <Sub />

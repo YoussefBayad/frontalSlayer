@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Heading, Text, Button, Image } from "theme-ui";
-import banner from "assets/images/banner.webp";
+import banner from "assets/images/banner.png";
 import BannerPattern from "assets/images/banner-pattern.webp";
 import { Link } from "components/link";
 
