@@ -3,13 +3,13 @@ import { rgba } from "polished";
 export default {
   // example colors with dark mode
   colors: {
-    text: "#423d3b", // body color and primary color
-    textSecondary: "#514B49", // secondary body color
-    heading: "#3b3735", // primary heading color
-    headingSecondary: "#423d3b", // heading color
-    background: "#a00303", // body background color
-    backgroundSecondary: "#FFF5F0", // secondary background color
-    // backgroundSecondary: "", // secondary background color
+    text: "#fff0f0", // body color and primary color
+    textSecondary: "#BEA6A0", // secondary body color
+    heading: "#ffdddd", // primary heading color
+    headingSecondary: "#fff0f0", // heading color
+    background: "#a00303", // body background color :#900e0c
+
+    backgroundSecondary: "#af0705", // secondary background color
     borderColor: "#DE9B8A", // border color
     primary: "#e50300", // primary button and link color
     accent: "#e50300", // a contrast color for emphasizing UI
@@ -17,9 +17,25 @@ export default {
     darkRed: "#a00303",
     secondary: "#ffc0c0", // secondary color - can be used for hover states
     muted: "#BEA6A0", // muted color
-    dark: "#281713",
+    dark: "#1a0000",
     link: "#4A271E", // default link color
     danger: "#732525",
+    // light: "#ffc0bf",
+    // bet: "#ff4240", // secondary color - can be used for hover states
+    //3: "#bf0300", // muted color
+    // dark: "#400100",
+    red: {
+      50: "#fff0f0",
+      100: "#ffdddd",
+      200: "#ffc2c1",
+      300: "#ff9695",
+      400: "#ff5b59",
+      500: "#ff2926",
+      600: "#fc0906",
+      700: "#e50300",
+      800: "#af0705",
+      900: "#900e0c",
+    },
 
     // highlight	a background color for highlighting text
     modes: {
@@ -100,7 +116,11 @@ export default {
     },
   },
   section: {
-    banner: {},
+    banner: {
+      background: "rgb(229,3,0) ",
+      backgroundImage:
+        "linear-gradient(90deg, rgba(229,3,0,1) 0%, rgba(144,14,12,1) 40%)",
+    },
     features: {
       pt: [7, 7, 7, 8, 8, 7, 7],
       pb: [7, 7, 7, 8, 9, 130, 150],
@@ -110,7 +130,7 @@ export default {
       pb: [7, 7, 7, 8, 9, 150],
     },
     stats: {
-      backgroundColor: "backgroundSecondary",
+      backgroundImage: "background",
       pt: [7, 7, 7, 7, 8],
       pb: [7, 7, 7, 7, 8],
     },
