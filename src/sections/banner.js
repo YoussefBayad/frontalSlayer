@@ -42,9 +42,9 @@ const Banner = () => {
     <Box id="home" as="section" variant="section.banner">
       <Container sx={styles.contentWrapper}>
         <Box sx={styles.left}>
-          <Flex as="ul" sx={styles.rightNav}>
+          <Flex as="ul" sx={styles.left.nav}>
             {menuItems?.map((item, index) => (
-              <li key={index}>
+              <li sx={styles.listItem} key={index}>
                 <Link path={item?.path}>{item?.label}</Link>
               </li>
             ))}
@@ -55,9 +55,9 @@ const Banner = () => {
           <Testimonials />
         </Box>
         <Box sx={styles.right}>
-          <Flex as="ul" sx={styles.footerNav}>
+          <Flex as="ul" sx={styles.right.nav}>
             {menuItems?.map((item, index) => (
-              <li key={index}>
+              <li sx={styles.listItem} key={index}>
                 <Link path={item?.path}>{item?.label}</Link>
               </li>
             ))}
@@ -75,22 +75,54 @@ const styles = {
     display: [null, null, null, "flex", "grid"],
     gridTemplateColumns: ["repeat(1, 1fr)", "repeat(3, 1fr)"],
     alignItems: "flex-start",
-    justifyContent: "center",
-    minHeight: ["100vh"],
+    height: ["100vh"],
   },
-  content: {
-    maxWidth: [507, null, null, 324, 450],
+
+  left: {
+    mt: 90,
+    height: "100vh",
+    alignSelf: "flex-start",
+    ul: {
+      display: "flex",
+      flexDirection: "column",
+      listStyle: "none",
+    },
   },
-  footerNav: {
-    display: "flex",
-    flexDirection: "column",
+  right: {
+    justifySelf: "flex-end",
+    height: "100vh",
+    alignSelf: "flex-end",
+    ul: {
+      display: "flex",
+      flexDirection: "column",
+      listStyle: "none",
+    },
   },
-  rightNav: {
-    display: "flex",
-    flexDirection: "column",
+  listItem: {
+    mb: 20,
+    cursor: "pointer",
+    position: " relative",
+    "&:after": {
+      content: "''",
+      position: "absolute",
+      width: "110px",
+      transform: " scaleX(0)",
+      height: "2px",
+      bottom: " -5px",
+      left: "0",
+      backgroundColor: "text",
+      transformOrigin: " bottom right",
+      transition: "transform 0.25s ease-out",
+    },
+    "&:hover:after": {
+      transform: "scaleX(1)",
+      transformOrigin: "  bottom left",
+    },
   },
 
   logo: {
-    img: {},
+    img: {
+      // height: "100px",
+    },
   },
 };
