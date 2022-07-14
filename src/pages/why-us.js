@@ -7,7 +7,7 @@ import Banner from "components/second-banner";
 import WhyUs from "sections/why-us";
 import Clients from "sections/clients";
 import IntroVideo from "sections/intro-video";
-import Testimonials from "sections/testimonials";
+import Testimonials from "sections/carousel";
 
 export default function IndexPage() {
   return (

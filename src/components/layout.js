@@ -13,8 +13,6 @@ export default function Layout({ children }) {
       >
         {children}
       </main>
-      <Subscribe />
-      <Footer />
     </React.Fragment>
   );
 }

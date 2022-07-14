@@ -121,7 +121,7 @@ const styles = {
   },
 
   left: {
-    height: "100vh",
+    // height: "70vh",
     alignSelf: "flex-start",
     ul: {
       display: "flex",
