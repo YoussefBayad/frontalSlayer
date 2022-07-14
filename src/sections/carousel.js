@@ -2,55 +2,44 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Button } from "theme-ui";
 import Slider from "react-slick";
-import Testimonial from "components/cards/testimonial";
-import Avatar1 from "assets/images/testimonial/avatar1.webp";
-import Avatar2 from "assets/images/testimonial/avatar2.webp";
-import Avatar3 from "assets/images/testimonial/avatar3.webp";
-import Avatar4 from "assets/images/testimonial/avatar4.webp";
+import CarouselCard from "components/cards/carouselCard";
+import WigOne from "assets/images/wigone.webp";
+import WigTwo from "assets/images/wigtwo.webp";
+import WigThree from "assets/images/wigthree.webp";
+
 import { rgba } from "polished";
-import SectionHeading from "components/section-heading";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 const data = [
   {
     id: 1,
     title: "Most streamed artist in Arab Mena",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.",
-    avatar: Avatar1,
-    name: "Elgrande Toto",
-    designation: "@Elgrande.toto",
+    src: WigOne,
+    alt: "Elgrande Toto",
+
     review: 5,
   },
   {
     id: 2,
     title: "One the most streamed artist",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.",
-    avatar: Avatar2,
-    name: "Tagne",
-    designation: "@tagne",
+
+    src: WigTwo,
+    alt: "Tagne",
     review: 5,
   },
   {
     id: 3,
     title: "One the most streamed artist",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.",
-    avatar: Avatar3,
-    name: "Stormy",
-    designation: "@stormythereal",
+
+    src: WigOne,
+    alt: "Stormy",
     review: 5,
   },
   {
     id: 4,
-    title: "Biggest arabic album",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.",
-    avatar: Avatar4,
+    alt: "Biggest arabic album",
+    src: WigThree,
     name: "inkonnu",
-    designation: "@inkonnu",
-    review: 5,
   },
 ];
 
@@ -63,9 +52,9 @@ function SlickArrow({ className, onClick, control }) {
       sx={styles.paginationButton}
     >
       {control === "prev" ? (
-        <IoIosArrowDropleft size="32px" />
+        <IoIosArrowDropleft size="32px" fill="#ffc0c0" />
       ) : (
-        <IoIosArrowDropright size="32px" />
+        <IoIosArrowDropright size="32px" fill="#ffc0c0" />
       )}
     </Button>
   );
@@ -74,6 +63,9 @@ const settings = {
   arrows: true,
   dots: true,
   speed: 500,
+  pauseOnFocus: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
   nextArrow: <SlickArrow control="next" />,
   prevArrow: <SlickArrow control="prev" />,
   slidesToShow: 1,
@@ -91,31 +83,27 @@ const settings = {
 
 const Testimonials = () => {
   return (
-    <Box as="section" variant="section.testimonials">
-      <Container>
-        {/* <SectionHeading
-          sx={styles.heading}
-          title="Words From Happy Clients
-              "
-          description="Hear from hundreds of patients who have received support and care
-              "
-        /> */}
-        <Slider sx={styles.slider} {...settings}>
-          {data.map((testimonial) => (
-            <Testimonial key={testimonial.id} item={testimonial} />
-          ))}
-        </Slider>
-      </Container>
-    </Box>
+    <Container sx={styles.container}>
+      <Slider sx={styles.slider} {...settings}>
+        {data.map((item) => (
+          <CarouselCard key={item.id} item={item} />
+        ))}
+      </Slider>
+    </Container>
   );
 };
 
 export default Testimonials;
 
 const styles = {
+  container: {
+    mx: "auto",
+    mb: "20px",
+  },
   paginationButton: {
     minHeight: "30px",
     padding: 0,
+    mx: "-5px",
     position: "absolute",
     top: "calc(50% - 16px)",
     transform: "translateX(-50%)",
@@ -143,6 +131,9 @@ const styles = {
     },
   },
   slider: {
+    width: "250px",
+    height: "250px",
+    mx: "auto",
     ".slick-list": {
       // mx: [null, null, null, null, -2, 0],
     },
@@ -162,7 +153,7 @@ const styles = {
         display: "flex",
       },
       button: {
-        backgroundColor: rgba("#2D3D50", 0.15),
+        backgroundColor: rgba("#ec5d55", 0.6),
         borderRadius: 50,
         border: 0,
         cursor: "pointer",
@@ -175,7 +166,7 @@ const styles = {
         transition: "all 0.3s ease-in-out 0s",
       },
       ".slick-active button": {
-        backgroundColor: rgba("#2D3D50", 0.4),
+        backgroundColor: "lightRed",
         width: 20,
       },
     },

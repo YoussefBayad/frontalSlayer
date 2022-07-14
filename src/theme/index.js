@@ -10,7 +10,7 @@ export default {
     background: "#a00303", // body background color :#900e0c
 
     backgroundSecondary: "#af0705", // secondary background color
-    borderColor: "#DE9B8A", // border color
+    borderColor: "#ffc841", // border color
     primary: "#e50300", // primary button and link color
     accent: "#e50300", // a contrast color for emphasizing UI
     lightRed: "#ec5d55",
@@ -150,8 +150,8 @@ export default {
       pb: [7, 7, 7, 7, 150],
     },
     testimonials: {
-      pt: [7, 7, 7, 7, 8],
-      pb: [7, 7, 7, 7, 8],
+      // pt: [7, 7, 7, 7, 8],
+      // pb: [7, 7, 7, 7, 8],
     },
     whyUs: {
       pt: [7, 7, 7, 7, 8],

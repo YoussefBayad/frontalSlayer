@@ -7,9 +7,6 @@ const Testimonial = ({ item }) => {
   return (
     <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
       <Rating rating={item.review} />
-      <Heading as="h3" sx={styles.title}>
-        {item.title}
-      </Heading>
       <Text sx={styles.description}>{item.description}</Text>
       <div className="card-footer">
         <div className="image">
@@ -43,13 +40,15 @@ const styles = {
     ],
     bg: "white",
     textAlign: "center",
-    m: [
-      "28px 5px 30px 5px",
-      "28px 20px 30px 20px",
-      "28px 15px 30px 15px",
-      "28px 15px 30px 15px",
-      "30px 20px 40px",
-    ],
+    // m: [
+    //   "28px 5px 30px 5px",
+    //   "28px 20px 30px 20px",
+    //   "28px 15px 30px 15px",
+    //   "28px 15px 30px 15px",
+    //   "30px 20px 40px",
+    // ],
+    m: 0,
+    mx: "20px",
     "&:hover": {
       boxShadow: "0px 6px 30px rgba(38, 78, 118, 0.1)",
     },
@@ -98,13 +97,7 @@ const styles = {
       },
     },
   },
-  title: {
-    fontSize: [1, 2],
-    fontWeight: 700,
-    mb: [3, null, null, "22px"],
-    color: "text",
-    lineHeight: 1.6,
-  },
+
   description: {
     fontSize: [1, null, null, 2],
     fontWeight: "normal",
