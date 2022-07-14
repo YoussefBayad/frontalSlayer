@@ -14,9 +14,6 @@ export default function IndexPage() {
       <Layout>
         <SEO title="Frontal Slayer" />
         <Banner />
-        <Features />
-        <Sub />
-        <Clients />
       </Layout>
     </ThemeProvider>
   );
