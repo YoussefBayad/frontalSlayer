@@ -20,8 +20,8 @@ const styles = {
     borderRadius: "6px",
     height: "100%",
     // width: "100%",
-    bg: "backgroundSecondary",
-    m: "auto",
+    mx: "10px",
+
     "&:hover": {
       boxShadow: "0px 6px 30px rgba(38, 78, 118, 0.1)",
     },
@@ -33,7 +33,7 @@ const styles = {
       boxShadow: "0px 0px 1px rgba(38, 78, 118, 0.35)",
       transition: "all 0.3s",
       borderRadius: "6px",
-      m: 0,
+      mx: 0,
       p: 0,
     },
   },

@@ -24,6 +24,7 @@ export default {
     // bet: "#ff4240", // secondary color - can be used for hover states
     //3: "#bf0300", // muted color
     // dark: "#400100",
+
     red: {
       50: "#fff0f0",
       100: "#ffdddd",
@@ -170,6 +171,7 @@ export default {
       lineHeight: "heading",
       fontWeight: "heading",
     },
+
     heroTitle: {
       fontSize: [4, null, null, 5, null, 5, 6],
       fontWeight: 700,
