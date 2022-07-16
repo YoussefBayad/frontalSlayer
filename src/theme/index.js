@@ -141,11 +141,11 @@ export default {
       pt: [7, 7, 7, 7, 8],
       pb: [7, 7, 7, 7, 8],
     },
-    introVideo: {
-      backgroundColor: rgba("#dceefb", 0.2),
-      pt: [7, 7, 7, 7, 8],
-      pb: [7, 7, 7, 7, 8],
-    },
+    // introVideo: {
+    //   backgroundColor: rgba("#dceefb", 0.2),
+    //   pt: [7, 7, 7, 7, 8],
+    //   pb: [7, 7, 7, 7, 8],
+    // },
     usefulFeatures: {
       backgroundColor: "backgroundSecondary",
       pt: [7, 7, 7, 7, 8],
@@ -251,13 +251,13 @@ export default {
       color: "white",
       bg: "primary",
       backgroundImage:
-        "linear-gradient(to right, #6cabd8 0%, #225cb7  51%, #6cabd8  100%)",
+        "linear-gradient(to right, #e50300 0%, #ec5d55  51%, #e50300  100%)",
 
       textAlign: "center",
       textTransform: "uppercase",
       backgroundSize: "200% auto",
       color: "white",
-      boxShadow: "0 0 20px #eee",
+      boxShadow: "0 0 10px #400100",
       transitionDuration: "0.3s",
       // display: "block",
 

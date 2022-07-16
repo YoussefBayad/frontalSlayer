@@ -186,27 +186,32 @@ const styles = {
   inputField: {
     position: "relative",
     marginBottom: "1rem",
+    backgroundColor: "red",
     ".error": {
       borderColor: "  #ff4136 !important",
       borderWidth: "  1px !important",
     },
+    ".text__area ": {
+      backgroundColor: "darkRed",
+    },
+
     ".text__area": {
       width: " 100%",
       boxSizing: "border-box",
       border: "2px solid ",
-      borderColor: "accent",
+      borderColor: "#ffc0c0",
       padding: " 0.8rem 1rem",
       borderRadius: "7px",
       marginBottom: "0.5rem",
       transition: "0.3s",
       outlineColor: "accent",
       "&:focus": {
-        borderColor: "primary",
+        borderColor: "#ffc0c0",
         boxShadow: "0 0 0 2px primary",
         outline: "none",
       },
-      "&:placeholder": {
-        color: "#a7a7a7",
+      "&::placeholder": {
+        color: "muted",
       },
       "&:focus": {
         "&:focus": {

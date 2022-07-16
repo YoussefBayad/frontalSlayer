@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container, Heading } from "theme-ui";
-import PatternBG from "assets/images/banner-2.webp";
+import PatternBG from "assets/images/banner.jpg";
 
 export default function Banner({ title = " ", accent = " " }) {
   return (

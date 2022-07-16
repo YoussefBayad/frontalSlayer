@@ -1,14 +1,14 @@
-import { Box } from 'theme-ui';
+import { Box } from "theme-ui";
 
 export default ({ children, ...rest }) => {
   return (
-    <Box as='span' {...rest} sx={styles}>
+    <Box as="span" {...rest} sx={styles}>
       {children}
     </Box>
   );
 };
 
 const styles = {
-  color: '#ff4136',
-  ml: '5px',
+  color: "#ff5b59",
+  ml: "5px",
 };

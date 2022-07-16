@@ -8,17 +8,17 @@ const styles = {
   width: " 100%",
   boxSizing: "border-box",
   border: "2px solid ",
-  borderColor: "accent",
+  borderColor: "secondary",
   padding: " 0.8rem 1rem",
   borderRadius: "7px",
   marginBottom: "0.5rem",
   transition: "0.3s",
-
+  color: "white",
   error: {
-    borderColor: "#ff4136",
+    borderColor: "#ff5b59",
   },
 
-  "&:placeholder": {
-    color: "#a7a7a7",
+  "&::placeholder": {
+    color: "muted",
   },
 };
