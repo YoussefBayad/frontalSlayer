@@ -75,19 +75,17 @@ const settings = {
   ],
 };
 
-const Carousel = () => {
+const Carousel = ({ path, title }) => {
   return (
     <Container sx={styles.container}>
-      <Box sx={styles.contentWrapper}>
-        <Slider sx={styles.slider} {...settings}>
-          {data.map((item) => (
-            <CarouselCard key={item.id} item={item} />
-          ))}
-        </Slider>
-        <Box sx={styles.shelfWrapper}>
-          <Image sx={styles.shelfWrapper.shelf} src={Shelf} />
-          <Link path="/products/hd-lace" label="HD Lace" />
-        </Box>
+      <Slider sx={styles.slider} {...settings}>
+        {data.map((item) => (
+          <CarouselCard key={item.id} item={item} />
+        ))}
+      </Slider>
+      <Box sx={styles.shelfWrapper}>
+        <Image sx={styles.shelfWrapper.shelf} src={Shelf} />
+        <Link path={path} label={title} />
       </Box>
     </Container>
   );
@@ -97,9 +95,6 @@ export default Carousel;
 
 const styles = {
   container: {
-    display: "flex",
-  },
-  contentWrapper: {
     mx: "auto",
     height: "200px",
     display: "flex",

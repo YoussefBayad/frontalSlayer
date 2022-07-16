@@ -10,47 +10,36 @@ import {
   Flex,
 } from "theme-ui";
 import Logo from "assets/images/logo.png";
-import BannerPattern from "assets/images/banner-pattern.webp";
-import { Link } from "components/link";
+// import { Link } from "components/link";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
+import LeftNav, { RightNav } from "components/navs";
 
 const Products = () => {
-  const productsItems = [
-    {
-      path: "/products",
-      label: "PRODUCTS",
-    },
-    {
-      path: "/products/hd-lace",
-      label: "HD LACE",
-    },
-    {
-      path: "/products/transparent-lace",
-      label: "TRANSPARENT LACE",
-    },
-
-    {
-      path: "/products/custom-wigs",
-      label: "CUSTOM WIGS",
-    },
-  ];
-
   return (
     <Box as="section" variant="section.products">
       <Container sx={styles.container}>
-        <Box sx={styles.logo}>
-          <Image src={Logo} alt="logo" />
-        </Box>
-        <SectionHeading
-          title="Product Tool Booking"
-          sx={styles.sectionHeading}
-        />
-        <Box>
-          <Carousel />
-          <Carousel />
-          <Carousel />
-        </Box>
+        <LeftNav sx={styles.left} />
+
+        <Container sx={styles.carouselsWrapper}>
+          <Box sx={styles.logo}>
+            <Image src={Logo} alt="logo" />
+          </Box>
+          <SectionHeading
+            title="PRODUCT TOOL BOOKING"
+            sx={styles.sectionHeading}
+          />
+
+          <Box>
+            <Carousel title="HD LACE" path="/products/hd-lace" />
+            <Carousel
+              title="TRANSPARENT WIG"
+              path="/products/transparent-wig"
+            />
+            <Carousel title="CUSTOM WIG" path="/products/custom-wig" />
+          </Box>
+        </Container>
+        <RightNav sx={styles.right} />
       </Container>
     </Box>
   );
@@ -59,7 +48,16 @@ const Products = () => {
 export default Products;
 
 const styles = {
-  container: {
+  left: {
+    position: "fixed",
+    top: "100px",
+  },
+  right: {
+    position: "fixed",
+    bottom: "100px",
+    right: "100px",
+  },
+  carouselsWrapper: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -72,5 +70,9 @@ const styles = {
   },
   sectionHeading: {
     mb: 0,
+    h2: {
+      textShadow:
+        "  0 0 15px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
+    },
   },
 };

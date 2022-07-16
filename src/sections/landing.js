@@ -14,6 +14,7 @@ import BannerPattern from "assets/images/banner-pattern.webp";
 import { Link } from "components/link";
 import Carousel from "../components/carousels/landing";
 import LeftNav, { RightNav } from "components/navs";
+import Logo from "components/logo";
 
 const Landing = () => {
   const productsItems = [
@@ -64,9 +65,7 @@ const Landing = () => {
       <br></br>
       <Container sx={styles.contentWrapper}>
         <Box sx={styles.contentBorder}>
-          <Box sx={styles.logo}>
-            <Image src={logo} alt="logo" />
-          </Box>
+          <Logo />
           <LeftNav />
           <Box sx={styles.carousel}>
             <Carousel />

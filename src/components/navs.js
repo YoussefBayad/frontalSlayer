@@ -2,31 +2,31 @@
 import { jsx, Box, Flex } from "theme-ui";
 import { Link } from "components/link";
 
-export default function LeftNav() {
+export default function LeftNav({ ...props }) {
   const menuItems = [
     {
       path: "/",
-      label: "Home",
+      label: "HOME",
     },
     {
       path: "products",
-      label: "Products",
+      label: "PRODUCTS",
     },
     {
       path: "why-us",
-      label: "Lace Wigs",
+      label: "LACE WIGS",
     },
     {
       path: "/faq",
-      label: "Faq",
+      label: "FAQ",
     },
     {
       path: "/contact",
-      label: "Contact",
+      label: "CONTACT",
     },
   ];
   return (
-    <Box sx={styles.left}>
+    <Box sx={styles.left} {...props}>
       <Flex as="ul">
         {menuItems?.map((item, index) => (
           <li sx={styles.listItem} key={index}>
@@ -38,7 +38,7 @@ export default function LeftNav() {
   );
 }
 
-export function RightNav() {
+export function RightNav({ ...props }) {
   const productsItems = [
     {
       path: "/products",
@@ -59,7 +59,7 @@ export function RightNav() {
     },
   ];
   return (
-    <Box sx={styles.right}>
+    <Box sx={styles.right} {...props}>
       <Flex as="ul">
         {productsItems?.map((item, index) => (
           <li sx={styles.listItem} key={index}>
