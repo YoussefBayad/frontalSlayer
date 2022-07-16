@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
-import { motion } from 'framer-motion';
+import { jsx } from "theme-ui";
+import { motion } from "framer-motion";
 
 export const AccordionButton = ({ children, ...rest }) => (
   <div sx={styles.buttonToggle} {...rest}>
@@ -10,47 +10,47 @@ export const AccordionButton = ({ children, ...rest }) => (
 
 const styles = {
   buttonToggle: {
-    display: 'flex',
-    color: 'headingSecondary',
-    cursor: 'pointer',
-    border: 'none',
+    display: "flex",
+    color: "headingSecondary",
+    cursor: "pointer",
+    border: "none",
     fontSize: [16, 16, 16, 18, 20],
     fontWeight: 500,
     letterSpacing: -0.5,
-    position: 'relative',
-    paddingLeft: ['33px', '45px'],
+    position: "relative",
+    paddingLeft: ["33px", "45px"],
     lineHeight: [1.5, 1.8],
-    '& > span': {
-      position: 'absolute',
+    "& > span": {
+      position: "absolute",
       width: 20,
       height: 20,
-      borderRadius: '50%',
-      backgroundColor: 'primary',
-      top: ['2px', '6px'],
-      left: [0, '13px'],
-      '&.open:after': {
+      borderRadius: "50%",
+      backgroundColor: "primary",
+      top: ["2px", "6px"],
+      left: [0, "13px"],
+      "&.open:after": {
         opacity: 0,
       },
-      '&::before': {
-        position: 'absolute',
+      "&::before": {
+        position: "absolute",
         content: '""',
-        height: '2px',
+        height: "2px",
         width: 10,
-        backgroundColor: 'white',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50% , -50%)',
+        backgroundColor: "white",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50% , -50%)",
       },
-      '&::after': {
-        position: 'absolute',
+      "&::after": {
+        position: "absolute",
         content: '""',
         height: 10,
-        width: '2px',
-        backgroundColor: 'white',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50% , -50%)',
-        transition: 'all 0.25s',
+        width: "2px",
+        backgroundColor: "white",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50% , -50%)",
+        transition: "all 0.25s",
       },
     },
   },
@@ -58,7 +58,7 @@ const styles = {
 
 const variants = {
   open: {
-    height: 'auto',
+    height: "auto",
     marginTop: 12,
   },
   closed: { height: 0, marginTop: 0 },
@@ -67,15 +67,15 @@ export function AccordionContents({ isOpen, ...props }) {
   return (
     <motion.div
       initial="closed"
-      animate={isOpen ? 'open' : 'closed'}
+      animate={isOpen ? "open" : "closed"}
       variants={variants}
       sx={{
-        overflowY: 'hidden',
+        overflowY: "hidden",
         fontSize: [1, 2],
         lineHeight: 2,
-        color: '#343D48',
-        paddingLeft: ['33px', '45px'],
-        ' > div ': {
+        color: "#fff0f0",
+        paddingLeft: ["33px", "45px"],
+        " > div ": {
           paddingBottom: [1, 2],
         },
       }}
@@ -87,11 +87,11 @@ export function AccordionContents({ isOpen, ...props }) {
 export const AccordionItem = ({ isOpen, children, ...rest }) => (
   <div
     css={{
-      overflow: 'hidden',
-      padding: '17px 0',
-      borderBottom: '1px solid #E5ECF4',
-      '&:last-child': {
-        borderBottom: '0px solid',
+      overflow: "hidden",
+      padding: "17px 0",
+      borderBottom: "1px solid #E5ECF4",
+      "&:last-child": {
+        borderBottom: "0px solid",
       },
     }}
     {...rest}
@@ -101,14 +101,16 @@ export const AccordionItem = ({ isOpen, children, ...rest }) => (
 );
 
 export const preventClose = (state, changes) =>
-  changes.type === 'closing' && state.openIndexes.length < 2
+  changes.type === "closing" && state.openIndexes.length < 2
     ? { ...changes, openIndexes: state.openIndexes }
     : changes;
 
 export const single = (state, changes) =>
-  changes.type === 'opening'
+  changes.type === "opening"
     ? { ...changes, openIndexes: changes.openIndexes.slice(-1) }
     : changes;
 
-export const combineReducers = (...reducers) => (state, changes) =>
-  reducers.reduce((acc, reducer) => reducer(state, acc), changes);
+export const combineReducers =
+  (...reducers) =>
+  (state, changes) =>
+    reducers.reduce((acc, reducer) => reducer(state, acc), changes);
