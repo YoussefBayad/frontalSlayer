@@ -19,8 +19,8 @@ const Products = () => {
   return (
     <Box as="section" variant="section.products">
       <Container sx={styles.container}>
-        <LeftNav sx={styles.left} />
-
+        {/* <LeftNav sx={styles.left} /> */}
+        <Box></Box>
         <Container sx={styles.carouselsWrapper}>
           <Box sx={styles.logo}>
             <Image src={Logo} alt="logo" />
@@ -48,10 +48,10 @@ const Products = () => {
 export default Products;
 
 const styles = {
-  left: {
-    position: "fixed",
-    top: "100px",
-  },
+  // left: {
+  //   position: "fixed",
+  //   top: "100px",
+  // },
   right: {
     position: "fixed",
     bottom: "100px",

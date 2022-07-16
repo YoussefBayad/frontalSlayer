@@ -66,7 +66,8 @@ const Landing = () => {
       <Container sx={styles.contentWrapper}>
         <Box sx={styles.contentBorder}>
           <Logo />
-          <LeftNav />
+          {/* <LeftNav /> */}
+          <Box></Box>
           <Box sx={styles.carousel}>
             <Carousel />
             <Flex as="ul" sx={styles.middle.nav}>
