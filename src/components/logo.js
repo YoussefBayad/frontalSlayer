@@ -1,18 +1,38 @@
 /** @jsx jsx */
-import { jsx, Image } from "theme-ui";
+import { jsx, Image, Box } from "theme-ui";
 import { Link } from "components/link";
-import logo from "assets/images/logo.svg";
-import logoWhite from "assets/images/logo.svg";
+import logo from "assets/images/logo.png";
 
-export default function Logo({ isWhite }) {
+export default function Logo({ ...props }) {
   return (
-    <Link
-      path="/"
-      sx={{
-        variant: "links.logo",
-      }}
-    >
-      <Image src={isWhite ? logoWhite : logo} alt="impeerforyou logo" />
-    </Link>
+    <Box sx={styles.logo}>
+      <Link
+        path="/"
+        sx={{
+          variant: "links.logo",
+        }}
+        {...props}
+      >
+        <Image src={logo} alt="logo" />
+      </Link>
+    </Box>
   );
 }
+
+const styles = {
+  logo: {
+    cursor: "pointer",
+    position: "absolute",
+    top: "-130px",
+    left: "50%",
+    zIndex: "2",
+    transform: "translateX(-50%)",
+    // display: "flex",
+    // justifyContent: "center",
+    backgroundColor: "rgba(144,14,12,1)",
+    img: {
+      height: "30vh",
+      objectFit: "contain",
+    },
+  },
+};
