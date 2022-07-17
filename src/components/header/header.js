@@ -106,6 +106,7 @@ const styles = {
           opacity: 1,
           visibility: "visible",
         },
+
         ul: {
           display: "block",
           "li + li": {
@@ -169,10 +170,12 @@ const styles = {
     mb: 20,
     cursor: "pointer",
     position: " relative",
+    width: "fit-content",
+
     "&:after": {
       content: "''",
       position: "absolute",
-      width: "80px",
+      width: "100%",
       transform: " scaleX(0)",
       height: "2px",
       bottom: " -5px",

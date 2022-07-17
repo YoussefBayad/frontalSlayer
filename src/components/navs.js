@@ -109,7 +109,7 @@ const styles = {
       "&:after": {
         content: "''",
         position: "absolute",
-        width: "80px",
+        width: "100%",
         transform: "scaleX(1)",
         transformOrigin: "bottom left",
         height: "2px",
@@ -124,10 +124,12 @@ const styles = {
     mb: 20,
     cursor: "pointer",
     position: " relative",
+    width: "fit-content",
+
     "&:after": {
       content: "''",
       position: "absolute",
-      width: "100px",
+      width: "100%",
       transform: " scaleX(0)",
       height: "2px",
       bottom: " -5px",
