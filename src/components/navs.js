@@ -112,5 +112,8 @@ const styles = {
       flexDirection: "column",
       listStyle: "none",
     },
+    "@media only screen and (max-width: 768px)": {
+      display: "none",
+    },
   },
 };

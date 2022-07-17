@@ -66,7 +66,6 @@ const Landing = () => {
       <Container sx={styles.contentWrapper}>
         <Box sx={styles.contentBorder}>
           <Logo />
-          {/* <LeftNav /> */}
           <Box></Box>
           <Box sx={styles.carousel}>
             <Carousel />
@@ -101,7 +100,7 @@ const styles = {
     alignItems: "flex-start",
     border: "6px solid",
     borderColor: "headingSecondary",
-    height: "80vh",
+    height: ["84vh", "80vh"],
     py: "20px",
     px: "40px",
   },
@@ -160,8 +159,8 @@ const styles = {
   carousel: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-end",
-    height: "75vh",
+    justifyContent: ["center", "flex-end"],
+    height: ["60vh", "75vh"],
     m: 0,
     p: 0,
   },

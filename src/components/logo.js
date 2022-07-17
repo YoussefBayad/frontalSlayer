@@ -31,7 +31,7 @@ const styles = {
     // justifyContent: "center",
     backgroundColor: "rgba(144,14,12,1)",
     img: {
-      height: "30vh",
+      height: ["25vh", "30vh"],
       objectFit: "contain",
     },
   },

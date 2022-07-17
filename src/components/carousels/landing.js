@@ -131,8 +131,8 @@ const styles = {
     },
   },
   slider: {
-    width: "250px",
-    height: "250px",
+    width: ["200px", "250px"],
+    height: ["200px", "250px"],
     mx: "auto",
     ".slick-list": {
       // mx: [null, null, null, null, -2, 0],
