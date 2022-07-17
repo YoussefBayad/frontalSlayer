@@ -53,7 +53,7 @@ const styles = {
     },
   },
   sectionHeading: {
-    mb: 0,
+    mb: [0, "60px"],
     h2: {
       textShadow:
         "  0 0 15px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",

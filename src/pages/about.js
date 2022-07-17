@@ -5,20 +5,16 @@ import SEO from "components/seo";
 import Layout from "components/layout";
 import Banner from "components/second-banner";
 import WhyUs from "sections/why-us";
-import Clients from "sections/clients";
-import IntroVideo from "sections/intro-video";
-import Testimonials from "components/carousels/landing";
+import IntroVideo from "sections/tutorial-video";
 
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
-      <Layout>
+      <Layout spaceLeft>
         <SEO title="Why us" />
         <Banner title="WHAT SETS US " accent="APART" />
         <WhyUs />
         <IntroVideo />
-        <Clients />
-        <Testimonials />
       </Layout>
     </ThemeProvider>
   );

@@ -5,7 +5,6 @@ import SEO from "components/seo";
 import Layout from "components/layout";
 import Landing from "sections/landing";
 import Features from "sections/features";
-import Clients from "sections/clients";
 import Sub from "sections/subs";
 
 export default function IndexPage() {
