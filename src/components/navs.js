@@ -13,8 +13,8 @@ export default function LeftNav({ ...props }) {
       label: "PRODUCTS",
     },
     {
-      path: "why-us",
-      label: "LACE WIGS",
+      path: "about",
+      label: "ABOUT US",
     },
     {
       path: "/faq",
@@ -81,17 +81,6 @@ const styles = {
       p: 0,
     },
   },
-  right: {
-    display: "flex",
-    justifySelf: "flex-end",
-    alignItems: "flex-end",
-    height: "75vh",
-    ul: {
-      display: "flex",
-      flexDirection: "column",
-      listStyle: "none",
-    },
-  },
   listItem: {
     mb: 20,
     cursor: "pointer",
@@ -111,6 +100,17 @@ const styles = {
     "&:hover:after": {
       transform: "scaleX(1)",
       transformOrigin: "  bottom left",
+    },
+  },
+  right: {
+    display: "flex",
+    justifySelf: "flex-end",
+    alignItems: "flex-end",
+    height: "75vh",
+    ul: {
+      display: "flex",
+      flexDirection: "column",
+      listStyle: "none",
     },
   },
 };

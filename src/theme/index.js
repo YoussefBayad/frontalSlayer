@@ -118,10 +118,13 @@ export default {
   },
   section: {
     banner: {
-      background: "rgb(229,3,0) ",
+      background: "rgba(144,14,12,1) ",
       backgroundImage:
         "linear-gradient(90deg, rgba(229,3,0,1) 0%, rgba(144,14,12,1) 40%)",
       height: "100vh",
+      "@media only screen and (max-width: 958px)": {
+        background: "rgba(144,14,12,1) ",
+      },
     },
     features: {
       pt: [7, 7, 7, 8, 8, 7, 7],
