@@ -111,7 +111,7 @@ const styles = {
       "repeat(2,1fr)",
     ],
     alignItems: "center",
-    mx: "60px",
+    mx: ["10px", "15px", "20px", "60px"],
   },
   leftContent: {
     display: "grid",
@@ -121,14 +121,14 @@ const styles = {
       backgroundColor: "#dceefb",
       borderRadius: "10px",
       boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-      height: ["400px", "500px"],
+      height: ["300px", "400px", "500px"],
       width: ["100%", "100%", "100%", "100%"],
       objectFit: "cover",
-      my: ["30px", "30px", "30px", "0px"],
+      my: ["5px", "10px", "30px", "0px"],
     },
   },
   rightContent: {
-    marginLeft: "40px",
+    marginLeft: ["15px", "20px", "60px"],
   },
   heading: {
     textAlign: "left",
