@@ -110,6 +110,7 @@ export default {
       alignItems: "center",
       // justifyContent: 'space-between',
     },
+
     main: {},
     footer: {
       backgroundColor: "#F9FAFC",
