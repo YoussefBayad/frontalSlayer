@@ -63,7 +63,7 @@ const WhyUs = () => {
             <SectionHeading
               sx={styles.heading}
               title="Our Vision"
-              description="Impeerforyou envisions a world where all people affected by mental illness live healthy, fulfilling lives supported by a community that cares.Impeerforyou envisions a world where all people affected by mental illness live healthy, fulfilling lives supported by a community that cares              "
+              description="FrontalSlayer provides the highest quality beauty and hair products in the industry while ensuring professional and informed expert assistance for a seamless online shopping experience."
             />
           </Box>
         </Box>
@@ -72,7 +72,7 @@ const WhyUs = () => {
             <SectionHeading
               sx={styles.heading}
               title="Our Mission              "
-              description="Impeerforyou provides advocacy, education, support and public awareness so that all individuals and families affected by mental illness can build better lives.    Impeerforyou provides advocacy, education, support and public awareness so that all individuals and families affected by mental illness can build better lives.             "
+              description="With the ever-increasing popularity of online shopping, we continually strive to instill confidence in our clients by offering quality beauty and hair products and industry insider expertise. We want to be the leading internet beauty source for wearable hair with a customer service experience beyond reproach. We believe everyone can and deserves to be beautiful!  "
             />
           </Box>
           <Box sx={styles.leftContent}>
@@ -86,12 +86,10 @@ const WhyUs = () => {
           <Box sx={styles.rightContent}>
             <SectionHeading
               sx={styles.heading}
-              title="Our Values"
-              description=""
+              title="What Makes Us Different
+              "
+              description="Your shopping experience is our top priority. We want every one of our clients to look and feel fabulous. We go the extra mile to bring you comprehensive videos, images, and guides to help you find exactly what you are looking for. To serve you best!"
             />
-            <Box sx={styles.accordionGroup}>
-              <Accordion items={data.values} />
-            </Box>
           </Box>
         </Box>
       </Container>
@@ -113,17 +111,18 @@ const styles = {
       "repeat(2,1fr)",
     ],
     alignItems: "center",
+    mx: "60px",
   },
   leftContent: {
     display: "grid",
     placeContent: "center",
-
+    ml: [0, 0, 0, "inherit", "inherit"],
     ".image": {
       backgroundColor: "#dceefb",
       borderRadius: "10px",
       boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-      height: ["400px", "550px"],
-      width: ["100%", "100%", "100%", "auto"],
+      height: ["400px", "500px"],
+      width: ["100%", "100%", "100%", "100%"],
       objectFit: "cover",
       my: ["30px", "30px", "30px", "0px"],
     },
