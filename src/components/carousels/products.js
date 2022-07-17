@@ -3,39 +3,12 @@
 import { jsx, Box, Container, Button, Image } from "theme-ui";
 import Slider from "react-slick";
 import CarouselCard from "components/cards/carouselCard";
-import Wig from "assets/images/wig.png";
+
 import Shelf from "assets/images/shelf.svg";
 
 import { rgba } from "polished";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import { Link } from "components/link";
-
-const data = [
-  {
-    src: Wig,
-    alt: "wig",
-  },
-  {
-    src: Wig,
-    alt: "wig",
-  },
-  {
-    src: Wig,
-    alt: "wig",
-  },
-  {
-    src: Wig,
-    alt: "wig",
-  },
-  {
-    src: Wig,
-    alt: "wig",
-  },
-  {
-    src: Wig,
-    alt: "wig",
-  },
-];
 
 function SlickArrow({ className, onClick, control }) {
   return (
@@ -75,11 +48,11 @@ const settings = {
   ],
 };
 
-const Carousel = ({ path, title }) => {
+const Carousel = ({ data }) => {
   return (
     <Container sx={styles.container}>
       <Slider sx={styles.slider} {...settings}>
-        {data.map((item) => (
+        {data.products.map((item) => (
           <CarouselCard
             sx={styles.productsCarousel}
             key={item.id}
@@ -89,7 +62,7 @@ const Carousel = ({ path, title }) => {
       </Slider>
       <Box sx={styles.shelfWrapper}>
         <Image sx={styles.shelfWrapper.shelf} src={Shelf} />
-        <Link path={path} label={title} />
+        <Link path={data.path} label={data.title} />
       </Box>
     </Container>
   );

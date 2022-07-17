@@ -1,21 +1,12 @@
 /** @jsx jsx */
-import {
-  jsx,
-  Box,
-  Container,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Flex,
-} from "theme-ui";
+import { jsx, Box, Container, Image } from "theme-ui";
 import Logo from "assets/images/logo.png";
-// import { Link } from "components/link";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
+import { withPlugins } from "next-compose-plugins";
 
-const Products = () => {
+const Products = ({ data }) => {
   return (
     <Box as="section" variant="section.products">
       <Container sx={styles.container}>
@@ -31,12 +22,9 @@ const Products = () => {
           />
 
           <Box>
-            <Carousel title="HD LACE" path="/products/hd-lace" />
-            <Carousel
-              title="TRANSPARENT WIG"
-              path="/products/transparent-wig"
-            />
-            <Carousel title="CUSTOM WIG" path="/products/custom-wig" />
+            <Carousel data={data.rowOne} />
+            <Carousel data={data.rowTwo} />
+            <Carousel data={data.rowThree} />
           </Box>
         </Container>
         <RightNav sx={styles.right} />
