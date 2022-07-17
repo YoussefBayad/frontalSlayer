@@ -1,16 +1,18 @@
 /** @jsx jsx */
-import { jsx, Container, Heading } from "theme-ui";
-import PatternBG from "assets/images/banner.jpg";
+import { jsx, Container, Heading, Box } from "theme-ui";
+import PatternBG from "assets/images/banner.webp";
 
 export default function Banner({ title = " ", accent = " " }) {
   return (
     <section sx={styles.banner}>
-      <Container sx={styles.container}>
-        <Heading as="h2" sx={styles.title}>
-          {title}
-          <span sx={styles.title.accent}> {accent}</span>
-        </Heading>
-      </Container>
+      <Box sx={styles.bannerBackground}>
+        <Container sx={styles.container}>
+          <Heading as="h2" sx={styles.title}>
+            {title}
+            <span sx={styles.title.accent}> {accent}</span>
+          </Heading>
+        </Container>
+      </Box>
     </section>
   );
 }
@@ -21,7 +23,9 @@ const styles = {
     zIndex: -1,
     pb: [2, null, 0, null, 2, 0, null, 5],
     pt: ["105px", "105px", "140px", "150px", "150px", "160px"],
-    backgroundColor: "#f6fdff",
+    zIndex: "3",
+    background: "rgba(233,244,248,1) ",
+
     backgroundImage: `url(${PatternBG})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: "center right",
@@ -31,7 +35,7 @@ const styles = {
       content: "''",
       position: "absolute",
       top: "0; bottom: 0; left: 0; right: 0",
-      background: " rgba(0,0,0,0.5)",
+      background: " rgba(0,0,0,0.2)",
       pointerEvents: "none",
       zIndex: 0,
       "@media screen and (max-width:760px)": {
@@ -40,7 +44,8 @@ const styles = {
     },
 
     "@media screen and (max-width:760px)": {
-      backgroundImage: "none",
+      // backgroundImage: "none",
+      // background: "rgba(233,244,248,1) ",
     },
   },
 
@@ -48,6 +53,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+
     "@media screen and (max-width:760px)": {
       display: "block",
       textAlign: "center",
@@ -68,10 +74,7 @@ const styles = {
     fontWeight: "700",
     letterSpacing: "-.5px",
     pb: 8,
-    "@media screen and (max-width:760px)": {
-      color: "heading",
-      textShadow: "none",
-    },
+
     accent: {
       color: "primary",
       display: "inherit",

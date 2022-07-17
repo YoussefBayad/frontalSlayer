@@ -6,7 +6,7 @@ import Sticky from "react-stickynode";
 import { Link } from "components/link";
 import menuItems from "./header.data";
 
-export default function Header({ ...props }) {
+export default function Header({ spaceLeft, ...props }) {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const openMobileMenu = () => {
@@ -29,7 +29,7 @@ export default function Header({ ...props }) {
             <Box sx={styles.headerInner}>
               <Flex
                 as="nav"
-                sx={styles.navbar}
+                sx={spaceLeft ? styles.navbarSpaceLeft : styles.navbar}
                 className={mobileMenu ? "navbar active" : "navbar"}
               >
                 <Box
@@ -124,6 +124,12 @@ const styles = {
     position: "fixed",
     top: ["150px", "170px"],
     left: ["5%", "5%", "5%", "5%", "10%", "15%", "15%", "15%"],
+  },
+  navbarSpaceLeft: {
+    alignSelf: "flex-start",
+    position: "fixed",
+    top: ["150px", "170px"],
+    left: ["5%", "5%", "5%", "5%", "10%", "10%", "10%", "10%"],
   },
   navList: {
     listStyle: "none",
