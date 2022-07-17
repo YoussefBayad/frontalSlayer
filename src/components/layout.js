@@ -4,7 +4,7 @@ import React from "react";
 import Subscribe from "sections/subscribe";
 import Footer from "./footer";
 import Header from "./header/header";
-export default function Layout({ children }) {
+export default function Layout({ children, spaceLeft }) {
   return (
     <React.Fragment>
       <main
@@ -12,7 +12,7 @@ export default function Layout({ children }) {
           variant: "layout.main",
         }}
       >
-        <Header />
+        <Header spaceLeft={spaceLeft} />
         {children}
       </main>
     </React.Fragment>
