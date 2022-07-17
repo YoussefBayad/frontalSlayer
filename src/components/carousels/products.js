@@ -80,7 +80,11 @@ const Carousel = ({ path, title }) => {
     <Container sx={styles.container}>
       <Slider sx={styles.slider} {...settings}>
         {data.map((item) => (
-          <CarouselCard key={item.id} item={item} />
+          <CarouselCard
+            sx={styles.productsCarousel}
+            key={item.id}
+            item={item}
+          />
         ))}
       </Slider>
       <Box sx={styles.shelfWrapper}>
@@ -100,6 +104,12 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    mt: ["50px", "50px", "50px", 0],
+  },
+  productsCarousel: {
+    width: ["80%", "100%"],
+    height: ["80%", "100%"],
+    mx: ["auto", 0],
   },
   paginationButton: {
     minHeight: "30px",
@@ -132,8 +142,7 @@ const styles = {
     },
   },
   slider: {
-    width: ["100%", "30%"],
-    // height: "250px",
+    width: ["200px", "200px", "200px", "330px", "30%"],
     mx: "auto",
     ".slick-list": {
       // mx: [null, null, null, null, -2, 0],
@@ -147,11 +156,11 @@ const styles = {
     placeItems: "center",
     position: "relative",
     shelf: {
-      maxWidth: "35%",
+      maxWidth: ["130%", "80%", "80%", "60%", "60%", "35%"],
     },
     a: {
       position: "absolute",
-      top: "15px",
+      top: ["10px", "11px", "12px", "12px", "15px"],
       color: "white",
       zIndex: "5",
       textShadow:

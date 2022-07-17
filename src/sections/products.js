@@ -48,10 +48,6 @@ const Products = () => {
 export default Products;
 
 const styles = {
-  // left: {
-  //   position: "fixed",
-  //   top: "100px",
-  // },
   right: {
     position: "fixed",
     bottom: "100px",
@@ -64,7 +60,7 @@ const styles = {
   },
   logo: {
     img: {
-      height: "20vh",
+      height: [" 17vh", " 17vh", " 17vh", "20vh"],
       objectFit: "contain",
     },
   },
