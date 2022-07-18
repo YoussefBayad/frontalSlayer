@@ -116,7 +116,7 @@ const styles = {
     "&.slick-disabled": {
       color: "#BBC7D7",
       svg: {
-        transform: "scale(0.8)",
+        transform: ["scale(0.6)", "scale(0.8)"],
       },
     },
     "&.slick-prev": {
@@ -131,8 +131,8 @@ const styles = {
     },
   },
   slider: {
-    width: ["200px", "250px"],
-    height: ["200px", "250px"],
+    width: ["160px", "220px", "250px"],
+    height: ["160px", "220px", "250px"],
     mx: "auto",
     ".slick-list": {
       // mx: [null, null, null, null, -2, 0],

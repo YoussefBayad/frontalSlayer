@@ -75,7 +75,7 @@ const styles = {
     },
     position: "absolute",
     top: ["150px"],
-    left: ["5%", "5%", "15%", "25%"],
+    left: ["20%", "20%", "20%", "25%"],
   },
   headerWrapper: {
     position: "relative",
@@ -123,7 +123,7 @@ const styles = {
     alignSelf: "flex-start",
     position: "fixed",
     top: ["150px", "170px"],
-    left: ["5%", "5%", "5%", "5%", "10%", "20%", "20%", "20%"],
+    left: ["5%", "5%", "5%", "20%", "20%", "20%", "20%", "20%"],
     "@media only screen and (min-width: 768px)": {
       position: "block",
     },

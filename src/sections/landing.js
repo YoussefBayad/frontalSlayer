@@ -94,17 +94,17 @@ const styles = {
     borderRadius: "10px",
     position: "relative",
     p: "0 !important",
-    width: "70%",
-    height: "70%",
+    width: ["80%", "75%", "70%"],
+    height: ["60%", "75%", "70%"],
     backgroundColor: "#b70200",
     backgroundImage:
-      "linear-gradient(90deg, #ce0300 0%, rgba(144,14,12,0.5) 100%)",
+      "linear-gradient(90deg, #ce0300 0%, rgba(144,14,12,0.5) 30%)",
     // boxShadow:
     //   "0 2.8px 2.2px rgba(0, 0, 0, 0.034),0 6.7px 5.3px rgba(0, 0, 0, 0.048),0 12.5px 10px rgba(0, 0, 0, 0.06),0 22.3px 17.9px rgba(0, 0, 0, 0.072),0 41.8px 33.4px rgba(0, 0, 0, 0.086),0 100px 80px rgba(0, 0, 0, 0.12)",
     // boxShadow: " 7px 14px 40px 4px rgb(0 0 0 / 50%)",
     // filter: "drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 6px #e50300) drop-shadow(0px 0px 15px #ff5b59) drop-shadow(0px 0px 40px #fc0906) drop-shadow(0px 0px 60px #e50300)"
     boxShadow:
-      "10px 10px 30px 0px #ff5b59, 10px 10px 20px 0px #e50300, 10px 10px 100px 0px #ff5b59",
+      "10px 10px 30px 0px rgb(255 91 89 / 50%), 10px 10px 20px 0px rgb(229 3 0 / 50%), 10px 10px 100px 0px rgb(255 91 89 / 50%)",
   },
   contentBorder: {
     display: [null, null, null, "grid"],
@@ -115,7 +115,7 @@ const styles = {
     height: "100%",
 
     py: "20px",
-    px: "40px",
+    px: [0, "40px"],
   },
 
   logo: {
@@ -174,6 +174,7 @@ const styles = {
     flexDirection: "column",
     justifyContent: ["center", "flex-end"],
     height: ["60vh", "60vh"],
+    width: ["auto", "auto", "auto", "max-content"],
     m: 0,
     p: 0,
     zIndex: "10",
