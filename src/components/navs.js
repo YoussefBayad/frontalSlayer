@@ -87,7 +87,7 @@ const styles = {
     display: "flex",
     justifySelf: "flex-end",
     alignItems: "flex-end",
-    height: "75vh",
+    height: "60vh",
     // left: ["5%", "5%", "5%", "5%", "10%", "15%", "15%", "15%"],
   },
   navList: {

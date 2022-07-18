@@ -22,17 +22,17 @@ export default function Logo({ ...props }) {
 const neon = keyframes`
   from {
     filter: drop-shadow(0px 0px 1px #fff)
-    drop-shadow(0px 0px 3px #fff)
+    drop-shadow(0px 0px 3px #e50300)
     drop-shadow(0px 0px 10px #ff5b59)
-    drop-shadow(0px 0px 30px #ff9695)
+    drop-shadow(0px 0px 30px #fc0906)
     drop-shadow(0px 0px 50px #e50300);
   }
 
   to {
     filter: drop-shadow(0px 0px 3px #fff)
-    drop-shadow(0px 0px 6px #fff)
+    drop-shadow(0px 0px 6px #e50300)
     drop-shadow(0px 0px 15px #ff5b59)
-    drop-shadow(0px 0px 40px #ff9695)
+    drop-shadow(0px 0px 40px #fc0906)
     drop-shadow(0px 0px 60px #e50300); 
   }
 `;
@@ -47,9 +47,9 @@ const styles = {
     transform: "translateX(-50%)",
     // display: "flex",
     // justifyContent: "center",
-    backgroundColor: "rgba(144,14,12,1)",
+    // backgroundColor: "rgba(144,14,12,1)",
     img: {
-      height: ["25vh", "30vh"],
+      height: ["25vh", "25vh"],
       objectFit: "contain",
       stroke: "#fff",
       animationName: `${neon} `,
