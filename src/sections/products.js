@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image } from "theme-ui";
-import Logo from "assets/images/logo.png";
+import Logo from "assets/images/logo.svg";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
 import { withPlugins } from "next-compose-plugins";
+import { keyframes } from "@emotion/core";
 
 const Products = ({ data }) => {
   return (
@@ -34,6 +35,23 @@ const Products = ({ data }) => {
 };
 
 export default Products;
+const neon = keyframes`
+  from {
+    filter: drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 3px #fff)
+    drop-shadow(0px 0px 10px #ff5b59)
+    drop-shadow(0px 0px 30px #ff9695)
+    drop-shadow(0px 0px 50px #e50300);
+  }
+
+  to {
+    filter: drop-shadow(0px 0px 3px #fff)
+    drop-shadow(0px 0px 6px #fff)
+    drop-shadow(0px 0px 15px #ff5b59)
+    drop-shadow(0px 0px 40px #ff9695)
+    drop-shadow(0px 0px 60px #e50300); 
+  }
+`;
 
 const styles = {
   right: {
@@ -50,6 +68,11 @@ const styles = {
     img: {
       height: [" 17vh", " 17vh", " 17vh", "20vh"],
       objectFit: "contain",
+      stroke: "#fff",
+      animationName: `${neon} `,
+      animationDuration: " 0.8s",
+      animationIterationCount: "infinite",
+      animationDirection: " alternate",
     },
   },
   sectionHeading: {

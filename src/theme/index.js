@@ -104,6 +104,9 @@ export default {
       "&.is-mobile-menu": {
         backgroundColor: "text",
       },
+      "@media only screen and (min-width: 768px)": {
+        position: "absolute",
+      },
     },
     toolbar: {
       display: "flex",

@@ -124,6 +124,9 @@ const styles = {
     position: "fixed",
     top: ["150px", "170px"],
     left: ["5%", "5%", "5%", "5%", "10%", "15%", "15%", "15%"],
+    "@media only screen and (min-width: 768px)": {
+      position: "block",
+    },
   },
   navbarSpaceLeft: {
     alignSelf: "flex-start",
