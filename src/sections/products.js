@@ -11,7 +11,6 @@ const Products = ({ data }) => {
   return (
     <Box as="section" variant="section.products">
       <Container sx={styles.container}>
-        {/* <LeftNav sx={styles.left} /> */}
         <Box></Box>
         <Container sx={styles.carouselsWrapper}>
           <Box sx={styles.logo}>
@@ -36,21 +35,21 @@ const Products = ({ data }) => {
 
 export default Products;
 const neon = keyframes`
-  from {
-    filter: drop-shadow(0px 0px 1px #fff)
-    drop-shadow(0px 0px 3px #fff)
-    drop-shadow(0px 0px 10px #ff5b59)
-    drop-shadow(0px 0px 30px #ff9695)
-    drop-shadow(0px 0px 50px #e50300);
-  }
+from {
+  filter: drop-shadow(0px 0px 1px #fff)
+  drop-shadow(0px 0px 3px #e50300)
+  drop-shadow(0px 0px 10px #ff5b59)
+  drop-shadow(0px 0px 30px #fc0906)
+  drop-shadow(0px 0px 50px #e50300);
+}
 
-  to {
-    filter: drop-shadow(0px 0px 3px #fff)
-    drop-shadow(0px 0px 6px #fff)
-    drop-shadow(0px 0px 15px #ff5b59)
-    drop-shadow(0px 0px 40px #ff9695)
-    drop-shadow(0px 0px 60px #e50300); 
-  }
+to {
+  filter: drop-shadow(0px 0px 3px #fff)
+  drop-shadow(0px 0px 6px #e50300)
+  drop-shadow(0px 0px 15px #ff5b59)
+  drop-shadow(0px 0px 40px #fc0906)
+  drop-shadow(0px 0px 60px #e50300); 
+}
 `;
 
 const styles = {

@@ -5,9 +5,12 @@ import { GrClose } from "react-icons/gr";
 import Sticky from "react-stickynode";
 import { Link } from "components/link";
 import menuItems from "./header.data";
+import Dropdown from "./dropdown";
+import { FaPlus } from "react-icons/fa";
 
 export default function Header({ spaceLeft, ...props }) {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const openMobileMenu = () => {
     setMobileMenu(true);
@@ -17,6 +20,21 @@ export default function Header({ spaceLeft, ...props }) {
     setMobileMenu(false);
   };
 
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
   return (
     <Box sx={styles.headerWrapper}>
       <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={10}>
@@ -37,11 +55,27 @@ export default function Header({ spaceLeft, ...props }) {
                   sx={styles.navList}
                   className={mobileMenu ? "active" : ""}
                 >
-                  {menuItems?.map((item, index) => (
-                    <li sx={styles.listItem} key={index}>
-                      <Link path={item?.path}>{item?.label}</Link>
-                    </li>
-                  ))}
+                  {menuItems?.map(
+                    ({ path, label, isDropdown, dropdownItems }, i) =>
+                      isDropdown ? (
+                        <Dropdown
+                          label={label}
+                          path={path}
+                          items={dropdownItems}
+                          isOpen={dropdown}
+                          closeMobileMenu={closeMobileMenu}
+                          i={i}
+                        />
+                      ) : (
+                        <li
+                          sx={styles.listItem}
+                          key={i}
+                          onClick={closeMobileMenu}
+                        >
+                          <Link path={path}>{label}</Link>
+                        </li>
+                      )
+                  )}
                 </Box>
               </Flex>
 
@@ -196,6 +230,20 @@ const styles = {
     "&:hover:after": {
       transform: "scaleX(1)",
       transformOrigin: "bottom left",
+    },
+  },
+  dropdownLink: {
+    mb: 20,
+    a: {
+      display: "flex",
+      alignItems: "center",
+      position: "relative",
+    },
+    plus: {
+      ml: "5px",
+      "@media screen and (max-width: 768px)": {
+        display: "none",
+      },
     },
   },
 };
