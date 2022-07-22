@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Flex } from "theme-ui";
 import { Link } from "components/link";
-
+import { motion } from "framer-motion";
 export default function LeftNav({ ...props }) {
   const menuItems = [
     {
@@ -59,7 +59,13 @@ export function RightNav({ ...props }) {
     },
   ];
   return (
-    <Box sx={styles.right} {...props}>
+    <motion.Box
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      sx={styles.right}
+      {...props}
+    >
       <Flex as="nav" sx={styles.navbar}>
         <Box as="ul" sx={styles.navList}>
           {menuItems?.map((item, index) => (
@@ -69,7 +75,7 @@ export function RightNav({ ...props }) {
           ))}
         </Box>
       </Flex>
-    </Box>
+    </motion.Box>
   );
 }
 

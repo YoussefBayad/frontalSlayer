@@ -15,6 +15,7 @@ import { Link } from "components/link";
 import Carousel from "../components/carousels/landing";
 import LeftNav, { RightNav } from "components/navs";
 import Logo from "components/logo";
+import { motion } from "framer-motion";
 
 const Landing = () => {
   const productsItems = [
@@ -68,13 +69,19 @@ const Landing = () => {
           <Box></Box>
           <Box sx={styles.carousel}>
             <Carousel />
-            <Flex as="ul" sx={styles.middle.nav}>
+            <motion.Flex
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              as="ul"
+              sx={styles.middle.nav}
+            >
               {productsItems?.map((item, index) => (
                 <li sx={styles.listItem} key={index}>
                   <Link path={item?.path}>{item?.label}</Link>
                 </li>
               ))}
-            </Flex>{" "}
+            </motion.Flex>{" "}
           </Box>
           <RightNav />
         </Box>

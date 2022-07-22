@@ -6,7 +6,7 @@ import Sticky from "react-stickynode";
 import { Link } from "components/link";
 import menuItems from "./header.data";
 import Dropdown from "./dropdown";
-import { FaPlus } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Header({ spaceLeft, homeToggle, ...props }) {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -38,10 +38,13 @@ export default function Header({ spaceLeft, homeToggle, ...props }) {
   return (
     <Box sx={styles.headerWrapper}>
       <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={10}>
-        <Box
+        <motion.Box
           as="header"
           variant="layout.header"
           className={mobileMenu ? "is-mobile-menu" : ""}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
         >
           <Container>
             <Box sx={styles.headerInner}>
@@ -96,7 +99,7 @@ export default function Header({ spaceLeft, homeToggle, ...props }) {
               )}
             </Box>
           </Container>
-        </Box>
+        </motion.Box>
       </Sticky>
     </Box>
   );

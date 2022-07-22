@@ -3,10 +3,16 @@ import { jsx, Image, Box } from "theme-ui";
 import { Link } from "components/link";
 import logo from "assets/images/logo.svg";
 import { keyframes } from "@emotion/core";
+import { motion } from "framer-motion";
 
 export default function Logo({ home, ...props }) {
   return (
-    <Box sx={home ? styles.home : styles.logo}>
+    <motion.Box
+      sx={home ? styles.home : styles.logo}
+      initial={{ opacity: 0, scale: 0.5, y: 200 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Link
         path="/"
         sx={{
@@ -16,7 +22,7 @@ export default function Logo({ home, ...props }) {
       >
         <Image sx={styles.img} src={logo} alt="logo" />
       </Link>
-    </Box>
+    </motion.Box>
   );
 }
 const neon = keyframes`
