@@ -5,7 +5,9 @@ import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
 import { withPlugins } from "next-compose-plugins";
+import Wall from "assets/images/wall2.png";
 import { keyframes } from "@emotion/core";
+import { Link } from "components/link";
 
 const Products = ({ data }) => {
   return (
@@ -13,9 +15,11 @@ const Products = ({ data }) => {
       <Container sx={styles.container}>
         <Box></Box>
         <Container sx={styles.carouselsWrapper}>
-          <Box sx={styles.logo}>
-            <Image src={Logo} alt="logo" />
-          </Box>
+          {/* <Box > */}
+          <Link sx={styles.logo} label="" path="/">
+            <Image sx={styles.logo.img} src={Logo} alt="logo" />
+          </Link>
+          {/* </Box> */}
           <SectionHeading
             title="PRODUCT TOOL BOOKING"
             sx={styles.sectionHeading}
@@ -53,6 +57,16 @@ to {
 `;
 
 const styles = {
+  container: {
+    display: "grid",
+    gridTemplateColumns: [
+      "repeat(1, 1fr)",
+      "repeat(1, 1fr)",
+      "repeat(3, 1fr)",
+      "repeat(3, 1fr)",
+      "100px 1fr 100px",
+    ],
+  },
   right: {
     position: "fixed",
     bottom: "100px",
@@ -62,6 +76,11 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    backgroundImage: `url(${Wall})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    pb: "50px",
   },
   logo: {
     img: {
@@ -72,6 +91,7 @@ const styles = {
       animationDuration: " 0.8s",
       animationIterationCount: "infinite",
       animationDirection: " alternate",
+      cursor: "pointer",
     },
   },
   sectionHeading: {
