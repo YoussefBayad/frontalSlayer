@@ -13,7 +13,7 @@ export default function Layout({ children, spaceLeft, homeToggle }) {
           variant: "layout.main",
         }}
       >
-        <Logo />
+        <Logo home={homeToggle} />
         <Header spaceLeft={spaceLeft} homeToggle={homeToggle} />
         {children}
       </main>

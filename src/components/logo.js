@@ -41,9 +41,14 @@ const styles = {
   home: {
     cursor: "pointer",
     position: "absolute",
-    top: "-100px",
-    right: "0%",
-    zIndex: "2",
+    top: "20px",
+    right: "20px",
+    zIndex: "10",
+    "@media only screen and (max-width: 768px)": {
+      top: " 50px",
+      right: " 50%",
+      transform: " translateX(50%)",
+    },
   },
   logo: {
     cursor: "pointer",
