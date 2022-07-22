@@ -41,15 +41,12 @@ const styles = {
   logo: {
     cursor: "pointer",
     position: "absolute",
-    top: "-130px",
-    left: "50%",
+    top: "-100px",
+    right: "0%",
     zIndex: "2",
-    transform: "translateX(-50%)",
-    // display: "flex",
-    // justifyContent: "center",
-    // backgroundColor: "rgba(144,14,12,1)",
+
     img: {
-      height: ["25vh", "25vh"],
+      height: ["10vh", "10vh"],
       objectFit: "contain",
       stroke: "#fff",
       animationName: `${neon} `,
