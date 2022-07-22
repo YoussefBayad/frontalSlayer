@@ -56,6 +56,7 @@ export default {
     heading: "DM Sans",
     // heading: 'Bree Serif',
     monospace: "Menlo, monospace",
+    fontFamily: "'Montserrat', sans-serif",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   fontWeights: {
@@ -115,7 +116,9 @@ export default {
       // justifyContent: 'space-between',
     },
 
-    main: {},
+    main: {
+      position: "relative",
+    },
     footer: {
       backgroundColor: "#F9FAFC",
       pt: 6,

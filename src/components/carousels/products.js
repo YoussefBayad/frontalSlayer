@@ -133,6 +133,7 @@ const styles = {
     },
     a: {
       position: "absolute",
+      cursor: "pointer",
       top: ["10px", "11px", "12px", "12px", "15px"],
       color: "white",
       zIndex: "5",

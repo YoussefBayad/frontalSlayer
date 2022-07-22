@@ -65,7 +65,6 @@ const Landing = () => {
       <br></br>
       <Container sx={styles.contentWrapper}>
         <Box sx={styles.contentBorder}>
-          <Logo />
           <Box></Box>
           <Box sx={styles.carousel}>
             <Carousel />

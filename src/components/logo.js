@@ -4,9 +4,9 @@ import { Link } from "components/link";
 import logo from "assets/images/logo.svg";
 import { keyframes } from "@emotion/core";
 
-export default function Logo({ ...props }) {
+export default function Logo({ home, ...props }) {
   return (
-    <Box sx={styles.logo}>
+    <Box sx={home ? styles.home : styles.logo}>
       <Link
         path="/"
         sx={{
@@ -14,7 +14,7 @@ export default function Logo({ ...props }) {
         }}
         {...props}
       >
-        <Image src={logo} alt="logo" />
+        <Image sx={styles.img} src={logo} alt="logo" />
       </Link>
     </Box>
   );
@@ -38,21 +38,28 @@ const neon = keyframes`
 `;
 
 const styles = {
-  logo: {
+  home: {
     cursor: "pointer",
     position: "absolute",
     top: "-100px",
     right: "0%",
     zIndex: "2",
+  },
+  logo: {
+    cursor: "pointer",
+    position: "absolute",
+    top: "20px",
+    right: "20px",
+    zIndex: "10",
+  },
 
-    img: {
-      height: ["10vh", "10vh"],
-      objectFit: "contain",
-      stroke: "#fff",
-      animationName: `${neon} `,
-      animationDuration: " 0.8s",
-      animationIterationCount: "infinite",
-      animationDirection: " alternate",
-    },
+  img: {
+    height: ["5vh", "15vh"],
+    objectFit: "contain",
+    stroke: "#fff",
+    animationName: `${neon} `,
+    animationDuration: " 0.8s",
+    animationIterationCount: "infinite",
+    animationDirection: " alternate",
   },
 };
