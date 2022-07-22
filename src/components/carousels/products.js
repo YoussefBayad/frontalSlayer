@@ -129,7 +129,7 @@ const styles = {
     placeItems: "center",
     position: "relative",
     shelf: {
-      maxWidth: ["130%", "80%", "80%", "60%", "60%", "35%"],
+      maxWidth: ["130%", "80%", "80%", "70%", "60%", "35%"],
     },
     a: {
       position: "absolute",

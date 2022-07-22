@@ -10,7 +10,7 @@ import Sub from "sections/subs";
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
-      <Layout>
+      <Layout homeToggle>
         <SEO title="Frontal Slayer" />
         <Landing />
       </Layout>

@@ -4,7 +4,7 @@ import React from "react";
 import Subscribe from "sections/subscribe";
 import Footer from "./footer";
 import Header from "./header/header";
-export default function Layout({ children, spaceLeft, homeBurger }) {
+export default function Layout({ children, spaceLeft, homeToggle }) {
   return (
     <React.Fragment>
       <main
@@ -12,7 +12,7 @@ export default function Layout({ children, spaceLeft, homeBurger }) {
           variant: "layout.main",
         }}
       >
-        <Header spaceLeft={spaceLeft} homeBurger />
+        <Header spaceLeft={spaceLeft} homeToggle={homeToggle} />
         {children}
       </main>
     </React.Fragment>

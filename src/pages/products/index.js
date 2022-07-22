@@ -8,6 +8,7 @@ import Products from "sections/products";
 import Wig from "assets/images/wig.png";
 import Transparent from "assets/images/transparent.png";
 import Customized from "assets/images/customized.png";
+// import ex from "assets/images/rowOne.jpg";
 
 const data = {
   rowOne: {

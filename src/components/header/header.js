@@ -8,7 +8,7 @@ import menuItems from "./header.data";
 import Dropdown from "./dropdown";
 import { FaPlus } from "react-icons/fa";
 
-export default function Header({ spaceLeft, ...props }) {
+export default function Header({ spaceLeft, homeToggle, ...props }) {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
@@ -90,7 +90,7 @@ export default function Header({ spaceLeft, ...props }) {
               ) : (
                 <MenuButton
                   aria-label="Toggle Menu"
-                  sx={styles.toggle}
+                  sx={homeToggle ? styles.homeToggle : styles.toggle}
                   onClick={openMobileMenu}
                 />
               )}
@@ -108,8 +108,16 @@ const styles = {
       display: "none",
     },
     position: "absolute",
+    top: ["100px"],
+    left: ["2%", "2%", "20%", "25%"],
+  },
+  homeToggle: {
+    "@media only screen and (min-width: 768px)": {
+      display: "none",
+    },
+    position: "absolute",
     top: ["150px"],
-    left: ["20%", "20%", "20%", "25%"],
+    left: ["16%", "16%", "20%", "25%"],
   },
   headerWrapper: {
     position: "relative",
@@ -157,7 +165,7 @@ const styles = {
     alignSelf: "flex-start",
     position: "fixed",
     top: ["150px", "170px"],
-    left: ["5%", "5%", "5%", "20%", "20%", "20%", "20%", "20%"],
+    left: ["5%", "5%", "5%", "10%", "10%", "20%", "20%", "20%"],
     "@media only screen and (min-width: 768px)": {
       position: "block",
     },

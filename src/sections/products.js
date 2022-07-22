@@ -15,11 +15,9 @@ const Products = ({ data }) => {
       <Container sx={styles.container}>
         <Box></Box>
         <Container sx={styles.carouselsWrapper}>
-          {/* <Box > */}
           <Link sx={styles.logo} label="" path="/">
             <Image sx={styles.logo.img} src={Logo} alt="logo" />
           </Link>
-          {/* </Box> */}
           <SectionHeading
             title="PRODUCT TOOL BOOKING"
             sx={styles.sectionHeading}
@@ -58,12 +56,13 @@ to {
 
 const styles = {
   container: {
+    px: ["0", "0", "0", "auto"],
     display: "grid",
     gridTemplateColumns: [
       "repeat(1, 1fr)",
       "repeat(1, 1fr)",
-      "repeat(3, 1fr)",
-      "repeat(3, 1fr)",
+      "repeat(1, 1fr)",
+      "100px 1fr 100px",
       "100px 1fr 100px",
     ],
   },
