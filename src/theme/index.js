@@ -97,12 +97,13 @@ export default {
     },
     header: {
       position: "fixed",
+      top: 0,
       left: 0,
       right: 0,
       padding: "20px 0",
       transition: "all 0.3s ease-in-out 0s",
       "&.is-mobile-menu": {
-        backgroundColor: "text",
+        backgroundColor: "lightRed",
       },
       "@media only screen and (min-width: 768px)": {
         position: "absolute",

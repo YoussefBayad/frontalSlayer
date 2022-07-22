@@ -11,19 +11,19 @@ function Dropdown({ items, path, label, closeMobileMenu, innerDropdown, i }) {
   const [dropdown, setDropdown] = useState(false);
 
   const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
-    }
+    // if (window.innerWidth < 960) {
+    //   setDropdown(false);
+    // } else {
+    setDropdown(true);
+    // }
   };
 
   const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
+    // if (window.innerWidth < 960) {
+    //   setDropdown(false);
+    // } else {
+    setDropdown(false);
+    // }
   };
   const handleClick = () => setClick(!click);
 
@@ -95,9 +95,9 @@ const styles = {
     },
     plus: {
       ml: "5px",
-      "@media screen and (max-width: 768px)": {
-        display: "none",
-      },
+      // "@media screen and (max-width: 768px)": {
+      //   display: "none",
+      // },
     },
   },
 
