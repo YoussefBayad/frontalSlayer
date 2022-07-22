@@ -165,7 +165,7 @@ const styles = {
     alignSelf: "flex-start",
     position: "fixed",
     top: ["150px", "170px"],
-    left: ["5%", "5%", "5%", "10%", "10%", "20%", "20%", "20%"],
+    left: ["5%", "5%", "5%", "20%", "20%", "20%", "20%", "20%"],
     "@media only screen and (min-width: 768px)": {
       position: "block",
     },

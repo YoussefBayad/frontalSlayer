@@ -105,7 +105,7 @@ const data = {
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
-      <Layout>
+      <Layout spaceLeft>
         <SEO title="Products" />
         <Products data={data} />
       </Layout>
