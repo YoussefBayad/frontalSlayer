@@ -5,7 +5,7 @@ import Subscribe from "sections/subscribe";
 import Footer from "./footer";
 import Header from "./header/header";
 import Logo from "./logo";
-export default function Layout({ children, spaceLeft, homeToggle }) {
+export default function Layout({ children, spaceLeft, homeToggle, noLogo }) {
   return (
     <React.Fragment>
       <main
@@ -13,7 +13,7 @@ export default function Layout({ children, spaceLeft, homeToggle }) {
           variant: "layout.main",
         }}
       >
-        <Logo home={homeToggle} />
+        <Logo home={homeToggle} noLogo={noLogo} />
         <Header spaceLeft={spaceLeft} homeToggle={homeToggle} />
         {children}
       </main>

@@ -5,24 +5,26 @@ import logo from "assets/images/logo.svg";
 import { keyframes } from "@emotion/core";
 import { motion } from "framer-motion";
 
-export default function Logo({ home, ...props }) {
+export default function Logo({ home, noLogo, ...props }) {
   return (
-    <motion.Box
-      sx={home ? styles.home : styles.logo}
-      initial={{ opacity: 0, scale: 0.5, y: 200 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <Link
-        path="/"
-        sx={{
-          variant: "links.logo",
-        }}
-        {...props}
+    !noLogo && (
+      <motion.Box
+        sx={home ? styles.home : styles.logo}
+        initial={{ opacity: 0, scale: 0.5, y: 200 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        <Image sx={styles.img} src={logo} alt="logo" />
-      </Link>
-    </motion.Box>
+        <Link
+          path="/"
+          sx={{
+            variant: "links.logo",
+          }}
+          {...props}
+        >
+          <Image sx={styles.img} src={logo} alt="logo" />
+        </Link>
+      </motion.Box>
+    )
   );
 }
 const neon = keyframes`
@@ -53,7 +55,10 @@ const styles = {
     "@media only screen and (max-width: 768px)": {
       top: " 50px",
       right: " 50%",
-      transform: " translateX(50%)",
+      transform: " translateX(50%) !important",
+    },
+    img: {
+      height: "15vh",
     },
   },
   logo: {

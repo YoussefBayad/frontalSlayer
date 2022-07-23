@@ -143,6 +143,13 @@ const styles = {
       },
       "&:last-child": {
         borderBottom: "none",
+        // my: 0,
+        // py: 0,
+      },
+      "&:first-child": {
+        borderBottom: "none",
+        // my: 0,:
+        // py: 0,
       },
       a: {
         color: "text",
