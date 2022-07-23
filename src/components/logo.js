@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Image, Box } from "theme-ui";
+import { jsx, Image } from "theme-ui";
 import { Link } from "components/link";
 import logo from "assets/images/logo.svg";
 import { keyframes } from "@emotion/core";
@@ -12,7 +12,7 @@ export default function Logo({ home, noLogo, ...props }) {
         sx={home ? styles.home : styles.logo}
         initial={{ opacity: 0, scale: 0.5, y: 200 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       >
         <Link
           path="/"
