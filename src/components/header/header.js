@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Container, MenuButton, Flex, Button } from "theme-ui";
 import { useState } from "react";
-import { GrClose } from "react-icons/gr";
+import { AiOutlineClose } from "react-icons/ai";
 import Sticky from "react-stickynode";
 import { Link } from "components/link";
 import menuItems from "./header.data";
@@ -84,9 +84,9 @@ export default function Header({ spaceLeft, homeToggle, ...props }) {
 
               {mobileMenu ? (
                 <Button variant="text" sx={styles.closeButton}>
-                  <GrClose
+                  <AiOutlineClose
                     onClick={closeMobileMenu}
-                    color="white"
+                    fill="white"
                     size="20px"
                   />
                 </Button>
@@ -125,7 +125,12 @@ const styles = {
   headerWrapper: {
     position: "relative",
     "@media only screen and (max-width: 768px)": {
-      backgroundColor: "backgroundSecondary",
+      backgroundColor: "lightRed",
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      zIndex: "10",
     },
   },
   headerInner: {
@@ -137,8 +142,9 @@ const styles = {
       ".navbar": {
         position: "absolute",
         top: "100%",
+        minHeight: "100vh !important",
         backgroundColor: "backgroundSecondary",
-        width: "100%",
+        width: "100vw",
         left: 0,
         p: "20px 30px",
         display: "block",
@@ -147,6 +153,7 @@ const styles = {
         visibility: "hidden",
         minHeight: "calc(100vh - 77px)",
         transition: "all 0.3s ease-in-out 0s",
+        m: 0,
         "&.active": {
           opacity: 1,
           visibility: "visible",
@@ -155,7 +162,7 @@ const styles = {
         ul: {
           display: "block",
           "li + li": {
-            marginTop: 5,
+            marginTop: 1,
           },
           a: {
             color: "white",
@@ -217,6 +224,7 @@ const styles = {
       ml: "3px",
       path: {
         stroke: "#fff",
+        fill: "#fff",
       },
     },
   },
@@ -241,20 +249,6 @@ const styles = {
     "&:hover:after": {
       transform: "scaleX(1)",
       transformOrigin: "bottom left",
-    },
-  },
-  dropdownLink: {
-    mb: 20,
-    a: {
-      display: "flex",
-      alignItems: "center",
-      position: "relative",
-    },
-    plus: {
-      ml: "5px",
-      "@media screen and (max-width: 768px)": {
-        display: "none",
-      },
     },
   },
 };

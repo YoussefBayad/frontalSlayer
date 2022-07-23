@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex } from "theme-ui";
+import { jsx, Flex, Box } from "theme-ui";
 import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
@@ -29,35 +29,41 @@ function Dropdown({ items, path, label, closeMobileMenu, innerDropdown, i }) {
     },
   };
   const onMouseEnter = () => {
-    // if (window.innerWidth < 960) {
-    //   setDropdown(false);
-    // } else {
-    setDropdown(true);
-    // }
+    if (window.innerWidth < 960) {
+      return;
+    } else {
+      setDropdown(true);
+    }
   };
 
   const onMouseLeave = () => {
-    // if (window.innerWidth < 960) {
-    //   setDropdown(false);
-    // } else {
-    setDropdown(false);
-    // }
+    if (window.innerWidth < 960) {
+      return;
+    } else {
+      setDropdown(false);
+    }
   };
   const handleClick = () => setClick(!click);
+  const handleDropdownClick = () => {
+    console.log("hiii");
+    setDropdown((prev) => !prev);
+  };
 
   return (
     <motion.li
       key={i}
       sx={innerDropdown ? styles.innerDropdownLink : styles.dropdownLink}
     >
-      <Link path={path} label={label} onClick={closeMobileMenu}>
-        {label}{" "}
+      <Box sx={styles.dropdownLinkWrapper}>
+        <Link path={path} label={label} onClick={closeMobileMenu}>
+          {label}{" "}
+        </Link>
         <FaPlus
           onMouseEnter={onMouseEnter}
-          // onMouseLeave={onMouseLeave}
-          sx={styles.dropdownLink.plus}
+          onClick={handleDropdownClick}
+          sx={styles.dropdownLinkWrapper.plus}
         />
-      </Link>
+      </Box>
       {dropdown && (
         <motion.Flex
           as="nav"
@@ -74,6 +80,7 @@ function Dropdown({ items, path, label, closeMobileMenu, innerDropdown, i }) {
           {items?.map(({ isDropdown, dropdownItems, label, path }, i) => {
             return isDropdown ? (
               <Dropdown
+                key={i}
                 label={label}
                 path={path}
                 items={dropdownItems}
@@ -109,16 +116,17 @@ export default Dropdown;
 const styles = {
   dropdownLink: {
     mb: 20,
-    a: {
-      display: "flex",
-      alignItems: "center",
-      position: "relative",
-    },
+  },
+  dropdownLinkWrapper: {
+    display: "flex",
+    alignItems: "center",
+    position: "relative",
     plus: {
+      cursor: "pointer",
       ml: "5px",
-      // "@media screen and (max-width: 768px)": {
-      //   display: "none",
-      // },
+      "@media screen and (max-width: 768px)": {
+        width: "25px",
+      },
     },
   },
 
@@ -129,7 +137,9 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     color: "text",
-    ml: "40px",
+    ml: ["15px", "15px", "40px"],
+    mb: "20px",
+    width: ["150px", "auto"],
     // mt: " 10px",
     // mb: " 30px",
     li: {
