@@ -9,7 +9,7 @@ import { Link } from "components/link";
 function Dropdown({ items, path, label, closeMobileMenu, innerDropdown, i }) {
   const [click, setClick] = useState(false);
 
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState(true);
 
   const dropdownAnimate = {
     enter: {
@@ -45,8 +45,7 @@ function Dropdown({ items, path, label, closeMobileMenu, innerDropdown, i }) {
   };
   const handleClick = () => setClick(!click);
   const handleDropdownClick = () => {
-    console.log("hiii");
-    setDropdown((prev) => !prev);
+    // setDropdown((prev) => !prev);
   };
 
   return (
@@ -62,6 +61,7 @@ function Dropdown({ items, path, label, closeMobileMenu, innerDropdown, i }) {
           onMouseEnter={onMouseEnter}
           onClick={handleDropdownClick}
           sx={styles.dropdownLinkWrapper.plus}
+          fill="white"
         />
       </Box>
       {dropdown && (
@@ -124,6 +124,8 @@ const styles = {
     plus: {
       cursor: "pointer",
       ml: "5px",
+      fill='white'
+
       "@media screen and (max-width: 768px)": {
         width: "25px",
       },
