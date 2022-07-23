@@ -142,7 +142,7 @@ const styles = {
       ".navbar": {
         position: "absolute",
         top: "100%",
-        minHeight: "100vh !important",
+        minHeight: " calc(100vh - 0px) !important ;",
         backgroundColor: "backgroundSecondary",
         width: "100vw",
         left: 0,
@@ -154,6 +154,7 @@ const styles = {
         minHeight: "calc(100vh - 77px)",
         transition: "all 0.3s ease-in-out 0s",
         m: 0,
+        pb: "300px",
         "&.active": {
           opacity: 1,
           visibility: "visible",

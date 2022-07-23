@@ -19,9 +19,9 @@ function SlickArrow({ className, onClick, control }) {
       sx={styles.paginationButton}
     >
       {control === "prev" ? (
-        <IoIosArrowDropleft size="32px" fill="#ffc0c0" />
+        <IoIosArrowDropleft size="32px" fill="white" />
       ) : (
-        <IoIosArrowDropright size="32px" fill="#ffc0c0" />
+        <IoIosArrowDropright size="32px" fill="white" />
       )}
     </Button>
   );
@@ -33,8 +33,8 @@ const settings = {
   //   pauseOnFocus: true,
   //   autoplay: true,
   //   autoplaySpeed: 2000,
-  nextArrow: <SlickArrow control="next" />,
-  prevArrow: <SlickArrow control="prev" />,
+  nextArrow: <SlickArrow fill="white" control="next" />,
+  prevArrow: <SlickArrow fill="white" control="prev" />,
   slidesToShow: 3,
   slidesToScroll: 1,
   responsive: [
@@ -129,7 +129,7 @@ const styles = {
     placeItems: "center",
     position: "relative",
     shelf: {
-      maxWidth: ["130%", "80%", "80%", "70%", "60%", "35%"],
+      maxWidth: ["120%", "80%", "80%", "70%", "60%", "35%"],
     },
     a: {
       position: "absolute",

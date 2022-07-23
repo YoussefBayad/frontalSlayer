@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image } from "theme-ui";
 import Logo from "assets/images/logo.svg";
+import bottomShelf from "assets/images/bottomShelfs.PNG";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
@@ -28,6 +29,7 @@ const Products = ({ data }) => {
             <Carousel data={data.rowTwo} />
             <Carousel data={data.rowThree} />
           </Box>
+          <Image sx={styles.bottomShelf} src={bottomShelf} alt="shelfs" />
         </Container>
         <RightNav sx={styles.right} />
       </Container>
@@ -99,5 +101,8 @@ const styles = {
       textShadow:
         "  0 0 15px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
     },
+  },
+  bottomShelf: {
+    mt: "100px",
   },
 };
