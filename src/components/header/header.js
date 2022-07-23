@@ -111,7 +111,7 @@ const styles = {
       display: "none",
     },
     position: "absolute",
-    top: ["100px"],
+    top: ["50px"],
     left: ["2%", "2%", "20%", "25%"],
   },
   homeToggle: {
