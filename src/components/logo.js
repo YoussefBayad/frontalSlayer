@@ -54,7 +54,7 @@ const styles = {
     zIndex: "10",
     "@media only screen and (max-width: 768px)": {
       top: " 50px",
-      right: " 50%",
+      right: "50%",
       transform: " translateX(50%) !important",
     },
     img: {

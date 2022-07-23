@@ -146,7 +146,7 @@ const styles = {
         backgroundColor: "backgroundSecondary",
         width: "100vw",
         left: 0,
-        p: "20px 30px",
+        p: "20px 45px",
         display: "block",
         boxShadow: "0 6px 13px rgba(38,78,118,0.1)",
         opacity: 0,

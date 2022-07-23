@@ -9,7 +9,7 @@ import { Link } from "components/link";
 function Dropdown({ items, path, label, closeMobileMenu, innerDropdown, i }) {
   const [click, setClick] = useState(false);
 
-  const [dropdown, setDropdown] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
 
   const dropdownAnimate = {
     enter: {
@@ -45,7 +45,7 @@ function Dropdown({ items, path, label, closeMobileMenu, innerDropdown, i }) {
   };
   const handleClick = () => setClick(!click);
   const handleDropdownClick = () => {
-    // setDropdown((prev) => !prev);
+    setDropdown((prev) => !prev);
   };
 
   return (
