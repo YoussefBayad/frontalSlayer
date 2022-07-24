@@ -379,6 +379,7 @@ export default {
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
+      overflowX: "hidden",
     },
     // h1-h6 Heading styles
     h1: {

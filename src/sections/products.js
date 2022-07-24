@@ -2,10 +2,10 @@
 import { jsx, Box, Container, Image } from "theme-ui";
 import Logo from "assets/images/logo.svg";
 import bottomShelf from "assets/images/bottomShelfs.PNG";
+import flowerHolder from "assets/images/flowerHolder.PNG";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
-import { withPlugins } from "next-compose-plugins";
 import Wall from "assets/images/wall2.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
@@ -29,9 +29,12 @@ const Products = ({ data }) => {
             <Carousel data={data.rowTwo} />
             <Carousel data={data.rowThree} />
           </Box>
-          <Image sx={styles.bottomShelf} src={bottomShelf} alt="shelfs" />
+          <Box sx={styles.bottomShelf}>
+            <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
+            <Image src={bottomShelf} alt="shelf" />
+            <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
+          </Box>
         </Container>
-        <RightNav sx={styles.right} />
       </Container>
     </Box>
   );
@@ -58,15 +61,17 @@ to {
 
 const styles = {
   container: {
+    position: "relative",
     px: ["0", "0", "0", "auto"],
     display: "grid",
     gridTemplateColumns: [
-      "repeat(1, 1fr)",
-      "repeat(1, 1fr)",
+      "repeat(1, 0.7fr)",
+      "repeat(1, 0.7fr)",
       "repeat(1, 1fr)",
       "100px 1fr 100px",
       "100px 1fr 100px",
     ],
+    placeContent: "center",
   },
   right: {
     position: "fixed",
@@ -78,10 +83,11 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     backgroundImage: `url(${Wall})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
+    backgroundPosition: "top",
+    backgroundSize: ["cover"],
+    backgroundRepeat: "repeat",
     pb: "50px",
+    boxShadow: "inset 0 8px 30px -4px #ff4240",
   },
   logo: {
     img: {
@@ -104,5 +110,19 @@ const styles = {
   },
   bottomShelf: {
     mt: "100px",
+  },
+  leftFlowers: {
+    height: ["10%", "35%"],
+    position: "absolute",
+    transform: "translateX(0%)",
+    left: ["calc(0% - 13px)", "calc(0% - 10px)", "calc(0% - 195px)"],
+    bottom: ["70px", "70px", "120px"],
+  },
+  rightFlowers: {
+    height: ["10%", "35%"],
+    position: "absolute",
+    transform: "translateX(0%)",
+    right: ["calc(0% - 13px)", "calc(0% - 10px)", "calc(0% - 195px)"],
+    bottom: ["70px", "70px", "120px"],
   },
 };

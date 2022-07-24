@@ -115,7 +115,7 @@ const styles = {
     },
   },
   slider: {
-    width: ["200px", "200px", "200px", "330px", "30%"],
+    width: ["150px", "150px", "200px", "330px", "30%"],
     mx: "auto",
     ".slick-list": {
       // mx: [null, null, null, null, -2, 0],
@@ -129,12 +129,12 @@ const styles = {
     placeItems: "center",
     position: "relative",
     shelf: {
-      maxWidth: ["120%", "80%", "80%", "70%", "60%", "35%"],
+      maxWidth: ["130%", "80%", "80%", "70%", "60%", "35%"],
     },
     a: {
       position: "absolute",
       cursor: "pointer",
-      top: ["10px", "11px", "12px", "12px", "15px"],
+      top: ["4px", "11px", "12px", "12px", "15px"],
       color: "white",
       zIndex: "5",
       textShadow:

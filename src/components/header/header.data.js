@@ -66,8 +66,8 @@ export default [
               },
 
               {
-                path: "/products/wigs/custom/waterproof",
-                label: "WATERPROOF",
+                path: "/products/wigs/custom/watercolor",
+                label: "WATERCOLOR",
               },
             ],
           },
@@ -96,6 +96,7 @@ export default [
       {
         path: "/products/frontals",
         label: "FRONTALS",
+        isDropdown: true,
         dropdownItems: [
           {
             path: "/products/frontals/hd",
