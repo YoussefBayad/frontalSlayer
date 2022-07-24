@@ -3,6 +3,7 @@ import { jsx, Box, Container, Image } from "theme-ui";
 import Logo from "assets/images/logo.svg";
 import bottomShelf from "assets/images/bottomShelfs.PNG";
 import flowerHolder from "assets/images/flowerHolder.PNG";
+import phone from "assets/images/phone.PNG";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
@@ -31,7 +32,14 @@ const Products = ({ data }) => {
           </Box>
           <Box sx={styles.bottomShelf}>
             <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
-            <Image src={bottomShelf} alt="shelf" />
+            <Box sx={styles.shelfWrapper}>
+              <Image sx={styles.shelfWrapper.phone} src={phone} alt="shelf" />
+              <Image
+                sx={styles.shelfWrapper.shelf}
+                src={bottomShelf}
+                alt="shelf"
+              />
+            </Box>
             <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
           </Box>
         </Container>
@@ -87,7 +95,6 @@ const styles = {
     backgroundSize: ["cover"],
     backgroundRepeat: "repeat",
     pb: "50px",
-    boxShadow: "inset 0 8px 30px -4px #ff4240",
   },
   logo: {
     img: {
@@ -110,6 +117,17 @@ const styles = {
   },
   bottomShelf: {
     mt: "100px",
+  },
+  shelfWrapper: {
+    position: "relative",
+
+    shelf: {},
+    phone: {
+      position: "absolute",
+      height: [" 40px", " 86px"],
+      top: ["-20px", " 0"],
+      left: ["20px", " 133px"],
+    },
   },
   leftFlowers: {
     height: ["10%", "35%"],
