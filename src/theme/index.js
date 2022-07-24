@@ -136,6 +136,9 @@ export default {
       //   background: "rgba(144,14,12,1) ",
       // },
     },
+    products: {
+      overflowX: "hidden",
+    },
     features: {
       pt: [7, 7, 7, 8, 8, 7, 7],
       pb: [7, 7, 7, 8, 9, 130, 150],

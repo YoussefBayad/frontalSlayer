@@ -124,25 +124,25 @@ const styles = {
   },
   shelfWrapper: {
     position: "relative",
-    height: ["120px", "auto"],
+    height: ["120px", " 167px !important", "auto"],
     shelf: {},
     phone: {
       position: "absolute",
       height: [" 40px", " 86px"],
-      top: ["-20px", " 0"],
+      top: ["-23px", " 0"],
       left: ["20px", " 133px"],
       cursor: "pointer",
     },
   },
   leftFlowers: {
-    height: ["10%", "35%"],
+    height: ["10%", "10%", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
     left: ["calc(0% - 10px)", "calc(0% - 10px)", "calc(0% - 195px)"],
     bottom: ["0px", "0px", "120px"],
   },
   rightFlowers: {
-    height: ["10%", "35%"],
+    height: ["10%", "10%", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
     right: ["calc(0% - 10px)", "calc(0% - 10px)", "calc(0% - 195px)"],
@@ -159,7 +159,7 @@ const styles = {
     backgroundSize: " cover",
     backgroundRepeat: " no-repeat",
     position: " absolute",
-    bottom: " -140px",
+    bottom: " -185px",
     zIndex: " -1",
   },
 };
