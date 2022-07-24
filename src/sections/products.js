@@ -8,7 +8,8 @@ import floor from "assets/images/floor.svg";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
-import Wall from "assets/images/wall2.png";
+import Wall from "assets/images/wall.png";
+import WallBig from "assets/images/wall2.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 
@@ -34,7 +35,7 @@ const Products = ({ data }) => {
           <Box sx={styles.bottomShelf}>
             <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
             <Box sx={styles.shelfWrapper}>
-              <Link path="/contact" label="">
+              <Link sx={styles.shelfWrapper.phoneLink} path="/contact" label="">
                 <Image sx={styles.shelfWrapper.phone} src={phone} alt="shelf" />
               </Link>
               <Image
@@ -46,8 +47,8 @@ const Products = ({ data }) => {
             <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
           </Box>
         </Container>
+        <Box sx={styles.floor}></Box>
       </Container>
-      <Box sx={styles.floor}></Box>
     </Box>
   );
 };
@@ -77,8 +78,8 @@ const styles = {
     px: ["0", "0", "0", "auto"],
     display: "grid",
     gridTemplateColumns: [
-      "repeat(1, 0.7fr)",
-      "repeat(1, 0.7fr)",
+      "repeat(1,0.7fr)",
+      "repeat(1,0.7fr)",
       "repeat(1, 1fr)",
       "100px 1fr 100px",
       "100px 1fr 100px",
@@ -94,10 +95,10 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundImage: `url(${Wall})`,
+    backgroundImage: [`url(${Wall})`, `url(${Wall})`, `url(${WallBig})`],
     backgroundPosition: "top",
-    backgroundSize: ["cover"],
-    backgroundRepeat: "no-repeat",
+    backgroundSize: ["contain", "contain", "cover"],
+    backgroundRepeat: ["round", "round", "no-repeat"],
     // pb: "50px",
   },
   logo: {
@@ -123,14 +124,22 @@ const styles = {
     mt: "100px",
   },
   shelfWrapper: {
-    position: "relative",
     height: ["120px", " 167px !important", "auto"],
-    shelf: {},
+
+    shelf: {
+      position: "absolute",
+      right: "8%",
+      bottom: " -37px !important",
+      width: " 80%",
+    },
+    phoneLink: {
+      position: "relative",
+    },
     phone: {
       position: "absolute",
       height: [" 40px", " 86px"],
-      top: ["-23px", " 0"],
-      left: ["20px", " 133px"],
+      bottom: ["90px", "90px", " 0"],
+      left: ["66px", "66px", " 133px"],
       cursor: "pointer",
     },
   },
@@ -139,27 +148,27 @@ const styles = {
     position: "absolute",
     transform: "translateX(0%)",
     left: ["calc(0% - 10px)", "calc(0% - 10px)", "calc(0% - 195px)"],
-    bottom: ["0px", "0px", "120px"],
+    bottom: ["0px", "0px", "-20px"],
   },
   rightFlowers: {
     height: ["10%", "10%", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
     right: ["calc(0% - 10px)", "calc(0% - 10px)", "calc(0% - 195px)"],
-    bottom: ["0px", "0px", "120px"],
+    bottom: ["0px", "0px", "-20px"],
   },
   floor: {
-    width: " 100%",
-    height: " 200px",
+    position: " absolute",
+    bottom: [" -187px", " -187px", " -284px"],
+    zIndex: " -1",
+    width: " 100vw",
+    height: [" 200px", " 200px", " 311px"],
     backgroundColor: " white",
-    // backgroundImage:
-    //   "  linear-gradient(135deg, #ffffff 25%, transparent 25%), linear-gradient(225deg, #ffffff 25%, transparent 25%), linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(315deg, #ffffff 25%, #000 25%)",
+    left: ["auto", "auto", "50%"],
+    transform: ["", "", "translateX(-50%) "],
     backgroundImage: `url(${floor})`,
     backgroundPosition: " center",
     backgroundSize: " cover",
     backgroundRepeat: " no-repeat",
-    position: " absolute",
-    bottom: " -185px",
-    zIndex: " -1",
   },
 };
