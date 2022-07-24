@@ -77,7 +77,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    mt: ["50px", "50px", "50px", 0],
+    mt: ["50px", "50px", "70px", 0],
   },
   productsCarousel: {
     width: ["80%", "100%"],
@@ -129,12 +129,12 @@ const styles = {
     placeItems: "center",
     position: "relative",
     shelf: {
-      width: ["100%", "80%", "80%", "70%", "60%", "35%"],
+      width: ["100%", "100%", "100%", "100%", "100%", "100%"],
     },
     a: {
       position: "absolute",
       cursor: "pointer",
-      top: ["-1px", "11px", "12px", "12px", "15px"],
+      top: ["-1px", "-1px", "-1px", "-1px", "-1px"],
       color: "white",
       zIndex: "5",
       fontSize: "smaller",
