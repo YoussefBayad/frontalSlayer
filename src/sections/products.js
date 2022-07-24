@@ -4,6 +4,7 @@ import Logo from "assets/images/logo.svg";
 import bottomShelf from "assets/images/bottomShelfs.PNG";
 import flowerHolder from "assets/images/flowerHolder.PNG";
 import phone from "assets/images/phone.PNG";
+import floor from "assets/images/floor.svg";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
@@ -33,7 +34,9 @@ const Products = ({ data }) => {
           <Box sx={styles.bottomShelf}>
             <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
             <Box sx={styles.shelfWrapper}>
-              <Image sx={styles.shelfWrapper.phone} src={phone} alt="shelf" />
+              <Link path="/contact" label="">
+                <Image sx={styles.shelfWrapper.phone} src={phone} alt="shelf" />
+              </Link>
               <Image
                 sx={styles.shelfWrapper.shelf}
                 src={bottomShelf}
@@ -44,6 +47,7 @@ const Products = ({ data }) => {
           </Box>
         </Container>
       </Container>
+      <Box sx={styles.floor}></Box>
     </Box>
   );
 };
@@ -93,8 +97,8 @@ const styles = {
     backgroundImage: `url(${Wall})`,
     backgroundPosition: "top",
     backgroundSize: ["cover"],
-    backgroundRepeat: "repeat",
-    pb: "50px",
+    backgroundRepeat: "no-repeat",
+    // pb: "50px",
   },
   logo: {
     img: {
@@ -120,27 +124,42 @@ const styles = {
   },
   shelfWrapper: {
     position: "relative",
-
+    height: ["120px", "auto"],
     shelf: {},
     phone: {
       position: "absolute",
       height: [" 40px", " 86px"],
       top: ["-20px", " 0"],
       left: ["20px", " 133px"],
+      cursor: "pointer",
     },
   },
   leftFlowers: {
     height: ["10%", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
-    left: ["calc(0% - 13px)", "calc(0% - 10px)", "calc(0% - 195px)"],
-    bottom: ["70px", "70px", "120px"],
+    left: ["calc(0% - 10px)", "calc(0% - 10px)", "calc(0% - 195px)"],
+    bottom: ["0px", "0px", "120px"],
   },
   rightFlowers: {
     height: ["10%", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
-    right: ["calc(0% - 13px)", "calc(0% - 10px)", "calc(0% - 195px)"],
-    bottom: ["70px", "70px", "120px"],
+    right: ["calc(0% - 10px)", "calc(0% - 10px)", "calc(0% - 195px)"],
+    bottom: ["0px", "0px", "120px"],
+  },
+  floor: {
+    width: " 100%",
+    height: " 200px",
+    backgroundColor: " white",
+    // backgroundImage:
+    //   "  linear-gradient(135deg, #ffffff 25%, transparent 25%), linear-gradient(225deg, #ffffff 25%, transparent 25%), linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(315deg, #ffffff 25%, #000 25%)",
+    backgroundImage: `url(${floor})`,
+    backgroundPosition: " center",
+    backgroundSize: " cover",
+    backgroundRepeat: " no-repeat",
+    position: " absolute",
+    bottom: " -140px",
+    zIndex: " -1",
   },
 };

@@ -375,11 +375,13 @@ export default {
 
   styles: {
     // To add base, top-level styles to the <body> element, use theme.styles.root.
+    html: {
+      overflowX: "hidden",
+    },
     root: {
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
-      overflowX: "hidden",
     },
     // h1-h6 Heading styles
     h1: {
