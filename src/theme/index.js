@@ -137,7 +137,7 @@ export default {
       // },
     },
     products: {
-      overflowX: "hidden",
+      overflowX: "clip",
     },
     features: {
       pt: [7, 7, 7, 8, 8, 7, 7],

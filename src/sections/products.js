@@ -128,9 +128,9 @@ const styles = {
 
     shelf: {
       position: "absolute",
-      right: "8%",
-      bottom: " -37px !important",
-      width: " 80%",
+      right: ["8%", "8%", "8%", "17.5%"],
+      bottom: [" -37px !important", " -37px !important", " -96px !important"],
+      width: [" 80%", " 80%", " 80%", " 60%"],
     },
     phoneLink: {
       position: "relative",
@@ -138,8 +138,8 @@ const styles = {
     phone: {
       position: "absolute",
       height: [" 40px", " 86px"],
-      bottom: ["90px", "90px", " 0"],
-      left: ["66px", "66px", " 133px"],
+      bottom: ["90px", "90px", " 0", "259px"],
+      left: ["66px", "66px", " 133px", "348px"],
       cursor: "pointer",
     },
   },
