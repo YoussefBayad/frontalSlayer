@@ -35,18 +35,18 @@ const Products = ({ data }) => {
             <Carousel data={data.rowTwo} />
             <Carousel data={data.rowThree} />
           </Box>
-          <Box sx={styles.bottomShelf}>
-            <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
-            <Box sx={styles.shelfWrapper}>
-              <Image
-                sx={styles.shelfWrapper.shelf}
-                src={bottomShelf}
-                alt="shelf"
-              />
-            </Box>
-            <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
-          </Box>
         </Container>
+        <Box sx={styles.bottomShelf}>
+          <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
+          <Box sx={styles.shelfWrapper}>
+            <Image
+              sx={styles.shelfWrapper.shelf}
+              src={bottomShelf}
+              alt="shelf"
+            />
+          </Box>
+          <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
+        </Box>
         <Box sx={styles.floor}></Box>
       </Container>
     </Box>
@@ -104,7 +104,9 @@ const styles = {
     backgroundSize: ["contain", "contain", "cover"],
     backgroundRepeat: ["repeat", "repeat", "no-repeat"],
     p: 0,
-    boxShadow: "0 0 15px 5px #e53030",
+    // boxShadow: "0 0 15px 5px #e53030",
+    filter: "drop-shadow(0px 26px 14px #ec6868)",
+    height: "150%",
   },
   logo: {
     img: {
@@ -131,6 +133,7 @@ const styles = {
   },
   bottomShelf: {
     mt: "20px",
+    zIndex: "4",
   },
   shelfWrapper: {
     height: ["120px", " 167px !important", "auto"],
@@ -174,7 +177,7 @@ const styles = {
   floor: {
     position: " absolute",
     bottom: [" -220px", " -220px", " -284px"],
-    zIndex: " -1",
+    zIndex: " 2",
     width: " 100vw",
     height: [" 250px", " 250px", " 311px"],
     backgroundColor: " white",

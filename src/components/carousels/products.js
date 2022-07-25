@@ -128,7 +128,7 @@ const styles = {
       width: "50% !important",
       height: "50% !important",
       mx: "auto !important",
-      ml: "15px",
+      ml: "15px !important",
     },
   },
   shelfWrapper: {
