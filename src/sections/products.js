@@ -9,7 +9,7 @@ import top from "assets/images/topfull.png";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
-import WallBig from "assets/images/wall.PNG";
+import WallBig from "assets/images/wall.png";
 import WallSmall from "assets/images/wall22.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
