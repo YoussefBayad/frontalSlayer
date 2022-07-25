@@ -35,9 +35,9 @@ const Products = ({ data }) => {
           <Box sx={styles.bottomShelf}>
             <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
             <Box sx={styles.shelfWrapper}>
-              <Link sx={styles.shelfWrapper.phoneLink} path="/contact" label="">
+              {/* <Link sx={styles.shelfWrapper.phoneLink} path="/contact" label="">
                 <Image sx={styles.shelfWrapper.phone} src={phone} alt="shelf" />
-              </Link>
+              </Link> */}
               <Image
                 sx={styles.shelfWrapper.shelf}
                 src={bottomShelf}
@@ -132,9 +132,14 @@ const styles = {
 
     shelf: {
       position: "absolute",
-      right: ["8%", "8%", "8%", "17.5%"],
-      bottom: [" -37px !important", " -37px !important", " -96px !important"],
-      width: [" 80%", " 80%", " 80%", " 60%"],
+      right: ["14%", "14%", "14%", "20.5%"],
+      bottom: [
+        " -9px !important",
+        " -9px !important",
+        " -9px !important",
+        " -14px !important",
+      ],
+      width: [" 70%", " 70%", " 70%", " 55%"],
     },
     phoneLink: {
       position: "relative",
