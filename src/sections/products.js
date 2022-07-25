@@ -5,7 +5,7 @@ import bottomShelf from "assets/images/bottomShelfs.PNG";
 import flowerHolder from "assets/images/flowerHolder.PNG";
 import phone from "assets/images/phone.PNG";
 import floor from "assets/images/floor.svg";
-import top from "assets/images/top1.png";
+import top from "assets/images/topfull.png";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
@@ -17,7 +17,9 @@ import { Link } from "components/link";
 const Products = ({ data }) => {
   return (
     <Box as="section" variant="section.products">
-      <Box sx={styles.top}></Box>
+      <Box sx={styles.top}>
+        <Image src={top} alt="roof" />
+      </Box>
 
       <Container sx={styles.container}>
         <Box></Box>
@@ -105,7 +107,8 @@ const styles = {
     backgroundRepeat: ["repeat", "repeat", "no-repeat"],
     p: 0,
     // boxShadow: "0 0 15px 5px #e53030",
-    filter: "drop-shadow(0px 26px 14px #ec6868)",
+    stroke: " #ff5b59",
+    filter: "drop-shadow(0px 26px 14px #ff5b59)",
     height: "150%",
   },
   logo: {
@@ -189,13 +192,14 @@ const styles = {
     backgroundRepeat: " no-repeat",
   },
   top: {
-    zIndex: " -1",
+    zIndex: " 1",
     width: " 100vw",
-    height: [" 23px", " 23px", " 60px"],
-    backgroundColor: " #e3d8d7",
-    backgroundImage: `url(${top})`,
-    backgroundPosition: " center",
-    backgroundSize: " cover",
-    backgroundRepeat: " no-repeat",
+    height: [" 50px", " 50px", " 60px"],
+    display: "flex",
+    // backgroundColor: " #e3d8d7",
+    // backgroundImage: `url(${top})`,
+    // backgroundPosition: " center",
+    // backgroundSize: " cover",
+    // backgroundRepeat: " no-repeat",
   },
 };
