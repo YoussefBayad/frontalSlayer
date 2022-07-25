@@ -20,7 +20,7 @@ const styles = {
     borderRadius: "6px",
     height: "100%",
     // width: "100%",
-    mx: "10px",
+    // mx: "10px",
 
     "&:hover": {
       boxShadow: "0px 6px 30px rgba(38, 78, 118, 0.1)",

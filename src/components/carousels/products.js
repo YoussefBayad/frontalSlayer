@@ -41,7 +41,7 @@ const settings = {
     {
       breakpoint: 769,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
       },
     },
@@ -72,17 +72,17 @@ export default Carousel;
 
 const styles = {
   container: {
-    mx: "auto",
-    height: "200px",
+    // mx: "auto",
+    height: ["auto", "auto", "200px"],
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    mt: ["50px", "50px", "70px", 0],
+    mb: ["20px"],
   },
   productsCarousel: {
-    width: ["80%", "100%"],
-    height: ["80%", "100%"],
-    mx: ["auto", 0],
+    // width: ["80%", "100%"],
+    // height: ["80%", "100%"],
+    // mx: ["auto", 0],
   },
   paginationButton: {
     minHeight: "30px",
@@ -96,6 +96,7 @@ const styles = {
     },
     svg: {
       transition: "all 0.2s ease-in-out 0s",
+      width: "20px",
     },
     "&.slick-disabled": {
       color: "#BBC7D7",
@@ -106,16 +107,16 @@ const styles = {
     "&.slick-prev": {
       left: 0,
       transform: "translateX(0%)",
-      left: "calc(0% - 32px)",
+      left: "calc(0% - 0px)",
     },
     "&.slick-next": {
       transform: "translateX(0%)",
-      right: "calc(0% - 32px)",
+      right: "calc(0% - 0px)",
       // right: 0,
     },
   },
   slider: {
-    width: ["120px", "120px", "200px", "330px", "30%"],
+    width: ["200px", "120px", "200px", "330px", "30%"],
     mx: "auto",
     ".slick-list": {
       // mx: [null, null, null, null, -2, 0],
@@ -129,7 +130,7 @@ const styles = {
     placeItems: "center",
     position: "relative",
     shelf: {
-      width: ["100%", "100%", "100%", "100%", "100%", "100%"],
+      width: ["80%", "80%", "100%", "100%", "100%", "100%"],
     },
     a: {
       position: "absolute",

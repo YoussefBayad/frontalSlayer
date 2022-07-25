@@ -1,21 +1,24 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image } from "theme-ui";
-import Logo from "assets/images/logo.svg";
+import Logo from "assets/images/logo.gif";
 import bottomShelf from "assets/images/bottomShelfs.PNG";
 import flowerHolder from "assets/images/flowerHolder.PNG";
 import phone from "assets/images/phone.PNG";
 import floor from "assets/images/floor.svg";
+import top from "assets/images/top1.png";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
 import WallBig from "assets/images/wall2.png";
-import WallSmall from "assets/images/wall3.png";
+import WallSmall from "assets/images/wall2.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 
 const Products = ({ data }) => {
   return (
     <Box as="section" variant="section.products">
+      <Box sx={styles.top}></Box>
+
       <Container sx={styles.container}>
         <Box></Box>
         <Container sx={styles.carouselsWrapper}>
@@ -35,9 +38,6 @@ const Products = ({ data }) => {
           <Box sx={styles.bottomShelf}>
             <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
             <Box sx={styles.shelfWrapper}>
-              {/* <Link sx={styles.shelfWrapper.phoneLink} path="/contact" label="">
-                <Image sx={styles.shelfWrapper.phone} src={phone} alt="shelf" />
-              </Link> */}
               <Image
                 sx={styles.shelfWrapper.shelf}
                 src={bottomShelf}
@@ -102,15 +102,17 @@ const styles = {
     ],
     backgroundPosition: "top",
     backgroundSize: ["contain", "contain", "cover"],
-    backgroundRepeat: ["round", "round", "no-repeat"],
-    // pb: "50px",
+    backgroundRepeat: ["repeat", "repeat", "no-repeat"],
+    p: 0,
   },
   logo: {
     img: {
-      height: [" 17vh", " 17vh", " 17vh", "20vh"],
+      height: [" 100px", " 100px", " 13vh", "20vh"],
+      mt: "15px",
+
       objectFit: "contain",
       stroke: "#fff",
-      animationName: `${neon} `,
+      // animationName: `${neon} `,
       animationDuration: " 0.8s",
       animationIterationCount: "infinite",
       animationDirection: " alternate",
@@ -118,14 +120,16 @@ const styles = {
     },
   },
   sectionHeading: {
-    mb: [0, "60px"],
+    mb: [0, 0],
     h2: {
+      fontSize: "15px",
+
       textShadow:
         "  0 0 15px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
     },
   },
   bottomShelf: {
-    mt: "100px",
+    mt: "20px",
   },
   shelfWrapper: {
     height: ["120px", " 167px !important", "auto"],
@@ -134,9 +138,9 @@ const styles = {
       position: "absolute",
       right: ["14%", "14%", "14%", "20.5%"],
       bottom: [
-        " -9px !important",
-        " -9px !important",
-        " -9px !important",
+        " -20px !important",
+        " -20px !important",
+        " -20px !important",
         " -14px !important",
       ],
       width: [" 70%", " 70%", " 70%", " 55%"],
@@ -153,29 +157,39 @@ const styles = {
     },
   },
   leftFlowers: {
-    height: ["10%", "10%", "35%"],
+    height: ["150px", "150px", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
-    left: ["calc(0% - 10px)", "calc(0% - 10px)", "calc(0% - 195px)"],
-    bottom: ["0px", "0px", "-20px"],
+    left: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
+    bottom: ["-35px"],
   },
   rightFlowers: {
-    height: ["10%", "10%", "35%"],
+    height: ["150px", "150px", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
-    right: ["calc(0% - 10px)", "calc(0% - 10px)", "calc(0% - 195px)"],
-    bottom: ["0px", "0px", "-20px"],
+    right: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
+    bottom: ["-35px"],
   },
   floor: {
     position: " absolute",
-    bottom: [" -187px", " -187px", " -284px"],
+    bottom: [" -180px", " -180px", " -284px"],
     zIndex: " -1",
     width: " 100vw",
-    height: [" 200px", " 200px", " 311px"],
+    height: [" 195px", " 195px", " 311px"],
     backgroundColor: " white",
     left: ["auto", "auto", "50%"],
     transform: ["", "", "translateX(-50%) "],
     backgroundImage: `url(${floor})`,
+    backgroundPosition: " center",
+    backgroundSize: " cover",
+    backgroundRepeat: " no-repeat",
+  },
+  top: {
+    zIndex: " -1",
+    width: " 100vw",
+    height: [" 23px", " 23px", " 60px"],
+    backgroundColor: " #e3d8d7",
+    backgroundImage: `url(${top})`,
     backgroundPosition: " center",
     backgroundSize: " cover",
     backgroundRepeat: " no-repeat",

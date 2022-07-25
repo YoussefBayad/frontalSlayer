@@ -137,7 +137,8 @@ export default {
       // },
     },
     products: {
-      overflowX: "clip",
+      // overflowX: "clip",
+      backgroundColor: "#8d0707",
     },
     features: {
       pt: [7, 7, 7, 8, 8, 7, 7],
