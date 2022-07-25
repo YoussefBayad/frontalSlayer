@@ -9,8 +9,8 @@ import top from "assets/images/top1.png";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
-import WallBig from "assets/images/wall2.png";
-import WallSmall from "assets/images/wall2.png";
+import WallBig from "assets/images/wall.png";
+import WallSmall from "assets/images/wall22.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 
@@ -104,6 +104,7 @@ const styles = {
     backgroundSize: ["contain", "contain", "cover"],
     backgroundRepeat: ["repeat", "repeat", "no-repeat"],
     p: 0,
+    boxShadow: "0 0 15px 5px #e53030",
   },
   logo: {
     img: {
@@ -172,10 +173,10 @@ const styles = {
   },
   floor: {
     position: " absolute",
-    bottom: [" -180px", " -180px", " -284px"],
+    bottom: [" -220px", " -220px", " -284px"],
     zIndex: " -1",
     width: " 100vw",
-    height: [" 195px", " 195px", " 311px"],
+    height: [" 250px", " 250px", " 311px"],
     backgroundColor: " white",
     left: ["auto", "auto", "50%"],
     transform: ["", "", "translateX(-50%) "],

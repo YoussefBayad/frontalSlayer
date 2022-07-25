@@ -5,36 +5,41 @@ import SEO from "components/seo";
 import Layout from "components/layout";
 import Products from "sections/products";
 
-import Wig from "assets/images/wig.png";
-import Transparent from "assets/images/transparent.png";
-import Customized from "assets/images/customized.png";
-// import ex from "assets/images/rowOne.jpg";
+import Wig1 from "assets/images/wigs/1.png";
+import Wig2 from "assets/images/wigs/2.png";
+import Wig3 from "assets/images/wigs/3.png";
+import Wig4 from "assets/images/wigs/4.png";
+import Wig5 from "assets/images/wigs/5.png";
+import Wig6 from "assets/images/wigs/6.png";
+import Wig7 from "assets/images/wigs/7.png";
+import Wig8 from "assets/images/wigs/8.png";
+import Wig9 from "assets/images/wigs/9.png";
 
 const data = {
   rowOne: {
     products: [
       {
-        src: Wig,
+        src: Wig1,
         alt: "wig",
       },
       {
-        src: Wig,
+        src: Wig2,
         alt: "wig",
       },
       {
-        src: Wig,
+        src: Wig3,
         alt: "wig",
       },
       {
-        src: Wig,
+        src: Wig4,
         alt: "wig",
       },
       {
-        src: Wig,
+        src: Wig5,
         alt: "wig",
       },
       {
-        src: Wig,
+        src: Wig6,
         alt: "wig",
       },
     ],
@@ -44,27 +49,27 @@ const data = {
   rowTwo: {
     products: [
       {
-        src: Transparent,
+        src: Wig4,
         alt: "Transparent",
       },
       {
-        src: Transparent,
+        src: Wig5,
         alt: "Transparent",
       },
       {
-        src: Transparent,
+        src: Wig6,
         alt: "Transparent",
       },
       {
-        src: Transparent,
+        src: Wig7,
         alt: "Transparent",
       },
       {
-        src: Transparent,
+        src: Wig8,
         alt: "Transparent",
       },
       {
-        src: Transparent,
+        src: Wig9,
         alt: "Transparent",
       },
     ],
@@ -74,27 +79,27 @@ const data = {
   rowThree: {
     products: [
       {
-        src: Customized,
+        src: Wig7,
         alt: "Customized",
       },
       {
-        src: Customized,
+        src: Wig8,
         alt: "Customized",
       },
       {
-        src: Customized,
+        src: Wig9,
         alt: "Customized",
       },
       {
-        src: Customized,
+        src: Wig1,
         alt: "Customized",
       },
       {
-        src: Customized,
+        src: Wig2,
         alt: "Customized",
       },
       {
-        src: Customized,
+        src: Wig3,
         alt: "Customized",
       },
     ],

@@ -124,6 +124,12 @@ const styles = {
     ".slick-slide": {
       // mr: [null, null, null, null, 4, 0],
     },
+    img: {
+      width: "50% !important",
+      height: "50% !important",
+      mx: "auto !important",
+      ml: "15px",
+    },
   },
   shelfWrapper: {
     display: "grid",
