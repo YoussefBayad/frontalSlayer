@@ -8,8 +8,8 @@ import floor from "assets/images/floor.svg";
 import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
 import LeftNav, { RightNav } from "components/navs";
-import Wall from "assets/images/wall.png";
 import WallBig from "assets/images/wall2.png";
+import WallSmall from "assets/images/wall3.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 
@@ -95,7 +95,11 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundImage: [`url(${Wall})`, `url(${Wall})`, `url(${WallBig})`],
+    backgroundImage: [
+      `url(${WallSmall})`,
+      `url(${WallSmall})`,
+      `url(${WallBig})`,
+    ],
     backgroundPosition: "top",
     backgroundSize: ["contain", "contain", "cover"],
     backgroundRepeat: ["round", "round", "no-repeat"],
