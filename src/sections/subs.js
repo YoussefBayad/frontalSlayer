@@ -6,40 +6,40 @@ import SectionHeading from "components/section-heading";
 import SubCard from "components/cards/sub";
 import { useRouter } from "next/router";
 
-import thumb1 from "assets/images/subs/thumb1.webp";
-import thumb2 from "assets/images/subs/thumb2.webp";
-import thumb3 from "assets/images/subs/thumb3.webp";
-import thumb4 from "assets/images/tbi.webp";
+// import thumb1 from "assets/images/subs/thumb1.webp";
+// import thumb2 from "assets/images/subs/thumb2.webp";
+// import thumb3 from "assets/images/subs/thumb3.webp";
+// import thumb4 from "assets/images/tbi.webp";
 
 const data = [
-  {
-    id: 1,
-    thumb: thumb1,
-    title: `Anxiety`,
-    link: "/mental-health/anxiety",
-    description: `Feeling anxious is a normal reaction to stress, and everyone... `,
-  },
-  {
-    id: 2,
-    thumb: thumb2,
-    title: "Depression",
-    link: "/mental-health/depression",
-    description: `Depression commonly occurs after traumatic events. It is...`,
-  },
-  {
-    id: 3,
-    thumb: thumb3,
-    title: `PTSD`,
-    link: "/mental-health/ptsd",
-    description: `Post-traumatic stress disorder, or PTSD, is a condition that...`,
-  },
-  {
-    id: 4,
-    thumb: thumb4,
-    title: `TBI`,
-    link: "/mental-health/tbi",
-    description: `Traumatic Brain Injury or TBI, is a common deployment-related...`,
-  },
+  // {
+  //   id: 1,
+  //   thumb: thumb1,
+  //   title: `Anxiety`,
+  //   link: "/mental-health/anxiety",
+  //   description: `Feeling anxious is a normal reaction to stress, and everyone... `,
+  // },
+  // {
+  //   id: 2,
+  //   thumb: thumb2,
+  //   title: "Depression",
+  //   link: "/mental-health/depression",
+  //   description: `Depression commonly occurs after traumatic events. It is...`,
+  // },
+  // {
+  //   id: 3,
+  //   thumb: thumb3,
+  //   title: `PTSD`,
+  //   link: "/mental-health/ptsd",
+  //   description: `Post-traumatic stress disorder, or PTSD, is a condition that...`,
+  // },
+  // {
+  //   id: 4,
+  //   thumb: thumb4,
+  //   title: `TBI`,
+  //   link: "/mental-health/tbi",
+  //   description: `Traumatic Brain Injury or TBI, is a common deployment-related...`,
+  // },
 ];
 
 function SlickArrow({ className, onClick, control }) {
