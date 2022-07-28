@@ -137,8 +137,9 @@ export default {
       // },
     },
     products: {
-      // overflowX: "clip",
       backgroundColor: "#8d0707",
+      height: "100vh",
+      overflow: "hidden",
     },
     features: {
       pt: [7, 7, 7, 8, 8, 7, 7],

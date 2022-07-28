@@ -20,44 +20,35 @@ const Products = ({ data }) => {
       <Box sx={styles.top}>
         <Image src={top} alt="roof" />
       </Box>
-
-      <Container sx={styles.container}>
-        <Box></Box>
-        <Container sx={styles.carouselsWrapper}>
-          <Link sx={styles.logo} label="" path="/">
-            <Image sx={styles.logo.img} src={Logo} alt="logo" />
-            {/* <ReactPlayer
+      <Container sx={styles.wigsWrapper}>
+        <Link sx={styles.logo} label="" path="/">
+          <Image sx={styles.logo.img} src={Logo} alt="logo" />
+          {/* <ReactPlayer
               className="react-player fixed-bottom"
               url="/src/assets/images/Logo/FilllogoAnimation.mp4"
               width="100%"
               height="100%"
               controls={true}
             /> */}
-          </Link>
-          <SectionHeading
-            title="PRODUCT TOOL BOOKING"
-            sx={styles.sectionHeading}
-          />
+        </Link>
+        <SectionHeading
+          title="PRODUCT TOOL BOOKING"
+          sx={styles.sectionHeading}
+        />
 
-          <Box>
-            <Shelf data={data.rowOne} />
-            <Shelf data={data.rowTwo} />
-            <Shelf data={data.rowThree} />
-          </Box>
-        </Container>
-        <Box sx={styles.bottomShelf}>
-          <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
-          <Box sx={styles.shelfWrapper}>
-            <Image
-              sx={styles.shelfWrapper.shelf}
-              src={bottomShelf}
-              alt="shelf"
-            />
-          </Box>
-          <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
+        <Box>
+          <Shelf data={data.rowOne} />
+          <Shelf data={data.rowTwo} />
+          <Shelf data={data.rowThree} />
         </Box>
-        <Box sx={styles.floor}></Box>
       </Container>
+      <Box sx={styles.floor}>
+        <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
+        <Box sx={styles.shelfWrapper}>
+          <Image sx={styles.shelfWrapper.shelf} src={bottomShelf} alt="shelf" />
+        </Box>
+        <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
+      </Box>
     </Box>
   );
 };
@@ -82,25 +73,7 @@ to {
 `;
 
 const styles = {
-  container: {
-    position: "relative",
-    px: ["0", "0", "0", "auto"],
-    display: "grid",
-    gridTemplateColumns: [
-      "repeat(1,0.7fr)",
-      "repeat(1,0.7fr)",
-      "repeat(1, 1fr)",
-      "100px 1fr 100px",
-      "100px 1fr 100px",
-    ],
-    placeContent: "center",
-  },
-  right: {
-    position: "fixed",
-    bottom: "100px",
-    right: "100px",
-  },
-  carouselsWrapper: {
+  wigsWrapper: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -111,12 +84,13 @@ const styles = {
     ],
     backgroundPosition: "top",
     backgroundSize: ["contain", "contain", "cover"],
-    backgroundRepeat: ["repeat", "repeat", "no-repeat"],
+    backgroundRepeat: ["no-repeat"],
     p: 0,
     // boxShadow: "0 0 15px 5px #e53030",
     stroke: " #ff5b59",
     filter: "drop-shadow(0px 26px 14px #ff5b59)",
-    height: "150%",
+    height: "100%",
+    width: "75%",
     position: "relative",
     top: " -29px",
   },
@@ -155,63 +129,6 @@ const styles = {
         "  0 0 15px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
     },
   },
-  bottomShelf: {
-    mt: "20px",
-    zIndex: "4",
-  },
-  shelfWrapper: {
-    height: ["120px", " 167px !important", "auto"],
-
-    shelf: {
-      position: "absolute",
-      right: ["14%", "14%", "14%", "20.5%"],
-      bottom: [
-        " -20px !important",
-        " -20px !important",
-        " -20px !important",
-        " -14px !important",
-      ],
-      width: [" 70%", " 70%", " 70%", " 55%"],
-    },
-    phoneLink: {
-      position: "relative",
-    },
-    phone: {
-      position: "absolute",
-      height: [" 40px", " 86px"],
-      bottom: ["90px", "90px", " 0", "259px"],
-      left: ["66px", "66px", " 133px", "348px"],
-      cursor: "pointer",
-    },
-  },
-  leftFlowers: {
-    height: ["150px", "150px", "35%"],
-    position: "absolute",
-    transform: "translateX(0%)",
-    left: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
-    bottom: ["-35px"],
-  },
-  rightFlowers: {
-    height: ["150px", "150px", "35%"],
-    position: "absolute",
-    transform: "translateX(0%)",
-    right: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
-    bottom: ["-35px"],
-  },
-  floor: {
-    position: " absolute",
-    bottom: [" -220px", " -220px", " -284px"],
-    zIndex: " 2",
-    width: " 100vw",
-    height: [" 250px", " 250px", " 311px"],
-    backgroundColor: " white",
-    left: ["auto", "auto", "50%"],
-    transform: ["", "", "translateX(-50%) "],
-    backgroundImage: `url(${floor})`,
-    backgroundPosition: " center",
-    backgroundSize: " cover",
-    backgroundRepeat: " no-repeat",
-  },
   top: {
     zIndex: " 1",
     width: " 100vw",
@@ -222,5 +139,44 @@ const styles = {
     // backgroundPosition: " center",
     // backgroundSize: " cover",
     // backgroundRepeat: " no-repeat",
+  },
+  floor: {
+    position: " relative",
+    bottom: ["26vh"],
+    zIndex: " 2",
+    width: " 100vw",
+    height: ["20vh"],
+    backgroundColor: " white",
+    left: ["0"],
+    backgroundImage: `url(${floor})`,
+    backgroundPosition: " center",
+    backgroundSize: " cover",
+    backgroundRepeat: " no-repeat",
+  },
+  shelfWrapper: {
+    mt: "2.5vh",
+    shelf: {
+      position: "absolute",
+      right: ["14%", "14%", "14%", "20.5%"],
+      bottom: [" 16vh !important"],
+      width: [" 70%", " 70%", " 70%", " 55%"],
+      zIndex: "3",
+    },
+  },
+  leftFlowers: {
+    height: ["150px", "150px", "35%"],
+    position: "absolute",
+    transform: "translateX(0%)",
+    left: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
+    bottom: ["16vh"],
+    zIndex: "3",
+  },
+  rightFlowers: {
+    height: ["150px", "150px", "35%"],
+    position: "absolute",
+    transform: "translateX(0%)",
+    right: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
+    bottom: ["16vh"],
+    zIndex: "3",
   },
 };
