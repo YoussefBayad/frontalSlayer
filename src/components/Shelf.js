@@ -26,7 +26,7 @@ export default Shelf;
 
 const styles = {
   container: {
-    width: "80%",
+    width: "70%",
     p: 0,
     mb: ["20px"],
   },
@@ -37,6 +37,9 @@ const styles = {
     zIndex: "2",
 
     imgWrapper: {
+      display: "grid",
+      placeItems: "center",
+
       img: {
         width: "50%",
         mx: "auto",
@@ -48,6 +51,7 @@ const styles = {
     placeItems: "center",
     position: "relative",
     top: "-6px",
+    zIndex: "-1",
     shelf: {
       width: ["100%"],
       height: "14px",

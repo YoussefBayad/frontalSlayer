@@ -8,7 +8,7 @@ import floor from "assets/images/floor.svg";
 import top from "assets/images/topfull.png";
 import SectionHeading from "components/section-heading";
 // import WallBig from "assets/images/wall.png";
-import WallSmall from "assets/images/wall22.png";
+import WallSmall from "assets/images/wallstretched.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 import Shelf from "components/Shelf";
@@ -117,6 +117,8 @@ const styles = {
     stroke: " #ff5b59",
     filter: "drop-shadow(0px 26px 14px #ff5b59)",
     height: "150%",
+    position: "relative",
+    top: " -29px",
   },
   logo: {
     img: {
