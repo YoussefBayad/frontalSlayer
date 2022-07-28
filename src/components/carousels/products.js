@@ -4,7 +4,7 @@ import { jsx, Box, Container, Button, Image } from "theme-ui";
 import Slider from "react-slick";
 import CarouselCard from "components/cards/carouselCard";
 
-import Shelf from "assets/images/shelf.svg";
+import Shelf from "assets/images/shelf.png";
 
 import { rgba } from "polished";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";

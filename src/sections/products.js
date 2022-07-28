@@ -1,18 +1,18 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image } from "theme-ui";
 import Logo from "assets/images/logo.gif";
+// import Logo from "assets/images/Logo/FrontalSlayerLogoAnimation.mp4";
 import bottomShelf from "assets/images/bottomShelfs.PNG";
 import flowerHolder from "assets/images/flowerHolder.PNG";
-import phone from "assets/images/phone.PNG";
 import floor from "assets/images/floor.svg";
 import top from "assets/images/topfull.png";
-import Carousel from "../components/carousels/products";
 import SectionHeading from "components/section-heading";
-import LeftNav, { RightNav } from "components/navs";
 // import WallBig from "assets/images/wall.png";
 import WallSmall from "assets/images/wall22.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
+import Shelf from "components/Shelf";
+// import ReactPlayer from "react-player";
 
 const Products = ({ data }) => {
   return (
@@ -26,6 +26,13 @@ const Products = ({ data }) => {
         <Container sx={styles.carouselsWrapper}>
           <Link sx={styles.logo} label="" path="/">
             <Image sx={styles.logo.img} src={Logo} alt="logo" />
+            {/* <ReactPlayer
+              className="react-player fixed-bottom"
+              url="/src/assets/images/Logo/FilllogoAnimation.mp4"
+              width="100%"
+              height="100%"
+              controls={true}
+            /> */}
           </Link>
           <SectionHeading
             title="PRODUCT TOOL BOOKING"
@@ -33,9 +40,9 @@ const Products = ({ data }) => {
           />
 
           <Box>
-            <Carousel data={data.rowOne} />
-            <Carousel data={data.rowTwo} />
-            <Carousel data={data.rowThree} />
+            <Shelf data={data.rowOne} />
+            <Shelf data={data.rowTwo} />
+            <Shelf data={data.rowThree} />
           </Box>
         </Container>
         <Box sx={styles.bottomShelf}>
@@ -113,6 +120,18 @@ const styles = {
   },
   logo: {
     img: {
+      height: [" 100px", " 100px", " 13vh", "20vh"],
+      mt: "15px",
+
+      objectFit: "contain",
+      stroke: "#fff",
+      // animationName: `${neon} `,
+      animationDuration: " 0.8s",
+      animationIterationCount: "infinite",
+      animationDirection: " alternate",
+      cursor: "pointer",
+    },
+    video: {
       height: [" 100px", " 100px", " 13vh", "20vh"],
       mt: "15px",
 

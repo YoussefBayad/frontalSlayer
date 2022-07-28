@@ -30,18 +30,6 @@ const data = {
         src: Wig3,
         alt: "wig",
       },
-      {
-        src: Wig4,
-        alt: "wig",
-      },
-      {
-        src: Wig5,
-        alt: "wig",
-      },
-      {
-        src: Wig6,
-        alt: "wig",
-      },
     ],
     title: "HD LACE",
     path: "/products/hd-lace",
@@ -60,18 +48,6 @@ const data = {
         src: Wig6,
         alt: "Transparent",
       },
-      {
-        src: Wig7,
-        alt: "Transparent",
-      },
-      {
-        src: Wig8,
-        alt: "Transparent",
-      },
-      {
-        src: Wig9,
-        alt: "Transparent",
-      },
     ],
     title: "TRANSPARENT LACE",
     path: "/products/transparent-lace",
@@ -88,18 +64,6 @@ const data = {
       },
       {
         src: Wig9,
-        alt: "Customized",
-      },
-      {
-        src: Wig1,
-        alt: "Customized",
-      },
-      {
-        src: Wig2,
-        alt: "Customized",
-      },
-      {
-        src: Wig3,
         alt: "Customized",
       },
     ],
