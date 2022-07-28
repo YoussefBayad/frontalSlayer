@@ -51,6 +51,7 @@ const styles = {
     shelf: {
       width: ["100%"],
       height: "14px",
+      boxShadow: "0 4px 4px -1px #fff9b7",
     },
     a: {
       position: "absolute",
