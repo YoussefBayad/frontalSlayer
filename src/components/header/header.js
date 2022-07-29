@@ -158,6 +158,7 @@ const styles = {
         "&.active": {
           opacity: 1,
           visibility: "visible",
+          height: "100vh",
         },
 
         ul: {
@@ -230,11 +231,11 @@ const styles = {
     },
   },
   listItem: {
-    mb: 20,
+    mb: [0, 0, 20],
     cursor: "pointer",
     position: " relative",
     width: "fit-content",
-
+    fontSize: "",
     "&:after": {
       content: "''",
       position: "absolute",

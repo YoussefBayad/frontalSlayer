@@ -54,15 +54,14 @@ function Dropdown({ items, path, label, closeMobileMenu, innerDropdown, i }) {
       sx={innerDropdown ? styles.innerDropdownLink : styles.dropdownLink}
     >
       <Box sx={styles.dropdownLinkWrapper}>
-        <Link path={path} label={label} onClick={closeMobileMenu}>
-          {label}{" "}
-        </Link>
-        <FaPlus
+        <Link
+          path=""
+          label={label}
           onMouseEnter={onMouseEnter}
           onClick={handleDropdownClick}
-          sx={styles.dropdownLinkWrapper.plus}
-          fill="white"
-        />
+        >
+          {label}
+        </Link>
       </Box>
       {dropdown && (
         <motion.Flex
@@ -115,20 +114,12 @@ export default Dropdown;
 
 const styles = {
   dropdownLink: {
-    mb: 20,
+    // mb: 20,
   },
   dropdownLinkWrapper: {
-    display: "flex",
-    alignItems: "center",
-    position: "relative",
-    plus: {
-      cursor: "pointer",
-      ml: "5px",
-      fill: "white",
-
-      "@media screen and (max-width: 768px)": {
-        width: "25px",
-      },
+    a: {
+      fontWeight: "bold !important",
+      mb: [0, 0, 20],
     },
   },
 
@@ -146,7 +137,7 @@ const styles = {
     // mb: " 30px",
     li: {
       cursor: "pointer",
-      py: 2,
+      // py: 2,
       ":last-child": {
         pb: 0,
       },

@@ -135,7 +135,7 @@ export default [
   },
   {
     path: "/build-a-wig",
-    label: "BUILD A WIG",
+    label: "BUILD-A-WIG",
   },
   {
     path: "/about",
