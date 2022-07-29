@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image } from "theme-ui";
-import Logo from "assets/images/logo.gif";
+import Logo from "assets/images/landingLogo.gif";
 // import Logo from "assets/images/Logo/FrontalSlayerLogoAnimation.mp4";
 import bottomShelf from "assets/images/bottomShelfs.PNG";
 import flowerHolder from "assets/images/flowerHolder.PNG";
@@ -31,6 +31,12 @@ const Products = ({ data }) => {
               height="100%"
               controls={true}
             /> */}
+          {/* <video
+            controls
+            autoPlay
+            src={"/FilllogoAnimation.mp4"}
+            style={{ width: "100px", height: "100px" }}
+          /> */}
         </Link>
 
         <Image src={ptb} sx={styles.sectionHeading} />

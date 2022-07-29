@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Image } from "theme-ui";
 import { Link } from "components/link";
-import logo from "assets/images/logo.svg";
+import logo from "assets/images/logo.gif";
 import { keyframes } from "@emotion/core";
 import { motion } from "framer-motion";
 
@@ -73,7 +73,7 @@ const styles = {
     height: ["5vh", "15vh"],
     objectFit: "contain",
     stroke: "#fff",
-    animationName: `${neon} `,
+    // animationName: `${neon} `,
     animationDuration: " 0.8s",
     animationIterationCount: "infinite",
     animationDirection: " alternate",
