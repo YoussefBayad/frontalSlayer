@@ -6,7 +6,8 @@ import bottomShelf from "assets/images/bottomShelfs.PNG";
 import flowerHolder from "assets/images/flowerHolder.PNG";
 import floor from "assets/images/floor.svg";
 import top from "assets/images/topfull.png";
-import SectionHeading from "components/section-heading";
+import ptb from "assets/images/gif/products-tools-booking.gif";
+
 // import WallBig from "assets/images/wall.png";
 import WallSmall from "assets/images/wallstretched.png";
 import { keyframes } from "@emotion/core";
@@ -31,11 +32,8 @@ const Products = ({ data }) => {
               controls={true}
             /> */}
         </Link>
-        <SectionHeading
-          title="PRODUCT TOOL BOOKING"
-          sx={styles.sectionHeading}
-        />
 
+        <Image src={ptb} sx={styles.sectionHeading} />
         <Box>
           <Shelf data={data.rowOne} />
           <Shelf data={data.rowTwo} />
@@ -121,13 +119,8 @@ const styles = {
     },
   },
   sectionHeading: {
-    mb: [0, 0],
-    h2: {
-      fontSize: "15px",
-
-      textShadow:
-        "  0 0 15px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
-    },
+    width: " 50%",
+    mb: "20px",
   },
   top: {
     zIndex: " 1",
@@ -157,7 +150,7 @@ const styles = {
     mt: "2.5vh",
     shelf: {
       position: "absolute",
-      right: ["14%", "14%", "14%", "20.5%"],
+      right: ["15%"],
       bottom: [" 16vh !important"],
       width: [" 70%", " 70%", " 70%", " 55%"],
       zIndex: "3",

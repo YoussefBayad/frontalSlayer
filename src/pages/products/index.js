@@ -14,16 +14,19 @@ import Wig6 from "assets/images/wigs/6.png";
 import Wig7 from "assets/images/wigs/7.png";
 import Wig8 from "assets/images/wigs/8.png";
 import Wig9 from "assets/images/wigs/9.png";
+import customWig from "assets/images/gif/custom-wig.gif";
+import hdLace from "assets/images/gif/hd-lace.gif";
+import transparentLace from "assets/images/gif/transparent-lace.gif";
 
 const data = {
   rowOne: {
     products: [
       {
-        src: Wig1,
+        src: Wig2,
         alt: "wig",
       },
       {
-        src: Wig2,
+        src: Wig1,
         alt: "wig",
       },
       {
@@ -31,7 +34,7 @@ const data = {
         alt: "wig",
       },
     ],
-    title: "HD LACE",
+    title: hdLace,
     path: "/products/hd-lace",
   },
   rowTwo: {
@@ -49,7 +52,7 @@ const data = {
         alt: "Transparent",
       },
     ],
-    title: "TRANSPARENT LACE",
+    title: transparentLace,
     path: "/products/transparent-lace",
   },
   rowThree: {
@@ -67,7 +70,7 @@ const data = {
         alt: "Customized",
       },
     ],
-    title: "CUSTOM WIG",
+    title: customWig,
     path: "/products/custom",
   },
 };

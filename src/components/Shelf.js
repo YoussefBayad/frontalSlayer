@@ -16,7 +16,9 @@ const Shelf = ({ data }) => {
       </Box>
       <Box sx={styles.shelfWrapper}>
         <Image sx={styles.shelfWrapper.shelf} src={shelf} />
-        <Link path={data.path} label={data.title} />
+        <Link path={data.path} label="">
+          <Image src={data.title} label={data.title} />
+        </Link>
       </Box>
     </Container>
   );
@@ -54,18 +56,21 @@ const styles = {
     zIndex: "-1",
     shelf: {
       width: ["100%"],
-      height: "14px",
-      boxShadow: "0 4px 4px -1px #fff9b7",
+      height: "20px",
+      filter: "drop-shadow(0px 4px 1px #fff9b7)",
     },
     a: {
       position: "absolute",
       cursor: "pointer",
-      top: ["-1px", "-1px", "-1px", "-1px", "-1px"],
+      top: ["4px"],
       color: "white",
       zIndex: "5",
       fontSize: "smaller",
-      textShadow:
-        "  0 0 5px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
+      // textShadow:
+      //   "  0 0 5px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
+      img: {
+        height: "10px",
+      },
     },
   },
 };
