@@ -22,7 +22,7 @@ const Products = ({ data }) => {
         <Image src={top} alt="roof" />
       </Box>
       <Container sx={styles.wigsWrapper}>
-        <Link sx={styles.logo} label="" path="/">
+        <Link sx={styles.logo} label="" path="/home">
           <Image sx={styles.logo.img} src={Logo} alt="logo" />
           {/* <ReactPlayer
               className="react-player fixed-bottom"

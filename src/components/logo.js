@@ -15,7 +15,7 @@ export default function Logo({ home, noLogo, ...props }) {
         transition={{ duration: 1 }}
       >
         <Link
-          path="/"
+          path="/home"
           sx={{
             variant: "links.logo",
           }}
