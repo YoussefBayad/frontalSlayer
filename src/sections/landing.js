@@ -10,7 +10,6 @@ import {
   Flex,
 } from "theme-ui";
 import logo from "assets/images/logo.png";
-import BannerPattern from "assets/images/banner-pattern.webp";
 import { Link } from "components/link";
 import Carousel from "../components/carousels/landing";
 import LeftNav, { RightNav } from "components/navs";
