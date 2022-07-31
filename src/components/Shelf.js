@@ -62,14 +62,14 @@ const styles = {
     a: {
       position: "absolute",
       cursor: "pointer",
-      top: ["4px"],
+      top: ["3px"],
       color: "white",
       zIndex: "5",
       fontSize: "smaller",
       // textShadow:
       //   "  0 0 5px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
       img: {
-        height: "10px",
+        height: "6px",
       },
     },
   },

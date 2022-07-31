@@ -22,24 +22,13 @@ const Products = ({ data }) => {
         <Image src={top} alt="roof" />
       </Box>
       <Container sx={styles.wigsWrapper}>
-        <Link sx={styles.logo} label="" path="/home">
+        <Link sx={styles.logo} label="" path="/">
           <Image sx={styles.logo.img} src={Logo} alt="logo" />
-          {/* <ReactPlayer
-              className="react-player fixed-bottom"
-              url="/src/assets/images/Logo/FilllogoAnimation.mp4"
-              width="100%"
-              height="100%"
-              controls={true}
-            /> */}
-          {/* <video
-            controls
-            autoPlay
-            src={"/FilllogoAnimation.mp4"}
-            style={{ width: "100px", height: "100px" }}
-          /> */}
+        </Link>
+        <Link style={{ display: "grid" }} path="/shop" label="">
+          <Image sx={styles.sectionHeading} src={ptb} />
         </Link>
 
-        <Image src={ptb} sx={styles.sectionHeading} />
         <Box>
           <Shelf data={data.rowOne} />
           <Shelf data={data.rowTwo} />
@@ -50,6 +39,11 @@ const Products = ({ data }) => {
         <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
         <Box sx={styles.shelfWrapper}>
           <Image sx={styles.shelfWrapper.shelf} src={bottomShelf} alt="shelf" />
+          <Box sx={styles.shelfWrapper.comingSoon}>
+            <p>COMING SOON</p>
+            <p>COMING SOON</p>
+            <p>COMING SOON</p>
+          </Box>
         </Box>
         <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
       </Box>
@@ -111,22 +105,12 @@ const styles = {
       animationDirection: " alternate",
       cursor: "pointer",
     },
-    video: {
-      height: [" 100px", " 100px", " 13vh", "20vh"],
-      mt: "15px",
-
-      objectFit: "contain",
-      stroke: "#fff",
-      // animationName: `${neon} `,
-      animationDuration: " 0.8s",
-      animationIterationCount: "infinite",
-      animationDirection: " alternate",
-      cursor: "pointer",
-    },
   },
   sectionHeading: {
-    width: " 50%",
     mb: "20px",
+    cursor: "pointer",
+    mx: "auto",
+    width: "50%",
   },
   top: {
     zIndex: " 1",
@@ -161,13 +145,27 @@ const styles = {
       width: [" 70%", " 70%", " 70%", " 55%"],
       zIndex: "3",
     },
+    comingSoon: {
+      fontSize: " 9px",
+      position: " absolute",
+      position: " absolute",
+      right: " 43%",
+      bottom: " 17vh !important",
+      zIndex: " 3",
+      p: {
+        mb: "20px",
+        filter:
+          "drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #e50300) drop-shadow(0px 0px 0px #ff5b59) drop-shadow(0px 0px 30px #fc0906) drop-shadow(0px 0px 9px #e50300)",
+        color: "accent",
+      },
+    },
   },
   leftFlowers: {
     height: ["150px", "150px", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
     left: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
-    bottom: ["16vh"],
+    bottom: ["18vh"],
     zIndex: "3",
   },
   rightFlowers: {
@@ -175,7 +173,7 @@ const styles = {
     position: "absolute",
     transform: "translateX(0%)",
     right: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
-    bottom: ["16vh"],
+    bottom: ["18vh"],
     zIndex: "3",
   },
 };
