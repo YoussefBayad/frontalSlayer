@@ -9,9 +9,11 @@ const Shelf = ({ data }) => {
     <Container sx={styles.container}>
       <Box sx={styles.wigs}>
         {data.products.map((item) => (
-          <Box sx={styles.wigs.imgWrapper} key={item.id}>
-            <Image src={item.src} alt={item.alt} />
-          </Box>
+          <Link path="/products/coming" label="">
+            <Box sx={styles.wigs.imgWrapper} key={item.id}>
+              <Image src={item.src} alt={item.alt} />
+            </Box>
+          </Link>
         ))}
       </Box>
       <Box sx={styles.shelfWrapper}>
