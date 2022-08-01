@@ -124,7 +124,7 @@ const styles = {
     },
     position: "absolute",
     top: ["50px"],
-    left: ["2%", "2%", "20%", "25%"],
+    left: ["4%", "4%", "20%", "25%"],
     width: " 20px",
     marginTop: " 20px",
   },
