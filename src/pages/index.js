@@ -40,11 +40,11 @@ const data = {
   rowTwo: {
     products: [
       {
-        src: Wig4,
+        src: Wig5,
         alt: "Transparent",
       },
       {
-        src: Wig5,
+        src: Wig4,
         alt: "Transparent",
       },
       {

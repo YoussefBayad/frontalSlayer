@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Container, MenuButton, Flex, Button } from "theme-ui";
+import { jsx, Box, Container, Image, Flex, Button, MenuButton } from "theme-ui";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import Sticky from "react-stickynode";
@@ -7,6 +7,11 @@ import { Link } from "components/link";
 import menuItems from "./header.data";
 import Dropdown from "./dropdown";
 import { motion } from "framer-motion";
+import youtube from "assets/images/icons/youtube.svg";
+import facebook from "assets/images/icons/facebook.svg";
+import instagram from "assets/images/icons/instagram.svg";
+import twitter from "assets/images/icons/twitter.svg";
+import nav from "assets/images/icons/nav.svg";
 
 export default function Header({ spaceLeft, homeToggle, ...props }) {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -80,6 +85,12 @@ export default function Header({ spaceLeft, homeToggle, ...props }) {
                       )
                   )}
                 </Box>
+                <Box sx={styles.socialIcons}>
+                  <Image src={facebook} alt="social media icon" />
+                  <Image src={instagram} alt="social media icon" />
+                  <Image src={twitter} alt="social media icon" />
+                  <Image src={youtube} alt="social media icon" />
+                </Box>
               </Flex>
 
               {mobileMenu ? (
@@ -91,7 +102,8 @@ export default function Header({ spaceLeft, homeToggle, ...props }) {
                   />
                 </Button>
               ) : (
-                <MenuButton
+                <Image
+                  src={nav}
                   aria-label="Toggle Menu"
                   sx={homeToggle ? styles.homeToggle : styles.toggle}
                   onClick={openMobileMenu}
@@ -113,11 +125,15 @@ const styles = {
     position: "absolute",
     top: ["50px"],
     left: ["2%", "2%", "20%", "25%"],
+    width: " 20px",
+    marginTop: " 20px",
   },
   homeToggle: {
     "@media only screen and (min-width: 768px)": {
       display: "none",
     },
+    width: " 20px",
+    marginTop: " 20px",
     position: "absolute",
     top: ["150px"],
     left: ["16%", "16%", "20%", "25%"],
@@ -251,6 +267,17 @@ const styles = {
     "&:hover:after": {
       transform: "scaleX(1)",
       transformOrigin: "bottom left",
+    },
+  },
+  socialIcons: {
+    "@media only screen and (min-width: 768px)": {
+      display: "none",
+    },
+    my: "15px",
+    img: {
+      width: "20px",
+      ml: "5px",
+      objectFit: "contain",
     },
   },
 };

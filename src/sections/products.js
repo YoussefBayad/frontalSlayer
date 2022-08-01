@@ -9,7 +9,7 @@ import top from "assets/images/topfull.png";
 import ptb from "assets/images/gif/products-tools-booking.gif";
 
 // import WallBig from "assets/images/wall.png";
-import WallSmall from "assets/images/wallstretched.png";
+import WallSmall from "assets/images/FW2.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 import Shelf from "components/Shelf";
@@ -146,11 +146,11 @@ const styles = {
       zIndex: "3",
     },
     comingSoon: {
-      fontSize: " 9px",
+      fontSize: " 7px",
       position: " absolute",
       position: " absolute",
-      right: " 43%",
-      bottom: " 17vh !important",
+      right: " 44%",
+      bottom: " 17.5vh !important",
       zIndex: " 3",
       p: {
         mb: "20px",
