@@ -52,7 +52,7 @@ const styles = {
         fontSize: " 10px",
         m: "0",
         padding: " 0px 4px 0px 4px",
-        maxWidth: "50px",
+        // maxWidth: "50px",
       },
       img: {
         width: "50%",
