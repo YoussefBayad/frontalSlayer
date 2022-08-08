@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Container, Button, Image } from "theme-ui";
+import { jsx, Box, Container, Button, Image, Text } from "theme-ui";
 import shelf from "assets/images/shelf.png";
 import { Link } from "components/link";
 
@@ -12,6 +12,7 @@ const Shelf = ({ data }) => {
           <Link path="/products/coming" label="">
             <Box sx={styles.wigs.imgWrapper} key={item.id}>
               <Image src={item.src} alt={item.alt} />
+              <Text sx={styles.wigs.imgWrapper.title}>{item.alt}</Text>
             </Box>
           </Link>
         ))}
@@ -43,7 +44,16 @@ const styles = {
     imgWrapper: {
       display: "grid",
       placeItems: "center",
-
+      position: "relative",
+      title: {
+        position: "absolute",
+        top: " 10px",
+        backgroundColor: "background",
+        fontSize: " 10px",
+        m: "0",
+        padding: " 0px 4px 0px 4px",
+        maxWidth: "50px",
+      },
       img: {
         width: "50%",
         mx: "auto",

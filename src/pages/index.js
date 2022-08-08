@@ -23,15 +23,15 @@ const data = {
     products: [
       {
         src: Wig2,
-        alt: "wig",
+        alt: "RAW",
       },
       {
         src: Wig1,
-        alt: "wig",
+        alt: "VIRGIN",
       },
       {
         src: Wig3,
-        alt: "wig",
+        alt: "613",
       },
     ],
     title: hdLace,
@@ -41,15 +41,15 @@ const data = {
     products: [
       {
         src: Wig5,
-        alt: "Transparent",
+        alt: "RAW",
       },
       {
         src: Wig4,
-        alt: "Transparent",
+        alt: "VIRGIN",
       },
       {
         src: Wig6,
-        alt: "Transparent",
+        alt: "613",
       },
     ],
     title: transparentLace,
@@ -59,15 +59,15 @@ const data = {
     products: [
       {
         src: Wig7,
-        alt: "Customized",
+        alt: "TRANSPARENT",
       },
       {
         src: Wig8,
-        alt: "Customized",
+        alt: "HD",
       },
       {
         src: Wig9,
-        alt: "Customized",
+        alt: "WATERCOLOR",
       },
     ],
     title: customWig,
