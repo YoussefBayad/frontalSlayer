@@ -7,7 +7,6 @@ import { Link } from "components/link";
 import menuItems from "./header.data";
 import Dropdown from "./dropdown";
 import { motion } from "framer-motion";
-import youtube from "assets/images/icons/youtube.svg";
 import facebook from "assets/images/icons/facebook.svg";
 import instagram from "assets/images/icons/instagram.svg";
 import twitter from "assets/images/icons/twitter.svg";
@@ -86,10 +85,15 @@ export default function Header({ spaceLeft, homeToggle, ...props }) {
                   )}
                 </Box>
                 <Box sx={styles.socialIcons}>
-                  <Image src={facebook} alt="social media icon" />
-                  <Image src={instagram} alt="social media icon" />
-                  <Image src={twitter} alt="social media icon" />
-                  <Image src={youtube} alt="social media icon" />
+                  <a href="https://www.facebook.com/frontalslyer">
+                    <Image src={facebook} alt="social media icon" />
+                  </a>
+                  <a href="https://www.instagram.com/frontalslayer/">
+                    <Image src={instagram} alt="social media icon" />
+                  </a>
+                  <a href="https://twitter.com/frontalslyer">
+                    <Image src={twitter} alt="social media icon" />
+                  </a>
                 </Box>
               </Flex>
 
@@ -162,7 +166,7 @@ const styles = {
         backgroundColor: "backgroundSecondary",
         width: "100vw",
         left: 0,
-        p: "20px 45px",
+        p: "20px 40px",
         display: "block",
         boxShadow: "0 6px 13px rgba(38,78,118,0.1)",
         opacity: 0,
@@ -251,7 +255,8 @@ const styles = {
     cursor: "pointer",
     position: " relative",
     width: "fit-content",
-    fontSize: "",
+    fontSize: "12px",
+    fontWeight: "100 !important",
     "&:after": {
       content: "''",
       position: "absolute",

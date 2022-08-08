@@ -145,11 +145,6 @@ export default {
       backgroundColor: "#8d0707",
       height: "100vh",
       overflow: "hidden",
-      opacity: " 0.9",
-      backgroundImage:
-        "  radial-gradient(#E5E5F7 0.30000000000000004px, transparent 0.30000000000000004px), radial-gradient(#E5E5F7 0.30000000000000004px, #8d0707 0.30000000000000004px)",
-      backgroundSize: " 12px 12px",
-      backgroundPosition: " 0 0,6px 6px",
     },
     features: {
       pt: [7, 7, 7, 8, 8, 7, 7],

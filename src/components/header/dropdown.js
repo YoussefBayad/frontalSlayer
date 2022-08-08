@@ -118,7 +118,8 @@ const styles = {
   },
   dropdownLinkWrapper: {
     a: {
-      fontWeight: "bold !important",
+      fontSize: "12px",
+      fontWeight: "100 !important",
       mb: [0, 0, 20],
     },
   },
