@@ -5,7 +5,7 @@ import Logo from "assets/images/landingLogo.gif";
 import bottomShelf from "assets/images/bottomShelfsText.png";
 import flowerHolder from "assets/images/flowerHolder.PNG";
 import floor from "assets/images/floor.svg";
-import top from "assets/images/topfull.png";
+import top from "assets/images/top.png";
 import ptb from "assets/images/gif/products-tools-booking.gif";
 
 // import WallBig from "assets/images/wall.png";
