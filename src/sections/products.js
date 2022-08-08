@@ -2,7 +2,7 @@
 import { jsx, Box, Container, Image } from "theme-ui";
 import Logo from "assets/images/landingLogo.gif";
 // import Logo from "assets/images/Logo/FrontalSlayerLogoAnimation.mp4";
-import bottomShelf from "assets/images/bottomShelfs.PNG";
+import bottomShelf from "assets/images/bottomShelfsText.png";
 import flowerHolder from "assets/images/flowerHolder.PNG";
 import floor from "assets/images/floor.svg";
 import top from "assets/images/topfull.png";
@@ -39,11 +39,11 @@ const Products = ({ data }) => {
         <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
         <Box sx={styles.shelfWrapper}>
           <Image sx={styles.shelfWrapper.shelf} src={bottomShelf} alt="shelf" />
-          <Box sx={styles.shelfWrapper.comingSoon}>
+          {/* <Box sx={styles.shelfWrapper.comingSoon}>
             <p>COMING SOON</p>
             <p>COMING SOON</p>
             <p>COMING SOON</p>
-          </Box>
+          </Box> */}
         </Box>
         <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
       </Box>
