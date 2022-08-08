@@ -9,7 +9,7 @@ import top from "assets/images/topfull.png";
 import ptb from "assets/images/gif/products-tools-booking.gif";
 
 // import WallBig from "assets/images/wall.png";
-import WallSmall from "assets/images/FW2.png";
+import WallSmall from "assets/images/fwsmall.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 import Shelf from "components/Shelf";
