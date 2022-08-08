@@ -280,7 +280,7 @@ const styles = {
     },
     my: "15px",
     img: {
-      width: "20px",
+      width: "17px",
       ml: "5px",
       objectFit: "contain",
     },

@@ -137,6 +137,8 @@ const styles = {
     // mt: " 10px",
     // mb: " 30px",
     li: {
+      fontSize: "12px",
+
       cursor: "pointer",
       // py: 2,
       ":last-child": {
