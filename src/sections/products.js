@@ -160,7 +160,7 @@ const styles = {
     },
   },
   leftFlowers: {
-    height: ["150px", "150px", "35%"],
+    height: ["140px", "140px", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
     left: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
@@ -168,7 +168,7 @@ const styles = {
     zIndex: "3",
   },
   rightFlowers: {
-    height: ["150px", "150px", "35%"],
+    height: ["140px", "140px", "35%"],
     position: "absolute",
     transform: "translateX(0%)",
     right: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
