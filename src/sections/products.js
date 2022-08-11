@@ -1,10 +1,8 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image } from "theme-ui";
 import Logo from "assets/images/landingLogo.gif";
-// import Logo from "assets/images/Logo/FrontalSlayerLogoAnimation.mp4";
-import bottomShelf from "assets/images/bottomShelfs.png";
+import bottomShelf from "assets/images/bottomShelf.png";
 import flowerHolder from "assets/images/flowerHolder.PNG";
-// import flowerHolder from "assets/images/UFP.png";
 import floor from "assets/images/floor.svg";
 import top from "assets/images/top.png";
 import ptb from "assets/images/gif/products-tools-booking.gif";
