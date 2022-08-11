@@ -20,7 +20,11 @@ const Shelf = ({ data }) => {
       <Box sx={styles.shelfWrapper}>
         <Image sx={styles.shelfWrapper.shelf} src={shelf} />
         <Link path={data.path} label="">
-          <Image src={data.title} label={data.title} />
+          <Image
+            // sx={data.path == "/products/custom" ? styles.customImage : ""}
+            src={data.title}
+            label={data.title}
+          />
         </Link>
       </Box>
     </Container>
@@ -34,6 +38,9 @@ const styles = {
     width: "70%",
     p: 0,
     mb: ["20px"],
+  },
+  customImage: {
+    height: "8px !important",
   },
 
   wigs: {
@@ -49,10 +56,9 @@ const styles = {
         position: "absolute",
         top: " 10px",
         backgroundColor: "background",
-        fontSize: " 10px",
+        fontSize: " 6px",
         m: "0",
         padding: " 0px 4px 0px 4px",
-        // maxWidth: "50px",
       },
       img: {
         width: "50%",
@@ -74,7 +80,7 @@ const styles = {
     a: {
       position: "absolute",
       cursor: "pointer",
-      top: ["3px"],
+      top: ["4px"],
       color: "white",
       zIndex: "5",
       fontSize: "smaller",

@@ -2,8 +2,9 @@
 import { jsx, Box, Container, Image } from "theme-ui";
 import Logo from "assets/images/landingLogo.gif";
 // import Logo from "assets/images/Logo/FrontalSlayerLogoAnimation.mp4";
-import bottomShelf from "assets/images/bottomShelfsText.png";
+import bottomShelf from "assets/images/bottomShelfs.png";
 import flowerHolder from "assets/images/flowerHolder.PNG";
+// import flowerHolder from "assets/images/UFP.png";
 import floor from "assets/images/floor.svg";
 import top from "assets/images/top.png";
 import ptb from "assets/images/gif/products-tools-booking.gif";
@@ -88,7 +89,7 @@ const styles = {
     stroke: " #ff5b59",
     filter: "drop-shadow(0px 26px 14px #ff5b59)",
     height: "100%",
-    width: "75%",
+    width: "65%",
     position: "relative",
     top: " -29px",
   },
@@ -140,9 +141,9 @@ const styles = {
     mt: "2.5vh",
     shelf: {
       position: "absolute",
-      right: ["15%"],
+      right: ["20%"],
       bottom: [" 16vh !important"],
-      width: [" 70%", " 70%", " 70%", " 55%"],
+      width: [" 60%", " 70%", " 70%", " 55%"],
       zIndex: "3",
     },
     comingSoon: {

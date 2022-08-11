@@ -186,6 +186,11 @@ const styles = {
           "li + li": {
             marginTop: 1,
           },
+          li: {
+            "&:first-child": {
+              mb: "-7px",
+            },
+          },
           a: {
             color: "white",
           },
