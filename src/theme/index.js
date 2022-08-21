@@ -119,7 +119,7 @@ export default {
 
     main: {
       position: "relative",
-      height: "-webkit-fill-available",
+      height: "100%",
     },
     footer: {
       backgroundColor: "#F9FAFC",

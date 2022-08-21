@@ -38,7 +38,7 @@ class CustomDocument extends Document {
             /* Other global styles such as 'html, body' etc... */
 
             #__next {
-              height: -webkit-fill-available;
+              height: 100%;
             }
           `}</style>
         </body>
