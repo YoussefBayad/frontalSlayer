@@ -10,15 +10,6 @@ export default function CustomApp({ Component, pageProps }) {
     initGA();
     logPageView();
     Router.events.on("routeChangeComplete", logPageView);
-
-    const documentHeight = () => {
-      const doc = document.documentElement;
-      doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
-    };
-    console.log("innerHeight", `${window.innerHeight}px`);
-
-    window.addEventListener("resize", documentHeight);
-    documentHeight();
   }, []);
 
   return <Component {...pageProps} />;

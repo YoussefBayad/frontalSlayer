@@ -119,6 +119,7 @@ export default {
 
     main: {
       position: "relative",
+      height: "-webkit-fill-available",
     },
     footer: {
       backgroundColor: "#F9FAFC",
@@ -143,7 +144,7 @@ export default {
     },
     products: {
       backgroundColor: "#8d0707",
-      height: "100vh",
+      height: "100%",
       overflow: "hidden",
     },
     features: {
