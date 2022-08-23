@@ -360,11 +360,12 @@ export default {
       borderRadius: 8,
       borderColor: "borderColor",
       height: 60,
-      "&:focus": {
-        borderColor: "primary",
-        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
-        outline: "none",
+      "&::placeholder": {
+        color: "red",
       },
+    },
+    "input::placeholder": {
+      color: "red",
     },
   },
 
