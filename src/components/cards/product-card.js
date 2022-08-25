@@ -7,9 +7,11 @@ import { Link } from "components/link";
 const Product = () => {
   return (
     <Container sx={styles.product}>
-      <Image src={wig} alt={"wig"} />
-      <Heading as="h4">LACE WIG</Heading>
-      <Text as="p">Wig description</Text>
+      <Link style={{ cursor: "pointer" }} path="/product">
+        <Image src={wig} alt={"wig"} />
+        <Heading as="h4">LACE WIG</Heading>
+        <Text as="p">Wig description</Text>
+      </Link>
       <Box sx={styles.product.footer}>
         <Text as="h4" sx={styles.product.footer.price}>
           11.99$
