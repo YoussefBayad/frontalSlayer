@@ -10,14 +10,14 @@ import {
   Button,
 } from "theme-ui";
 import WallSmall from "assets/images/fwCut.png";
-import blurryGradient from "assets/images/blurryGradient2.svg";
+import blurryGradient from "assets/images/blurryGradient3.svg";
 import { IoIosSearch } from "react-icons/io";
-import { Link } from "components/link";
 import Product from "components/cards/product-card";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaGripLines } from "react-icons/fa";
 import header from "assets/images/icons/nav.svg";
 import params from "assets/images/icons/params.svg";
+import shortText from "assets/images/icons/shortText.svg";
 
 const Shop = () => {
   return (
