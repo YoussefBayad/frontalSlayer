@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@next/env": "^12.1.6",
+    "@reduxjs/toolkit": "^1.8.5",
     "formik": "^2.2.9",
     "framer-motion": "^2.7.5",
     "next": "9.5.3",
@@ -22,7 +23,9 @@
     "react-ga": "^3.1.2",
     "react-icons": "^3.11.0",
     "react-modal": "^3.11.2",
+    "react-redux": "^8.0.2",
     "react-scroll": "^1.8.1",
+    "react-show-more-text": "^1.5.2",
     "react-slick": "^0.29.0",
     "react-stickynode": "^3.0.3",
     "responsive-embed": "^1.0.0",
