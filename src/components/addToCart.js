@@ -15,6 +15,7 @@ const AddToCart = ({ product }) => {
       {/* {!isProductInCart ? ( */}
       <Button
         variant="primary"
+        sx={styles.addToCart}
         // onClick={() => {
         //   dispatch(addToCart(product));
         //   dispatch(openCart());
@@ -36,12 +37,9 @@ const AddToCart = ({ product }) => {
 export default AddToCart;
 
 const styles = {
-  rating: {
-    span: {
-      fontSize: "$medium",
-    },
-    p: {
-      marginLeft: "1rem",
-    },
+  addToCart: {
+    px: "11px",
+    boxShadow: "0 4px 7px 0 rgb(31 38 135 / 28%)",
+    fontSize: ["14px", "16px", "18px"],
   },
 };

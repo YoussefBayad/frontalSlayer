@@ -33,8 +33,9 @@ const Product = () => {
               lines={4}
               more="Show more"
               less="Show less"
-              className="content-css"
-              anchorClass="my-anchor-css-class"
+              className="showMore"
+              anchorClass="showMoreAnchor"
+              sx={styles.showMore}
               // onClick={this.executeOnClick}
               expanded={false}
               width={280}
@@ -99,6 +100,10 @@ const styles = {
     backgroundSize: ["cover"],
     backgroundRepeat: ["repeat"],
   },
+  showMore: {
+    a: { textDecoration: "none", color: "link" },
+  },
+
   container: {
     my: ["20px", "40px"],
   },
@@ -130,7 +135,7 @@ const styles = {
     border: " 1px solid rgba(209, 213, 219, 0.4)",
     width: "100%",
     color: "text",
-    padding: ["25px", "40px"],
+    padding: ["20px", "40px"],
     p: {
       color: "text",
       fontSize: "12px",
@@ -141,30 +146,46 @@ const styles = {
       mt: "10px",
       display: "flex",
       justifyContent: " space-between",
-      alignItems: " center",
+      alignItems: "flex-start",
     },
     middle: {
-      mt: "20px",
+      mt: "30px",
+      h4: {
+        mb: "10px",
+      },
     },
     footer: {
-      mt: "20px",
+      mt: "30px",
       display: "flex",
       justifyContent: " space-between",
       alignItems: " center",
-      price: {},
+      price: {
+        fontSize: "22px",
+      },
       addToCart: {
         display: "flex",
         justifyContent: "center",
         alignItems: " center",
       },
+      button: {
+        borderRadius: "20px",
+      },
       productQty: {
-        padding: "0.3rem 1rem",
-        border: "1px solid $black",
-        width: "9rem",
+        padding: "0",
+        border: "1px solid #ec5d55",
+        borderRadius: "20px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        fontSize: '"12px"',
+        fontSize: "18px",
+        mr: 2,
+
+        button: {
+          backgroundColor: "transparent",
+          color: "lightRed",
+          fontSize: "25px",
+          py: 0,
+        },
       },
     },
   },

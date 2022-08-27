@@ -27,10 +27,11 @@ export default Rating;
 const styles = {
   rating: {
     span: {
-      fontSize: "$medium",
+      fontSize: ["25px", "30px"],
     },
     p: {
-      marginLeft: "1rem",
+      width: "max-content",
+      margin: "auto",
     },
   },
 };
