@@ -2,12 +2,11 @@
 import { jsx, Box, Container, Image, Heading, Text, Button } from "theme-ui";
 import blurryGradient from "assets/images/blurryGradient3.svg";
 import wig from "assets/images/transparent.png";
-import { IoIosArrowBack } from "react-icons/io";
-import header from "assets/images/icons/nav.svg";
 import ShowMoreText from "react-show-more-text";
 import Rating from "../components/reviews";
 import { useState } from "react";
 import AddToCart from "components/addToCart";
+import Header from "components/header";
 
 const Product = () => {
   const [qty, setQty] = useState(1);
@@ -15,11 +14,7 @@ const Product = () => {
   return (
     <Box as="section" variant={"section.product"} sx={styles.section}>
       <Container sx={styles.container}>
-        <Box sx={styles.header}>
-          <IoIosArrowBack />
-          <Heading as="h2">Frontal Slayer</Heading>
-          <Image src={header} />
-        </Box>
+        <Header />
         <Box sx={styles.product}>
           <Image src={wig} alt={"wig"} />
           <Box sx={styles.product.header}>
@@ -107,26 +102,7 @@ const styles = {
   container: {
     my: ["20px", "40px"],
   },
-  header: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    my: "30px",
-    color: "text",
 
-    svg: {
-      width: "30px",
-      height: "30px",
-      // fill: "red",
-    },
-    img: {
-      width: "30px",
-      height: "30px",
-      svg: {
-        // fill: "red",
-      },
-    },
-  },
   product: {
     background: " rgba( 255, 255, 255, 0.3 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",

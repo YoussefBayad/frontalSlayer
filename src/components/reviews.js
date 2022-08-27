@@ -32,6 +32,7 @@ const styles = {
     p: {
       width: "max-content",
       margin: "auto",
+      marginTop: "-5px",
     },
   },
 };

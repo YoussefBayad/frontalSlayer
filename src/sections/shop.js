@@ -1,33 +1,19 @@
 /** @jsx jsx */
-import {
-  jsx,
-  Box,
-  Container,
-  Image,
-  Heading,
-  Text,
-  Input,
-  Button,
-} from "theme-ui";
+import { jsx, Box, Container, Image, Text, Input, Button } from "theme-ui";
 import WallSmall from "assets/images/fwCut.png";
 import blurryGradient from "assets/images/blurryGradient3.svg";
 import { IoIosSearch } from "react-icons/io";
 import Product from "components/cards/product-card";
-import { IoIosArrowBack } from "react-icons/io";
 import { FaGripLines } from "react-icons/fa";
-import header from "assets/images/icons/nav.svg";
 import params from "assets/images/icons/params.svg";
 import shortText from "assets/images/icons/shortText.svg";
+import Header from "components/header";
 
 const Shop = () => {
   return (
     <Box as="section" variant={"section.shop"} sx={styles.section}>
       <Container sx={styles.container}>
-        <Box sx={styles.header}>
-          <IoIosArrowBack />
-          <Heading as="h2">Frontal Slayer</Heading>
-          <Image src={header} />
-        </Box>
+        <Header />
         <Box sx={styles.navigation}>
           <Box sx={styles.navigation.sort}>
             <FaGripLines />
@@ -81,26 +67,7 @@ const styles = {
   container: {
     my: ["20px", "40px"],
   },
-  header: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    my: "30px",
-    color: "text",
 
-    svg: {
-      width: "30px",
-      height: "30px",
-      // fill: "red",
-    },
-    img: {
-      width: "30px",
-      height: "30px",
-      svg: {
-        // fill: "red",
-      },
-    },
-  },
   navigation: {
     display: "flex",
     justifyContent: "space-between",
