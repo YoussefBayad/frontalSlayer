@@ -56,7 +56,7 @@ const styles = {
       price: {},
       wishlist: {
         width: "30px",
-        filter: " drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2))",
+        filter: " drop-shadow(3px 5px 2px rgb(31 38 135 / 28%))",
       },
     },
   },
