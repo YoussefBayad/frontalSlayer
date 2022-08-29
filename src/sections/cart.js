@@ -51,7 +51,7 @@ const Cart = () => {
             {products.length > 0 && (
               <CheckoutSummary total={total} totalItems={totalItems}>
                 <Link path="/shipping">
-                  <Button sx={styles.cartPage.checkoutBtn}>
+                  <Button variant="glass" sx={styles.cartPage.checkoutBtn}>
                     Proceed to Checkout
                   </Button>
                 </Link>
@@ -75,8 +75,8 @@ const styles = {
     },
     inner: {
       display: "flex",
-      flexDirection: ["column", "row"],
-      alignItems: ["center", "flex-start"],
+      flexDirection: ["column", "column", "row"],
+      alignItems: ["center", "center", "flex-start"],
       justifyContent: ["space-between"],
     },
     products: {
@@ -93,10 +93,11 @@ const styles = {
     checkoutBtn: {
       textAlign: "center",
       width: "100%",
-      borderRadius: "0",
-      marginTop: "1rem",
-      borderRadius: "0.5rem",
-      fontSize: 1,
+      height: "100%",
+      borderRadius: "0px 0px 15px 15px",
+      mt: "0px",
+      fontSize: 2,
+      boxShadow: "none",
     },
   },
 };

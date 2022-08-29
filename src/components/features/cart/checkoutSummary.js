@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx, Box, Heading } from "theme-ui";
+import { jsx, Box, Heading, Badge } from "theme-ui";
 
 const CheckoutSummary = ({ children, total, totalItems }) => {
   return (
-    <Box sx={styles.checkoutSummary}>
+    <Badge variant="glass" sx={styles.checkoutSummary}>
       <Heading as="h1" sx={styles.checkoutSummary.title}>
         ORDER SUMMARY{" "}
       </Heading>
@@ -19,8 +19,8 @@ const CheckoutSummary = ({ children, total, totalItems }) => {
         <p sx={styles.checkoutSummary.text}>Total </p>
         <p sx={styles.checkoutSummary.price}>${total}</p>
       </Box>
-      {children}
-    </Box>
+      <Box sx={styles.checkoutSummary.checkout}>{children}</Box>
+    </Badge>
   );
 };
 
@@ -28,15 +28,18 @@ export default CheckoutSummary;
 
 const styles = {
   checkoutSummary: {
-    background: " rgba( 255, 255, 255, 0.3 )",
-    boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-    backdropFilter: " blur(16px) saturate(100%)",
-    borderRadius: "15px",
-    border: " 1px solid rgba(209, 213, 219, 0.4)",
-    width: "100%",
+    width: ["100%", "100%", "70%", "50%"],
+    ml: ["0", "0", "20px", "30px"],
+    mt: ["40px", "40px", "0", "0"],
+    p: 0,
     title: {
       fontSize: "$medium",
       margin: "0",
+    },
+
+    "& > div": {
+      // display: "none",
+      maxHeight: "70px",
     },
 
     totalPrice: {
@@ -71,6 +74,15 @@ const styles = {
       padding: "1.5rem",
       width: "100%",
       borderBottom: "solid 2px rgba( 255, 255, 255, 0.3 )",
+    },
+    checkout: {
+      width: "100%",
+      m: 0,
+      p: 0,
+      button: {
+        mb: "0",
+        mx: 0,
+      },
     },
   },
 };

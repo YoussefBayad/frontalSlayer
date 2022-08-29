@@ -95,7 +95,7 @@ const AddReview = ({ id, reviews = [] }) => {
                     <Button
                       // disabled={loadingProductReview}
                       type="submit"
-                      variant="default"
+                      variant="glass"
                     >
                       Add Review
                     </Button>
@@ -141,13 +141,6 @@ const styles = {
     button: {
       marginTop: "15px",
       width: ["100%", "auto"],
-      boxShadow: "0 4px 7px 0 rgb(31 38 135 / 28%)",
-      color: "#fff",
-      margin: "40px auto",
-      backgroundColor: "rgba(255,255,255,0.06)",
-      border: "1px solid rgba(255,255,255,0.1)",
-      borderRadius: "15px",
-      backdropFilter: "blur(10px)",
     },
     option: {
       color: "black",

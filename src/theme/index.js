@@ -307,6 +307,19 @@ export default {
       bg: "secondary",
       transition: "0.3s ease-in-out 0s",
     },
+    glass: {
+      cursor: "pointer",
+      fontFamily: "body",
+      color: "text",
+      boxShadow: "0 4px 7px 0 rgb(31 38 135 / 28%)",
+      color: "#fff",
+      margin: "40px auto",
+      backgroundColor: "rgba(255,255,255,0.06)",
+      border: "1px solid rgba(255,255,255,0.1)",
+      borderRadius: "15px",
+      backdropFilter: "blur(10px)",
+      transition: "0.3s ease-in-out 0s",
+    },
     muted: {
       variant: "buttons.default",
       backgroundColor: "#EDF0F2",
@@ -382,6 +395,13 @@ export default {
       color: "primary",
       bg: "transparent",
       boxShadow: "inset 0 0 0 1px",
+    },
+    glass: {
+      background: " rgba( 255, 255, 255, 0.3 )",
+      boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+      backdropFilter: " blur(16px) saturate(100%)",
+      borderRadius: "15px",
+      border: " 1px solid rgba(209, 213, 219, 0.4)",
     },
   },
 

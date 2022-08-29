@@ -5,12 +5,16 @@ import header from "../../utils/header";
 const ISSERVER = typeof window === "undefined";
 
 const initialState = {
-  user: (!ISSERVER && JSON.parse(localStorage.getItem("user"))) || null,
+  user: (!ISSERVER && JSON.parse(localStorage.getItem("user"))) || {
+    username: "youssef",
+    _id: "emproj",
+  },
   loading: false,
   message: null,
 };
 
 // register thunk
+
 export const register = createAsyncThunk(
   "user/register",
   async (user, { rejectWithValue }) => {

@@ -24,21 +24,24 @@ const initialState = {
   data: [
     {
       name: "lace wig",
-      price: "32",
+      price: 32,
       _id: "35878",
       imageUrl: wig,
+      qty: 1,
     },
     {
       name: "lace wig",
-      price: "32",
+      price: 32,
       _id: "35878",
       imageUrl: wig,
+      qty: 1,
     },
     {
       name: "lace wig",
-      price: "32",
+      price: 32,
       _id: "35878",
       imageUrl: wig,
+      qty: 1,
     },
   ],
   loading: false,

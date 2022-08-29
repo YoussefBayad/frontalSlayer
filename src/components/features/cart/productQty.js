@@ -58,7 +58,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    fontSize: "18px",
+    fontSize: "12px",
     mr: 2,
 
     button: {
