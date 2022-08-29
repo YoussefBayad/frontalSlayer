@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import wig from "assets/images/wig.PNG";
 
 const ISSERVER = typeof window === "undefined";
 
@@ -22,10 +23,22 @@ const initialState = {
   isCartOpen: false,
   data: [
     {
-      title: "lace wig",
+      name: "lace wig",
       price: "32",
       _id: "35878",
-      imageUrl: "msqodivuqpùzoeihduspimlyifv sduil",
+      imageUrl: wig,
+    },
+    {
+      name: "lace wig",
+      price: "32",
+      _id: "35878",
+      imageUrl: wig,
+    },
+    {
+      name: "lace wig",
+      price: "32",
+      _id: "35878",
+      imageUrl: wig,
     },
   ],
   loading: false,

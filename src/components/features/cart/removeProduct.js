@@ -21,7 +21,6 @@ export default RemoveProduct;
 
 const styles = {
   RemoveProductFCart: {
-    marginLeft: "30rem",
     color: "error",
     " &::after ": {
       backgroundColor: "$error",

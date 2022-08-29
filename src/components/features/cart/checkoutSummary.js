@@ -28,9 +28,12 @@ export default CheckoutSummary;
 
 const styles = {
   checkoutSummary: {
-    border: "solid 3px grey",
-    borderRadius: "0.5rem",
-
+    background: " rgba( 255, 255, 255, 0.3 )",
+    boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    backdropFilter: " blur(16px) saturate(100%)",
+    borderRadius: "15px",
+    border: " 1px solid rgba(209, 213, 219, 0.4)",
+    width: "100%",
     title: {
       fontSize: "$medium",
       margin: "0",
@@ -42,7 +45,7 @@ const styles = {
       justifyContent: "space-between",
       padding: "1.5rem",
       width: "100%",
-      borderBottom: "solid 2px grey",
+      borderBottom: "solid 2px rgba( 255, 255, 255, 0.3 )",
     },
     title: {
       display: "flex",
@@ -50,7 +53,7 @@ const styles = {
       justifyContent: "space-between",
       padding: "1.5rem",
       width: "100%",
-      borderBottom: "solid 2px grey",
+      borderBottom: "solid 2px rgba( 255, 255, 255, 0.3 )",
     },
 
     shippingCost: {
@@ -59,7 +62,7 @@ const styles = {
       justifyContent: "space-between",
       padding: "1.5rem",
       width: "100%",
-      borderBottom: "solid 2px grey",
+      borderBottom: "solid 2px rgba( 255, 255, 255, 0.3 )",
     },
     totalItems: {
       display: "flex",
@@ -67,7 +70,7 @@ const styles = {
       justifyContent: "space-between",
       padding: "1.5rem",
       width: "100%",
-      borderBottom: "solid 2px grey",
+      borderBottom: "solid 2px rgba( 255, 255, 255, 0.3 )",
     },
   },
 };

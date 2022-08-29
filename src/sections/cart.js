@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import CartProduct from "components/features/cart/product";
 import CheckoutSummary from "components/features/cart/checkoutSummary";
 import { Link } from "components/link";
+import Header from "components/header";
 
 const Cart = () => {
   let products = useSelector((state) => state.cart.data);
@@ -23,6 +24,7 @@ const Cart = () => {
   return (
     <Box as="section" variant={"section.shop"} sx={styles.section}>
       <Container sx={styles.container}>
+        <Header />
         <Box sx={styles.cartPage}>
           <Heading as="h1" sx={styles.cartPage.title}>
             Shopping Cart :
@@ -78,17 +80,7 @@ const styles = {
       justifyContent: ["space-between"],
     },
     products: {
-      height: "auto",
-      width: "fit-content",
-      paddingBottom: "1rem",
-      borderBottom: "solid 2px border",
-      "&:first-child": {
-        borderTop: "solid 2px grey",
-      },
-      "&:last-child": {
-        border: "none",
-        marginBottom: "5rem",
-      },
+      width: "100%",
     },
 
     img: {
@@ -99,13 +91,12 @@ const styles = {
       padding: "2rem",
     },
     checkoutBtn: {
-      display: "block",
-      width: "auto",
       textAlign: "center",
+      width: "100%",
       borderRadius: "0",
-      margin: "0.5rem",
       marginTop: "1rem",
       borderRadius: "0.5rem",
+      fontSize: 1,
     },
   },
 };
