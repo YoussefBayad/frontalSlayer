@@ -13,15 +13,14 @@ import {
 
 import Message from "./form/error";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "./link";
-// import { addReview } from "../../../redux/productDetails/productDetailsSlice";
+import { addReview } from "redux/productDetails/productDetailsSlice";
 import Rating from "./rating";
 
 const AddReview = ({ id, reviews = [] }) => {
-  // const dispatch = useDispatch();
-  // const user = useSelector((state) => state.auth.user);
-  const user = { username: "youssef", _id: 2555 };
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth.user);
   const username = user?.username;
   const userId = user?._id;
 
@@ -38,11 +37,11 @@ const AddReview = ({ id, reviews = [] }) => {
     username,
   };
   const addReviewHandler = (values) => {
-    // dispatch();
-    // addReview({
-    //   review: values,
-    //   productId: id,
-    // })
+    dispatch();
+    addReview({
+      review: values,
+      productId: id,
+    });
   };
   return (
     <Box sx={styles.addReview}>
@@ -103,14 +102,14 @@ const AddReview = ({ id, reviews = [] }) => {
                   </Form>
                 </Formik>
               ) : (
-                <p sx={styles.loginMessage}>
+                <Message sx={styles.loginMessage}>
                   You Already reviewed this product
-                </p>
+                </Message>
               )
             ) : (
-              <Text sx={styles.loginMessage}>
+              <Message sx={styles.loginMessage}>
                 Please <Link path="/login">sign in</Link> to write a review{" "}
-              </Text>
+              </Message>
             )}
           </Box>
         </Box>
