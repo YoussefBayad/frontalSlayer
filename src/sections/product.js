@@ -7,6 +7,7 @@ import Rating from "../components/reviews";
 import { useState } from "react";
 import AddToCart from "components/addToCart";
 import Header from "components/header";
+import AddReview from "components/addReview";
 
 const Product = () => {
   const [qty, setQty] = useState(1);
@@ -75,6 +76,7 @@ const Product = () => {
               />
             </Box>
           </Box>
+          <AddReview />
         </Box>
       </Container>
     </Box>

@@ -12,7 +12,7 @@ import {
 import logo from "assets/images/logo.png";
 import { Link } from "components/link";
 import Carousel from "../components/carousels/landing";
-import LeftNav, { RightNav } from "components/navs";
+import LeftNav, { RightNav } from "components/homeNavs";
 import Logo from "components/logo";
 import { motion } from "framer-motion";
 
