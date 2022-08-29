@@ -20,7 +20,14 @@ const paymentMethod =
 
 const initialState = {
   isCartOpen: false,
-  data,
+  data: [
+    {
+      title: "lace wig",
+      price: 32,
+      _id: "35878",
+      imageUrl: "msqodivuqpùzoeihduspimlyifv sduil",
+    },
+  ],
   loading: false,
   message: null,
   shippingData,
