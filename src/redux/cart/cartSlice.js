@@ -25,14 +25,14 @@ const initialState = {
     {
       name: "lace wig",
       price: 32,
-      _id: "35878",
+      _id: "355878",
       imageUrl: wig,
       qty: 1,
     },
     {
       name: "lace wig",
       price: 32,
-      _id: "35878",
+      _id: "535878",
       imageUrl: wig,
       qty: 1,
     },
