@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 import Router from "next/router";
+// redux
+import { Provider } from "react-redux";
+import store from "redux/createStore";
+
 import { initGA, logPageView } from "analytics";
 import "components/modal/modal.css";
 import "typeface-dm-sans";
@@ -12,5 +16,9 @@ export default function CustomApp({ Component, pageProps }) {
     Router.events.on("routeChangeComplete", logPageView);
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
