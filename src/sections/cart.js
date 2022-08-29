@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Text, Button, Heading } from "theme-ui";
+import { jsx, Box, Text, Button, Heading, Container } from "theme-ui";
 import { useSelector } from "react-redux";
 import { AnimatePresence } from "framer-motion";
 import CartProduct from "components/features/cart/product";
@@ -21,40 +21,43 @@ const Cart = () => {
   const totalItems = products.length;
 
   return (
-    <Box sx={styles.cartPage}>
-      <Heading as="h1" sx={styles.title}>
-        Shopping Cart :
-      </Heading>
-      <Box sx={styles.cartPage.inner}>
-        <Box sx={styles.cartPage.products}>
-          {products.length === 0 ? (
-            <>
-              <Heading as="h3" sx={styles.emptyCart}>
-                Your cart is empty ...
-              </Heading>
-              <Link sx={styles.inCart} path="/shop">
-                Back To Shop
-              </Link>
-            </>
-          ) : (
-            <AnimatePresence>
-              {products.map((product) => (
-                <CartProduct key={product._id} product={product} />
-              ))}
-            </AnimatePresence>
-          )}
+    <Box as="section" variant={"section.shop"} sx={styles.section}>
+      <Container sx={styles.container}>
+        <Box sx={styles.cartPage}>
+          <Heading as="h1" sx={styles.cartPage.title}>
+            Shopping Cart :
+          </Heading>
+          <Box sx={styles.cartPage.inner}>
+            <Box sx={styles.cartPage.products}>
+              {products.length === 0 ? (
+                <>
+                  <Heading as="h3" sx={styles.emptyCart}>
+                    Your cart is empty ...
+                  </Heading>
+                  <Link sx={styles.inCart} path="/shop">
+                    Back To Shop
+                  </Link>
+                </>
+              ) : (
+                <AnimatePresence>
+                  {products.map((product) => (
+                    <CartProduct key={product._id} product={product} />
+                  ))}
+                </AnimatePresence>
+              )}
+            </Box>
+            {products.length > 0 && (
+              <CheckoutSummary total={total} totalItems={totalItems}>
+                <Link path="/shipping">
+                  <Button sx={styles.cartPage.checkoutBtn}>
+                    Proceed to Checkout
+                  </Button>
+                </Link>
+              </CheckoutSummary>
+            )}
+          </Box>
         </Box>
-        {products.length > 0 && (
-          <CheckoutSummary total={total} totalItems={totalItems}>
-            <Link
-              path="/shipping"
-              sx={styles.btn & styles.cartPage.checkoutBtn}
-            >
-              Proceed to Checkout
-            </Link>
-          </CheckoutSummary>
-        )}
-      </Box>
+      </Container>
     </Box>
   );
 };
@@ -65,20 +68,16 @@ const styles = {
   cartPage: {
     marginTop: "3rem",
     marginBottom: "15rem",
-    height: "100%",
-    width: "100%",
-    paddingLeft: "2rem",
     title: {
-      fontSize: "$title",
       paddingBottom: "3rem",
     },
     inner: {
       display: "flex",
-      alignItems: "flex-start",
-      justifyContent: "space-between",
-      flexWrap: "wrap",
+      flexDirection: ["column", "row"],
+      alignItems: ["center", "flex-start"],
+      justifyContent: ["space-between"],
     },
-    product: {
+    products: {
       height: "auto",
       width: "fit-content",
       paddingBottom: "1rem",
