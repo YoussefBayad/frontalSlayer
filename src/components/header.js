@@ -1,15 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import {
-  jsx,
-  Box,
-  Container,
-  Button,
-  Image,
-  Text,
-  Span,
-  Heading,
-} from "theme-ui";
+import { jsx, Box, Image, Heading } from "theme-ui";
 import header from "assets/images/icons/nav.svg";
 import { IoIosArrowBack } from "react-icons/io";
 import { useRouter } from "next/router";
@@ -17,10 +8,15 @@ import { Link } from "./link";
 
 const Header = () => {
   const router = useRouter();
+  console.log("route", router.pathname);
 
   return (
     <Box sx={styles.header}>
-      <IoIosArrowBack onClick={() => router.back()} />
+      <IoIosArrowBack
+        onClick={() =>
+          router.pathname == "/shop" ? router.push("/") : router.back()
+        }
+      />
       <Link path="/">
         <Heading as="h2">Frontal Slayer</Heading>
       </Link>
@@ -43,9 +39,8 @@ const styles = {
       cursor: "pointer",
     },
     svg: {
-      width: "30px",
-      height: "30px",
-      // fill: "red",
+      width: "40px",
+      height: "40px",
       cursor: "pointer",
     },
     img: {
@@ -53,9 +48,7 @@ const styles = {
 
       width: "30px",
       height: "30px",
-      svg: {
-        // fill: "red",
-      },
+      svg: {},
     },
   },
 };
