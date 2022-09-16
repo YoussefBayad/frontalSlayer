@@ -164,7 +164,7 @@ const styles = {
     position: "absolute",
     transform: "translateX(0%)",
     left: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
-    bottom: ["16vh"],
+    bottom: ["16.5vh"],
     zIndex: "3",
   },
   rightFlowers: {
@@ -172,7 +172,7 @@ const styles = {
     position: "absolute",
     transform: "translateX(0%)",
     right: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
-    bottom: ["16vh"],
+    bottom: ["16.5vh"],
     zIndex: "3",
   },
 };
