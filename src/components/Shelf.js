@@ -19,12 +19,12 @@ const Shelf = ({ data }) => {
       </Box>
       <Box sx={styles.shelfWrapper}>
         <Image sx={styles.shelfWrapper.shelf} src={shelf} />
-        <Link path={data.path} label="">
-          <Image
+        <Link path={data.path} label={data.title}>
+          {/* <Image
             // sx={data.path == "/products/custom" ? styles.customImage : ""}
             src={data.title}
             label={data.title}
-          />
+          /> */}
         </Link>
       </Box>
     </Container>
@@ -80,12 +80,15 @@ const styles = {
     a: {
       position: "absolute",
       cursor: "pointer",
-      top: ["4px"],
+
+      top: "50%",
+      transform: "translateY(-20%)",
       color: "white",
       zIndex: "5",
-      fontSize: "smaller",
-      // textShadow:
-      //   "  0 0 5px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
+      fontSize: "9px",
+
+      textShadow:
+        "  0 0 5px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
       img: {
         height: "6px",
       },

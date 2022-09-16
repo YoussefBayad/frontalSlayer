@@ -34,7 +34,8 @@ const data = {
         alt: "613",
       },
     ],
-    title: hdLace,
+    title: "HD LACE",
+    src: hdLace,
     path: "/products/hd-lace",
   },
   rowTwo: {
@@ -52,7 +53,8 @@ const data = {
         alt: "613",
       },
     ],
-    title: transparentLace,
+    title: "TRANSPARENT LACE",
+    src: transparentLace,
     path: "/products/transparent-lace",
   },
   rowThree: {
@@ -70,7 +72,8 @@ const data = {
         alt: "WATERCOLOR",
       },
     ],
-    title: customWig,
+    title: "CUSTOM WIG",
+    src: customWig,
     path: "/products/custom",
   },
 };
