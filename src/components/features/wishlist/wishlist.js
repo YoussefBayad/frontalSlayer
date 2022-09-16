@@ -5,7 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { removeFromCart } from "redux/cart/cartSlice";
 import ProductQty from "./ProductQty";
-import RemoveProduct from "./RemoveProduct";
+import RemoveProduct from "./removeProduct";
 import { Link } from "components/link";
 import AddToCart from "components/addToCart";
 
