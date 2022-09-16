@@ -9,7 +9,7 @@ const Shelf = ({ data }) => {
     <Container sx={styles.container}>
       <Box sx={styles.wigs}>
         {data.products.map((item) => (
-          <Link path="/products/coming" label="">
+          <Link path="/shop/coming" label="">
             <Box sx={styles.wigs.imgWrapper} key={item.id}>
               <Image src={item.src} alt={item.alt} />
               <Text sx={styles.wigs.imgWrapper.title}>{item.alt}</Text>
@@ -80,11 +80,10 @@ const styles = {
     a: {
       position: "absolute",
       cursor: "pointer",
-
       top: "50%",
       transform: "translateY(-20%)",
-      color: "white",
-      zIndex: "5",
+      color: "#e50300",
+      zIndex: "6",
       fontSize: "9px",
 
       textShadow:

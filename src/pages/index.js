@@ -36,7 +36,7 @@ const data = {
     ],
     title: "HD LACE",
     src: hdLace,
-    path: "/products/hd-lace",
+    path: "/shop/hd-lace",
   },
   rowTwo: {
     products: [
@@ -55,7 +55,7 @@ const data = {
     ],
     title: "TRANSPARENT LACE",
     src: transparentLace,
-    path: "/products/transparent-lace",
+    path: "/shop/transparent-lace",
   },
   rowThree: {
     products: [
@@ -74,7 +74,7 @@ const data = {
     ],
     title: "CUSTOM WIG",
     src: customWig,
-    path: "/products/custom",
+    path: "/shop/custom",
   },
 };
 export default function IndexPage() {
