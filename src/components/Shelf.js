@@ -35,7 +35,7 @@ export default Shelf;
 
 const styles = {
   container: {
-    width: "70%",
+    width: "60%",
     p: 0,
     mb: ["20px"],
   },

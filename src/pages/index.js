@@ -91,7 +91,7 @@ export default function IndexPage() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Layout spaceLeft noLogo>
+      <Layout homeToggle noLogo>
         <SEO title="Products" />
         <Products data={data} />
       </Layout>

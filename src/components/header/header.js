@@ -12,7 +12,7 @@ import nav from "assets/images/icons/nav.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import Dropdown from "./dropdown";
 
-export default function Header({ spaceLeft, ...props }) {
+export default function Header({ homeToggle, spaceLeft, ...props }) {
   const [open, setOpen] = useState(false);
 
   const collapseNode = () => ({ height: 0 });
@@ -60,7 +60,12 @@ export default function Header({ spaceLeft, ...props }) {
   }
 
   return !open ? (
-    <Image src={nav} alt="navigation" onClick={() => setOpen(true)} />
+    <Image
+      sx={homeToggle ? styles.homeToggle : styles.toggle}
+      src={nav}
+      alt="navigation"
+      onClick={() => setOpen(true)}
+    />
   ) : (
     <Box sx={styles.headerWrapper}>
       <Box sx={styles.close}>
@@ -130,6 +135,12 @@ const styles = {
     py: "12px",
     px: "24px",
   },
+  homeToggle: {
+    position: "absolute",
+    height: "30px",
+    top: "10vh",
+    left: "2vw",
+  },
   headerWrapper: {
     background: " rgba( 255, 255, 255, 0.6 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
@@ -142,6 +153,10 @@ const styles = {
     maxWidth: "400px",
     width: "100%",
     height: "100vh",
+    overflow: "scroll",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
     zIndex: "10",
     ".rc-menu": {
       border: "none",
@@ -150,6 +165,7 @@ const styles = {
       // backdropFilter: "blur(0px) saturate(50%)",
       zIndex: "20",
       marginTop: 0,
+      flex: 1,
     },
 
     ".rc-menu-item": {
@@ -180,7 +196,7 @@ const styles = {
     justifyContent: "space-around",
     mx: "auto",
     width: "50%",
-    mt: "50px",
+    py: "50px",
     img: {
       height: "30px",
     },
