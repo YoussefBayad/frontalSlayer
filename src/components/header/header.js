@@ -1,293 +1,188 @@
 /** @jsx jsx */
-import { jsx, Box, Container, Image, Flex, Button, MenuButton } from "theme-ui";
+import { jsx, Box, Image } from "theme-ui";
 import { useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import Sticky from "react-stickynode";
+import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
 import { Link } from "components/link";
 import menuItems from "./header.data";
-import Dropdown from "./dropdown";
 import { motion } from "framer-motion";
 import facebook from "assets/images/icons/facebook.svg";
 import instagram from "assets/images/icons/instagram.svg";
 import twitter from "assets/images/icons/twitter.svg";
 import nav from "assets/images/icons/nav.svg";
+import { AiOutlineClose } from "react-icons/ai";
+import Dropdown from "./dropdown";
 
-export default function Header({ spaceLeft, homeToggle, ...props }) {
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+export default function Header({ spaceLeft, ...props }) {
+  const [open, setOpen] = useState(false);
 
-  const openMobileMenu = () => {
-    setMobileMenu(true);
-  };
+  const collapseNode = () => ({ height: 0 });
+  const expandNode = (node) => ({ height: node.scrollHeight });
 
-  const closeMobileMenu = () => {
-    setMobileMenu(false);
-  };
-
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
+  const getSvgIcon = (style = {}, text) => {
+    if (text) {
+      return <i style={style}>{text}</i>;
     }
-  };
-
-  const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
-  };
-  return (
-    <Box sx={styles.headerWrapper}>
-      <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={10}>
-        <motion.Box
-          as="header"
-          variant="layout.header"
-          className={mobileMenu ? "is-mobile-menu" : ""}
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+    const path =
+      "M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h" +
+      "-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v" +
+      "60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91" +
+      ".5c1.9 0 3.8-0.7 5.2-2L869 536.2c14.7-12.8 14.7-35.6 0-48.4z";
+    return (
+      <i style={style}>
+        <svg
+          viewBox="0 0 1024 1024"
+          width="1em"
+          height="1em"
+          fill="currentColor"
+          style={{ verticalAlign: "-.125em" }}
         >
-          <Container>
-            <Box sx={styles.headerInner}>
-              <Flex
-                as="nav"
-                sx={spaceLeft ? styles.navbarSpaceLeft : styles.navbar}
-                className={mobileMenu ? "navbar active" : "navbar"}
-              >
-                <Box
-                  as="ul"
-                  sx={styles.navList}
-                  className={mobileMenu ? "active" : ""}
-                >
-                  {menuItems?.map(
-                    ({ path, label, isDropdown, dropdownItems }, i) =>
-                      isDropdown ? (
-                        <Dropdown
-                          label={label}
-                          path={path}
-                          items={dropdownItems}
-                          isOpen={dropdown}
-                          closeMobileMenu={closeMobileMenu}
-                          i={i}
-                        />
-                      ) : (
-                        <li
-                          sx={styles.listItem}
-                          key={i}
-                          onClick={closeMobileMenu}
-                        >
-                          <Link path={path}>{label}</Link>
-                        </li>
-                      )
-                  )}
-                </Box>
-                <Box sx={styles.socialIcons}>
-                  <a href="https://www.facebook.com/frontalslyer">
-                    <Image src={facebook} alt="social media icon" />
-                  </a>
-                  <a href="https://www.instagram.com/frontalslayer/">
-                    <Image src={instagram} alt="social media icon" />
-                  </a>
-                  <a href="https://twitter.com/frontalslyer">
-                    <Image src={twitter} alt="social media icon" />
-                  </a>
-                </Box>
-              </Flex>
+          <path d={path} />
+        </svg>
+      </i>
+    );
+  };
 
-              {mobileMenu ? (
-                <Button variant="text" sx={styles.closeButton}>
-                  <AiOutlineClose
-                    onClick={closeMobileMenu}
-                    fill="white"
-                    size="20px"
-                  />
-                </Button>
-              ) : (
-                <Image
-                  src={nav}
-                  aria-label="Toggle Menu"
-                  sx={homeToggle ? styles.homeToggle : styles.toggle}
-                  onClick={openMobileMenu}
-                />
-              )}
-            </Box>
-          </Container>
-        </motion.Box>
-      </Sticky>
+  function itemIcon(props) {
+    return getSvgIcon({
+      position: "absolute",
+      right: "1rem",
+      color: props.isSelected ? "#BEA6A0" : "inherit",
+    });
+  }
+
+  function expandIcon(props) {
+    return getSvgIcon({
+      position: "absolute",
+      right: "1rem",
+      color: "#ffc0c0",
+      transform: `rotate(${props.isOpen ? 90 : 0}deg)`,
+    });
+  }
+
+  return !open ? (
+    <Image src={nav} alt="navigation" onClick={() => setOpen(true)} />
+  ) : (
+    <Box sx={styles.headerWrapper}>
+      <Box sx={styles.close}>
+        <AiOutlineClose
+          size="28px"
+          fill="white"
+          onClick={() => setOpen(false)}
+        />
+      </Box>
+      <Menu
+        mode="inline"
+        defaultOpenKeys={["1"]}
+        motion={{
+          motionName: "rc-menu-collapse",
+          onAppearStart: collapseNode,
+          onAppearActive: expandNode,
+          onEnterStart: collapseNode,
+          onEnterActive: expandNode,
+          onLeaveStart: expandNode,
+          onLeaveActive: collapseNode,
+        }}
+        itemIcon={itemIcon}
+        expandIcon={expandIcon}
+        sx={styles.menu}
+        key="1"
+        popupOffset={[10, 15]}
+      >
+        {menuItems?.map(({ path, label, isDropdown, dropdownItems, key }) => {
+          return isDropdown ? (
+            <Dropdown
+              key={key}
+              label={label}
+              path={path}
+              items={dropdownItems}
+            />
+          ) : (
+            <MenuItem key={key}>
+              {" "}
+              <Link sx={styles.link} path={`${path}`}>
+                {label}
+              </Link>
+            </MenuItem>
+          );
+        })}
+      </Menu>
+      <Box sx={styles.socialIcons}>
+        <a href="https://www.facebook.com/frontalslyer">
+          <Image src={facebook} alt="social media icon" />
+        </a>
+        <a href="https://www.instagram.com/frontalslayer/">
+          <Image src={instagram} alt="social media icon" />
+        </a>
+        <a href="https://twitter.com/frontalslyer">
+          <Image src={twitter} alt="social media icon" />
+        </a>
+      </Box>
     </Box>
   );
 }
 
 const styles = {
-  toggle: {
-    "@media only screen and (min-width: 768px)": {
-      display: "none",
-    },
-    position: "absolute",
-    top: ["50px"],
-    left: ["4%", "4%", "20%", "25%"],
-    width: " 20px",
-    marginTop: " 20px",
-  },
-  homeToggle: {
-    "@media only screen and (min-width: 768px)": {
-      display: "none",
-    },
-    width: " 20px",
-    marginTop: " 20px",
-    position: "absolute",
-    top: ["150px"],
-    left: ["16%", "16%", "20%", "25%"],
+  close: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    py: "12px",
+    px: "24px",
   },
   headerWrapper: {
-    position: "relative",
-    "@media only screen and (max-width: 768px)": {
-      backgroundColor: "lightRed",
-      position: "fixed",
-      top: 0,
-      left: 0,
-      width: "100vw",
-      zIndex: "10",
-    },
-  },
-  headerInner: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-
-    "@media only screen and (max-width: 768px)": {
-      ".navbar": {
-        position: "absolute",
-        top: "100%",
-        minHeight: " calc(100vh - 0px) !important ;",
-        backgroundColor: "backgroundSecondary",
-        width: "100vw",
-        left: 0,
-        p: "20px 40px",
-        display: "block",
-        boxShadow: "0 6px 13px rgba(38,78,118,0.1)",
-        opacity: 0,
-        visibility: "hidden",
-        minHeight: "calc(100vh - 77px)",
-        transition: "all 0.3s ease-in-out 0s",
-        m: 0,
-        pb: "300px",
-        "&.active": {
-          opacity: 1,
-          visibility: "visible",
-          height: "100vh",
-        },
-
-        ul: {
-          display: "block",
-          "li + li": {
-            marginTop: 1,
-          },
-          li: {
-            "&:first-child": {
-              mb: "-7px",
-            },
-          },
-          a: {
-            color: "white",
-          },
-        },
-      },
-    },
-  },
-  navbar: {
-    alignSelf: "flex-start",
+    background: " rgba( 255, 255, 255, 0.6 )",
+    boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    backdropFilter: " blur(16px) saturate(100%)",
+    border: " 1px solid rgba(209, 213, 219, 0.4)",
+    color: "text",
     position: "fixed",
-    top: ["150px", "170px"],
-    left: ["5%", "5%", "5%", "20%", "20%", "20%", "20%", "20%"],
-    "@media only screen and (min-width: 768px)": {
-      position: "block",
-    },
-  },
-  navbarSpaceLeft: {
-    alignSelf: "flex-start",
-    position: "fixed",
-    top: ["150px", "170px"],
-    left: ["5%", "5%", "5%", "5%", "10%", "10%", "10%", "10%"],
-  },
-  navList: {
-    listStyle: "none",
-    marginLeft: "auto",
-    ul: {
-      display: "flex",
-      flexDirection: "column",
-      listStyle: "none",
-      p: 0,
-    },
-    p: 0,
-    ".nav-item": {
-      cursor: "pointer",
-      fontWeight: 400,
-      padding: 0,
-    },
-    ".active": {
-      "&:after": {
-        content: "''",
-        position: "absolute",
-        width: "80px",
-        transform: "scaleX(1)",
-        transformOrigin: "bottom left",
-        height: "2px",
-        bottom: " -5px",
-        left: "0",
-        backgroundColor: "text",
-        transition: "transform 0.25s ease-out",
-      },
+    top: "0",
+    left: "0",
+    maxWidth: "400px",
+    width: "100%",
+    height: "100vh",
+    zIndex: "10",
+    ".rc-menu": {
+      border: "none",
+      boxShadow: "none",
+      background: " rgba( 255, 255, 255, 0.3)",
+      // backdropFilter: "blur(0px) saturate(50%)",
+      zIndex: "20",
+      marginTop: 0,
     },
 
-    closeButton: {
-      height: "32px",
-      padding: "4px",
-      minHeight: "auto",
-      width: "32px",
-      ml: "3px",
-      path: {
-        stroke: "#fff",
-        fill: "#fff",
+    ".rc-menu-item": {
+      background: "transparent",
+      i: {
+        display: "none",
       },
     },
-  },
-  listItem: {
-    mb: [0, 0, 20],
-    cursor: "pointer",
-    position: " relative",
-    width: "fit-content",
-    fontSize: "12px",
-    fontWeight: "100 !important",
-    "&:after": {
-      content: "''",
-      position: "absolute",
-      width: "100%",
-      transform: " scaleX(0)",
-      height: "2px",
-      bottom: " -5px",
-      left: "0",
-      backgroundColor: "text",
-      transformOrigin: "bottom right",
-      transition: "transform 0.25s ease-out",
+    ".rc-menu-item-selected": {
+      backgroundColor: "transparent",
     },
-    "&:hover:after": {
-      transform: "scaleX(1)",
-      transformOrigin: "bottom left",
+    ".rc-menu-item-open": {},
+    ".rc-menu-item-active": {},
+    ".rc-menu-item-inline": {},
+    ".rc-menu-item-title": {},
+    ".rc-menu-submenu": {
+      background: "transparent",
     },
+    ".rc-menu-submenu-selected": {},
+    // "rc-menu-submenu-title": { backgroundColor: "orange !important " },
+    // "rc-menu-submenu-inline": { backgroundColor: "orange !important " },
+    ".rc-menu-submenu-open": {},
+    ".rc-menu-submenu-active": {},
+    // "rc-menu-submenu-selected": { backgroundColor: "orange !important " },
   },
   socialIcons: {
-    "@media only screen and (min-width: 768px)": {
-      display: "none",
-    },
-    my: "15px",
+    display: "flex",
+    justifyContent: "space-around",
+    mx: "auto",
+    width: "50%",
+    mt: "50px",
     img: {
-      width: "17px",
-      ml: "5px",
-      objectFit: "contain",
+      height: "30px",
     },
   },
 };
