@@ -1,18 +1,18 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Image, Heading } from "theme-ui";
-import header from "assets/images/icons/nav.svg";
 import { IoIosArrowBack } from "react-icons/io";
 import { useRouter } from "next/router";
 import { Link } from "./link";
+import Navigation from "./navigationMenu/header";
 
 const Header = () => {
   const router = useRouter();
-  console.log("route", router.pathname);
 
   return (
     <Box sx={styles.header}>
       <IoIosArrowBack
+        sx={styles.header.backIcon}
         onClick={() =>
           router.pathname == "/shop" ? router.push("/") : router.back()
         }
@@ -20,7 +20,7 @@ const Header = () => {
       <Link path="/">
         <Heading as="h2">Frontal Slayer</Heading>
       </Link>
-      <Image src={header} />
+      <Navigation sx={styles.header.burger} />
     </Box>
   );
 };
@@ -38,12 +38,12 @@ const styles = {
     h2: {
       cursor: "pointer",
     },
-    svg: {
+    backIcon: {
       width: "40px",
       height: "40px",
       cursor: "pointer",
     },
-    img: {
+    burger: {
       cursor: "pointer",
 
       width: "30px",

@@ -3,7 +3,7 @@ import { jsx } from "theme-ui";
 import React from "react";
 import Subscribe from "sections/subscribe";
 import Footer from "./footer";
-import Header from "./header/header";
+import Header from "./navigationMenu/header";
 import Logo from "./logo";
 export default function Layout({ children, spaceLeft, homeToggle, noLogo }) {
   return (

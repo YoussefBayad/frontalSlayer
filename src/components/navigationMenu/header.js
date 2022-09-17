@@ -65,6 +65,7 @@ export default function Header({ homeToggle, spaceLeft, ...props }) {
       src={nav}
       alt="navigation"
       onClick={() => setOpen(true)}
+      {...props}
     />
   ) : (
     <Box sx={styles.headerWrapper}>
