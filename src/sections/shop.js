@@ -6,6 +6,7 @@ import { IoIosSearch } from "react-icons/io";
 import Product from "components/cards/product-card";
 import { FaGripLines } from "react-icons/fa";
 import params from "assets/images/icons/params.svg";
+import cart from "assets/images/icons/cart.svg";
 import shortText from "assets/images/icons/shortText.svg";
 import Header from "components/header";
 
@@ -16,7 +17,7 @@ const Shop = () => {
         <Header />
         <Box sx={styles.navigation}>
           <Box sx={styles.navigation.sort}>
-            <FaGripLines />
+            <Image src={params} />
           </Box>
           <Box as="form" sx={styles.navigation.form}>
             <IoIosSearch sx={styles.navigation.form.button} />
@@ -31,7 +32,7 @@ const Shop = () => {
             />
           </Box>
           <Box sx={styles.navigation.sort}>
-            <Image src={params} />
+            <Image src={cart} />
           </Box>
         </Box>
         <Box sx={styles.products}>
