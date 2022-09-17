@@ -1,7 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Image, Heading, Text, Badge } from "theme-ui";
-import React from "react";
 import { motion } from "framer-motion";
 import { removeFromCart } from "redux/cart/cartSlice";
 import ProductQty from "./ProductQty";
