@@ -9,7 +9,7 @@ import FOF from "sections/FOF";
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
-      <Layout>
+      <Layout homeToggle>
         <SEO title="Coming soon" />
         <Banner title="Coming " accent="Soon" />
         <FOF />

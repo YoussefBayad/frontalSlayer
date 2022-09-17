@@ -5,6 +5,7 @@ import shelf from "assets/images/shelf.png";
 import { Link } from "components/link";
 
 const Shelf = ({ data }) => {
+  console.log("data", data.path);
   return (
     <Container sx={styles.container}>
       <Box sx={styles.wigs}>
@@ -19,13 +20,13 @@ const Shelf = ({ data }) => {
       </Box>
       <Box sx={styles.shelfWrapper}>
         <Image sx={styles.shelfWrapper.shelf} src={shelf} />
-        <Link path={data.path} label={data.title}>
-          {/* <Image
+        <Link path={data.path} label={data.title} />
+
+        {/* <Image
             // sx={data.path == "/products/custom" ? styles.customImage : ""}
             src={data.title}
             label={data.title}
           /> */}
-        </Link>
       </Box>
     </Container>
   );

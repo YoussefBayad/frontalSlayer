@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import wig from "assets/images/wig.PNG";
+import wig from "assets/images/wig.png";
 
 const ISSERVER = typeof window === "undefined";
 
