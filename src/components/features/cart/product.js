@@ -4,7 +4,7 @@ import { jsx, Box, Image, Heading, Text, Badge } from "theme-ui";
 import React from "react";
 import { motion } from "framer-motion";
 import { removeFromCart } from "redux/cart/cartSlice";
-import ProductQty from "./ProductQty";
+import ProductQty from "./productQty";
 import RemoveProduct from "./removeProduct";
 import { Link } from "components/link";
 
