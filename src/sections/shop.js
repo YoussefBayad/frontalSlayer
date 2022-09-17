@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, Box, Container, Image, Text, Input, Button } from "theme-ui";
-import WallSmall from "assets/images/fwCut.png";
+import { jsx, Box, Container, Image, Text, Input } from "theme-ui";
+import CascadingFlowers from "assets/images/cascadingFlowers.svg";
 import blurryGradient from "assets/images/blurryGradient3.svg";
 import { IoIosSearch } from "react-icons/io";
 import Product from "components/cards/product-card";
@@ -63,6 +63,18 @@ const styles = {
     backgroundPosition: "right",
     backgroundSize: ["cover"],
     backgroundRepeat: ["repeat"],
+    "&:before": {
+      content: '""',
+      position: "fixed",
+      backgroundImage: `url(${CascadingFlowers})`,
+      // backgroundPosition: "right",
+      backgroundSize: "cover",
+      backgroundRepeat: "repeat",
+      top: "-70px",
+      right: "0",
+      width: "100vw",
+      height: "100vh",
+    },
   },
   container: {
     my: ["20px", "40px"],

@@ -28,11 +28,13 @@ const styles = {
   rating: {
     span: {
       fontSize: ["25px", "30px"],
+      zIndex: "5",
     },
     p: {
       width: "max-content",
       margin: "auto",
       marginTop: "-5px",
+      zIndex: "5",
     },
   },
 };

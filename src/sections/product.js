@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image, Heading, Text, Button } from "theme-ui";
 import blurryGradient from "assets/images/blurryGradient3.svg";
+import CascadingFlowers from "assets/images/cascadingFlowers.svg";
+
 import wig from "assets/images/transparent.png";
 import ShowMoreText from "react-show-more-text";
 import Rating from "../components/reviews";
@@ -96,6 +98,19 @@ const styles = {
     backgroundPosition: "right",
     backgroundSize: ["cover"],
     backgroundRepeat: ["repeat"],
+    "&:before": {
+      content: '""',
+      position: "absolute",
+      backgroundImage: `url(${CascadingFlowers})`,
+      // backgroundPosition: "right",
+      backgroundSize: "cover",
+      backgroundRepeat: "repeat",
+      top: "-75px",
+      right: "0",
+      width: "100vw",
+      height: "100vh",
+      zIndex: "0",
+    },
   },
   showMore: {
     a: { textDecoration: "none", color: "link" },
@@ -114,6 +129,8 @@ const styles = {
     width: "100%",
     color: "text",
     padding: ["20px", "40px"],
+    zIndex: "2",
+
     p: {
       color: "text",
       fontSize: "12px",

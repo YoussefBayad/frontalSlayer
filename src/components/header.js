@@ -34,9 +34,11 @@ const styles = {
     alignItems: "center",
     my: "30px",
     color: "text",
-
+    zIndex: "10",
+    a: { zIndex: "10" },
     h2: {
       cursor: "pointer",
+      textShadow: "1px 1px 1px #000",
     },
     backIcon: {
       width: "40px",
@@ -45,7 +47,7 @@ const styles = {
     },
     burger: {
       cursor: "pointer",
-
+      zIndex: "10",
       width: "30px",
       height: "30px",
       svg: {},
