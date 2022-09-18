@@ -5,6 +5,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { useRouter } from "next/router";
 import { Link } from "./link";
 import Navigation from "./navigationMenu/header";
+import MobileDrawer from "./navigationMenu/mobile-drawer";
 
 const Header = () => {
   const router = useRouter();
@@ -20,7 +21,8 @@ const Header = () => {
       <Link path="/">
         <Heading as="h2">Frontal Slayer</Heading>
       </Link>
-      <Navigation sx={styles.header.burger} />
+      {/* <Navigation sx={styles.header.burger} /> */}
+      <MobileDrawer />
     </Box>
   );
 };

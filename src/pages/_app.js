@@ -6,6 +6,7 @@ import store from "redux/createStore";
 
 import { initGA, logPageView } from "analytics";
 import "rc-menu/assets/index.css";
+import "rc-drawer/assets/index.css";
 
 import "components/modal/modal.css";
 import "typeface-dm-sans";
