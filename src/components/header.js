@@ -42,6 +42,7 @@ const styles = {
     py: "5px",
     px: "15px",
     position: "sticky",
+    top: "0px",
     zIndex: "3",
 
     h2: {
