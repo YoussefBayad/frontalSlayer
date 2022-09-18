@@ -35,7 +35,7 @@ const Shop = () => {
             <Image src={cart} />
           </Box>
         </Box>
-        <Box sx={styles.products}>
+        <Box sx={styles[".shop-products"]}>
           <Product />
           <Product />
           <Product />
@@ -169,5 +169,22 @@ const styles = {
       marginTop: "20px",
       backgroundColor: "red",
     },
+    "&:nth-child(2)": {
+      zIndex: "3",
+    },
+  },
+
+  ".shop-products": {
+    gap: ["20px 25px", 25, 25, 30, 30, 30],
+    display: "grid",
+    gridTemplateColumns: ["repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(4, 1fr)"],
+    // "&:first-child": {
+    //   marginTop: "20px",
+    //   backgroundColor: "red",
+    //   display: "none !important",
+    // },
+    // ".shop-products:nth-child(2)": {
+    //   display: "none !important",
+    // },
   },
 };

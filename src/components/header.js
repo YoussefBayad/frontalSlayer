@@ -34,8 +34,16 @@ const styles = {
     alignItems: "center",
     my: "30px",
     color: "text",
-    zIndex: "10",
-    a: { zIndex: "10" },
+    background: " rgba( 255, 255, 255, 0.3 )",
+    boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    backdropFilter: " blur(16px) saturate(100%)",
+    borderRadius: "15px",
+    border: " 1px solid rgba(209, 213, 219, 0.4)",
+    py: "5px",
+    px: "15px",
+    position: "sticky",
+    zIndex: "3",
+
     h2: {
       cursor: "pointer",
       textShadow: "1px 1px 1px #000",
@@ -47,10 +55,8 @@ const styles = {
     },
     burger: {
       cursor: "pointer",
-      zIndex: "10",
       width: "30px",
-      height: "30px",
-      svg: {},
+      height: "25px",
     },
   },
 };
