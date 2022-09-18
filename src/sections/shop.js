@@ -9,8 +9,15 @@ import params from "assets/images/icons/params.svg";
 import cart from "assets/images/icons/cart.svg";
 import shortText from "assets/images/icons/shortText.svg";
 import Header from "components/header";
+import Masonry from "react-masonry-css";
 
 const Shop = () => {
+  const breakpointColumnsObj = {
+    default: 4,
+    1100: 4,
+    700: 3,
+    500: 2,
+  };
   return (
     <Box as="section" variant={"section.shop"} sx={styles.section}>
       <Container sx={styles.container}>
@@ -35,17 +42,23 @@ const Shop = () => {
             <Image src={cart} />
           </Box>
         </Box>
-        <Box sx={styles[".shop-products"]}>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-        </Box>
+        {/* <Box sx={styles[".shop-products"]}> */}
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          <Text sx={styles.title} id="1">
+            Lace Wigs :
+          </Text>
+          <Product id="2" />
+          <Product id="3" />
+          <Product id="4" />
+          <Product id="5" />
+          <Product id="6" />
+          <Product id="7" />
+          <Product id="8" />
+        </Masonry>
       </Container>
     </Box>
   );
@@ -161,30 +174,14 @@ const styles = {
       },
     },
   },
+  title: {
+    fontSize: "x-large",
+    fontWeight: "bold",
+    color: "heading",
+  },
   products: {
     gap: ["20px 25px", 25, 25, 30, 30, 30],
     display: "grid",
     gridTemplateColumns: ["repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(4, 1fr)"],
-    "&:first-child": {
-      marginTop: "20px",
-      backgroundColor: "red",
-    },
-    "&:nth-child(2)": {
-      zIndex: "3",
-    },
-  },
-
-  ".shop-products": {
-    gap: ["20px 25px", 25, 25, 30, 30, 30],
-    display: "grid",
-    gridTemplateColumns: ["repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(4, 1fr)"],
-    // "&:first-child": {
-    //   marginTop: "20px",
-    //   backgroundColor: "red",
-    //   display: "none !important",
-    // },
-    // ".shop-products:nth-child(2)": {
-    //   display: "none !important",
-    // },
   },
 };
