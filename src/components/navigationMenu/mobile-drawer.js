@@ -5,7 +5,7 @@ import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
 import { Scrollbars } from "react-custom-scrollbars";
 import Drawer from "components/drawer";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
-
+import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 import menuItems from "./header.data";
 import { motion } from "framer-motion";
@@ -81,6 +81,7 @@ export default function MobileDrawer() {
     <Drawer
       width="320px"
       style={{ background: "transparent" }}
+      sx={styles.header}
       drawerHandler={
         <Box sx={styles.handler}>
           {/* <IoMdMenu size={26} /> */}
@@ -151,6 +152,7 @@ export default function MobileDrawer() {
 }
 
 const styles = {
+  header: {},
   handler: {
     display: "flex",
     alignItems: "center",
@@ -166,7 +168,7 @@ const styles = {
     background: " rgba( 255, 255, 255, 0.3 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
     backdropFilter: " blur(2px) saturate(100%)",
-    borderRadius: "0 0 15px 15px",
+    borderRadius: " 0 15px 15px 0px",
     border: " 1px solid rgba(209, 213, 219, 0.4)",
   },
 
@@ -183,9 +185,10 @@ const styles = {
 
   content: {
     width: "100%",
-    height: "100%",
+    height: "90%",
     display: "flex",
     flexDirection: "column",
+    justifyContent: "space-between",
     background: "transparent",
     marginTop: "50px",
 
@@ -196,7 +199,6 @@ const styles = {
       color: "text",
       zIndex: "20",
       marginTop: 0,
-      flex: 1,
     },
 
     ".rc-menu-item": {
@@ -218,10 +220,9 @@ const styles = {
     left: "0",
     maxWidth: "400px",
     width: "100%",
-    height: "100vh",
     display: "flex",
     flexDirection: "column",
-
+    pr: "17px",
     ".rc-menu-item-open": {},
     ".rc-menu-item-active": {},
     ".rc-menu-item-inline": {},
@@ -236,7 +237,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    mt: "auto",
+    pb: "50px",
   },
 
   social: {
@@ -250,7 +251,8 @@ const styles = {
       alignItems: "center",
       justifyContent: "center",
       color: "text",
-      fontSize: 14,
+      width: "25px",
+      height: "25px",
       mr: "15px",
       transition: "all 0.25s",
       cursor: "pointer",
