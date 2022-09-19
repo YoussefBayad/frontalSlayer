@@ -199,6 +199,16 @@ const styles = {
       color: "text",
       zIndex: "20",
       marginTop: 0,
+      ".rc-menu-submenu-active": {
+        backgroundColor: "rgba( 255, 255, 255, 0.2 )",
+      },
+      ".rc-menu-submenu-title": {
+        backgroundColor: "transparent",
+      },
+      ".rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title":
+        {
+          backgroundColor: "rgba( 255, 255, 255, 0.2 )",
+        },
     },
 
     ".rc-menu-item": {
@@ -222,7 +232,7 @@ const styles = {
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    pr: "17px",
+    // pr: "17px",
     ".rc-menu-item-open": {},
     ".rc-menu-item-active": {},
     ".rc-menu-item-inline": {},
