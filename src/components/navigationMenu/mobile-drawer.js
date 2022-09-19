@@ -31,7 +31,7 @@ const social = [
   },
 ];
 
-export default function MobileDrawer() {
+export default function MobileDrawer({ homeToggle }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const collapseNode = () => ({ height: 0 });
@@ -83,8 +83,7 @@ export default function MobileDrawer() {
       style={{ background: "transparent" }}
       sx={styles.header}
       drawerHandler={
-        <Box sx={styles.handler}>
-          {/* <IoMdMenu size={26} /> */}
+        <Box sx={homeToggle ? styles.homeToggle : styles.handler}>
           <Image src={nav} />
         </Box>
       }
@@ -154,6 +153,17 @@ export default function MobileDrawer() {
 const styles = {
   header: {},
   handler: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: "0",
+    width: "26px",
+  },
+  homeToggle: {
+    position: "absolute",
+    height: "30px",
+    top: "10vh",
+    left: "2vw",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
