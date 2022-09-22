@@ -320,6 +320,7 @@ export default {
       backdropFilter: "blur(10px)",
       transition: "0.3s ease-in-out 0s",
     },
+
     muted: {
       variant: "buttons.default",
       backgroundColor: "#EDF0F2",
@@ -402,6 +403,17 @@ export default {
       backdropFilter: " blur(16px) saturate(100%)",
       borderRadius: "15px",
       border: " 1px solid rgba(209, 213, 219, 0.4)",
+    },
+    transparent: {
+      background: "transparent",
+      // boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+      // backdropFilter: " blur(16px) saturate(100%)",
+      borderRadius: "15px",
+      borderBottom: " 1px solid rgba(209, 213, 219, 0.4)",
+      height: "200px !important",
+      img: {
+        height: ["100px", "100px", "150px"],
+      },
     },
   },
 

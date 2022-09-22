@@ -8,7 +8,7 @@ import ProductQty from "./productQty";
 import RemoveProduct from "./removeProduct";
 import { Link } from "components/link";
 
-const CartProduct = ({ product }) => {
+const CartProduct = ({ product, cartPopup }) => {
   return (
     <motion.Box
       layout
@@ -17,7 +17,12 @@ const CartProduct = ({ product }) => {
       exit={{ x: 100, opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Badge variant="glass" sx={styles.cartProduct}>
+      <Badge
+        // sx={cartPopup ? styles.cartPopupProduct : styles.cartProduct}
+        sx={styles.cartProduct}
+        variant={cartPopup ? "transparent" : "glass"}
+        className={cartPopup ? "cart-popup-product" : ""}
+      >
         <Box sx={styles.cartProduct.leftSide}>
           <Link path={`/shop/product/${product._id}`}>
             <Image
@@ -111,7 +116,7 @@ const styles = {
         fontSize: "1",
         marginTop: "0.5rem",
         " &:last-child": {
-          fontSize: "$medium",
+          fontSize: "medium",
           padding: "0",
           margin: "0",
         },

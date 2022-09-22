@@ -26,6 +26,7 @@ export default function Drawer({
         placement={placement}
         handler={false}
         {...props}
+        style={{ background: "transparent" }}
       >
         {closeButton && (
           <Box as="div" onClick={toggleHandler} sx={closeBtnStyle}>

@@ -8,7 +8,7 @@ import ShowMoreText from "react-show-more-text";
 import Rating from "../components/reviews";
 import { useState } from "react";
 import AddToCart from "components/addToCart";
-import Header from "components/header";
+import Header from "components/header/header";
 import AddReview from "components/addReview";
 
 const Product = () => {

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { AnimatePresence } from "framer-motion";
 import Product from "components/features/wishlist/wishlist";
 import { Link } from "components/link";
-import Header from "components/header";
+import Header from "components/header/header";
 
 const Wishlist = () => {
   let products = useSelector((state) => state.wishlist.data);
