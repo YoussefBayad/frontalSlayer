@@ -26,7 +26,6 @@ export default function Drawer({
         placement={placement}
         handler={false}
         {...props}
-        style={{ background: "transparent" }}
       >
         {closeButton && (
           <Box as="div" onClick={toggleHandler} sx={closeBtnStyle}>
@@ -49,4 +48,5 @@ export default function Drawer({
 Drawer.defaultProps = {
   width: "320px",
   placement: "left",
+  background: "transparent",
 };

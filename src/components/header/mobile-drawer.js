@@ -80,6 +80,8 @@ export default function MobileDrawer({ homeToggle }) {
   return (
     <Drawer
       width="320px"
+      backgroundColor="transparent"
+      background="transparent"
       style={{ background: "transparent" }}
       // sx={styles.header}
       drawerHandler={

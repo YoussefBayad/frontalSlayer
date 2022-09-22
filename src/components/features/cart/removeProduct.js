@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx, Heading } from "theme-ui";
 import { useDispatch } from "react-redux";
+import { FcFullTrash } from "react-icons/fc";
 
 const RemoveProduct = ({ _id, removeFromCart }) => {
   const dispatch = useDispatch();
@@ -12,7 +13,8 @@ const RemoveProduct = ({ _id, removeFromCart }) => {
       sx={styles.RemoveProductFCart}
       onClick={() => dispatch(removeFromCart(_id))}
     >
-      REMOVE
+      {/* REMOVE */}
+      <FcFullTrash size="35px" />
     </Heading>
   );
 };
@@ -22,8 +24,9 @@ export default RemoveProduct;
 const styles = {
   RemoveProductFCart: {
     color: "error",
+    cursor: "pointer",
     " &::after ": {
-      backgroundColor: "$error",
+      backgroundColor: "error",
     },
   },
 };
