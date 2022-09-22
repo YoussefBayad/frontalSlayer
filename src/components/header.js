@@ -4,7 +4,6 @@ import { jsx, Box, Image, Heading } from "theme-ui";
 import { IoIosArrowBack } from "react-icons/io";
 import { useRouter } from "next/router";
 import { Link } from "./link";
-import Navigation from "./navigationMenu/header";
 import MobileDrawer from "./navigationMenu/mobile-drawer";
 
 const Header = () => {
@@ -45,7 +44,7 @@ const styles = {
     px: "15px",
     position: "sticky",
     top: "0px",
-    zIndex: "3",
+    zIndex: "100",
 
     h2: {
       cursor: "pointer",
