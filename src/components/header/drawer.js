@@ -25,7 +25,6 @@ export default function Drawer({
         width={width}
         placement={placement}
         handler={false}
-        duration={"0.4s"}
         {...props}
       >
         {closeButton && (

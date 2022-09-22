@@ -3,7 +3,7 @@ import { jsx, Box, Image } from "theme-ui";
 import { useState } from "react";
 import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
 import { Scrollbars } from "react-custom-scrollbars";
-import Drawer from "components/drawer";
+import Drawer from "components/header/drawer";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
@@ -81,7 +81,7 @@ export default function MobileDrawer({ homeToggle }) {
     <Drawer
       width="320px"
       style={{ background: "transparent" }}
-      sx={styles.header}
+      // sx={styles.header}
       drawerHandler={
         <Box sx={homeToggle ? styles.homeToggle : styles.handler}>
           <Image src={nav} />
@@ -151,7 +151,7 @@ export default function MobileDrawer({ homeToggle }) {
 }
 
 const styles = {
-  header: {},
+  // header: {},
   handler: {
     display: "flex",
     alignItems: "center",

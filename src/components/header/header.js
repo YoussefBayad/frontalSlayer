@@ -3,8 +3,8 @@
 import { jsx, Box, Image, Heading } from "theme-ui";
 import { IoIosArrowBack } from "react-icons/io";
 import { useRouter } from "next/router";
-import { Link } from "./link";
-import MobileDrawer from "./navigationMenu/mobile-drawer";
+import { Link } from "../link";
+import MobileDrawer from "./mobile-drawer";
 
 const Header = () => {
   const router = useRouter();
@@ -44,7 +44,7 @@ const styles = {
     px: "15px",
     position: "sticky",
     top: "0px",
-    zIndex: "100",
+    zIndex: "20",
 
     h2: {
       cursor: "pointer",
