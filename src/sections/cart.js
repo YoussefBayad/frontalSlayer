@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import CartProduct from "components/features/cart/product";
 import CheckoutSummary from "components/features/cart/checkoutSummary";
 import { Link } from "components/link";
-import Header from "components/header";
+import Header from "components/header/header";
 
 const Cart = () => {
   let products = useSelector((state) => state.cart.data);

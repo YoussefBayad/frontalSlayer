@@ -8,16 +8,22 @@ import { FaGripLines } from "react-icons/fa";
 import params from "assets/images/icons/params.svg";
 import cart from "assets/images/icons/cart.svg";
 import shortText from "assets/images/icons/shortText.svg";
-import Header from "components/header";
+import Header from "components/header/header";
+import { openCart } from "../redux/cart/cartSlice";
+
 import Masonry from "react-masonry-css";
+import { useDispatch } from "react-redux";
 
 const Shop = () => {
+  const dispatch = useDispatch();
+
   const breakpointColumnsObj = {
     default: 4,
     1100: 4,
     700: 3,
     500: 2,
   };
+
   return (
     <Box as="section" variant={"section.shop"} sx={styles.section}>
       <Container sx={styles.container}>
@@ -38,7 +44,7 @@ const Shop = () => {
               sx={styles.navigation.form.input}
             />
           </Box>
-          <Box sx={styles.navigation.sort}>
+          <Box sx={styles.navigation.sort} onClick={() => dispatch(openCart())}>
             <Image src={cart} />
           </Box>
         </Box>
@@ -120,6 +126,8 @@ const styles = {
       py: "5px",
       px: "15px",
       display: "flex",
+      cursor: "pointer",
+      zIndex: "3",
     },
 
     form: {

@@ -4,7 +4,8 @@ import React from "react";
 import Subscribe from "sections/subscribe";
 import Footer from "./footer";
 import Logo from "./logo";
-import MobileDrawer from "./navigationMenu/mobile-drawer";
+import MobileDrawer from "./header/mobile-drawer";
+import Cart from "./features/cart";
 export default function Layout({ children, spaceLeft, homeToggle, noLogo }) {
   return (
     <React.Fragment>
@@ -13,6 +14,8 @@ export default function Layout({ children, spaceLeft, homeToggle, noLogo }) {
           variant: "layout.main",
         }}
       >
+        <Cart />
+
         <Logo home={homeToggle} noLogo={noLogo} />
         {/* <Header spaceLeft={spaceLeft} */}
         <MobileDrawer homeToggle={homeToggle} />
