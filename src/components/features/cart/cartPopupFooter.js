@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { jsx, Box, Heading } from "theme-ui";
+import { jsx, Box, Heading, Button } from "theme-ui";
 import { Link } from "components/link";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { openCart } from "../../../redux/cart/cartSlice";
 
-const CartFooter = ({ total, openCart, ...rest }) => {
+const CartFooter = ({ total, openCart }) => {
   const dispatch = useDispatch();
   return (
-    <Box {...rest}>
+    <Box sx={styles.cartFooter}>
       {Number(total) === 0 ? (
         <Link
           path="/shop"
@@ -24,16 +24,17 @@ const CartFooter = ({ total, openCart, ...rest }) => {
         <>
           <Link
             path="/shipping"
-            sx="btn checkout-btn"
             onClick={() => {
               dispatch(openCart());
             }}
           >
-            <span>CHECKOUT</span>{" "}
-            <span>
-              ${""}
-              {total ? total : "00.00"}
-            </span>
+            <Button sx={styles.cartFooter.checkout} variant="glass">
+              <span>CHECKOUT</span>{" "}
+              <span>
+                ${""}
+                {total ? total : "00.00"}
+              </span>
+            </Button>
           </Link>
           <Link
             className="cart-remove-product"
@@ -52,3 +53,20 @@ const CartFooter = ({ total, openCart, ...rest }) => {
 };
 
 export default CartFooter;
+
+const styles = {
+  cartFooter: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: ["2rem 1rem", "2rem 1rem", "3rem"],
+    textAlign: "center",
+    "& a:last-child ": {
+      color: "link",
+      fontWeight: "bold",
+    },
+    checkout: {
+      width: "70%",
+    },
+  },
+};

@@ -76,7 +76,7 @@ const Cart = () => {
                 ))}
               </AnimatePresence>
             </Box>{" "}
-            <Footer total={total} openCart={openCart} sx={styles.cartFooter} />
+            <Footer total={total} openCart={openCart} />
           </motion.Box>
         </>
       )}
@@ -182,9 +182,6 @@ const styles = {
   "@media screen and (max-width: 450px)": {
     cart: {
       width: "100%",
-    },
-    cartFooter: {
-      padding: "2rem 1rem !important",
     },
   },
 };
