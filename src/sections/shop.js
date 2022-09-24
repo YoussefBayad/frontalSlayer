@@ -14,9 +14,9 @@ import { openCart } from "../redux/cart/cartSlice";
 import Masonry from "react-masonry-css";
 import { useDispatch } from "react-redux";
 
-const Shop = () => {
+const Shop = ({ query }) => {
   const dispatch = useDispatch();
-
+  console.log("query", query);
   const breakpointColumnsObj = {
     default: 4,
     1100: 4,
@@ -55,7 +55,7 @@ const Shop = () => {
           columnClassName="my-masonry-grid_column"
         >
           <Text sx={styles.title} id="1">
-            Lace Wigs :
+            {query.trim().charAt(0).toUpperCase() + query.slice(1)} Wigs :
           </Text>
           <Product id="2" />
           <Product id="3" />

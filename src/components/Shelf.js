@@ -10,7 +10,7 @@ const Shelf = ({ data }) => {
     <Container sx={styles.container}>
       <Box sx={styles.wigs}>
         {data.products.map((item) => (
-          <Link path="/shop/coming" label="">
+          <Link path={data.path} label="">
             <Box sx={styles.wigs.imgWrapper} key={item.id}>
               <Image src={item.src} alt={item.alt} />
               <Text sx={styles.wigs.imgWrapper.title}>{item.alt}</Text>

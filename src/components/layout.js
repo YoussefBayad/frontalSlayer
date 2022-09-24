@@ -14,7 +14,7 @@ export default function Layout({ children, spaceLeft, homeToggle, noLogo }) {
           variant: "layout.main",
         }}
       >
-        <Cart />
+        {/* <Cart /> */}
 
         <Logo home={homeToggle} noLogo={noLogo} />
         {/* <Header spaceLeft={spaceLeft} */}
