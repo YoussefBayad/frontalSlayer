@@ -7,12 +7,20 @@ import wig from "assets/images/transparent.png";
 import ShowMoreText from "react-show-more-text";
 import Rating from "../components/reviews";
 import { useState } from "react";
-import AddToCart from "components/addToCart";
+import AddToCart from "components/features/cart/addToCart";
 import Header from "components/header/header";
 import AddReview from "components/addReview";
 
 const Product = () => {
   const [qty, setQty] = useState(1);
+
+  const product = {
+    name: "lace wig",
+    price: 32,
+    _id: "355878",
+    imageUrl: wig,
+    qty: 1,
+  };
 
   return (
     <Box as="section" variant={"section.product"} sx={styles.section}>
@@ -73,9 +81,7 @@ const Product = () => {
                 </Button>
               </Box>
 
-              <AddToCart
-              // product={{ ...product, qty }}
-              />
+              <AddToCart product={{ ...product, qty }} />
             </Box>
           </Box>
           <AddReview />

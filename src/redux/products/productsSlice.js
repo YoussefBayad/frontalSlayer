@@ -1,16 +1,119 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
-import header from '../../utils/header';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+import header from "../../utils/header";
+import Wig1 from "assets/images/wigs/1.png";
+import Wig2 from "assets/images/wigs/2.png";
+import Wig3 from "assets/images/wigs/3.png";
+import Wig4 from "assets/images/wigs/4.png";
+import Wig5 from "assets/images/wigs/5.png";
+import Wig6 from "assets/images/wigs/6.png";
+import Wig7 from "assets/images/wigs/7.png";
+import Wig8 from "assets/images/wigs/8.png";
+import Wig9 from "assets/images/wigs/9.png";
+
+const data = [
+  {
+    _id: 1,
+    src: Wig2,
+    alt: "RAW",
+    name: "Lace Raw",
+    price: "110",
+    type: "wig",
+    category: "hd",
+    subCategory: "raw",
+  },
+  {
+    src: Wig1,
+    alt: "VIRGIN",
+    _id: 2,
+    name: "Lace Virgin",
+    price: "100",
+    type: "wig",
+    category: "hd",
+    subCategory: "virgin",
+  },
+  {
+    src: Wig3,
+    alt: "613",
+    _id: 3,
+    name: "Lace 613",
+    price: "90",
+    type: "wig",
+    category: "hd",
+    subCategory: "613",
+  },
+
+  {
+    src: Wig5,
+    alt: "RAW",
+    _id: 4,
+    name: "Lace raw",
+    price: "90",
+    type: "wig",
+    category: "transparent",
+    subCategory: "raw",
+  },
+  {
+    src: Wig4,
+    alt: "VIRGIN",
+    _id: 5,
+    name: "Lace Virgin",
+    price: "80",
+    type: "wig",
+    category: "transparent",
+    subCategory: "virgin",
+  },
+  {
+    src: Wig6,
+    alt: "613",
+    _id: 6,
+    name: "Lace 613",
+    price: "70",
+    type: "wig",
+    category: "transparent",
+    subCategory: "613",
+  },
+  {
+    _id: 7,
+    name: "Lace transparent",
+    price: "70",
+    type: "wig",
+    src: Wig7,
+    alt: "TRANSPARENT",
+    category: "custom",
+    subCategory: "transparent",
+  },
+  {
+    _id: 8,
+    name: "Lace hd",
+    price: "70",
+    type: "wig",
+    category: "custom",
+    subCategory: "hd",
+    src: Wig8,
+    alt: "HD",
+  },
+  {
+    _id: 9,
+    name: "Lace watercolor",
+    price: "70",
+    type: "wig",
+    category: "custom",
+    subCategory: "watercolor",
+    src: Wig9,
+    alt: "WATERCOLOR",
+  },
+];
 
 const initialState = {
-  data: [],
+  data: data,
   loading: false,
   message: null,
 };
 
 export const fetchProducts = createAsyncThunk(
-  'products/fetchProducts',
-  async (keyword = '', { rejectWithValue }) => {
+  "products/fetchProducts",
+  async (keyword = "", { rejectWithValue }) => {
     try {
       const { data } = await axios.get(`/products?keyword=${keyword}`);
 
@@ -22,13 +125,13 @@ export const fetchProducts = createAsyncThunk(
 );
 
 export const addProduct = createAsyncThunk(
-  'products/addProduct',
+  "products/addProduct",
   async (product, { rejectWithValue }) => {
     try {
-      console.log('product', product);
+      console.log("product", product);
 
-      const { data } = await axios.post('/products', { product }, header);
-      console.log('data', data);
+      const { data } = await axios.post("/products", { product }, header);
+      console.log("data", data);
 
       return data;
     } catch (err) {
@@ -38,7 +141,7 @@ export const addProduct = createAsyncThunk(
 );
 
 export const editProduct = createAsyncThunk(
-  'products/editProduct',
+  "products/editProduct",
   async (product, { rejectWithValue }) => {
     try {
       const { data } = await axios.put(
@@ -54,7 +157,7 @@ export const editProduct = createAsyncThunk(
 );
 
 export const deleteProduct = createAsyncThunk(
-  'products/deleteProduct',
+  "products/deleteProduct",
   async (id, { rejectWithValue }) => {
     try {
       const { data } = await axios.delete(`/products/${id}`, header);
@@ -66,7 +169,7 @@ export const deleteProduct = createAsyncThunk(
 );
 
 const productsSlice = createSlice({
-  name: 'products',
+  name: "products",
   initialState,
   reducers: {
     latest(state) {
@@ -98,7 +201,7 @@ const productsSlice = createSlice({
     },
     [addProduct.pending]: (state, action) => {
       state.loading = false;
-      state.message = 'we are processing your request';
+      state.message = "we are processing your request";
     },
     [addProduct.fulfilled]: (state, action) => {
       if (!action.payload) return;
@@ -113,7 +216,7 @@ const productsSlice = createSlice({
     },
     [deleteProduct.pending]: (state, action) => {
       state.loading = false;
-      state.message = 'we are processing your request';
+      state.message = "we are processing your request";
     },
     [deleteProduct.fulfilled]: (state, action) => {
       if (!action.payload) return;
@@ -127,7 +230,7 @@ const productsSlice = createSlice({
     },
     [editProduct.pending]: (state, action) => {
       state.loading = false;
-      state.message = 'we are processing your request';
+      state.message = "we are processing your request";
     },
     [editProduct.fulfilled]: (state, action) => {
       console.log(action.payload.product);

@@ -6,7 +6,7 @@ import { removeFromCart } from "redux/cart/cartSlice";
 import ProductQty from "./productQty";
 import RemoveProduct from "./removeProduct";
 import { Link } from "components/link";
-import AddToCart from "components/addToCart";
+import AddToCart from "components/features/cart/addToCart";
 
 const CartProduct = ({ product }) => {
   return (
