@@ -11,9 +11,12 @@ function Dropdown({ items, path, label, innerDropdown, eventKey }) {
   return (
     <SubMenu
       title={
-        <Link path="" label={label}>
+        // <Link path={path} label={label}>
+        <a sx={styles.a} href={path}>
+          {" "}
           {label}
-        </Link>
+        </a>
+        // </Link>
       }
       key={eventKey}
       eventKey={eventKey}
@@ -24,7 +27,7 @@ function Dropdown({ items, path, label, innerDropdown, eventKey }) {
         ) : (
           <MenuItem key={key}>
             {" "}
-            <Link path={`${path}`}>{label}</Link>
+            <Link path={path}>{label}</Link>
           </MenuItem>
         )
       )}
@@ -38,6 +41,7 @@ const styles = {
   dropdownLink: {
     // mb: 20,
   },
+  a: { textDecoration: "none", color: "text" },
   dropdownLinkWrapper: {
     a: {
       fontSize: "12px",

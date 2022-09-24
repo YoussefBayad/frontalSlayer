@@ -55,7 +55,9 @@ const Shop = ({ query }) => {
           columnClassName="my-masonry-grid_column"
         >
           <Text sx={styles.title} id="1">
-            {query.trim().charAt(0).toUpperCase() + query.slice(1)} Wigs :
+            {String(query).trim().charAt(0).toUpperCase() +
+              String(query).slice(1)}{" "}
+            Wigs :
           </Text>
           <Product id="2" />
           <Product id="3" />

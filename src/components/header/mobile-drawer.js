@@ -127,7 +127,7 @@ export default function MobileDrawer({ homeToggle }) {
                 ) : (
                   <MenuItem key={key}>
                     {" "}
-                    <Link sx={styles.link} path={`${path}`}>
+                    <Link sx={styles.link} path={path}>
                       {label}
                     </Link>
                   </MenuItem>
