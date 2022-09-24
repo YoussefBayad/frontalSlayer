@@ -83,12 +83,12 @@ const styles = {
       cursor: "pointer",
       top: "50%",
       transform: "translateY(-20%)",
-      color: "#e50300",
+      color: "#FF7469",
       zIndex: "6",
       fontSize: "9px",
 
       textShadow:
-        "  0 0 5px  #e50300,0 0 10px  #e50300,0 0 20px  #e50300,0 0 40px #e50300,0 0 80px #e50300,0 0 90px #e50300,0 0 100px #e50300,0 0 150px #e50300;",
+        "  0 0 5px  #FFAD9A,0 0 10px  #FFAD9A,0 0 20px  #FFAD9A,0 0 40px #FFAD9A,0 0 80px #FFAD9A,0 0 90px #FFAD9A,0 0 100px #FFAD9A,0 0 150px #FFAD9A;",
       img: {
         height: "6px",
       },

@@ -18,7 +18,7 @@ const CartFooter = ({ total, openCart }) => {
             dispatch(openCart());
           }}
         >
-          Back To Shop
+          <Button variant="glass">Back To Shop</Button>
         </Link>
       ) : (
         <>
@@ -58,15 +58,16 @@ const styles = {
   cartFooter: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
-    padding: ["2rem 1rem", "2rem 1rem", "3rem"],
+    justifyContent: "'space-between',",
+    // padding: ["2rem 1rem", "2rem 1rem", "3rem"],
     textAlign: "center",
     "& a:last-child ": {
       color: "link",
       fontWeight: "bold",
     },
     checkout: {
-      width: "70%",
+      // width: "70%",
+      mr: "0.5rem",
     },
   },
 };

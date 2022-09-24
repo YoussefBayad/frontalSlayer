@@ -132,6 +132,10 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    emptyCart: {
+      p: "1.5rem",
+    },
+
     cartHeader: {
       width: "100%",
       display: "flex",

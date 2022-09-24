@@ -18,11 +18,11 @@ import Dropdown from "./dropdown";
 
 const social = [
   {
-    path: "https://www.facebook.com/frontalslyer",
+    path: "https://www.facebook.com/frontalslayer",
     icon: facebook,
   },
   {
-    path: "https://twitter.com/frontalslyer",
+    path: "https://twitter.com/frontalslayer",
     icon: twitter,
   },
   {
@@ -139,7 +139,7 @@ export default function MobileDrawer({ homeToggle }) {
             <Box sx={styles.social}>
               {social.map((socialItem, i) => (
                 <Box as="span" key={i} sx={styles.social.icon}>
-                  <a to={socialItem.path}>
+                  <a href={socialItem.path}>
                     <Image src={socialItem.icon} alt="social media icon" />
                   </a>
                 </Box>
