@@ -56,7 +56,8 @@ const styles = {
       title: {
         position: "absolute",
         top: " 10px",
-        backgroundColor: "background",
+        backgroundColor: "#FF7469",
+        borderRadius: "5px",
         fontSize: " 6px",
         m: "0",
         padding: " 0px 4px 0px 4px",
