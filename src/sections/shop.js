@@ -10,13 +10,18 @@ import cart from "assets/images/icons/cart.svg";
 import shortText from "assets/images/icons/shortText.svg";
 import Header from "components/header/header";
 import { openCart } from "../redux/cart/cartSlice";
+import Skeleton from "react-loading-skeleton";
 
 import Masonry from "react-masonry-css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Shop = ({ query }) => {
   const dispatch = useDispatch();
-  console.log("query", query);
+  const { data, loading, message } = useSelector((state) => state.products);
+  const products = query
+    ? data.filter((product) => product.category === query)
+    : data;
+
   const breakpointColumnsObj = {
     default: 4,
     1100: 4,
@@ -48,24 +53,46 @@ const Shop = ({ query }) => {
             <Image src={cart} />
           </Box>
         </Box>
-        {/* <Box sx={styles[".shop-products"]}> */}
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
           <Text sx={styles.title} id="1">
-            {String(query).trim().charAt(0).toUpperCase() +
-              String(query).slice(1)}{" "}
-            Wigs :
+            {query
+              ? `${
+                  String(query).trim().charAt(0).toUpperCase() +
+                  String(query).slice(1)
+                } 
+            Wigs : `
+              : "Shop :"}
           </Text>
-          <Product id="2" />
-          <Product id="3" />
-          <Product id="4" />
-          <Product id="5" />
-          <Product id="6" />
-          <Product id="7" />
-          <Product id="8" />
+
+          {!loading ? (
+            products?.map((product) => (
+              <Product product={product} key={product._id} />
+            ))
+          ) : (
+            <>
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((ske) => (
+                <div>
+                  <Skeleton height={250} width={300} style={{ margin: 10 }} />
+                  <Skeleton width={300} />
+                  <Skeleton width={300} />
+                  <Skeleton height={30} width={80} />
+                </div>
+              ))}
+            </>
+          )}
+
+          {message && <ErrorMessage>{message}</ErrorMessage>}
+
+          {products.length === 0 && (
+            <Heading as="h3" sx={styles.noProductExist}>
+              No product found with this name{" "}
+              <Link to="/shop">Back to Shop</Link>
+            </Heading>
+          )}
         </Masonry>
       </Container>
     </Box>
@@ -193,5 +220,11 @@ const styles = {
     gap: ["20px 25px", 25, 25, 30, 30, 30],
     display: "grid",
     gridTemplateColumns: ["repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(4, 1fr)"],
+  },
+  noProductExist: {
+    marginBottom: "30rem",
+    a: {
+      color: "link",
+    },
   },
 };

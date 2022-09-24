@@ -4,17 +4,17 @@ import wig from "assets/images/transparent.png";
 import heart from "assets/images/icons/heartCircle.svg";
 import { Link } from "components/link";
 
-const Product = () => {
+const Product = ({ product }) => {
   return (
     <Container sx={styles.product}>
-      <Link style={{ cursor: "pointer" }} path="/product">
-        <Image src={wig} alt={"wig"} />
-        <Heading as="h4">LACE WIG</Heading>
+      <Link style={{ cursor: "pointer" }} path={`product/${product._id}`}>
+        <Image sx={styles.product.wigImg} src={product.src} alt={"wig"} />
+        <Heading as="h4">{product.name} </Heading>
         <Text as="p">Wig description</Text>
       </Link>
       <Box sx={styles.product.footer}>
         <Text as="h4" sx={styles.product.footer.price}>
-          11.99$
+          {product.price}$
         </Text>
 
         <Image
@@ -41,7 +41,13 @@ const styles = {
     color: "text",
     p: "20px",
     py: "10px",
-
+    wigImg: {
+      height: "145px",
+      objectFit: "contain",
+      display: "flex",
+      mx: "auto",
+      marginBottom: "15px",
+    },
     p: {
       color: "text",
       fontSize: "12px",
