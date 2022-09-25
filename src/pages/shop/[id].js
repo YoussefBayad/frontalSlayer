@@ -3,8 +3,8 @@ import { ThemeProvider } from "theme-ui";
 import theme from "theme";
 import SEO from "components/seo";
 import Shop from "sections/shop";
-import Cart from "components/features/cart";
 import { useRouter } from "next/router";
+import Layout from "components/layout";
 
 export default function page() {
   const router = useRouter();
@@ -12,9 +12,10 @@ export default function page() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Cart />
-      <SEO title="Shop" />
-      <Shop query={id} />
+      <Layout>
+        <SEO title="Shop" />
+        <Shop query={id} />
+      </Layout>
     </ThemeProvider>
   );
 }

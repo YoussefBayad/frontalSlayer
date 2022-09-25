@@ -24,64 +24,69 @@ const Product = ({ query }) => {
       <Container sx={styles.container}>
         <Header />
         <Box sx={styles.product}>
-          <Image sx={styles.product.src} src={product.src} alt={"wig"} />
-          <Box sx={styles.product.header}>
-            <Heading as="h2">{product.name}</Heading>
-            <Rating numReviews={87} rating={5} />
-          </Box>
-          <Box sx={styles.product.middle}>
-            <Text as="h4">Wig description</Text>
-            <ShowMoreText
-              /* Default options */
-              lines={4}
-              more="Show more"
-              less="Show less"
-              className="showMore"
-              anchorClass="showMoreAnchor"
-              sx={styles.showMore}
-              // onClick={this.executeOnClick}
-              expanded={false}
-              width={280}
-              truncatedEndingComponent={"... "}
-            >
-              {" "}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
-              Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu
-              venenatis. Duis tincidunt laoreet ex, in pretium orci vestibulum
-              eget. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut
-              vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut,
-              pulvinar vitae dolor. Integer eu nibh at nisi ullamcorper sagittis
-              id vel leo. Integer feugiat faucibus libero, at maximus nisl
-              suscipit posuere. Morbi nec enim nunc.{" "}
-            </ShowMoreText>
-          </Box>
-          <Box sx={styles.product.footer}>
-            <Text as="h3" sx={styles.product.footer.price}>
-              {product.price}$
-            </Text>
-            <Box sx={styles.product.footer.addToCart}>
-              <Box sx={styles.product.footer.productQty}>
-                <Button
-                  variant="white"
-                  onClick={() => setQty((prev) => prev + 1)}
-                >
-                  +
-                </Button>
-                {qty}
-                <Button
-                  variant="white"
-                  onClick={() => qty > 1 && setQty((prev) => prev - 1)}
-                >
-                  -
-                </Button>
+          {product ? (
+            <>
+              <Image sx={styles.product.src} src={product.src} alt={"wig"} />
+              <Box sx={styles.product.header}>
+                <Heading as="h2">{product.name}</Heading>
+                <Rating numReviews={87} rating={5} />
               </Box>
+              <Box sx={styles.product.middle}>
+                <Text as="h4">Wig description</Text>
+                <ShowMoreText
+                  /* Default options */
+                  lines={4}
+                  more="Show more"
+                  less="Show less"
+                  className="showMore"
+                  anchorClass="showMoreAnchor"
+                  sx={styles.showMore}
+                  // onClick={this.executeOnClick}
+                  expanded={false}
+                  width={280}
+                  truncatedEndingComponent={"... "}
+                >
+                  {" "}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Quisque nisl eros, pulvinar facilisis justo mollis, auctor
+                  consequat urna. Morbi a bibendum metus. Donec scelerisque
+                  sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in
+                  pretium orci vestibulum eget. Class aptent taciti sociosqu ad
+                  litora torquent per conubia nostra, per inceptos himenaeos.
+                  Duis pharetra luctus lacus ut vestibulum. Maecenas ipsum
+                  lacus, lacinia quis posuere ut, pulvinar vitae dolor. Integer
+                  eu nibh at nisi ullamcorper sagittis id vel leo. Integer
+                  feugiat faucibus libero, at maximus nisl suscipit posuere.
+                  Morbi nec enim nunc.{" "}
+                </ShowMoreText>
+              </Box>
+              <Box sx={styles.product.footer}>
+                <Text as="h3" sx={styles.product.footer.price}>
+                  {product.price}$
+                </Text>
+                <Box sx={styles.product.footer.addToCart}>
+                  <Box sx={styles.product.footer.productQty}>
+                    <Button
+                      variant="white"
+                      onClick={() => setQty((prev) => prev + 1)}
+                    >
+                      +
+                    </Button>
+                    {qty}
+                    <Button
+                      variant="white"
+                      onClick={() => qty > 1 && setQty((prev) => prev - 1)}
+                    >
+                      -
+                    </Button>
+                  </Box>
 
-              <AddToCart product={{ ...product, qty }} />
-            </Box>
-          </Box>
-          <AddReview />
+                  <AddToCart product={{ ...product, qty }} />
+                </Box>
+              </Box>
+              <AddReview />
+            </>
+          ) : null}
         </Box>
       </Container>
     </Box>

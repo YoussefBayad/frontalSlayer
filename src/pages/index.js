@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "theme-ui";
 import theme from "theme";
 import SEO from "components/seo";
-import Layout from "components/layout";
+import Layout from "components/landingLayout";
 import Products from "sections/products";
 
 export default function IndexPage() {

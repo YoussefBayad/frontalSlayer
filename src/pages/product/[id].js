@@ -12,8 +12,10 @@ export default function page() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SEO title="Frontal Slayer" />
-      <Product query={id} />
+      <Layout>
+        <SEO title="Frontal Slayer" />
+        <Product query={id} />
+      </Layout>
     </ThemeProvider>
   );
 }

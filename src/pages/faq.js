@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "theme-ui";
 import theme from "theme";
 import SEO from "components/seo";
-import Layout from "components/layout";
+import Layout from "components/landingLayout";
 import Banner from "components/second-banner";
 import Faq from "sections/faq";
 
