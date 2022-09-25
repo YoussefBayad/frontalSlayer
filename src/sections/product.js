@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image, Heading, Text, Button } from "theme-ui";
 import blurryGradient from "assets/images/blurryGradient3.svg";
-import CascadingFlowers from "assets/images/cascadingFlowers.svg";
+import CascadingFlowers from "assets/images/cascadingFlowersHQ.svg";
+import flowersTwo from "assets/images/flowerThree.svg";
 
 import wig from "assets/images/transparent.png";
 import ShowMoreText from "react-show-more-text";
@@ -101,7 +102,6 @@ const styles = {
     width: "100%",
     position: "absolute",
     top: "0",
-    // backgroundColor: "background",
     backgroundImage: [`url(${blurryGradient})`],
     backgroundPosition: "right",
     backgroundSize: ["cover"],
@@ -110,12 +110,24 @@ const styles = {
       content: '""',
       position: "absolute",
       backgroundImage: `url(${CascadingFlowers})`,
-      // backgroundPosition: "right",
       backgroundSize: "cover",
+      backgroundRepeat: "repeat-y",
+      top: "-47px",
+      right: "0px",
+      width: "100%",
+      height: "100vh",
+      zIndex: "2",
+    },
+    "&:after": {
+      content: '""',
+      position: "absolute",
+      backgroundImage: `url(${flowersTwo})`,
+      // backgroundPosition: "right",
+      backgroundSize: "contain",
       backgroundRepeat: "repeat",
-      top: "-75px",
-      right: "0",
-      width: "100vw",
+      top: "0",
+      left: "-60px",
+      width: "232px",
       height: "100vh",
       zIndex: "0",
     },
@@ -134,7 +146,9 @@ const styles = {
     backdropFilter: " blur(16px) saturate(100%)",
     borderRadius: "15px",
     border: " 1px solid rgba(209, 213, 219, 0.4)",
-    width: "100%",
+    position: "relative",
+    width: "90%",
+    mx: "auto",
     color: "text",
     padding: ["20px", "40px"],
     zIndex: "2",
