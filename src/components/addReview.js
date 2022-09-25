@@ -49,7 +49,9 @@ const AddReview = ({ id, reviews = [] }) => {
         <Heading as="h2">Reviews :</Heading>
         <Box>
           {reviews.length === 0 && (
-            <Message>This product has no reviews yet</Message>
+            <Message sx={styles.addReview.message}>
+              This product has no reviews yet
+            </Message>
           )}
           {reviews.map((review) => (
             <Box sx={styles.review} key={review._id}>
@@ -126,6 +128,9 @@ const styles = {
     py: ["20px", "30px"],
     borderTop: "2px solid rgba( 255,255,255,0.3 )",
     borderRadius: "0",
+    message: {
+      color: "link",
+    },
     form: {
       margin: "2rem 0",
     },

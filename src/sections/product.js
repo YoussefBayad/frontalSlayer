@@ -10,26 +10,23 @@ import { useState } from "react";
 import AddToCart from "components/features/cart/addToCart";
 import Header from "components/header/header";
 import AddReview from "components/addReview";
+import { useSelector } from "react-redux";
 
-const Product = () => {
+const Product = ({ query }) => {
   const [qty, setQty] = useState(1);
 
-  const product = {
-    name: "lace wig",
-    price: 32,
-    _id: "355878",
-    imageUrl: wig,
-    qty: 1,
-  };
+  const { data, loading, message } = useSelector((state) => state.products);
+  const product = data.filter((product) => product._id == query)[0];
+  console.log("product", product);
 
   return (
     <Box as="section" variant={"section.product"} sx={styles.section}>
       <Container sx={styles.container}>
         <Header />
         <Box sx={styles.product}>
-          <Image src={wig} alt={"wig"} />
+          <Image sx={styles.product.src} src={product.src} alt={"wig"} />
           <Box sx={styles.product.header}>
-            <Heading as="h2">LACE WIG</Heading>
+            <Heading as="h2">{product.name}</Heading>
             <Rating numReviews={87} rating={5} />
           </Box>
           <Box sx={styles.product.middle}>
@@ -62,7 +59,7 @@ const Product = () => {
           </Box>
           <Box sx={styles.product.footer}>
             <Text as="h3" sx={styles.product.footer.price}>
-              11.99$
+              {product.price}$
             </Text>
             <Box sx={styles.product.footer.addToCart}>
               <Box sx={styles.product.footer.productQty}>
@@ -136,7 +133,12 @@ const styles = {
     color: "text",
     padding: ["20px", "40px"],
     zIndex: "2",
-
+    src: {
+      height: "250px",
+      display: "flex",
+      mx: "auto",
+      mb: "15px",
+    },
     p: {
       color: "text",
       fontSize: "12px",
