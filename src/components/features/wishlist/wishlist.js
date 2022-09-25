@@ -5,8 +5,11 @@ import { motion } from "framer-motion";
 import { removeFromWishlist } from "redux/wishlist/wishlistSlice";
 import { Link } from "components/link";
 import heart from "assets/images/icons/heartCircle.svg";
+import { useDispatch } from "react-redux";
 
 const WishlistProducts = ({ product }) => {
+  const dispatch = useDispatch();
+
   return (
     <motion.Box
       layout
@@ -42,7 +45,11 @@ const WishlistProducts = ({ product }) => {
           </Box>
         </Box>
         <Box sx={styles.wishlistProducts.rightSide}>
-          <Image src={heart} alt="add to wishlist" />
+          <Image
+            src={heart}
+            alt="add to wishlist"
+            onClick={() => dispatch(removeFromWishlist(product._id))}
+          />
         </Box>
       </Badge>
     </motion.Box>

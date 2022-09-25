@@ -35,7 +35,7 @@ const Wishlist = () => {
                   <Heading as="h3" sx={styles.emptyWishlist}>
                     Your Wishlist is empty ...
                   </Heading>
-                  <Link sx={styles.inWishlist} path="/shop">
+                  <Link sx={styles.backToShop} path="/shop">
                     Back To Shop
                   </Link>
                 </>
@@ -57,6 +57,12 @@ const Wishlist = () => {
 export default Wishlist;
 
 const styles = {
+  emptyWishlist: {},
+  backToShop: {
+    padding: "2rem",
+    color: "link",
+    mt: "1rem",
+  },
   wishlistPage: {
     marginTop: "3rem",
     marginBottom: "15rem",
@@ -76,9 +82,6 @@ const styles = {
     img: {
       width: "100px",
       height: "100px",
-    },
-    inWishlist: {
-      padding: "2rem",
     },
   },
 };
