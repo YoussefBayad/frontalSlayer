@@ -85,9 +85,11 @@ const styles = {
         minHeight: "90px",
         name: {
           fontWeight: "bold",
+          fontSize: "18px",
         },
         price: {
           fontWeight: "lighter",
+          fontSize: "18px",
         },
       },
     },

@@ -2,13 +2,11 @@
 /** @jsx jsx */
 import { jsx, Box, Image, Heading, Text, Badge } from "theme-ui";
 import { motion } from "framer-motion";
-import { removeFromCart } from "redux/cart/cartSlice";
-import ProductQty from "./productQty";
-import RemoveProduct from "./removeProduct";
+import { removeFromWishlist } from "redux/wishlist/wishlistSlice";
 import { Link } from "components/link";
-import AddToCart from "components/features/cart/addToCart";
+import heart from "assets/images/icons/heartCircle.svg";
 
-const CartProduct = ({ product }) => {
+const WishlistProducts = ({ product }) => {
   return (
     <motion.Box
       layout
@@ -17,44 +15,44 @@ const CartProduct = ({ product }) => {
       exit={{ x: 100, opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Badge variant="glass" sx={styles.cartProduct}>
-        <Box sx={styles.cartProduct.leftSide}>
-          <Link path={`/shop/product/${product._id}`}>
+      <Badge variant="glass" sx={styles.wishlistProducts}>
+        <Box sx={styles.wishlistProducts.leftSide}>
+          <Link path={`/product/${product._id}`}>
             <Image
-              sx={styles.cartProduct.img}
-              // src={
-              //   product.imageUrl
-              //     ? `http://localhost:5000${product.imageUrl}`
-              //     : `/img/${product.name.replace(/\s/g, "")}.webp`
-              // }
-              src={product.imageUrl}
+              sx={styles.wishlistProducts.img}
+              src={product.src}
               alt={product.name}
             />
           </Link>
-          <Box sx={styles.cartProduct.leftSide.description}>
-            <Link path={`/shop/product/${product._id}`}>
-              <Text as="p" sx={styles.cartProduct.leftSide.description.name}>
+          <Box sx={styles.wishlistProducts.leftSide.description}>
+            <Link path={`/product/${product._id}`}>
+              <Text
+                as="p"
+                sx={styles.wishlistProducts.leftSide.description.name}
+              >
                 {product.name}
               </Text>
             </Link>
-            <Text as="p" sx={styles.cartProduct.leftSide.description.price}>
+            <Text
+              as="p"
+              sx={styles.wishlistProducts.leftSide.description.price}
+            >
               ${product.price} usd
             </Text>
           </Box>
         </Box>
-        <Box sx={styles.cartProduct.rightSide}>
-          <RemoveProduct _id={product._id} removeFromCart={removeFromCart} />
-          <AddToCart />
+        <Box sx={styles.wishlistProducts.rightSide}>
+          <Image src={heart} alt="add to wishlist" />
         </Box>
       </Badge>
     </motion.Box>
   );
 };
 
-export default CartProduct;
+export default WishlistProducts;
 
 const styles = {
-  cartProduct: {
+  wishlistProducts: {
     maxWidth: "600px",
     height: "100%",
     display: "flex",
@@ -76,19 +74,24 @@ const styles = {
         minHeight: "90px",
         name: {
           fontWeight: "bold",
+          fontSize: "18px",
         },
         price: {
           fontWeight: "lighter",
+          fontSize: "18px",
         },
       },
     },
 
     rightSide: {
       display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
+      justifyContent: "center",
       alignItems: "center",
       minHeight: "90px",
+      img: {
+        height: "50px",
+        cursor: "pointer",
+      },
     },
     count: {
       padding: "0.1rem 1rem",

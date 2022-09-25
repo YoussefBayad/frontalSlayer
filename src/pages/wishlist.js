@@ -4,12 +4,15 @@ import theme from "theme";
 import SEO from "components/seo";
 
 import Wishlist from "sections/wishlist";
+import Layout from "components/layout";
 
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
-      <SEO title="Your Wishlist" />
-      <Wishlist />
+      <Layout>
+        <SEO title="Your Wishlist" />
+        <Wishlist />
+      </Layout>
     </ThemeProvider>
   );
 }
