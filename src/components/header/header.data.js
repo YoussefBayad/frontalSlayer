@@ -3,6 +3,7 @@ export default [
   //   path: "/",
   //   label: "HOME",
   // },
+
   {
     path: "/shop",
     label: "PRODUCTS",
@@ -133,6 +134,14 @@ export default [
         ],
       },
     ],
+  },
+  {
+    path: "/cart",
+    label: "CART",
+  },
+  {
+    path: "/wishlist",
+    label: "WISHLIST",
   },
   {
     path: "/tools",

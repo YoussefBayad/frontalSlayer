@@ -9,17 +9,6 @@ import Header from "components/header/header";
 const Wishlist = () => {
   let products = useSelector((state) => state.wishlist.data);
 
-  // total price
-  const total =
-    products.length > 0 &&
-    products
-      .reduce((a, p) => {
-        return a + p.price * p.qty;
-      }, 0)
-      .toFixed(2);
-  // total items
-  const totalItems = products.length;
-
   return (
     <Box as="section" variant={"section.wishlist"} sx={styles.section}>
       <Container sx={styles.container}>

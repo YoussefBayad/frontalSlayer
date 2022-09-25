@@ -3,8 +3,11 @@ import { jsx, Box, Container, Image, Heading, Text } from "theme-ui";
 import wig from "assets/images/transparent.png";
 import heart from "assets/images/icons/heartCircle.svg";
 import { Link } from "components/link";
+import { useDispatch } from "react-redux";
+import { addToWishlist } from "redux/wishlist/wishlistSlice";
 
 const Product = ({ product }) => {
+  const dispatch = useDispatch();
   return (
     <Container sx={styles.product}>
       <Link style={{ cursor: "pointer" }} path={`product/${product._id}`}>
@@ -21,6 +24,7 @@ const Product = ({ product }) => {
           src={heart}
           sx={styles.product.footer.wishlist}
           alt="add to wishlist"
+          onClick={() => dispatch(addToWishlist(product))}
         />
       </Box>
     </Container>
@@ -60,9 +64,13 @@ const styles = {
       justifyContent: " space-between",
       alignItems: " center",
       price: {},
+      zIndex: "30",
+
       wishlist: {
         width: "30px",
         filter: " drop-shadow(3px 5px 2px rgb(31 38 135 / 28%))",
+        cursor: "pointer",
+        zIndex: "30",
       },
     },
   },

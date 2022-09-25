@@ -22,7 +22,7 @@ const WishlistProducts = ({ product }) => {
         <Box sx={styles.wishlistProducts.leftSide}>
           <Link path={`/product/${product._id}`}>
             <Image
-              sx={styles.wishlistProducts.img}
+              sx={styles.wishlistProducts.leftSide.img}
               src={product.src}
               alt={product.name}
             />
@@ -74,6 +74,11 @@ const styles = {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
+      img: {
+        height: "100px",
+        objectFit: "contain",
+        mr: "15px",
+      },
       description: {
         display: "flex",
         flexDirection: "column",
