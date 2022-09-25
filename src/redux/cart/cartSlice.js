@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import wig from "assets/images/wig.png";
-
+import Wig7 from "assets/images/wigs/7.png";
+import Wig8 from "assets/images/wigs/8.png";
+import Wig9 from "assets/images/wigs/9.png";
 const ISSERVER = typeof window === "undefined";
 
 // get data from cart
@@ -23,25 +24,37 @@ const initialState = {
   isCartOpen: false,
   data: [
     {
-      name: "lace wig",
-      price: 32,
-      _id: "355878",
-      imageUrl: wig,
-      qty: 1,
+      _id: 7,
+      name: "Lace transparent",
+      price: "70",
+      type: "wig",
+      src: Wig7,
+      alt: "TRANSPARENT",
+      category: "custom",
+      subCategory: "transparent",
+      qty: "1",
     },
     {
-      name: "lace wig",
-      price: 32,
-      _id: "535878",
-      imageUrl: wig,
-      qty: 1,
+      _id: 8,
+      name: "Lace hd",
+      price: "70",
+      type: "wig",
+      category: "custom",
+      subCategory: "hd",
+      src: Wig8,
+      alt: "HD",
+      qty: "1",
     },
     {
-      name: "lace wig",
-      price: 32,
-      _id: "35878",
-      imageUrl: wig,
-      qty: 1,
+      _id: 9,
+      name: "Lace watercolor",
+      price: "70",
+      type: "wig",
+      category: "custom",
+      subCategory: "watercolor",
+      src: Wig9,
+      alt: "WATERCOLOR",
+      qty: "2",
     },
   ],
   loading: false,

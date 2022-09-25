@@ -32,7 +32,7 @@ const CartProduct = ({ product, cartPopup }) => {
               //     ? `http://localhost:5000${product.imageUrl}`
               //     : `/img/${product.name.replace(/\s/g, "")}.webp`
               // }
-              src={product.imageUrl}
+              src={product.src}
               alt={product.name}
             />
           </Link>
@@ -73,6 +73,10 @@ const styles = {
 
     color: "text",
     p: "10px",
+    img: {
+      mx: "15px",
+      height: "100px",
+    },
 
     leftSide: {
       display: "flex",
