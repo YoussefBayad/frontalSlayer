@@ -426,6 +426,7 @@ export default {
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
+      textTransform: "uppercase !important ",
     },
     // h1-h6 Heading styles
     h1: {
