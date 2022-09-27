@@ -38,7 +38,7 @@ const styles = {
   container: {
     width: "60%",
     p: 0,
-    mb: ["20px"],
+    mb: ["10px"],
   },
   customImage: {
     height: "8px !important",
@@ -56,11 +56,10 @@ const styles = {
       title: {
         position: "absolute",
         top: " 10px",
-        backgroundColor: "#FF7469",
-        borderRadius: "5px",
-        fontSize: " 6px",
+        backgroundColor: "accent",
+        fontSize: "6px",
         m: "0",
-        padding: " 0px 4px 0px 4px",
+        padding: "0.2px 3px 0px 3px",
       },
       img: {
         width: "50%",
@@ -83,10 +82,12 @@ const styles = {
       position: "absolute",
       cursor: "pointer",
       top: "50%",
-      transform: "translateY(-20%)",
+      transform: "translateY(4%)",
+      m: "0",
+      p: "0",
       color: "#FF7469",
       zIndex: "6",
-      fontSize: "9px",
+      fontSize: "7px",
 
       textShadow:
         "  0 0 5px  #FFAD9A,0 0 10px  #FFAD9A,0 0 20px  #FFAD9A,0 0 40px #FFAD9A,0 0 80px #FFAD9A,0 0 90px #FFAD9A,0 0 100px #FFAD9A,0 0 150px #FFAD9A;",
