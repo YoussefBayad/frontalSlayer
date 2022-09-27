@@ -65,6 +65,7 @@ const styles = {
     color: "text",
     p: "10px",
 
+    borderRadius: "0",
     leftSide: {
       display: "flex",
       justifyContent: "space-between",

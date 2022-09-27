@@ -32,6 +32,8 @@ const styles = {
     ml: ["0", "0", "20px", "30px"],
     mt: ["40px", "40px", "0", "0"],
     p: 0,
+    borderRadius: "0px 0px 15px 15px",
+    marginBottom: "30px",
     title: {
       fontSize: "$medium",
       margin: "0",

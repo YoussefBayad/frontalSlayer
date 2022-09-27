@@ -69,13 +69,16 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    mb: ["20px", "25px"],
+    borderRadius: "0",
 
+    mb: ["20px", "25px"],
+    fontSize: "16px",
     color: "text",
     p: "10px",
     img: {
-      mx: "15px",
+      mr: "15px",
       height: "100px",
+      objectFit: "contain",
     },
 
     leftSide: {
@@ -89,11 +92,11 @@ const styles = {
         minHeight: "90px",
         name: {
           fontWeight: "bold",
-          fontSize: "18px",
+          fontSize: ["16px", "17px", "18px"],
         },
         price: {
           fontWeight: "lighter",
-          fontSize: "18px",
+          fontSize: ["16px", "17px", "18px"],
         },
       },
     },
