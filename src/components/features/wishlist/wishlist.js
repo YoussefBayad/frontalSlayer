@@ -7,6 +7,7 @@ import { Link } from "components/link";
 import heart from "assets/images/icons/heartCircle.svg";
 import { useDispatch } from "react-redux";
 import HeartButton from "./heartButton";
+import AddToCart from "../cart/addToCart";
 
 const WishlistProducts = ({ product }) => {
   return (
@@ -45,6 +46,7 @@ const WishlistProducts = ({ product }) => {
         </Box>
         <Box sx={styles.wishlistProducts.rightSide}>
           <HeartButton product={product} />
+          {/* <AddToCart product={{ ...product }} /> */}
         </Box>
       </Badge>
     </motion.Box>
@@ -93,6 +95,7 @@ const styles = {
 
     rightSide: {
       display: "flex",
+      flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
       minHeight: "90px",

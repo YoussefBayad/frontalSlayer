@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
-import { Box } from "theme-ui";
+import { Box, Image } from "theme-ui";
 import RcDrawer from "rc-drawer";
+import cart from "assets/images/icons/cart.svg";
+import wishlist from "assets/images/icons/heart.svg";
+import { Link } from "components/link";
 
 export default function Drawer({
   className,
@@ -28,8 +31,16 @@ export default function Drawer({
         {...props}
       >
         {closeButton && (
-          <Box as="div" onClick={toggleHandler} sx={closeBtnStyle}>
-            {closeButton}
+          <Box as="div" sx={styles.close}>
+            <Box>
+              <Link path="/cart">
+                <Image src={cart} sx={styles.close.img} />
+              </Link>
+              <Link path="/wishlist">
+                <Image src={wishlist} sx={styles.close.img} />
+              </Link>
+            </Box>
+            <Box onClick={toggleHandler}>{closeButton}</Box>
           </Box>
         )}
         <Box sx={drawerStyle}>{children} </Box>
@@ -49,4 +60,25 @@ Drawer.defaultProps = {
   width: "320px",
   placement: "left",
   background: "transparent",
+};
+
+const styles = {
+  close: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    position: "absolute",
+    top: "20px",
+    width: "100%",
+    r: 0,
+    p: "15px",
+    zIndex: "1",
+    cursor: "pointer",
+
+    img: {
+      width: "24px",
+      height: "24px",
+      mr: "15px",
+    },
+  },
 };

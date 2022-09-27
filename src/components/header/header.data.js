@@ -135,14 +135,14 @@ export default [
       },
     ],
   },
-  {
-    path: "/cart",
-    label: "CART",
-  },
-  {
-    path: "/wishlist",
-    label: "WISHLIST",
-  },
+  // {
+  //   path: "/cart",
+  //   label: "CART",
+  // },
+  // {
+  //   path: "/wishlist",
+  //   label: "WISHLIST",
+  // },
   {
     path: "/tools",
     label: "TOOLS",

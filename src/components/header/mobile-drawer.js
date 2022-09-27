@@ -184,17 +184,6 @@ const styles = {
     border: " 1px solid rgba(209, 213, 219, 0.4)",
   },
 
-  close: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "absolute",
-    top: "20px",
-    right: "15px",
-    zIndex: "1",
-    cursor: "pointer",
-  },
-
   content: {
     width: "100%",
     height: "90%",
@@ -202,7 +191,7 @@ const styles = {
     flexDirection: "column",
     justifyContent: "space-between",
     background: "transparent",
-    marginTop: "50px",
+    mt: "70px",
 
     ".rc-menu": {
       border: "none",

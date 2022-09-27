@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image, Text, Input } from "theme-ui";
-import CascadingFlowers from "assets/images/cascadingFlowersHQ.svg";
+import CascadingFlowers from "assets/images/cascadingFlowersHQ-cropped.svg";
 import blurryGradient from "assets/images/blurryGradient3.svg";
 import { IoIosSearch } from "react-icons/io";
 import Product from "components/cards/product-card";
@@ -107,6 +107,7 @@ const styles = {
     width: "100%",
     position: "absolute",
     top: "0",
+    overflowX: "hidden",
     // backgroundColor: "background",
     backgroundImage: [`url(${blurryGradient})`],
     backgroundPosition: "right",
@@ -118,9 +119,9 @@ const styles = {
       backgroundImage: `url(${CascadingFlowers})`,
       backgroundSize: "cover",
       backgroundRepeat: "repeat-y",
-      top: "-47px",
-      right: "0px",
-      width: "100%",
+      top: "-30px",
+      right: "-79px",
+      width: "80%",
       height: "100vh",
       zIndex: "2",
     },
