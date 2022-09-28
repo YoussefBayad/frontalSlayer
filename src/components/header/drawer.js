@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Box, Image } from "theme-ui";
 import RcDrawer from "rc-drawer";
-import cart from "assets/images/icons/cart.svg";
+import cart from "assets/images/icons/cartMenu.svg";
 import wishlist from "assets/images/icons/heart.svg";
 import { Link } from "components/link";
 
@@ -79,6 +79,9 @@ const styles = {
       width: "24px",
       height: "24px",
       mr: "15px",
+    },
+    svg: {
+      fill: "#4A271E",
     },
   },
 };

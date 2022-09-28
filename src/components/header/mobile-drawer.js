@@ -15,6 +15,7 @@ import twitter from "assets/images/icons/twitter.svg";
 import nav from "assets/images/icons/nav.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import Dropdown from "./dropdown";
+import marble from "assets/images/floor.svg";
 
 const social = [
   {
@@ -52,7 +53,7 @@ export default function MobileDrawer({ homeToggle }) {
           viewBox="0 0 1024 1024"
           width="1em"
           height="1em"
-          fill="currentColor"
+          fill="#4A271E"
           style={{ verticalAlign: "-.125em" }}
         >
           <path d={path} />
@@ -81,7 +82,7 @@ export default function MobileDrawer({ homeToggle }) {
     <Drawer
       width="320px"
       backgroundColor="transparent"
-      background="transparent"
+      // background="transparent"
       style={{ background: "transparent" }}
       // sx={styles.header}
       drawerHandler={
@@ -91,7 +92,7 @@ export default function MobileDrawer({ homeToggle }) {
       }
       open={isDrawerOpen}
       toggleHandler={() => setIsDrawerOpen((prev) => !prev)}
-      closeButton={<IoMdClose size="24px" color="#ff9695" />}
+      closeButton={<IoMdClose size="30px" color="red" />}
       drawerStyle={styles.drawer}
       closeBtnStyle={styles.close}
     >
@@ -176,12 +177,15 @@ const styles = {
   drawer: {
     width: "100%",
     height: "100%",
-    color: "text",
+    color: "accent",
     background: " rgba( 255, 255, 255, 0.3 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
     backdropFilter: " blur(2px) saturate(100%)",
     borderRadius: " 0 15px 15px 0px",
     border: " 1px solid rgba(209, 213, 219, 0.4)",
+    backgroundImage: `url(${marble})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "repeat-y",
   },
 
   content: {
@@ -197,18 +201,18 @@ const styles = {
       border: "none",
       boxShadow: "none",
       background: "transparent",
-      color: "text",
+      color: "accent",
       zIndex: "20",
       marginTop: 0,
       ".rc-menu-submenu-active": {
-        backgroundColor: "rgba( 255, 255, 255, 0.2 )",
+        backgroundColor: "rgba( 255, 255, 255, 0.4 )",
       },
       ".rc-menu-submenu-title": {
         backgroundColor: "transparent",
       },
       ".rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title":
         {
-          backgroundColor: "rgba( 255, 255, 255, 0.2 )",
+          backgroundColor: "rgba( 255, 255, 255, 0.4 )",
         },
     },
 
@@ -226,7 +230,7 @@ const styles = {
   menu: {
     width: "100%",
 
-    color: "text",
+    color: "accent",
     top: "0",
     left: "0",
     maxWidth: "400px",
@@ -261,7 +265,7 @@ const styles = {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      color: "text",
+      color: "accent",
       width: "25px",
       height: "25px",
       mr: "15px",

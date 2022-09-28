@@ -41,7 +41,7 @@ const styles = {
   dropdownLink: {
     // mb: 20,
   },
-  a: { textDecoration: "none", color: "text" },
+  a: { textDecoration: "none", color: "accent" },
   dropdownLinkWrapper: {
     a: {
       fontSize: "12px",
@@ -56,7 +56,7 @@ const styles = {
     textAlign: "start",
     display: "flex",
     flexDirection: "column",
-    color: "text",
+    color: "accent",
     ml: ["15px", "15px", "40px"],
     mb: "20px",
     width: ["150px", "auto"],
@@ -85,7 +85,7 @@ const styles = {
         // mb: "-7px",
       },
       a: {
-        color: "text",
+        color: "accent",
       },
     },
   },
