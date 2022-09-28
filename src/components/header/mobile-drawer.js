@@ -74,7 +74,7 @@ export default function MobileDrawer({ homeToggle }) {
     return getSvgIcon({
       position: "absolute",
       right: "1rem",
-      color: "#ffc0c0",
+      color: "#4A271E",
       transform: `rotate(${props.isOpen ? 90 : 0}deg)`,
     });
   }

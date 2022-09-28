@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image } from "theme-ui";
-import Logo from "assets/images/landingLogo.gif";
+import Logo from "assets/images/logo.gif";
 import bottomShelf from "assets/images/bottomShelf.png";
 import flowerHolder from "assets/images/flowerHolder.PNG";
 import floor from "assets/images/floor.svg";
@@ -24,6 +24,12 @@ import Wig9 from "assets/images/wigs/9.png";
 import customWig from "assets/images/gif/custom-wig.gif";
 import hdLace from "assets/images/gif/hd-lace.gif";
 import transparentLace from "assets/images/gif/transparent-lace.gif";
+import raw from "assets/images/wigs/raw.png";
+import six from "assets/images/wigs/613.png";
+import virgin from "assets/images/wigs/virgin.png";
+import hd from "assets/images/wigs/hd.png";
+import transparent from "assets/images/wigs/transparent.png";
+import watercolor from "assets/images/wigs/watercolorpng.png";
 
 const data = {
   rowOne: {
@@ -31,14 +37,17 @@ const data = {
       {
         src: Wig2,
         alt: "RAW",
+        label: raw,
       },
       {
         src: Wig1,
         alt: "VIRGIN",
+        label: virgin,
       },
       {
         src: Wig3,
         alt: "613",
+        label: six,
       },
     ],
     title: "HD LACE",
@@ -50,14 +59,17 @@ const data = {
       {
         src: Wig5,
         alt: "RAW",
+        label: raw,
       },
       {
         src: Wig4,
         alt: "VIRGIN",
+        label: virgin,
       },
       {
         src: Wig6,
         alt: "613",
+        label: six,
       },
     ],
     title: "TRANSPARENT LACE",
@@ -69,17 +81,20 @@ const data = {
       {
         src: Wig7,
         alt: "TRANSPARENT",
+        label: transparent,
       },
       {
         src: Wig8,
         alt: "HD",
+        label: hd,
       },
       {
         src: Wig9,
         alt: "WATERCOLOR",
+        label: watercolor,
       },
     ],
-    title: "CUSTOM WIG",
+    title: "CUSTOM WIGS",
     src: customWig,
     path: "/shop/custom",
   },

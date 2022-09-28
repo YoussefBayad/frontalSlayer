@@ -13,7 +13,11 @@ const Shelf = ({ data }) => {
           <Link path={data.path} label="">
             <Box sx={styles.wigs.imgWrapper} key={item.id}>
               <Image src={item.src} alt={item.alt} />
-              <Text sx={styles.wigs.imgWrapper.title}>{item.alt}</Text>
+              <Image
+                src={item.label}
+                alt={item.alt}
+                sx={styles.wigs.imgWrapper.title}
+              />
             </Box>
           </Link>
         ))}
@@ -56,10 +60,10 @@ const styles = {
       title: {
         position: "absolute",
         top: " 10px",
-        backgroundColor: "accent",
-        fontSize: "6px",
         m: "0",
-        padding: "0.2px 3px 0px 3px",
+        width: "76% !important",
+        height: "16%",
+        objectFit: "cover",
       },
       img: {
         width: "50%",
@@ -82,7 +86,7 @@ const styles = {
       position: "absolute",
       cursor: "pointer",
       top: "50%",
-      transform: "translateY(4%)",
+      transform: "translateY(1%)",
       m: "0",
       p: "0",
       color: "#FF7469",
