@@ -2,6 +2,7 @@
 import { jsx, Box, Container, Image, Heading, Text } from "theme-ui";
 import { Link } from "components/link";
 import HeartButton from "components/features/wishlist/heartButton";
+import marble from "assets/images/floor.svg";
 
 const Product = ({ product }) => {
   return (
@@ -39,7 +40,10 @@ const styles = {
     backdropFilter: " blur(16px) saturate(100%)",
     borderRadius: "15px",
     border: " 1px solid rgba(209, 213, 219, 0.4)",
-    color: "text",
+    backgroundImage: `url(${marble})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "repeat-y",
+    color: "dark",
     p: "20px",
     py: "10px",
     wigImg: {
@@ -50,9 +54,12 @@ const styles = {
       marginBottom: "15px",
     },
     p: {
-      color: "text",
+      color: "link",
       fontSize: "12px",
-      opacity: "0.7",
+      // opacity: "0.7",
+    },
+    h4: {
+      opacity: "0.9",
     },
 
     footer: {
