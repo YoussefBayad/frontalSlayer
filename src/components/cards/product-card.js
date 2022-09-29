@@ -2,7 +2,7 @@
 import { jsx, Box, Container, Image, Heading, Text } from "theme-ui";
 import { Link } from "components/link";
 import HeartButton from "components/features/wishlist/heartButton";
-import marble from "assets/images/transparentMarbel2.png";
+import marble from "assets/images/transparentMarble.png";
 
 const Product = ({ product }) => {
   return (
