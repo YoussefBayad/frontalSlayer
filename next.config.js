@@ -8,20 +8,17 @@ const nextConfiguration = {
 
 // module.exports = withPlugins([optimizedImages], nextConfiguration);
 
-module.exports = withPlugins(
+module.exports = withPlugins([
   [
-    [
-      withPWA,
-      {
-        pwa: {
-          dest: "public",
-          register: true,
-          skipWaiting: true,
-          runtimeCaching,
-        },
+    withPWA,
+    {
+      pwa: {
+        dest: "public",
+        register: true,
+        skipWaiting: true,
       },
-    ],
-    [optimizedImages],
+    },
   ],
-  nextConfiguration
-);
+  [optimizedImages],
+  nextConfiguration,
+]);
