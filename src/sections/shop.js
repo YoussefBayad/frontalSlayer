@@ -15,7 +15,7 @@ import Skeleton from "react-loading-skeleton";
 import Masonry from "react-masonry-css";
 import { useDispatch, useSelector } from "react-redux";
 
-const Shop = ({ query }) => {
+const Shop = ({ query, subCategory }) => {
   const dispatch = useDispatch();
   const { data, loading, message } = useSelector((state) => state.products);
   const products = query
@@ -53,21 +53,32 @@ const Shop = ({ query }) => {
             <Image src={cart} />
           </Box>
         </Box>
+        <Text sx={styles.category} id="1">
+          {query
+            ? `${
+                String(query).trim().charAt(0).toUpperCase() +
+                String(query).slice(1)
+              } 
+            Wigs : `
+            : "Shop :"}
+        </Text>
+        <Text sx={styles.subCategory} id="1">
+          {subCategory
+            ? `${
+                String(subCategory).trim().charAt(0).toUpperCase() +
+                String(subCategory).slice(1)
+              } UNITS
+             `
+            : ""}
+        </Text>
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-          <Text sx={styles.title} id="1">
-            {query
-              ? `${
-                  String(query).trim().charAt(0).toUpperCase() +
-                  String(query).slice(1)
-                } 
-            Wigs : `
-              : "Shop :"}
+          <Text style={{ height: "20px" }} id="1">
+            {""}
           </Text>
-
           {!loading ? (
             products?.map((product) => (
               <Product product={product} key={product._id} />
@@ -212,10 +223,19 @@ const styles = {
       },
     },
   },
-  title: {
+  category: {
     fontSize: "x-large",
     fontWeight: "bold",
     color: "heading",
+    textAlign: "center",
+    marginBottom: "10px",
+  },
+  subCategory: {
+    fontSize: "large",
+    fontWeight: "600",
+    color: "heading",
+    textAlign: "center",
+    marginBottom: "30px",
   },
   products: {
     gap: ["20px 25px", 25, 25, 30, 30, 30],
