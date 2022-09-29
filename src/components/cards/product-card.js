@@ -2,7 +2,7 @@
 import { jsx, Box, Container, Image, Heading, Text } from "theme-ui";
 import { Link } from "components/link";
 import HeartButton from "components/features/wishlist/heartButton";
-import marble from "assets/images/floor.svg";
+import marble from "assets/images/transparentMarbel.png";
 
 const Product = ({ product }) => {
   return (
@@ -35,9 +35,9 @@ const styles = {
   product: {
     minHeight: "150px",
     width: "100%",
-    background: " rgba( 255, 255, 255, 0.3 )",
+    // background: " rgba( 255, 255, 255, 0.3 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-    backdropFilter: " blur(16px) saturate(100%)",
+    backdropFilter: " blur(4px) saturate(100%)",
     borderRadius: "15px",
     border: " 1px solid rgba(209, 213, 219, 0.4)",
     backgroundImage: `url(${marble})`,
