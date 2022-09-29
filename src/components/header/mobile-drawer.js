@@ -15,7 +15,7 @@ import twitter from "assets/images/icons/twitter.svg";
 import nav from "assets/images/icons/nav.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import Dropdown from "./dropdown";
-import marble from "assets/images/floor.svg";
+import marble from "assets/images/marble.jpg";
 
 const social = [
   {
@@ -201,7 +201,7 @@ const styles = {
       border: "none",
       boxShadow: "none",
       background: "transparent",
-      color: "accent",
+      color: "background",
       zIndex: "20",
       marginTop: 0,
       ".rc-menu-submenu-active": {
@@ -230,14 +230,14 @@ const styles = {
   menu: {
     width: "100%",
 
-    color: "accent",
+    color: " background",
     top: "0",
     left: "0",
     maxWidth: "400px",
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    // pr: "17px",
+    pr: ["17px", "17px", 0],
     ".rc-menu-item-open": {},
     ".rc-menu-item-active": {},
     ".rc-menu-item-inline": {},
@@ -281,7 +281,7 @@ const styles = {
   },
 
   button: {
-    color: "white",
+    color: "background",
     fontSize: "14px",
     fw: "700",
     height: "45px",

@@ -41,7 +41,7 @@ const styles = {
   dropdownLink: {
     // mb: 20,
   },
-  a: { textDecoration: "none", color: "accent" },
+  a: { textDecoration: "none", color: "background" },
   dropdownLinkWrapper: {
     a: {
       fontSize: "12px",
