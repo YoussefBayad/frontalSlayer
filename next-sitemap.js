@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://impeerforyou.com",
+  siteUrl: "https://frontalslayer.vercel.app/",
   generateRobotsTxt: true,
 };

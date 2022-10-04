@@ -1,14 +1,16 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image } from "theme-ui";
-import Logo from "assets/images/logo.gif";
+import Logo from "assets/images/newLogo.png";
 import bottomShelf from "assets/images/bottomShelf.png";
 import flowerHolder from "assets/images/flowerHolder.PNG";
+import leftPot from "assets/images/leftPot.PNG";
+import rightPot from "assets/images/rightPot.PNG";
 import floor from "assets/images/floor.svg";
 import top from "assets/images/top.png";
 import ptb from "assets/images/gif/products-tools-booking.gif";
 
 // import WallBig from "assets/images/wall.png";
-import WallSmall from "assets/images/fwsmall.png";
+import WallSmall from "assets/images/newFL.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 import Shelf from "components/Shelf";
@@ -121,7 +123,7 @@ const Products = () => {
         </Box>
       </Container>
       <Box sx={styles.floor}>
-        <Image src={flowerHolder} sx={styles.leftFlowers} alt="shelf" />
+        <Image src={leftPot} sx={styles.leftFlowers} alt="shelf" />
         <Box sx={styles.shelfWrapper}>
           <Image sx={styles.shelfWrapper.shelf} src={bottomShelf} alt="shelf" />
           {/* <Box sx={styles.shelfWrapper.comingSoon}>
@@ -130,7 +132,7 @@ const Products = () => {
             <p>COMING SOON</p>
           </Box> */}
         </Box>
-        <Image src={flowerHolder} sx={styles.rightFlowers} alt="shelf" />
+        <Image src={rightPot} sx={styles.rightFlowers} alt="shelf" />
       </Box>
     </Box>
   );
@@ -250,7 +252,7 @@ const styles = {
     position: "absolute",
     transform: "translateX(0%)",
     left: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
-    bottom: ["16.5vh"],
+    bottom: ["17.5vh"],
     zIndex: "3",
   },
   rightFlowers: {
@@ -258,7 +260,7 @@ const styles = {
     position: "absolute",
     transform: "translateX(0%)",
     right: ["calc(0% - 0px)", "calc(0% - 0px)", "calc(0% - 195px)"],
-    bottom: ["16.5vh"],
+    bottom: ["17.5vh"],
     zIndex: "3",
   },
 };
