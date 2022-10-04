@@ -209,6 +209,8 @@ const styles = {
       },
       ".rc-menu-submenu-title": {
         backgroundColor: "transparent",
+        p: 0,
+        fontSize: "15px",
       },
       ".rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title":
         {

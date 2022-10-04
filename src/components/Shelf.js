@@ -76,7 +76,7 @@ const styles = {
     placeItems: "center",
     position: "relative",
     top: "-6px",
-    zIndex: "-1",
+    zIndex: "2",
     shelf: {
       width: ["100%"],
       height: "20px",
