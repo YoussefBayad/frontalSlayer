@@ -212,6 +212,13 @@ const styles = {
         p: 0,
         fontSize: "15px",
       },
+      " .rc-menu-submenu > .rc-menu-submenu-title": {
+        py: "4px",
+      },
+      " .rc-menu-sub.rc-menu-inline > .rc-menu-item, .rc-menu-sub.rc-menu-inline > .rc-menu-submenu > .rc-menu-submenu-title ":
+        {
+          py: "4px",
+        },
       ".rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title":
         {
           backgroundColor: "rgba( 255, 255, 255, 0.4 )",
