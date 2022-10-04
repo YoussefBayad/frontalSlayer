@@ -39,16 +39,21 @@ const data = {
       {
         src: Wig2,
         alt: "RAW",
+        path: "/shop/hd/raw",
         label: raw,
       },
       {
         src: Wig1,
         alt: "VIRGIN",
+        path: "/shop/hd/virgin",
+
         label: virgin,
       },
       {
         src: Wig3,
         alt: "613",
+        path: "/shop/hd/613",
+
         label: six,
       },
     ],
@@ -62,15 +67,20 @@ const data = {
         src: Wig5,
         alt: "RAW",
         label: raw,
+        path: "/shop/transparent/raw",
       },
       {
         src: Wig4,
         alt: "VIRGIN",
+        path: "/shop/transparent/virgin",
+
         label: virgin,
       },
       {
         src: Wig6,
         alt: "613",
+        path: "/shop/transparent/613",
+
         label: six,
       },
     ],
@@ -83,16 +93,21 @@ const data = {
       {
         src: Wig7,
         alt: "TRANSPARENT",
+        path: "/shop/custom/transparent",
+
         label: transparent,
       },
       {
         src: Wig8,
         alt: "HD",
+        path: "/shop/custom/hd",
+
         label: hd,
       },
       {
         src: Wig9,
         alt: "WATERCOLOR",
+        path: "/shop/custom/watercolor",
         label: watercolor,
       },
     ],
