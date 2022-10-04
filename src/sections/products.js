@@ -173,7 +173,7 @@ const styles = {
     p: 0,
     // boxShadow: "0 0 15px 5px #e53030",
     stroke: " #ff5b59",
-    filter: "drop-shadow(0px 26px 14px #ff5b59)",
+    // filter: "drop-shadow(0px 26px 14px #ff5b59)",
     height: "100%",
     width: "75%",
     position: "relative",
