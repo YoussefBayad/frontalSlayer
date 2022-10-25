@@ -320,6 +320,19 @@ export default {
       backdropFilter: "blur(10px)",
       transition: "0.3s ease-in-out 0s",
     },
+    darkGlass: {
+      cursor: "pointer",
+      fontFamily: "body",
+      color: "text",
+      boxShadow: "0 4px 7px 0 rgb(31 38 135 / 28%)",
+      color: "#fff",
+      margin: "40px auto",
+      backgroundColor: "rgba(26, 0, 0, 0.38)",
+      border: "1px solid rgba(27,0,0,0.1)",
+      borderRadius: "15px",
+      backdropFilter: "blur(10px)",
+      transition: "0.3s ease-in-out 0s",
+    },
 
     muted: {
       variant: "buttons.default",

@@ -87,7 +87,8 @@ const AddReview = ({ id, reviews = [] }) => {
                       </Select>
                     </Box>
                     <Box controlId="comment">
-                      <h4>Comment</h4>
+                      <Heading as="h4">Comment</Heading>
+
                       <Textarea
                         as="textarea"
                         name="comment"
@@ -97,7 +98,7 @@ const AddReview = ({ id, reviews = [] }) => {
                     <Button
                       // disabled={loadingProductReview}
                       type="submit"
-                      variant="glass"
+                      variant="darkGlass"
                     >
                       Add Review
                     </Button>
@@ -128,6 +129,7 @@ const styles = {
     py: ["20px", "30px"],
     borderTop: "2px solid rgba( 255,255,255,0.3 )",
     borderRadius: "0",
+
     message: {
       color: "link",
     },
@@ -135,13 +137,16 @@ const styles = {
       margin: "2rem 0",
     },
     h2: {
+      fontSize: "1.2rem",
       mb: "20px",
     },
     h3: {
       marginTop: "30px",
+      fontSize: "1rem",
     },
     h4: {
-      marginBottom: "1rem",
+      my: "1rem",
+      fontSize: "0.9rem",
     },
     button: {
       marginTop: "15px",

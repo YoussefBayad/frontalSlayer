@@ -2,7 +2,7 @@
 import { jsx, Box, Container, Image, Heading, Text, Button } from "theme-ui";
 import blurryGradient from "assets/images/blurryGradient3.svg";
 import CascadingFlowers from "assets/images/cascadingFlowersHQ.svg";
-import flowersTwo from "assets/images/flowerThree.svg";
+import flowersTwo from "assets/images/f3.svg";
 
 import wig from "assets/images/transparent.png";
 import ShowMoreText from "react-show-more-text";
@@ -12,6 +12,8 @@ import AddToCart from "components/features/cart/addToCart";
 import Header from "components/header/header";
 import AddReview from "components/addReview";
 import { useSelector } from "react-redux";
+import marble from "assets/images/marble.jpg";
+import HeartButton from "components/features/wishlist/heartButton";
 
 const Product = ({ query }) => {
   const [qty, setQty] = useState(1);
@@ -23,10 +25,14 @@ const Product = ({ query }) => {
   return (
     <Box as="section" variant={"section.product"} sx={styles.section}>
       <Container sx={styles.container}>
-        <Header />
+        <Header darkBackground />
         <Box sx={styles.product}>
           {product ? (
             <>
+              <HeartButton
+                style={{ display: "flex", justifyContent: "flex-end " }}
+                product={product}
+              />
               <Image sx={styles.product.src} src={product.src} alt={"wig"} />
               <Box sx={styles.product.header}>
                 <Heading as="h2">{product.name}</Heading>
@@ -102,7 +108,8 @@ const styles = {
     width: "100%",
     position: "absolute",
     top: "0",
-    backgroundImage: [`url(${blurryGradient})`],
+    // backgroundImage: [`url(${blurryGradient})`],
+    backgroundImage: `url(${marble})`,
     backgroundPosition: "right",
     backgroundSize: ["cover"],
     backgroundRepeat: ["repeat"],
@@ -124,8 +131,8 @@ const styles = {
       backgroundImage: `url(${flowersTwo})`,
       // backgroundPosition: "right",
       backgroundSize: "contain",
-      backgroundRepeat: "repeat",
-      top: "0",
+      backgroundRepeat: "no-repeat",
+      bottom: "0",
       left: "-60px",
       width: "232px",
       height: "100vh",
@@ -134,6 +141,7 @@ const styles = {
   },
   showMore: {
     a: { textDecoration: "none", color: "link" },
+    fontSize: "0.9rem",
   },
 
   container: {
@@ -149,7 +157,7 @@ const styles = {
     position: "relative",
     width: "90%",
     mx: "auto",
-    color: "text",
+    color: "dark",
     padding: ["20px", "40px"],
     zIndex: "2",
     src: {
@@ -159,7 +167,7 @@ const styles = {
       mb: "15px",
     },
     p: {
-      color: "text",
+      color: "dark",
       fontSize: "12px",
       opacity: "0.7",
     },
@@ -167,13 +175,18 @@ const styles = {
     header: {
       mt: "10px",
       display: "flex",
-      justifyContent: " space-between",
-      alignItems: "flex-start",
+      alignItems: "center",
+      flexDirection: "column",
+
+      h2: {
+        fontSize: "1.2rem",
+      },
     },
     middle: {
       mt: "30px",
       h4: {
         mb: "10px",
+        fontSize: "1rem",
       },
     },
     footer: {
