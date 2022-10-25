@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import Product from "components/features/wishlist/wishlist";
 import { Link } from "components/link";
 import Header from "components/header/header";
+import marble from "assets/images/marble.jpg";
 
 const Wishlist = () => {
   let products = useSelector((state) => state.wishlist.data);
@@ -12,7 +13,7 @@ const Wishlist = () => {
   return (
     <Box as="section" variant={"section.wishlist"} sx={styles.section}>
       <Container sx={styles.container}>
-        <Header />
+        <Header darkBackground />
         <Box sx={styles.wishlistPage}>
           <Heading as="h1" sx={styles.wishlistPage.title}>
             Your Wishlist :
@@ -46,6 +47,14 @@ const Wishlist = () => {
 export default Wishlist;
 
 const styles = {
+  section: {
+    position: "absolute",
+    width: "100vw",
+    height: "100vh",
+    backgroundImage: `url(${marble})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "repeat-y",
+  },
   emptyWishlist: {},
   backToShop: {
     padding: "2rem",
@@ -57,6 +66,7 @@ const styles = {
     marginBottom: "15rem",
     title: {
       paddingBottom: "3rem",
+      color: "dark",
     },
     inner: {
       display: "flex",

@@ -69,8 +69,9 @@ const styles = {
     alignItems: "center",
     justifyContent: "space-between",
     mb: ["20px", "25px"],
+    backdropFilter: "blur(5px)",
 
-    color: "text",
+    color: "dark",
     p: "10px",
 
     borderRadius: "0",

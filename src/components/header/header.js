@@ -6,11 +6,18 @@ import { useRouter } from "next/router";
 import { Link } from "../link";
 import MobileDrawer from "./mobile-drawer";
 
-const Header = () => {
+const Header = ({ darkBackground }) => {
   const router = useRouter();
 
   return (
-    <Box sx={styles.header}>
+    <Box
+      style={{
+        background: darkBackground
+          ? " rgba(26, 0, 0 , 0.38) "
+          : " rgba( 255, 255, 255, 0.3 )",
+      }}
+      sx={styles.header}
+    >
       <IoIosArrowBack
         sx={styles.header.backIcon}
         onClick={() =>
