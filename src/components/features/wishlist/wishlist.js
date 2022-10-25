@@ -35,6 +35,12 @@ const WishlistProducts = ({ product }) => {
               >
                 {product.name}
               </Text>
+              <Text
+                sx={styles.wishlistProducts.leftSide.description.description}
+                as="p"
+              >
+                Wig description
+              </Text>
             </Link>
             <Text
               as="p"
@@ -85,6 +91,11 @@ const styles = {
         name: {
           fontWeight: "bold",
           fontSize: "18px",
+        },
+        description: {
+          color: "link",
+          fontSize: "12px",
+          opacity: "0.7",
         },
         price: {
           fontWeight: "lighter",
