@@ -7,7 +7,7 @@ import marble from "assets/images/transparentMarble.png";
 const Product = ({ product }) => {
   return (
     <Container sx={styles.product}>
-      <Link style={{ cursor: "pointer" }} path={`product/${product._id}`}>
+      <Link style={{ cursor: "pointer" }} path={`/product/${product._id}`}>
         <Image sx={styles.product.wigImg} src={product.src} alt={"wig"} />
         <Heading as="h4">{product.name} </Heading>
         <Text as="p">Wig description</Text>
