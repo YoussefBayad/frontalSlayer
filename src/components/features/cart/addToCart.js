@@ -41,6 +41,6 @@ const styles = {
   addToCart: {
     px: "11px",
     boxShadow: "0 4px 7px 0 rgb(31 38 135 / 28%)",
-    fontSize: ["14px", "16px", "18px"],
+    fontSize: ["12px", "14px", "18px"],
   },
 };

@@ -195,7 +195,7 @@ const styles = {
       justifyContent: " space-between",
       alignItems: " center",
       price: {
-        fontSize: "22px",
+        fontSize: "1rem",
       },
       addToCart: {
         display: "flex",
