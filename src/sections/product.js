@@ -13,14 +13,21 @@ import Header from "components/header/header";
 import AddReview from "components/addReview";
 import { useSelector } from "react-redux";
 import marble from "assets/images/marble.jpg";
+import wig2 from "assets/images/wigs/2.png";
+import wig3 from "assets/images/wigs/3.png";
 import HeartButton from "components/features/wishlist/heartButton";
+import Slider from "react-slick";
+import CarouselCard from "../components/cards/carouselCard";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import Carousel from "components/carousels/products";
 
 const Product = ({ query }) => {
   const [qty, setQty] = useState(1);
 
   const { data, loading, message } = useSelector((state) => state.products);
   const product = data.filter((product) => product._id == query)[0];
-  console.log("product", product);
+
+  const imgArray = [product, { src: wig2, id: 3 }, { src: wig3, id: 2 }];
 
   return (
     <Box as="section" variant={"section.product"} sx={styles.section}>
@@ -33,7 +40,8 @@ const Product = ({ query }) => {
                 style={{ display: "flex", justifyContent: "flex-end " }}
                 product={product}
               />
-              <Image sx={styles.product.src} src={product.src} alt={"wig"} />
+              {/* <Image sx={styles.product.src} src={product.src} alt={"wig"} /> */}
+              <Carousel data={imgArray} />
               <Box sx={styles.product.header}>
                 <Heading as="h2">{product.name}</Heading>
                 <Rating numReviews={87} rating={5} />

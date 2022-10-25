@@ -19,29 +19,30 @@ function SlickArrow({ className, onClick, control }) {
       sx={styles.paginationButton}
     >
       {control === "prev" ? (
-        <IoIosArrowDropleft size="32px" fill="white" />
+        <IoIosArrowDropleft size="32px" fill="#ec5d55" />
       ) : (
-        <IoIosArrowDropright size="32px" fill="white" />
+        <IoIosArrowDropright size="32px" fill="#ec5d55" />
       )}
     </Button>
   );
 }
 const settings = {
   arrows: true,
-  //   dots: true,
+  dots: true,
   speed: 500,
   //   pauseOnFocus: true,
   //   autoplay: true,
   //   autoplaySpeed: 2000,
-  nextArrow: <SlickArrow fill="white" control="next" />,
-  prevArrow: <SlickArrow fill="white" control="prev" />,
-  slidesToShow: 3,
+  nextArrow: <SlickArrow fill="#ec5d55" control="next" />,
+  prevArrow: <SlickArrow fill="#ec5d55" control="prev" />,
+
+  slidesToShow: 1,
   slidesToScroll: 1,
   responsive: [
     {
       breakpoint: 769,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
       },
     },
@@ -52,7 +53,7 @@ const Carousel = ({ data }) => {
   return (
     <Container sx={styles.container}>
       <Slider sx={styles.slider} {...settings}>
-        {data.products.map((item) => (
+        {data.map((item, i) => (
           <CarouselCard
             sx={styles.productsCarousel}
             key={item.id}
@@ -60,10 +61,10 @@ const Carousel = ({ data }) => {
           />
         ))}
       </Slider>
-      <Box sx={styles.shelfWrapper}>
+      {/* <Box sx={styles.shelfWrapper}>
         <Image sx={styles.shelfWrapper.shelf} src={Shelf} />
         <Link path={data.path} label={data.title} />
-      </Box>
+      </Box> */}
     </Container>
   );
 };
@@ -96,7 +97,7 @@ const styles = {
     },
     svg: {
       transition: "all 0.2s ease-in-out 0s",
-      width: "20px",
+      width: "30px",
     },
     "&.slick-disabled": {
       color: "#BBC7D7",
@@ -125,10 +126,40 @@ const styles = {
       // mr: [null, null, null, null, 4, 0],
     },
     img: {
-      width: "50% !important",
-      height: "50% !important",
+      width: "80% !important",
+      height: "80% !important",
       mx: "auto !important",
-      ml: "15px !important",
+      // ml: "15px !important",
+    },
+    ".slick-dots": {
+      display: "flex !important",
+      margin: 0,
+      padding: 0,
+      listStyle: "none",
+      alignItems: "center",
+      justifyContent: "center",
+      marginTop: [3, null, null, 13],
+      li: {
+        mx: 1,
+        display: "flex",
+      },
+      button: {
+        backgroundColor: rgba("#ec5d55", 0.6),
+        borderRadius: 50,
+        border: 0,
+        cursor: "pointer",
+        padding: 0,
+        overflow: "hidden",
+        textIndent: "-9999em",
+        width: 10,
+        height: 6,
+        outline: 0,
+        transition: "all 0.3s ease-in-out 0s",
+      },
+      ".slick-active button": {
+        backgroundColor: "lightRed",
+        width: 20,
+      },
     },
   },
   shelfWrapper: {
