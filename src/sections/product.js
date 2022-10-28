@@ -119,7 +119,7 @@ const styles = {
     // backgroundImage: [`url(${blurryGradient})`],
     backgroundImage: `url(${marble})`,
     backgroundPosition: "right",
-    backgroundSize: ["cover"],
+    backgroundSize: ["contain"],
     backgroundRepeat: ["repeat"],
     "&:before": {
       content: '""',

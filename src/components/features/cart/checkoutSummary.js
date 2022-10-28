@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Heading, Badge } from "theme-ui";
+import { jsx, Box, Heading, Badge, Input } from "theme-ui";
 
 const CheckoutSummary = ({ children, total, totalItems }) => {
   return (
@@ -14,6 +14,10 @@ const CheckoutSummary = ({ children, total, totalItems }) => {
       <Box sx={styles.checkoutSummary.shippingCost}>
         <p sx={styles.checkoutSummary.text}>Shipping </p>
         <p sx={styles.checkoutSummary.price}>$00.00</p>
+      </Box>
+      <Box sx={styles.checkoutSummary.shippingCost}>
+        <p sx={styles.checkoutSummary.text}>PROMO CODE </p>
+        <Input sx={styles.checkoutSummary.input} />
       </Box>
       <Box sx={styles.checkoutSummary.totalPrice}>
         <p sx={styles.checkoutSummary.text}>Total </p>
@@ -42,6 +46,12 @@ const styles = {
     "& > div": {
       // display: "none",
       maxHeight: "70px",
+    },
+    input: {
+      backgroundColor: "#fefefe33",
+      borderColor: "#ffffff",
+      height: "40px",
+      marginLeft: "30px",
     },
 
     totalPrice: {

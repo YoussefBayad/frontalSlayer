@@ -52,7 +52,7 @@ const styles = {
     width: "100vw",
     height: "100vh",
     backgroundImage: `url(${marble})`,
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     backgroundRepeat: "repeat-y",
   },
   emptyWishlist: {},

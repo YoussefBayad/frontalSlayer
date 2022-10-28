@@ -52,7 +52,7 @@ const Cart = () => {
               <CheckoutSummary total={total} totalItems={totalItems}>
                 <Link path="/shipping">
                   <Button variant="glass" sx={styles.cartPage.checkoutBtn}>
-                    Proceed to Checkout
+                    PROCEED TO CHECKOUT
                   </Button>
                 </Link>
               </CheckoutSummary>
