@@ -8,6 +8,7 @@ import CartProduct from "./product";
 import useOutsideClickRef from "@rooks/use-outside-click-ref";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
+import marble from "assets/images/marble.jpg";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -53,7 +54,7 @@ const Cart = () => {
             sx={styles.cart}
           >
             <Box sx={styles.cart.cartHeader}>
-              <Heading as="h1">CART</Heading>
+              <Heading as="h1">My Bag</Heading>
               <IoMdClose
                 size="24px"
                 alt="close cart"
@@ -70,10 +71,17 @@ const Cart = () => {
                   Your cart is empty ...
                 </Heading>
               )}
-              <AnimatePresence>
-                {products.map((product) => (
-                  <CartProduct key={product._id} product={product} cartPopup />
-                ))}
+              <AnimatePresence sx={styles.productWrapper}>
+                <Box sx={styles.productWrapper}>
+                  {products.map((product) => (
+                    <CartProduct
+                      key={product._id}
+                      product={product}
+                      cartPopup
+                      sx={styles.product}
+                    />
+                  ))}
+                </Box>
               </AnimatePresence>
             </Box>{" "}
             <Footer total={total} openCart={openCart} />
@@ -94,6 +102,13 @@ const styles = {
     width: "100%",
     height: "100%",
     backgroundColor: "rgba(0, 0, 0, 0.3)",
+  },
+  productWrapper: {
+    maxHeight: "150px",
+  },
+  product: {
+    boxShadow: "0 8px 32px 0 rgb(31 38 135 / 17%)",
+    backdropFilter: "blur(2px) saturate(100%)",
   },
   cartRemoveProduct: {
     fontSize: "$small",
@@ -121,12 +136,15 @@ const styles = {
     maxWidth: "35rem",
     width: "100%",
     height: "100vh",
-    color: "text",
+    color: "dark",
     background: " rgba( 255, 255, 255, 0.3 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
     backdropFilter: " blur(10px) saturate(100%)",
-    borderRadius: "  15px 0 0 15px ",
-    border: " 1px solid rgba(209, 213, 219, 0.4)",
+    // borderRadius: "  15px 0 0 15px ",
+    backgroundImage: `url(${marble})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "repeat-y",
+    // border: " 1px solid rgb(168, 171, 177)",
     zIndex: "40",
     display: "flex",
     flexDirection: "column",
@@ -140,10 +158,14 @@ const styles = {
       width: "100%",
       display: "flex",
       alignItems: "center",
-      justifyContent: "space-between",
+      // color: "accent",
+      justifyContent: "flex-end",
       padding: "1.5rem",
-      borderBottom: "2px   solid rgba(209, 213, 219, 0.4) ",
-
+      borderBottom: "2px   solid rgba(168, 171, 177, 0.5) ",
+      h1: {
+        marginRight: "25%",
+        color: "darkRed",
+      },
       closeCart: {
         height: "2.5rem",
         width: "2.5rem",

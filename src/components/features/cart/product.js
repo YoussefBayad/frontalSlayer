@@ -20,8 +20,8 @@ const CartProduct = ({ product, cartPopup }) => {
       <Badge
         // sx={cartPopup ? styles.cartPopupProduct : styles.cartProduct}
         sx={styles.cartProduct}
-        variant={cartPopup ? "transparent" : "glass"}
-        className={cartPopup ? "cart-popup-product" : ""}
+        variant={cartPopup ? "glass" : "glass"}
+        // className={cartPopup ? "cart-popup-product" : ""}
       >
         <Box sx={styles.cartProduct.leftSide}>
           <Link path={`/shop/product/${product._id}`}>
@@ -42,6 +42,18 @@ const CartProduct = ({ product, cartPopup }) => {
                 {product.name}
               </Text>
             </Link>
+            <Text
+              as="p"
+              sx={styles.cartProduct.leftSide.description.smallerText}
+            >
+              {product.description} product description...
+            </Text>
+            <Text
+              as="p"
+              sx={styles.cartProduct.leftSide.description.smallerText}
+            >
+              wig size : L
+            </Text>
             <Text as="p" sx={styles.cartProduct.leftSide.description.price}>
               ${product.price} usd
             </Text>
@@ -64,16 +76,16 @@ export default CartProduct;
 
 const styles = {
   cartProduct: {
-    width: "100%",
+    width: "80%",
     height: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     borderRadius: "0",
-
+    mx: "auto",
     mb: ["20px", "25px"],
     fontSize: "16px",
-    color: "text",
+    color: "dark",
     p: "10px",
     img: {
       mr: "15px",
@@ -97,6 +109,10 @@ const styles = {
         price: {
           fontWeight: "lighter",
           fontSize: ["16px", "17px", "18px"],
+        },
+        smallerText: {
+          fontWeight: "lighter",
+          fontSize: ["12px", "13px", "14px"],
         },
       },
     },
