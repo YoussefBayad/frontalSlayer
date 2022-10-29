@@ -28,7 +28,7 @@ const CartFooter = ({ total, openCart }) => {
               dispatch(openCart());
             }}
           >
-            <Button sx={styles.cartFooter.checkout} variant="glass">
+            <Button sx={styles.cartFooter.checkout} variant="darkGlass">
               <span>CHECKOUT</span>{" "}
               <span>
                 ${""}
@@ -43,7 +43,6 @@ const CartFooter = ({ total, openCart }) => {
               dispatch(openCart());
             }}
           >
-            {" "}
             View cart
           </Link>
         </>
