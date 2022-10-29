@@ -81,6 +81,8 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    boxShadow: "0 8px 32px 0 rgb(31 38 135 / 17%)",
+    backdropFilter: "blur(2px) saturate(100%)",
     borderRadius: "0",
     mx: "auto",
     mb: ["20px", "25px"],

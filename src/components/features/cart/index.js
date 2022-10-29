@@ -106,10 +106,7 @@ const styles = {
   productWrapper: {
     maxHeight: "150px",
   },
-  product: {
-    boxShadow: "0 8px 32px 0 rgb(31 38 135 / 17%)",
-    backdropFilter: "blur(2px) saturate(100%)",
-  },
+
   cartRemoveProduct: {
     fontSize: "$small",
     fontWeight: "lighter",
