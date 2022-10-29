@@ -43,7 +43,7 @@ const CartFooter = ({ total, openCart }) => {
               dispatch(openCart());
             }}
           >
-            View cart
+            View Bag
           </Link>
         </>
       )}

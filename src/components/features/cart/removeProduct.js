@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, Heading } from "theme-ui";
 import { useDispatch } from "react-redux";
-import { FcFullTrash } from "react-icons/fc";
+import { BsTrash } from "react-icons/bs";
 
 const RemoveProduct = ({ _id, removeFromCart }) => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const RemoveProduct = ({ _id, removeFromCart }) => {
       onClick={() => dispatch(removeFromCart(_id))}
     >
       {/* REMOVE */}
-      <FcFullTrash size="35px" />
+      <BsTrash size="25px" />
     </Heading>
   );
 };

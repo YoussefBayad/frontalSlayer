@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Button } from "theme-ui";
+import { jsx, Box, Button, Text } from "theme-ui";
 import { useDispatch } from "react-redux";
 import { decrement, increment } from "redux/cart/cartSlice";
 
@@ -15,11 +15,19 @@ const ProductQty = ({ id, qty, countInStock }) => {
 
   return (
     <Box sx={styles.productQty}>
-      <Button variant="white" onClick={incrementQty}>
+      <Button
+        variant="white"
+        sx={styles.productQty.plus}
+        onClick={incrementQty}
+      >
         +
       </Button>
-      {qty}
-      <Button variant="white" onClick={() => dispatch(decrement(id))}>
+      <Text as="p">{qty}</Text>
+      <Button
+        variant="white"
+        sx={styles.productQty.minus}
+        onClick={() => dispatch(decrement(id))}
+      >
         -
       </Button>
     </Box>
@@ -54,18 +62,29 @@ const styles = {
   productQty: {
     padding: "0",
     border: "1px solid #ec5d55",
-    borderRadius: "20px",
+    // borderRadius: "20px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     fontSize: "12px",
     mr: 2,
-
+    p: { width: "30px", display: "grid", placeItems: "center" },
     button: {
       backgroundColor: "transparent",
       color: "lightRed",
-      fontSize: "25px",
+      fontSize: "20px",
       py: 0,
+      width: "30px",
+    },
+    plus: {
+      borderRight: "1px solid #ec5d55",
+      borderRadius: 0,
+      // mr: "5px",
+    },
+    minus: {
+      borderLeft: "1px solid #ec5d55",
+      borderRadius: 0,
+      // ml: "5px",
     },
   },
 };
