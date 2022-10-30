@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Shop = ({ query, subCategory }) => {
   const dispatch = useDispatch();
+  const cartProducts = useSelector((state) => state.cart.data);
   const { data, loading, message } = useSelector((state) => state.products);
   const products = query
     ? data.filter((product) => product.category === query)
@@ -51,7 +52,10 @@ const Shop = ({ query, subCategory }) => {
             />
           </Box>
           <Box sx={styles.navigation.sort} onClick={() => dispatch(openCart())}>
-            <Image src={cart} />
+            <Image sx={styles.navigation.cart} src={cart} />
+            <Box sx={styles.navigation.cart.notificationsCount}>
+              {cartProducts.length}
+            </Box>
           </Box>
         </Box>
         <Text sx={styles.category} id="1">
@@ -174,6 +178,24 @@ const styles = {
       display: "flex",
       cursor: "pointer",
       zIndex: "3",
+    },
+    cart: {
+      position: "relative",
+      notificationsCount: {
+        position: "absolute",
+        textAlign: "center",
+        fontSize: "xx-small",
+        fontWeight: "600",
+        color: "white",
+        paddingTop: "0.1rem",
+        paddingLeft: "0.1rem",
+        top: "0.1rem",
+        right: "0.3rem",
+        backgroundColor: "accent",
+        width: "15px",
+        height: "15px",
+        borderRadius: "50%",
+      },
     },
 
     form: {
