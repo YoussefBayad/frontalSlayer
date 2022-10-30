@@ -39,7 +39,7 @@ const styles = {
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
     backdropFilter: " blur(4px) saturate(100%)",
     borderRadius: " 15px 15px  0 0",
-    border: " 1px solid rgba(209, 213, 219, 0.4)",
+    border: " 1px solid black",
     backgroundImage: `url(${marble})`,
     backgroundSize: "cover",
     backgroundRepeat: "repeat-y",
