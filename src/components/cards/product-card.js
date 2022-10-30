@@ -2,7 +2,7 @@
 import { jsx, Box, Container, Image, Heading, Text } from "theme-ui";
 import { Link } from "components/link";
 import HeartButton from "components/features/wishlist/heartButton";
-import marble from "assets/images/transparentMarble.png";
+import marble from "assets/images/marble.jpg";
 
 const Product = ({ product }) => {
   return (
@@ -14,7 +14,7 @@ const Product = ({ product }) => {
       </Link>
       <Box sx={styles.product.footer}>
         <Text as="h4" sx={styles.product.footer.price}>
-          {product.price}$
+          $ {product.price}
         </Text>
 
         {/* <Image
@@ -38,7 +38,7 @@ const styles = {
     // background: " rgba( 255, 255, 255, 0.3 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
     backdropFilter: " blur(4px) saturate(100%)",
-    borderRadius: "15px",
+    borderRadius: " 15px 15px  0 0",
     border: " 1px solid rgba(209, 213, 219, 0.4)",
     backgroundImage: `url(${marble})`,
     backgroundSize: "cover",

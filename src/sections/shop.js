@@ -11,6 +11,7 @@ import shortText from "assets/images/icons/shortText.svg";
 import Header from "components/header/header";
 import { openCart } from "../redux/cart/cartSlice";
 import Skeleton from "react-loading-skeleton";
+import marble from "assets/images/marble.jpg";
 
 import Masonry from "react-masonry-css";
 import { useDispatch, useSelector } from "react-redux";
@@ -32,7 +33,7 @@ const Shop = ({ query, subCategory }) => {
   return (
     <Box as="section" variant={"section.shop"} sx={styles.section}>
       <Container sx={styles.container}>
-        <Header />
+        <Header darkBackground />
         <Box sx={styles.navigation}>
           <Box sx={styles.navigation.sort}>
             <Image src={params} />
@@ -59,8 +60,8 @@ const Shop = ({ query, subCategory }) => {
                 String(query).trim().charAt(0).toUpperCase() +
                 String(query).slice(1)
               } 
-            Wigs : `
-            : "Shop :"}
+            Wigs  `
+            : "Shop "}
         </Text>
         <Text sx={styles.subCategory} id="1">
           {subCategory
@@ -120,9 +121,13 @@ const styles = {
     top: "0",
     overflowX: "hidden",
     // backgroundColor: "background",
-    backgroundImage: [`url(${blurryGradient})`],
-    backgroundPosition: "right",
-    backgroundSize: ["cover"],
+    // backgroundImage: [`url(${blurryGradient})`],
+    // backgroundPosition: "right",
+    // backgroundSize: ["cover"],
+    // backgroundRepeat: ["repeat"],
+    backgroundImage: `url(${marble})`,
+    // backgroundPosition: "right",
+    backgroundSize: ["contain"],
     backgroundRepeat: ["repeat"],
     "&:after": {
       content: '""',
@@ -159,7 +164,7 @@ const styles = {
       },
     },
     sort: {
-      background: " rgba( 255, 255, 255, 0.3 )",
+      background: " rgba(26, 0, 0 , 0.38) ",
       boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
       backdropFilter: " blur(16px) saturate(100%)",
       borderRadius: "15px",
@@ -178,7 +183,7 @@ const styles = {
       maxWidth: ["480px", null, null, "520px"],
       height: ["45px", null, null, "50px", null, null, "50px"],
       input: {
-        background: " rgba( 255, 255, 255, 0.3 )",
+        background: " rgba(26, 0, 0 , 0.38) ",
         boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
         backdropFilter: " blur(16px) saturate(100%)",
         borderRadius: "15px",
@@ -226,14 +231,14 @@ const styles = {
   category: {
     fontSize: "x-large",
     fontWeight: "bold",
-    color: "heading",
+    color: "dark",
     textAlign: "center",
     marginBottom: "10px",
   },
   subCategory: {
     fontSize: "large",
     fontWeight: "600",
-    color: "heading",
+    color: "dark",
     textAlign: "center",
     marginBottom: "30px",
   },
