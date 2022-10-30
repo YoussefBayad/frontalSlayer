@@ -7,11 +7,13 @@ import marble from "assets/images/marble.jpg";
 const Product = ({ product }) => {
   return (
     <Container sx={styles.product}>
-      <Link style={{ cursor: "pointer" }} path={`/product/${product._id}`}>
-        <Image sx={styles.product.wigImg} src={product.src} alt={"wig"} />
-        <Heading as="h4">{product.name} </Heading>
-        <Text as="p">Wig description</Text>
-      </Link>
+      <Box sx={styles.product.top}>
+        <Link path={`/product/${product._id}`}>
+          <Image sx={styles.product.wigImg} src={product.src} alt={"wig"} />
+          <Heading as="h4">{product.name} </Heading>
+          <Text as="p">Wig description</Text>
+        </Link>
+      </Box>
       <Box sx={styles.product.footer}>
         <Text as="h4" sx={styles.product.footer.price}>
           $ {product.price}
@@ -44,8 +46,13 @@ const styles = {
     backgroundSize: "cover",
     backgroundRepeat: "repeat-y",
     color: "dark",
-    p: "20px",
+    px: "0",
     py: "10px",
+    top: {
+      display: "grid",
+      placeItems: "center",
+      cursor: "pointer",
+    },
     wigImg: {
       height: "145px",
       objectFit: "contain",
@@ -65,7 +72,7 @@ const styles = {
     footer: {
       mt: "10px",
       display: "flex",
-      justifyContent: " space-between",
+      justifyContent: "flex-end",
       alignItems: " center",
       price: {},
       zIndex: "30",

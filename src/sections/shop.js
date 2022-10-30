@@ -65,7 +65,7 @@ const Shop = ({ query, subCategory }) => {
             <Input
               name="search"
               id="search"
-              placeholder="Find Your School..."
+              placeholder="..."
               sx={styles.navigation.form.input}
             />
           </Box>
