@@ -35,6 +35,24 @@ const Shop = ({ query, subCategory }) => {
     <Box as="section" variant={"section.shop"} sx={styles.section}>
       <Container sx={styles.container}>
         <Header darkBackground />
+        <Text sx={styles.category} id="1">
+          {query
+            ? `${
+                String(query).trim().charAt(0).toUpperCase() +
+                String(query).slice(1)
+              } 
+            Wigs  `
+            : "Shop "}
+        </Text>
+        <Text sx={styles.subCategory} id="1">
+          {subCategory
+            ? `${
+                String(subCategory).trim().charAt(0).toUpperCase() +
+                String(subCategory).slice(1)
+              } UNITS
+             `
+            : ""}
+        </Text>
         <Box sx={styles.navigation}>
           <Box sx={styles.navigation.sort}>
             <Image src={params} />
@@ -58,24 +76,7 @@ const Shop = ({ query, subCategory }) => {
             </Box>
           </Box>
         </Box>
-        <Text sx={styles.category} id="1">
-          {query
-            ? `${
-                String(query).trim().charAt(0).toUpperCase() +
-                String(query).slice(1)
-              } 
-            Wigs  `
-            : "Shop "}
-        </Text>
-        <Text sx={styles.subCategory} id="1">
-          {subCategory
-            ? `${
-                String(subCategory).trim().charAt(0).toUpperCase() +
-                String(subCategory).slice(1)
-              } UNITS
-             `
-            : ""}
-        </Text>
+
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="my-masonry-grid"

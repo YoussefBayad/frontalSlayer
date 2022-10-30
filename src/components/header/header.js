@@ -56,10 +56,11 @@ const styles = {
     h2: {
       cursor: "pointer",
       textShadow: "1px 1px 1px #000",
+      fontSize: "1.4rem",
     },
     backIcon: {
-      width: "40px",
-      height: "40px",
+      width: "30px",
+      height: "30px",
       cursor: "pointer",
     },
     burger: {
