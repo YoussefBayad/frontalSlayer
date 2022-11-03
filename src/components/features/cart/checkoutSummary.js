@@ -4,24 +4,25 @@ import { jsx, Box, Heading, Badge, Input } from "theme-ui";
 const CheckoutSummary = ({ children, total, totalItems }) => {
   return (
     <Badge variant="glass" sx={styles.checkoutSummary}>
-      <Heading as="h1" sx={styles.checkoutSummary.title}>
-        ORDER SUMMARY{" "}
-      </Heading>
+      <Box sx={styles.checkoutSummary.title}>
+        <Heading as="h1">ORDER SUMMARY </Heading>
+      </Box>
       <Box sx={styles.checkoutSummary.totalItems}>
         <p sx={styles.checkoutSummary.text}>Total items </p>
-        <p sx={styles.checkoutSummary.price}>{totalItems}</p>
+        <p sx={styles.checkoutSummary.price}>({totalItems})</p>
       </Box>
       <Box sx={styles.checkoutSummary.shippingCost}>
         <p sx={styles.checkoutSummary.text}>Shipping </p>
         <p sx={styles.checkoutSummary.price}>$00.00</p>
       </Box>
-      <Box sx={styles.checkoutSummary.shippingCost}>
-        <p sx={styles.checkoutSummary.text}>PROMO CODE </p>
-        <Input sx={styles.checkoutSummary.input} />
-      </Box>
+
       <Box sx={styles.checkoutSummary.totalPrice}>
         <p sx={styles.checkoutSummary.text}>Total </p>
         <p sx={styles.checkoutSummary.price}>${total}</p>
+      </Box>
+      <Box sx={styles.checkoutSummary.shippingCost}>
+        {/* <p sx={styles.checkoutSummary.text}>PROMO CODE </p> */}
+        <Input placeholder="PROMO CODE" sx={styles.checkoutSummary.input} />
       </Box>
       <Box sx={styles.checkoutSummary.checkout}>{children}</Box>
     </Badge>
@@ -36,56 +37,67 @@ const styles = {
     ml: ["0", "0", "20px", "30px"],
     mt: ["40px", "40px", "0", "0"],
     p: 0,
+    px: "0 !important",
     borderRadius: "0px 0px 15px 15px",
     marginBottom: "30px",
+    border: " 1px solid black",
+
+    color: "dark",
+    backdropFilter: "blur(2px) saturate(100%)",
     title: {
       fontSize: "$medium",
-      margin: "0",
     },
 
     "& > div": {
       // display: "none",
       maxHeight: "70px",
     },
+    p: {
+      fontWeight: "400",
+    },
     input: {
-      backgroundColor: "#fefefe33",
-      borderColor: "#ffffff",
-      height: "40px",
-      marginLeft: "30px",
+      backgroundColor: "#4e484833 !important",
+      borderColor: "black",
+      height: "35px",
+      width: "100%",
     },
 
     totalPrice: {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      padding: "1.5rem",
+      px: "1rem",
+      py: "0",
       width: "100%",
-      borderBottom: "solid 2px rgba( 255, 255, 255, 0.3 )",
+      // borderBottom: "solid 1px rgb(0 0 0 / 39%)",
     },
     title: {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      padding: "1.5rem",
+      p: "1rem",
       width: "100%",
-      borderBottom: "solid 2px rgba( 255, 255, 255, 0.3 )",
+      mx: "auto",
+      // borderBottom: "solid 1px rgb(0 0 0 / 39%)",
     },
 
     shippingCost: {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      padding: "1.5rem",
+      px: "1rem",
+      py: "0",
       width: "100%",
-      borderBottom: "solid 2px rgba( 255, 255, 255, 0.3 )",
+      // borderBottom: "solid 1px rgb(0 0 0 / 39%)",
     },
     totalItems: {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      padding: "1.5rem",
+      px: "1rem",
+      py: "0",
       width: "100%",
-      borderBottom: "solid 2px rgba( 255, 255, 255, 0.3 )",
+      // borderBottom: "solid 1px rgb(0 0 0 / 39%)",
     },
     checkout: {
       width: "100%",

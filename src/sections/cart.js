@@ -6,6 +6,7 @@ import CartProduct from "components/features/cart/product";
 import CheckoutSummary from "components/features/cart/checkoutSummary";
 import { Link } from "components/link";
 import Header from "components/header/header";
+import marble from "assets/images/marble.png";
 
 const Cart = () => {
   let products = useSelector((state) => state.cart.data);
@@ -24,7 +25,7 @@ const Cart = () => {
   return (
     <Box as="section" variant={"section.shop"} sx={styles.section}>
       <Container sx={styles.container}>
-        <Header />
+        <Header darkBackground />
         <Box sx={styles.cartPage}>
           <Heading as="h1" sx={styles.cartPage.title}>
             Shopping Cart :
@@ -51,7 +52,7 @@ const Cart = () => {
             {products.length > 0 && (
               <CheckoutSummary total={total} totalItems={totalItems}>
                 <Link path="/shipping">
-                  <Button variant="glass" sx={styles.cartPage.checkoutBtn}>
+                  <Button variant="darkGlass" sx={styles.cartPage.checkoutBtn}>
                     PROCEED TO CHECKOUT
                   </Button>
                 </Link>
@@ -67,11 +68,20 @@ const Cart = () => {
 export default Cart;
 
 const styles = {
+  section: {
+    position: "absolute",
+    width: "100vw",
+    // height: "100vh",
+    backgroundImage: `url(${marble})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "repeat-y",
+  },
   cartPage: {
     marginTop: "3rem",
     marginBottom: "15rem",
     title: {
       paddingBottom: "3rem",
+      color: "dark",
     },
     inner: {
       display: "flex",
@@ -95,9 +105,10 @@ const styles = {
       width: "100%",
       height: "100%",
       borderRadius: "0px 0px 15px 15px",
-      mt: "0px",
+      mt: "20px",
       fontSize: 2,
       boxShadow: "none",
+      // color: "dark",
     },
   },
 };
