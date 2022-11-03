@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import Product from "components/features/wishlist/wishlist";
 import { Link } from "components/link";
 import Header from "components/header/header";
-import marble from "assets/images/marble.jpg";
+import marble from "assets/images/marble.png";
 
 const Wishlist = () => {
   let products = useSelector((state) => state.wishlist.data);
@@ -16,7 +16,7 @@ const Wishlist = () => {
         <Header darkBackground />
         <Box sx={styles.wishlistPage}>
           <Heading as="h1" sx={styles.wishlistPage.title}>
-            Your Wishlist :
+            Wishlist
           </Heading>
           <Box sx={styles.wishlistPage.inner}>
             <Box sx={styles.wishlistPage.products}>
@@ -50,7 +50,7 @@ const styles = {
   section: {
     position: "absolute",
     width: "100vw",
-    height: "100vh",
+    // height: "100vh",
     backgroundImage: `url(${marble})`,
     backgroundSize: "contain",
     backgroundRepeat: "repeat-y",

@@ -41,6 +41,12 @@ const WishlistProducts = ({ product }) => {
               >
                 Wig description
               </Text>
+              <Text
+                as="p"
+                sx={styles.wishlistProducts.leftSide.description.description}
+              >
+                wig size : L
+              </Text>
             </Link>
             <Text
               as="p"
@@ -70,7 +76,7 @@ const styles = {
     justifyContent: "space-between",
     mb: ["20px", "25px"],
     backdropFilter: "blur(5px)",
-
+    border: "1px solid black",
     color: "dark",
     p: "10px",
 
@@ -94,11 +100,14 @@ const styles = {
           fontSize: "18px",
         },
         description: {
-          color: "link",
+          color: "dark",
           fontSize: "12px",
-          opacity: "0.7",
+          // opacity: "0.7",
         },
+
         price: {
+          color: "dark",
+
           fontWeight: "lighter",
           fontSize: "18px",
         },
