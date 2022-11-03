@@ -84,6 +84,8 @@ const styles = {
     boxShadow: "0 8px 32px 0 rgb(31 38 135 / 17%)",
     backdropFilter: "blur(2px) saturate(100%)",
     borderRadius: "0",
+    border: " 1px solid black",
+
     mx: "auto",
     mb: ["20px", "25px"],
     fontSize: "16px",

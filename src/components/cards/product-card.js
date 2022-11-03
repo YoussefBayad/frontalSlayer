@@ -54,7 +54,7 @@ const styles = {
       cursor: "pointer",
     },
     wigImg: {
-      height: "145px",
+      height: "120px",
       objectFit: "contain",
       display: "flex",
       mx: "auto",

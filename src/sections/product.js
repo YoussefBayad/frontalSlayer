@@ -12,7 +12,7 @@ import AddToCart from "components/features/cart/addToCart";
 import Header from "components/header/header";
 import AddReview from "components/addReview";
 import { useSelector } from "react-redux";
-import marble from "assets/images/marble.jpg";
+import marble from "assets/images/marble.png";
 import wig2 from "assets/images/wigs/2.png";
 import wig3 from "assets/images/wigs/3.png";
 import HeartButton from "components/features/wishlist/heartButton";
