@@ -13,7 +13,11 @@ const RemoveProduct = ({ _id, removeFromCart }) => {
       onClick={() => dispatch(removeFromCart(_id))}
     >
       {/* REMOVE */}
-      <Image src={trashCan} alt="trash can" />
+      <Image
+        sx={styles.RemoveProductFCart.trashCan}
+        src={trashCan}
+        alt="trash can"
+      />
     </Heading>
   );
 };
@@ -27,7 +31,7 @@ const styles = {
     " &::after ": {
       backgroundColor: "error",
     },
-    img: {
+    trashCan: {
       width: "25px",
       height: "25px",
     },

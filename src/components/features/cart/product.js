@@ -26,7 +26,7 @@ const CartProduct = ({ product, cartPopup }) => {
         <Box sx={styles.cartProduct.leftSide}>
           <Link path={`/shop/product/${product._id}`}>
             <Image
-              sx={styles.cartProduct.img}
+              sx={styles.cartProduct.productImg}
               // src={
               //   product.imageUrl
               //     ? `http://localhost:5000${product.imageUrl}`
@@ -91,7 +91,7 @@ const styles = {
     fontSize: "16px",
     color: "dark",
     p: "10px",
-    img: {
+    productImg: {
       mr: "15px",
       height: "100px",
       objectFit: "contain",
