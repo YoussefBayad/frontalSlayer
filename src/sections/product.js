@@ -74,7 +74,7 @@ const Product = ({ query }) => {
               </Box>
               <Box sx={styles.product.footer}>
                 <Text as="h3" sx={styles.product.footer.price}>
-                  {product.price}$
+                  ${product.price}
                 </Text>
                 <Box sx={styles.product.footer.addToCart}>
                   <Box sx={styles.product.footer.productQty}>
@@ -156,9 +156,9 @@ const styles = {
   product: {
     background: " rgba( 255, 255, 255, 0.3 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-    backdropFilter: " blur(16px) saturate(100%)",
-    borderRadius: "15px",
-    border: " 1px solid rgba(209, 213, 219, 0.4)",
+    backdropFilter: " blur(2px) saturate(100%)",
+    border: "black 1px solid",
+    // border: " 1px solid rgba(209, 213, 219, 0.4)",
     position: "relative",
     width: "90%",
     mx: "auto",
