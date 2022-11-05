@@ -45,7 +45,7 @@ const WishlistProducts = ({ product }) => {
                 as="p"
                 sx={styles.wishlistProducts.leftSide.description.description}
               >
-                wig size : L
+                Cap size : L
               </Text>
             </Link>
             <Text

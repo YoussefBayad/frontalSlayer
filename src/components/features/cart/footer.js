@@ -27,14 +27,15 @@ const CartFooter = ({ total, openCart }) => {
             onClick={() => {
               dispatch(openCart());
             }}
+            sx={styles.cartFooter.checkout}
           >
-            <Button sx={styles.cartFooter.checkout} variant="darkGlass">
-              <span>CHECKOUT</span>{" "}
-              <span>
+            {/* <Button > */}
+            <span>CHECKOUT</span>{" "}
+            {/* <span>
                 ${""}
                 {total ? total : "00.00"}
-              </span>
-            </Button>
+              </span> */}
+            {/* </Button> */}
           </Link>
           <Link
             className="cart-remove-product"
@@ -43,7 +44,7 @@ const CartFooter = ({ total, openCart }) => {
               dispatch(openCart());
             }}
           >
-            View Bag
+            View Shopping Bag
           </Link>
         </>
       )}
@@ -57,16 +58,17 @@ const styles = {
   cartFooter: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "'space-between',",
-    // padding: ["2rem 1rem", "2rem 1rem", "3rem"],
+    flexDirection: "column",
+    justifyContent: "center",
+    padding: ["2rem 1rem", "2rem 1rem", "3rem"],
     textAlign: "center",
     "& a:last-child ": {
-      color: "link",
+      color: "dark",
       fontWeight: "bold",
     },
     checkout: {
       // width: "70%",
-      mr: "0.5rem",
+      // mr: "0.5rem",
     },
   },
 };

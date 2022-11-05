@@ -52,7 +52,7 @@ const CartProduct = ({ product, cartPopup }) => {
               as="p"
               sx={styles.cartProduct.leftSide.description.smallerText}
             >
-              wig size : L
+              Cap size : L
             </Text>
             <Text as="p" sx={styles.cartProduct.leftSide.description.price}>
               ${product.price} usd
@@ -106,13 +106,14 @@ const styles = {
         flexDirection: "column",
         justifyContent: "space-between",
         minHeight: "70px",
+        ml: "20px",
         name: {
           fontWeight: "bold",
-          fontSize: ["16px", "17px", "18px"],
+          fontSize: ["14px", "15px", "18px"],
         },
         price: {
           fontWeight: "lighter",
-          fontSize: ["16px", "17px", "18px"],
+          fontSize: ["14px", "15px", "18px"],
         },
         smallerText: {
           fontWeight: "lighter",
@@ -126,12 +127,12 @@ const styles = {
       flexDirection: "column",
       justifyContent: "space-between",
       alignItems: "center",
-      minHeight: "90px",
+      minHeight: "60px",
     },
     count: {
       padding: "0.1rem 1rem",
       border: "1px solid black",
-      width: "9rem",
+      width: "8rem",
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",

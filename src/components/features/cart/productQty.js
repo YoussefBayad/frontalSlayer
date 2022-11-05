@@ -69,13 +69,13 @@ const styles = {
     alignItems: "center",
     fontSize: "12px",
     mr: 2,
-    p: { width: "30px", display: "grid", placeItems: "center" },
+    p: { width: "25px", display: "grid", placeItems: "center" },
     button: {
       backgroundColor: "transparent",
       color: "dark",
       fontSize: "20px",
       py: 0,
-      width: "30px",
+      width: "20px",
     },
 
     plus: {

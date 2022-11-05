@@ -2,7 +2,7 @@
 import { jsx, Box, Heading, Badge, Image } from "theme-ui";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Footer from "./cartPopupFooter";
+import Footer from "./footer";
 import { openCart } from "../../../redux/cart/cartSlice";
 import CartProduct from "./product";
 import useOutsideClickRef from "@rooks/use-outside-click-ref";
@@ -54,11 +54,20 @@ const Cart = () => {
             sx={styles.cart}
           >
             <Box sx={styles.cart.cartHeader}>
-              <Heading as="h1">My Bag</Heading>
+              <Box sx={styles.cart.cartHeader.head}>
+                <Heading as="h1">Shopping Bag</Heading>
+                <Box sx={styles.cart.cartHeader.total}>
+                  <span>Subtotal</span>{" "}
+                  <span>
+                    ${""}
+                    {total ? total : "00.00"}
+                  </span>
+                </Box>
+              </Box>
               <IoMdClose
-                size="24px"
+                size="20px"
                 alt="close cart"
-                color="#ff9695"
+                color="#00000"
                 sx={styles.cart.cartHeader.closeCart}
                 onClick={() => {
                   dispatch(openCart());
@@ -158,10 +167,19 @@ const styles = {
       // color: "accent",
       justifyContent: "flex-end",
       padding: "1.5rem",
-      borderBottom: "2px   solid rgba(168, 171, 177, 0.5) ",
-      h1: {
+      // borderBottom: "2px   solid rgba(168, 171, 177, 0.5) ",
+
+      head: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
         marginRight: "25%",
-        color: "darkRed",
+
+        h1: {
+          color: "dark",
+          fontSize: "1.6rem",
+        },
       },
       closeCart: {
         height: "2.5rem",
