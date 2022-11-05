@@ -16,9 +16,6 @@ import marble from "assets/images/marble.png";
 import wig2 from "assets/images/wigs/2.png";
 import wig3 from "assets/images/wigs/3.png";
 import HeartButton from "components/features/wishlist/heartButton";
-import Slider from "react-slick";
-import CarouselCard from "../components/cards/carouselCard";
-import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import Carousel from "components/carousels/products";
 
 const Product = ({ query }) => {

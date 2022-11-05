@@ -4,6 +4,7 @@ import { jsx, Box, Container, Button, Image, Text, Span } from "theme-ui";
 import { useDispatch, useSelector } from "react-redux";
 import { openCart, addToCart } from "../../../redux/cart/cartSlice";
 import { Link } from "components/link";
+import cart from "assets/images/icons/cart.svg";
 
 const AddToCart = ({ product }) => {
   const dispatch = useDispatch();
@@ -22,12 +23,12 @@ const AddToCart = ({ product }) => {
             dispatch(openCart());
           }}
         >
-          Add To Cart
+          <Image src={cart} alt="cart icon" />
         </Button>
       ) : (
         <Box sx={styles.productInCart}>
           <Link sx={styles.buyButton} path="/cart">
-            <Button variant="glass">Go To Cart</Button>
+            Go To Cart
           </Link>
         </Box>
       )}
@@ -39,8 +40,16 @@ export default AddToCart;
 
 const styles = {
   addToCart: {
-    px: "11px",
+    px: "10px",
+    py: "10px",
     boxShadow: "0 4px 7px 0 rgb(31 38 135 / 28%)",
     fontSize: ["12px", "14px", "18px"],
+    minHeight: "fit-content",
+    img: {
+      height: "20px",
+    },
+    buyButton: {
+      fontWeight: "bold",
+    },
   },
 };
