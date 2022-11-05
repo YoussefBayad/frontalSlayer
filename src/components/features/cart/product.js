@@ -106,7 +106,7 @@ const styles = {
         flexDirection: "column",
         justifyContent: "space-between",
         minHeight: "70px",
-        ml: "20px",
+        ml: "10px",
         name: {
           fontWeight: "bold",
           fontSize: ["14px", "15px", "18px"],

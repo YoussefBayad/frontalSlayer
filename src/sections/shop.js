@@ -67,6 +67,7 @@ const Shop = ({ query, subCategory }) => {
               name="search"
               id="search"
               placeholder="..."
+              style={{ textTransform: "uppercase" }}
               sx={styles.navigation.form.input}
             />
           </Box>
@@ -136,18 +137,18 @@ const styles = {
     backgroundSize: ["contain"],
     backgroundRepeat: ["no-repeat"],
     backgroundColor: "white",
-    "&:after": {
-      content: '""',
-      position: "absolute",
-      backgroundImage: `url(${CascadingFlowers})`,
-      backgroundSize: "cover",
-      backgroundRepeat: "repeat-y",
-      top: "-30px",
-      right: "-79px",
-      width: "80%",
-      height: "100vh",
-      zIndex: "2",
-    },
+    // "&:after": {
+    //   content: '""',
+    //   position: "absolute",
+    //   backgroundImage: `url(${CascadingFlowers})`,
+    //   backgroundSize: "cover",
+    //   backgroundRepeat: "repeat-y",
+    //   top: "-30px",
+    //   right: "-79px",
+    //   width: "80%",
+    //   height: "100vh",
+    //   zIndex: "2",
+    // },
   },
   container: {
     my: ["20px", "40px"],
@@ -258,11 +259,11 @@ const styles = {
     fontWeight: "bold",
     color: "dark",
     textAlign: "center",
-    marginBottom: "10px",
+    // marginBottom: "5px",
   },
   subCategory: {
-    fontSize: "large",
-    fontWeight: "600",
+    fontSize: "x-large",
+    fontWeight: "bold",
     color: "dark",
     textAlign: "center",
     marginBottom: "30px",

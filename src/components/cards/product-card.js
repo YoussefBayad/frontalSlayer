@@ -16,7 +16,7 @@ const Product = ({ product }) => {
       </Box>
       <Box sx={styles.product.footer}>
         <Text as="h4" sx={styles.product.footer.price}>
-          $ {product.price}
+          ${product.price}
         </Text>
 
         {/* <Image
@@ -40,7 +40,7 @@ const styles = {
     // background: " rgba( 255, 255, 255, 0.3 )",
     boxShadow: " 0 8px 12px 0 rgba( 31, 38, 135, 0.17 )",
     backdropFilter: " blur(4px) saturate(100%)",
-    borderRadius: " 15px 15px  0 0",
+    // borderRadius: " 15px 15px  0 0",
     border: " 1px solid black",
     backgroundImage: `url(${marble})`,
     backgroundSize: "cover",

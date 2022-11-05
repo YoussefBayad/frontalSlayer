@@ -1,9 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Heading } from "theme-ui";
+import { jsx, Heading, Image } from "theme-ui";
 import { useDispatch } from "react-redux";
-import { BsTrash } from "react-icons/bs";
-
+import trashCan from "assets/images/icons/trash.svg";
 const RemoveProduct = ({ _id, removeFromCart }) => {
   const dispatch = useDispatch();
 
@@ -14,7 +13,7 @@ const RemoveProduct = ({ _id, removeFromCart }) => {
       onClick={() => dispatch(removeFromCart(_id))}
     >
       {/* REMOVE */}
-      <BsTrash size="25px" />
+      <Image src={trashCan} alt="trash can" />
     </Heading>
   );
 };
@@ -27,6 +26,10 @@ const styles = {
     cursor: "pointer",
     " &::after ": {
       backgroundColor: "error",
+    },
+    img: {
+      width: "25px",
+      height: "25px",
     },
   },
 };
