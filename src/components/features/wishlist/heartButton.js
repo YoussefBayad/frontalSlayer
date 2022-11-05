@@ -9,7 +9,7 @@ import heart from "assets/images/icons/heartAnimation.png";
 import { useDispatch, useSelector } from "react-redux";
 import { keyframes } from "@emotion/core";
 
-const HeartButton = ({ product }) => {
+const HeartButton = ({ product, height }) => {
   const dispatch = useDispatch();
 
   const isProductInWishlist = useSelector((state) =>
@@ -22,9 +22,11 @@ const HeartButton = ({ product }) => {
         <Box
           sx={styles.inHeart}
           onClick={() => dispatch(removeFromWishlist(product._id))}
+          style={{ height: height ? "40px" : "80px" }}
         ></Box>
       ) : (
         <Box
+          style={{ height: height ? "40px" : "80px" }}
           sx={styles.heart}
           onClick={() => dispatch(addToWishlist(product))}
         ></Box>

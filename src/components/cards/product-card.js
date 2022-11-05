@@ -3,10 +3,12 @@ import { jsx, Box, Container, Image, Heading, Text } from "theme-ui";
 import { Link } from "components/link";
 import HeartButton from "components/features/wishlist/heartButton";
 import marble from "assets/images/marble.jpg";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 
 const Product = ({ product }) => {
   return (
     <Container sx={styles.product}>
+      <HeartButton height product={product} />
       <Box sx={styles.product.top}>
         <Link path={`/product/${product._id}`}>
           <Image sx={styles.product.wigImg} src={product.src} alt={"wig"} />
@@ -18,14 +20,13 @@ const Product = ({ product }) => {
         <Text as="h4" sx={styles.product.footer.price}>
           ${product.price}
         </Text>
-
+        <AiOutlineInfoCircle size="25px" />
         {/* <Image
           src={heart}
           sx={styles.product.footer.wishlist}
           alt="add to wishlist"
           onClick={() => dispatch(addToWishlist(product))}
         /> */}
-        <HeartButton product={product} />
       </Box>
     </Container>
   );
@@ -71,10 +72,13 @@ const styles = {
 
     footer: {
       mt: "10px",
+      pr: "10px",
       display: "flex",
       justifyContent: "flex-end",
       alignItems: " center",
-      price: {},
+      price: {
+        mr: "3px",
+      },
       zIndex: "30",
 
       // wishlist: {
