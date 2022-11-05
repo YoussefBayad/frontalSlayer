@@ -26,6 +26,7 @@ const ProductQty = ({ id, qty, countInStock }) => {
       <Button
         variant="white"
         sx={styles.productQty.minus}
+        disabled={qty === 1}
         onClick={() => dispatch(decrement(id))}
       >
         -
@@ -61,7 +62,7 @@ const styles = {
   // },
   productQty: {
     padding: "0",
-    border: "1px solid #ec5d55",
+    border: "1px solid black",
     // borderRadius: "20px",
     display: "flex",
     justifyContent: "space-between",
@@ -71,20 +72,25 @@ const styles = {
     p: { width: "30px", display: "grid", placeItems: "center" },
     button: {
       backgroundColor: "transparent",
-      color: "lightRed",
+      color: "dark",
       fontSize: "20px",
       py: 0,
       width: "30px",
     },
+
     plus: {
-      borderRight: "1px solid #ec5d55",
+      borderRight: "1px solid black",
       borderRadius: 0,
       // mr: "5px",
     },
     minus: {
-      borderLeft: "1px solid #ec5d55",
+      borderLeft: "1px solid black",
       borderRadius: 0,
       // ml: "5px",
+    },
+    "button: disabled": {
+      opacity: "0.5",
+      backgroundColor: "rgba(0,0,0,0.2)",
     },
   },
 };
