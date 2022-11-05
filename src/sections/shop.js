@@ -12,6 +12,7 @@ import Header from "components/header/header";
 import { openCart } from "../redux/cart/cartSlice";
 import Skeleton from "react-loading-skeleton";
 import marble from "assets/images/marble.jpg";
+import shopBackground from "assets/images/shopBackground.png";
 
 import Masonry from "react-masonry-css";
 import { useDispatch, useSelector } from "react-redux";
@@ -41,7 +42,7 @@ const Shop = ({ query, subCategory }) => {
                 String(query).trim().charAt(0).toUpperCase() +
                 String(query).slice(1)
               } 
-            Wigs  `
+            Lace  `
             : "Shop "}
         </Text>
         <Text sx={styles.subCategory} id="1">
@@ -82,8 +83,8 @@ const Shop = ({ query, subCategory }) => {
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-          <Text style={{ height: "20px" }} id="1">
-            {""}
+          <Text style={{ color: "black" }} id="1">
+            ({products.length}) Units
           </Text>
           {!loading ? (
             products?.map((product) => (
@@ -130,10 +131,11 @@ const styles = {
     // backgroundPosition: "right",
     // backgroundSize: ["cover"],
     // backgroundRepeat: ["repeat"],
-    backgroundImage: `url(${marble})`,
+    backgroundImage: `url(${shopBackground})`,
     // backgroundPosition: "right",
     backgroundSize: ["contain"],
-    backgroundRepeat: ["repeat"],
+    backgroundRepeat: ["no-repeat"],
+    backgroundColor: "white",
     "&:after": {
       content: '""',
       position: "absolute",

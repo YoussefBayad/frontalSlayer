@@ -38,7 +38,7 @@ const styles = {
     minHeight: "150px",
     width: "100%",
     // background: " rgba( 255, 255, 255, 0.3 )",
-    boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    boxShadow: " 0 8px 12px 0 rgba( 31, 38, 135, 0.17 )",
     backdropFilter: " blur(4px) saturate(100%)",
     borderRadius: " 15px 15px  0 0",
     border: " 1px solid black",
@@ -66,7 +66,7 @@ const styles = {
       // opacity: "0.7",
     },
     h4: {
-      opacity: "0.9",
+      // opacity: "0.9",
     },
 
     footer: {
