@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev",
     "build": "next build",
     "serve": "next start",
     "export": "next export",
@@ -15,6 +15,7 @@
     "@reduxjs/toolkit": "^1.8.5",
     "@rooks/use-outside-click-ref": "^4.11.2",
     "axios": "^0.27.2",
+    "cross-env": "^7.0.3",
     "formik": "^2.2.9",
     "framer-motion": "^2.7.5",
     "next": "9.5.3",
