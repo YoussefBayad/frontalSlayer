@@ -165,11 +165,7 @@ export default {
       pt: [7, 7, 7, 7, 8],
       pb: [7, 7, 7, 7, 8],
     },
-    // introVideo: {
-    //   backgroundColor: rgba("#dceefb", 0.2),
-    //   pt: [7, 7, 7, 7, 8],
-    //   pb: [7, 7, 7, 7, 8],
-    // },
+
     usefulFeatures: {
       backgroundColor: "backgroundSecondary",
       pt: [7, 7, 7, 7, 8],
@@ -431,6 +427,7 @@ export default {
 
   styles: {
     // To add base, top-level styles to the <body> element, use theme.styles.root.
+
     html: {
       overflowX: "hidden",
     },
@@ -439,6 +436,10 @@ export default {
       lineHeight: "body",
       fontWeight: "body",
       textTransform: "uppercase !important ",
+    },
+    body: {
+      backgroundColor: "white !important",
+      backgroundColor: "white",
     },
     // h1-h6 Heading styles
     h1: {

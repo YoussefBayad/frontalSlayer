@@ -12,7 +12,8 @@ import { motion } from "framer-motion";
 import facebook from "assets/images/icons/facebook.svg";
 import instagram from "assets/images/icons/instagram.svg";
 import twitter from "assets/images/icons/twitter.svg";
-import nav from "assets/images/icons/darkMenu.svg";
+import darkNav from "assets/images/icons/darkMenu.svg";
+import nav from "assets/images/icons/nav.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import Dropdown from "./dropdown";
 import marble from "assets/images/marble.jpg";
@@ -32,7 +33,7 @@ const social = [
   },
 ];
 
-export default function MobileDrawer({ homeToggle }) {
+export default function MobileDrawer({ homeToggle, dark }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const collapseNode = () => ({ height: 0 });
@@ -87,7 +88,11 @@ export default function MobileDrawer({ homeToggle }) {
       // sx={styles.header}
       drawerHandler={
         <Box sx={homeToggle ? styles.homeToggle : styles.handler}>
-          <Image src={nav} />
+          {dark ? (
+            <Image src={darkNav} sx={styles.darkToggle} />
+          ) : (
+            <Image src={nav} />
+          )}
         </Box>
       }
       open={isDrawerOpen}
@@ -174,7 +179,9 @@ const styles = {
     flexShrink: "0",
     width: "25px",
   },
-
+  darkToggle: {
+    height: "20px",
+  },
   drawer: {
     width: "100%",
     height: "100%",

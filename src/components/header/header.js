@@ -7,7 +7,7 @@ import { Link } from "../link";
 import MobileDrawer from "./mobile-drawer";
 import { openCart } from "../../redux/cart/cartSlice";
 import CartIcon from "components/features/cart/cartIcon";
-import { IoIosSearch } from "react-icons/io";
+import search from "assets/images/icons/darkSearch.svg";
 
 const Header = () => {
   const router = useRouter();
@@ -18,12 +18,12 @@ const Header = () => {
         <IoIosArrowBack
           sx={styles.header.backIcon}
           color="black"
-          size="25px"
+          size="20px"
           onClick={() =>
             router.pathname == "/shop" ? router.push("/") : router.back()
           }
         />
-        <IoIosSearch color="black" size="25px" />
+        <Image src={search} alt="search" sx={styles.header.search} />
       </Box>
 
       <Link path="/">
@@ -32,7 +32,7 @@ const Header = () => {
       {/* <Navigation sx={styles.header.burger} /> */}
       <Box sx={styles.header.box}>
         <CartIcon />
-        <MobileDrawer />
+        <MobileDrawer dark />
       </Box>
     </Box>
   );
@@ -64,7 +64,10 @@ const styles = {
       fontSize: "1.2rem",
       color: "dark",
     },
-
+    search: {
+      height: "17px",
+      width: "20px",
+    },
     box: {
       display: "flex",
       justifyContent: "center",

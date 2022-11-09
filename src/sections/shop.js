@@ -53,11 +53,11 @@ const Shop = ({ query, subCategory }) => {
              `
             : ""}
         </Text>
-        <Box sx={styles.navigation}>
+        {/* <Box sx={styles.navigation}>
           <Box sx={styles.navigation.sort}>
             <Image src={params} />
           </Box>
-          {/* <Box as="form" sx={styles.navigation.form}>
+           <Box as="form" sx={styles.navigation.form}>
             <IoIosSearch sx={styles.navigation.form.button} />
             <Box as="label" htmlFor="search" variant="styles.srOnly">
               Search
@@ -69,8 +69,8 @@ const Shop = ({ query, subCategory }) => {
               style={{ textTransform: "uppercase" }}
               sx={styles.navigation.form.input}
             />
-          </Box> */}
-        </Box>
+          </Box> 
+        </Box> */}
 
         <Masonry
           breakpointCols={breakpointColumnsObj}
@@ -120,7 +120,6 @@ const styles = {
     position: "absolute",
     top: "0",
     overflowX: "hidden",
-    // backgroundColor: "background",
     // backgroundImage: [`url(${blurryGradient})`],
     // backgroundPosition: "right",
     // backgroundSize: ["cover"],
@@ -129,7 +128,7 @@ const styles = {
     // backgroundPosition: "right",
     backgroundSize: ["contain"],
     backgroundRepeat: ["no-repeat"],
-    backgroundColor: "white",
+    backgroundColor: "white ",
     // "&:after": {
     //   content: '""',
     //   position: "absolute",
