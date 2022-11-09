@@ -18,7 +18,7 @@ const Product = ({ product }) => {
       </Box>
       <Box sx={styles.product.footer}>
         <Text as="h4" sx={styles.product.footer.price}>
-          ${product.price}
+          ${product.price} usd
         </Text>
         <AiOutlineInfoCircle size="25px" />
         {/* <Image

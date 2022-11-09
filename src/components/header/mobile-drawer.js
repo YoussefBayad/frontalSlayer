@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import facebook from "assets/images/icons/facebook.svg";
 import instagram from "assets/images/icons/instagram.svg";
 import twitter from "assets/images/icons/twitter.svg";
-import nav from "assets/images/icons/nav.svg";
+import nav from "assets/images/icons/darkMenu.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import Dropdown from "./dropdown";
 import marble from "assets/images/marble.jpg";
@@ -160,7 +160,8 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     flexShrink: "0",
-    width: "26px",
+    width: "25px",
+    height: "25px",
   },
   homeToggle: {
     position: "absolute",
@@ -171,7 +172,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     flexShrink: "0",
-    width: "26px",
+    width: "25px",
   },
 
   drawer: {

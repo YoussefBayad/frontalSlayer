@@ -5,30 +5,35 @@ import { IoIosArrowBack } from "react-icons/io";
 import { useRouter } from "next/router";
 import { Link } from "../link";
 import MobileDrawer from "./mobile-drawer";
+import { openCart } from "../../redux/cart/cartSlice";
+import CartIcon from "components/features/cart/cartIcon";
+import { IoIosSearch } from "react-icons/io";
 
-const Header = ({ darkBackground }) => {
+const Header = () => {
   const router = useRouter();
 
   return (
-    <Box
-      style={{
-        background: darkBackground
-          ? " rgba(26, 0, 0 , 0.38) "
-          : " rgba( 255, 255, 255, 0.3 )",
-      }}
-      sx={styles.header}
-    >
-      <IoIosArrowBack
-        sx={styles.header.backIcon}
-        onClick={() =>
-          router.pathname == "/shop" ? router.push("/") : router.back()
-        }
-      />
+    <Box sx={styles.header}>
+      <Box sx={styles.header.box}>
+        <IoIosArrowBack
+          sx={styles.header.backIcon}
+          color="black"
+          size="25px"
+          onClick={() =>
+            router.pathname == "/shop" ? router.push("/") : router.back()
+          }
+        />
+        <IoIosSearch color="black" size="25px" />
+      </Box>
+
       <Link path="/">
         <Heading as="h2">Frontal Slayer</Heading>
       </Link>
       {/* <Navigation sx={styles.header.burger} /> */}
-      <MobileDrawer />
+      <Box sx={styles.header.box}>
+        <CartIcon />
+        <MobileDrawer />
+      </Box>
     </Box>
   );
 };
@@ -56,17 +61,17 @@ const styles = {
     h2: {
       cursor: "pointer",
       textShadow: "1px 1px 1px #000",
-      fontSize: "1.4rem",
+      fontSize: "1.2rem",
+      color: "dark",
     },
-    backIcon: {
-      width: "30px",
-      height: "30px",
-      cursor: "pointer",
-    },
-    burger: {
-      cursor: "pointer",
-      width: "30px",
-      height: "25px",
+
+    box: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      "& > div": {
+        mr: "10px",
+      },
     },
   },
 };

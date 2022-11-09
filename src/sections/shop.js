@@ -6,10 +6,9 @@ import { IoIosSearch } from "react-icons/io";
 import Product from "components/cards/product-card";
 import { FaGripLines } from "react-icons/fa";
 import params from "assets/images/icons/params.svg";
-import cart from "assets/images/icons/cart.svg";
+
 import shortText from "assets/images/icons/shortText.svg";
 import Header from "components/header/header";
-import { openCart } from "../redux/cart/cartSlice";
 import Skeleton from "react-loading-skeleton";
 import marble from "assets/images/marble.jpg";
 import shopBackground from "assets/images/shopBackground.png";
@@ -58,7 +57,7 @@ const Shop = ({ query, subCategory }) => {
           <Box sx={styles.navigation.sort}>
             <Image src={params} />
           </Box>
-          <Box as="form" sx={styles.navigation.form}>
+          {/* <Box as="form" sx={styles.navigation.form}>
             <IoIosSearch sx={styles.navigation.form.button} />
             <Box as="label" htmlFor="search" variant="styles.srOnly">
               Search
@@ -70,13 +69,7 @@ const Shop = ({ query, subCategory }) => {
               style={{ textTransform: "uppercase" }}
               sx={styles.navigation.form.input}
             />
-          </Box>
-          <Box sx={styles.navigation.sort} onClick={() => dispatch(openCart())}>
-            <Image sx={styles.navigation.cart} src={cart} />
-            <Box sx={styles.navigation.cart.notificationsCount}>
-              {cartProducts.length}
-            </Box>
-          </Box>
+          </Box> */}
         </Box>
 
         <Masonry
