@@ -37,11 +37,14 @@ const Shop = ({ query, subCategory }) => {
         <Header darkBackground />
         <Text sx={styles.category} id="1">
           {query
-            ? `${
-                String(query).trim().charAt(0).toUpperCase() +
-                String(query).slice(1)
-              } 
-            Lace  `
+            ? String(query).trim().charAt(0).toUpperCase() +
+                String(query).slice(1) ==
+              String("custom").trim().charAt(0).toUpperCase() +
+                String("custom").slice(1)
+              ? "Custom wigs"
+              : String(query).trim().charAt(0).toUpperCase() +
+                String(query).slice(1) +
+                " Lace "
             : "Shop "}
         </Text>
         <Text sx={styles.subCategory} id="1">
