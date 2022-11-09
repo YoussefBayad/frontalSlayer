@@ -125,7 +125,7 @@ const styles = {
     // backgroundSize: ["cover"],
     // backgroundRepeat: ["repeat"],
     backgroundImage: `url(${shopBackground})`,
-    // backgroundPosition: "right",
+    backgroundAttachment: "fixed",
     backgroundSize: ["contain"],
     backgroundRepeat: ["no-repeat"],
     backgroundColor: "white ",

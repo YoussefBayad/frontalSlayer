@@ -53,6 +53,7 @@ const styles = {
       display: "grid",
       placeItems: "center",
       cursor: "pointer",
+      textAlign: "center",
     },
     wigImg: {
       height: "120px",
@@ -62,7 +63,7 @@ const styles = {
       marginBottom: "15px",
     },
     p: {
-      color: "link",
+      color: "dark",
       fontSize: "12px",
       // opacity: "0.7",
     },
