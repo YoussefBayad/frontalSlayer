@@ -5,8 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { openCart, addToCart } from "../../../redux/cart/cartSlice";
 import { Link } from "components/link";
 import cart from "assets/images/icons/cart.svg";
+import darkCart from "assets/images/icons/darkCart.svg";
 
-const AddToCart = ({ product }) => {
+const AddToCart = ({ product, dark, ...rest }) => {
   const dispatch = useDispatch();
   const isProductInCart = useSelector((state) =>
     state.cart.data.find((item) => item._id === product._id)
@@ -22,11 +23,16 @@ const AddToCart = ({ product }) => {
             dispatch(addToCart(product));
             dispatch(openCart());
           }}
+          {...rest}
         >
-          <Image src={cart} alt="cart icon" />
+          {dark ? (
+            <Image src={darkCart} alt="cart icon" />
+          ) : (
+            <Image src={cart} alt="cart icon" />
+          )}
         </Button>
       ) : (
-        <Box sx={styles.productInCart}>
+        <Box sx={styles.productInCart} {...rest}>
           <Link sx={styles.buyButton} path="/cart">
             Go To Cart
           </Link>

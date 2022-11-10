@@ -14,7 +14,7 @@ const data =
 const initialState = {
   data: [
     {
-      _id: 7,
+      _id: 6,
       name: "Lace transparent",
       price: "70",
       type: "wig",
@@ -24,7 +24,7 @@ const initialState = {
       subCategory: "transparent",
     },
     {
-      _id: 8,
+      _id: 2,
       name: "Lace hd",
       price: "70",
       type: "wig",
@@ -34,7 +34,7 @@ const initialState = {
       alt: "HD",
     },
     {
-      _id: 9,
+      _id: 7,
       name: "Lace watercolor",
       price: "70",
       type: "wig",

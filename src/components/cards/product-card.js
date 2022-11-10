@@ -4,11 +4,13 @@ import { Link } from "components/link";
 import HeartButton from "components/features/wishlist/heartButton";
 import marble from "assets/images/marble.jpg";
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import AddToCart from "components/features/cart/addToCart";
 
 const Product = ({ product }) => {
   return (
     <Container sx={styles.product}>
       <HeartButton height product={product} />
+      {/* <AddToCart product={product} /> */}
       <Box sx={styles.product.top}>
         <Link path={`/product/${product._id}`}>
           <Image sx={styles.product.wigImg} src={product.src} alt={"wig"} />

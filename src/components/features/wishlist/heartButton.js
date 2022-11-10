@@ -9,7 +9,7 @@ import heart from "assets/images/icons/heartAnimation.png";
 import { useDispatch, useSelector } from "react-redux";
 import { keyframes } from "@emotion/core";
 
-const HeartButton = ({ product, height }) => {
+const HeartButton = ({ product, height, ...rest }) => {
   const dispatch = useDispatch();
 
   const isProductInWishlist = useSelector((state) =>
@@ -17,7 +17,7 @@ const HeartButton = ({ product, height }) => {
   );
 
   return (
-    <Box sx={styles.heartWrapper}>
+    <Box sx={styles.heartWrapper} {...rest}>
       {isProductInWishlist ? (
         <Box
           sx={styles.inHeart}

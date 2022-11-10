@@ -47,18 +47,18 @@ const WishlistProducts = ({ product }) => {
               >
                 Cap size : L
               </Text>
+              <Text
+                as="p"
+                sx={styles.wishlistProducts.leftSide.description.price}
+              >
+                ${product.price} usd
+              </Text>
             </Link>
-            <Text
-              as="p"
-              sx={styles.wishlistProducts.leftSide.description.price}
-            >
-              ${product.price} usd
-            </Text>
           </Box>
         </Box>
         <Box sx={styles.wishlistProducts.rightSide}>
-          <HeartButton product={product} />
-          {/* <AddToCart product={{ ...product }} /> */}
+          <HeartButton sx={styles.heart} height product={product} />
+          <AddToCart sx={styles.cart} product={product} dark />
         </Box>
       </Badge>
     </motion.Box>
@@ -68,33 +68,49 @@ const WishlistProducts = ({ product }) => {
 export default WishlistProducts;
 
 const styles = {
+  heart: {
+    position: "absolute",
+    left: "0rem",
+  },
+  cart: {
+    ml: "3.6rem",
+    backgroundColor: "transparent",
+    background: "transparent",
+    boxShadow: "none",
+    p: "0",
+    img: {
+      height: "30px",
+    },
+  },
   wishlistProducts: {
     maxWidth: "600px",
     height: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    flexDirection: "column",
     mb: ["20px", "25px"],
     backdropFilter: "blur(5px)",
     border: "1px solid black",
     color: "dark",
-    p: "10px",
-
+    py: "10px",
+    px: "0px",
     borderRadius: "0",
     leftSide: {
       display: "flex",
-      justifyContent: "space-between",
+      justifyContent: "'flex-start',",
       alignItems: "center",
+      width: "100%",
+      mb: "5px",
       img: {
         height: "100px",
         objectFit: "contain",
-        mr: "15px",
+        // mr: "15px",
       },
       description: {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        minHeight: "90px",
         name: {
           fontWeight: "bold",
           fontSize: "18px",
@@ -102,26 +118,25 @@ const styles = {
         description: {
           color: "dark",
           fontSize: "12px",
-          // opacity: "0.7",
+          fontWeight: "normal",
         },
 
         price: {
           color: "dark",
-
           fontWeight: "lighter",
-          fontSize: "18px",
+          fontSize: "14px",
         },
       },
     },
 
     rightSide: {
       display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
+      justifyContent: "flex-start",
       alignItems: "center",
-      minHeight: "90px",
+      width: "100%",
       img: {
-        height: "50px",
+        height: "20px",
+        width: "20px",
         cursor: "pointer",
       },
     },

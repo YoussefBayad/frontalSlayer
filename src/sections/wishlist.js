@@ -67,6 +67,7 @@ const styles = {
     title: {
       paddingBottom: "3rem",
       color: "dark",
+      textAlign: "center",
     },
     inner: {
       display: "flex",
