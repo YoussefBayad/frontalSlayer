@@ -28,7 +28,7 @@ const Cart = () => {
         <Header darkBackground />
         <Box sx={styles.cartPage}>
           <Heading as="h1" sx={styles.cartPage.title}>
-            Shopping Cart :
+            Shopping Bag
           </Heading>
           <Box sx={styles.cartPage.inner}>
             <Box sx={styles.cartPage.products}>
@@ -82,6 +82,7 @@ const styles = {
     title: {
       paddingBottom: "3rem",
       color: "dark",
+      textAlign: "center",
     },
     inner: {
       display: "flex",

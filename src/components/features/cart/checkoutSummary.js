@@ -38,7 +38,7 @@ const styles = {
     mt: ["40px", "40px", "0", "0"],
     p: 0,
     px: "0 !important",
-    borderRadius: "0px 0px 15px 15px",
+    borderRadius: "0px 0px 0px 0px",
     marginBottom: "30px",
     border: " 1px solid black",
 
@@ -50,7 +50,7 @@ const styles = {
 
     "& > div": {
       // display: "none",
-      maxHeight: "70px",
+      maxHeight: "20px",
     },
     p: {
       fontWeight: "400",
@@ -60,6 +60,7 @@ const styles = {
       borderColor: "black",
       height: "35px",
       width: "100%",
+      mt: "15px",
     },
 
     totalPrice: {
