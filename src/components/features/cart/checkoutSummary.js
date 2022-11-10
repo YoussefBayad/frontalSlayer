@@ -38,9 +38,11 @@ const styles = {
     mt: ["40px", "40px", "0", "0"],
     p: 0,
     px: "0 !important",
+    // pb: "5px",
     borderRadius: "0px 0px 0px 0px",
     marginBottom: "30px",
     border: " 1px solid black",
+    borderBottom: "none",
 
     color: "dark",
     backdropFilter: "blur(2px) saturate(100%)",
@@ -61,6 +63,12 @@ const styles = {
       height: "35px",
       width: "100%",
       mt: "15px",
+      borderRadius: "0",
+
+      "&::placeholder": {
+        textAlign: "center",
+        // color: "black",
+      },
     },
 
     totalPrice: {

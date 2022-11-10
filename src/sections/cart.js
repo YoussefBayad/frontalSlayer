@@ -105,7 +105,9 @@ const styles = {
       textAlign: "center",
       width: "100%",
       height: "100%",
-      borderRadius: "0px 0px 15px 15px",
+      borderRadius: "0px ",
+      borderTop: "none",
+
       mt: "20px",
       fontSize: 2,
       boxShadow: "none",

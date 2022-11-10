@@ -24,6 +24,8 @@ const styles = {
     position: "relative",
     display: "grid",
     placeItems: "center",
+    zIndex: "100",
+    cursor: "pointer",
     cartIcon: {
       height: "20px",
       width: "20px",

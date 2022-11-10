@@ -65,7 +65,7 @@ const Cart = () => {
                 </Box>
               </Box>
               <IoMdClose
-                size="20px"
+                size="14px"
                 alt="close cart"
                 color="#00000"
                 sx={styles.cart.cartHeader.closeCart}
