@@ -76,7 +76,7 @@ export default CartProduct;
 
 const styles = {
   cartProduct: {
-    width: "80%",
+    width: "90%",
     height: "100%",
     display: "flex",
     alignItems: "center",
@@ -92,8 +92,9 @@ const styles = {
     color: "dark",
     p: "10px",
     productImg: {
-      mr: "15px",
       height: "100px",
+      width: "50px !important ",
+
       objectFit: "contain",
     },
 

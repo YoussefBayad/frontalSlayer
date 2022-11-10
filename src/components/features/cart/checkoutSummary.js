@@ -74,10 +74,9 @@ const styles = {
     title: {
       display: "flex",
       alignItems: "center",
-      justifyContent: "space-between",
+      justifyContent: "center",
       p: "1rem",
       width: "100%",
-      mx: "auto",
       // borderBottom: "solid 1px rgb(0 0 0 / 39%)",
     },
 
