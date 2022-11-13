@@ -167,6 +167,7 @@ const styles = {
     flexShrink: "0",
     width: "25px",
     height: "25px",
+
     zIndex: "20",
   },
   homeToggle: {
@@ -179,7 +180,8 @@ const styles = {
     justifyContent: "center",
     flexShrink: "0",
     width: "25px",
-    zIndex: "20px",
+
+    zIndex: "20",
   },
   darkToggle: {
     height: "20px",
