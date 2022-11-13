@@ -138,18 +138,18 @@ const Products = () => {
           <Shelf data={data.rowThree} />
         </Box>
       </Container>
-      {/* <Box sx={styles.floor}>
-        <Image src={leftPot} sx={styles.leftFlowers} alt="shelf" />
+      <Box sx={styles.floor}>
+        {/* <Image src={leftPot} sx={styles.leftFlowers} alt="shelf" /> */}
         <Box sx={styles.shelfWrapper}>
           <Image sx={styles.shelfWrapper.shelf} src={bottomShelf} alt="shelf" />
-          <Box sx={styles.shelfWrapper.comingSoon}>
+          {/* <Box sx={styles.shelfWrapper.comingSoon}>
             <p>COMING SOON</p>
             <p>COMING SOON</p>
             <p>COMING SOON</p>
-          </Box>
+          </Box> */}
         </Box>
-        <Image src={rightPot} sx={styles.rightFlowers} alt="shelf" />
-      </Box> */}
+        {/* <Image src={rightPot} sx={styles.rightFlowers} alt="shelf" /> */}
+      </Box>
     </Box>
   );
 };
@@ -181,7 +181,8 @@ const styles = {
     backgroundPosition: "center",
     backgroundSize: ["contain"],
     backgroundRepeat: ["no-repeat"],
-    display: "flex",
+    position: "absolute",
+    top: "0",
   },
   wigsWrapper: {
     display: "flex",
@@ -222,26 +223,19 @@ const styles = {
     // backgroundRepeat: " no-repeat",
   },
   floor: {
-    position: " relative",
-    bottom: ["26vh"],
     zIndex: " 2",
     width: " 100vw",
-    height: ["20vh"],
-    backgroundColor: " white",
-    left: ["0"],
-    backgroundImage: `url(${floor})`,
-    backgroundPosition: " center",
-    backgroundSize: " cover",
-    backgroundRepeat: " no-repeat",
+    // height: ["20vh"],
   },
   shelfWrapper: {
     mt: "2.5vh",
     shelf: {
       position: "absolute",
       right: ["20%"],
-      bottom: [" 16vh !important"],
+      bottom: [" 15.5vh !important"],
       width: [" 60%", " 70%", " 70%", " 55%"],
       zIndex: "3",
+      mx: "auto",
     },
     comingSoon: {
       fontSize: " 7px",
