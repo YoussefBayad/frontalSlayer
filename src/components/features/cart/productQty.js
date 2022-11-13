@@ -69,7 +69,13 @@ const styles = {
     alignItems: "center",
     fontSize: "12px",
     mr: 2,
-    p: { width: "15px", display: "grid", placeItems: "center" },
+    p: {
+      width: "15px",
+      display: "grid",
+      placeItems: "center",
+      opacity: "1",
+      fontWeight: "bold",
+    },
     button: {
       backgroundColor: "transparent",
       color: "dark",

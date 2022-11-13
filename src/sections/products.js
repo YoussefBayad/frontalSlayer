@@ -11,6 +11,7 @@ import ptb from "assets/images/gif/products-tools-booking.gif";
 
 // import WallBig from "assets/images/wall.png";
 import WallSmall from "assets/images/newFL.png";
+import landing from "assets/images/landing.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 import Shelf from "components/Shelf";
@@ -119,10 +120,10 @@ const data = {
 
 const Products = () => {
   return (
-    <Box as="section" variant="section.products">
-      <Box sx={styles.top}>
+    <Box as="section" sx={styles.section}>
+      {/* <Box sx={styles.top}>
         <Image src={top} alt="roof" />
-      </Box>
+      </Box> */}
       <Container sx={styles.wigsWrapper}>
         <Link sx={styles.logo} label="" path="/">
           <Image sx={styles.logo.img} src={Logo} alt="logo" />
@@ -137,18 +138,18 @@ const Products = () => {
           <Shelf data={data.rowThree} />
         </Box>
       </Container>
-      <Box sx={styles.floor}>
+      {/* <Box sx={styles.floor}>
         <Image src={leftPot} sx={styles.leftFlowers} alt="shelf" />
         <Box sx={styles.shelfWrapper}>
           <Image sx={styles.shelfWrapper.shelf} src={bottomShelf} alt="shelf" />
-          {/* <Box sx={styles.shelfWrapper.comingSoon}>
+          <Box sx={styles.shelfWrapper.comingSoon}>
             <p>COMING SOON</p>
             <p>COMING SOON</p>
             <p>COMING SOON</p>
-          </Box> */}
+          </Box>
         </Box>
         <Image src={rightPot} sx={styles.rightFlowers} alt="shelf" />
-      </Box>
+      </Box> */}
     </Box>
   );
 };
@@ -173,26 +174,21 @@ to {
 `;
 
 const styles = {
+  section: {
+    height: "100%",
+    // width: "100vh",
+    backgroundImage: [`url(${landing})`],
+    backgroundPosition: "center",
+    backgroundSize: ["contain"],
+    backgroundRepeat: ["no-repeat"],
+    display: "flex",
+  },
   wigsWrapper: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundImage: [
-      `url(${WallSmall})`,
-      `url(${WallSmall})`,
-      `url(${WallSmall})`,
-    ],
-    backgroundPosition: "top",
-    backgroundSize: ["cover"],
-    backgroundRepeat: ["no-repeat"],
-    p: 0,
-    // boxShadow: "0 0 15px 5px #e53030",
-    stroke: " #ff5b59",
-    // filter: "drop-shadow(0px 26px 14px #ff5b59)",
-    height: "100%",
     width: "75%",
-    position: "relative",
-    top: " -29px",
+    mt: "20%",
   },
   logo: {
     img: {

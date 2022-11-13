@@ -171,7 +171,7 @@ const styles = {
   homeToggle: {
     position: "absolute",
     height: "30px",
-    top: "10vh",
+    top: "15vh",
     left: "2vw",
     display: "flex",
     alignItems: "center",

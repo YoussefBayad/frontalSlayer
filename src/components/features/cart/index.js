@@ -65,7 +65,7 @@ const Cart = () => {
                 </Box>
               </Box>
               <IoMdClose
-                size="14px"
+                size="25px"
                 alt="close cart"
                 color="#00000"
                 sx={styles.cart.cartHeader.closeCart}
@@ -174,7 +174,7 @@ const styles = {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        marginRight: "25%",
+        marginRight: "16%",
 
         h1: {
           color: "dark",
@@ -182,8 +182,6 @@ const styles = {
         },
       },
       closeCart: {
-        height: "2.5rem",
-        width: "2.5rem",
         alignSelf: "center",
         cursor: "pointer",
         // @include transition;

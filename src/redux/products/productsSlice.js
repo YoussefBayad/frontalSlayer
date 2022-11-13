@@ -15,6 +15,8 @@ const initialState = {
   data: [
     {
       _id: 1,
+      qty: "1",
+
       src: Wig2,
       alt: "RAW",
       name: "Lace Raw",
@@ -24,6 +26,8 @@ const initialState = {
       subCategory: "raw",
     },
     {
+      qty: "1",
+
       src: Wig1,
       alt: "VIRGIN",
       _id: 2,
@@ -34,6 +38,8 @@ const initialState = {
       subCategory: "virgin",
     },
     {
+      qty: "1",
+
       src: Wig3,
       alt: "613",
       _id: 3,
@@ -45,6 +51,8 @@ const initialState = {
     },
 
     {
+      qty: "1",
+
       src: Wig5,
       alt: "RAW",
       _id: 4,
@@ -55,6 +63,8 @@ const initialState = {
       subCategory: "raw",
     },
     {
+      qty: "1",
+
       src: Wig4,
       alt: "VIRGIN",
       _id: 5,
@@ -65,6 +75,8 @@ const initialState = {
       subCategory: "virgin",
     },
     {
+      qty: "1",
+
       src: Wig6,
       alt: "613",
       _id: 6,
@@ -79,6 +91,8 @@ const initialState = {
       name: "Lace transparent",
       price: "70",
       type: "wig",
+      qty: "1",
+
       src: Wig7,
       alt: "TRANSPARENT",
       category: "custom",
@@ -91,6 +105,8 @@ const initialState = {
       type: "wig",
       category: "custom",
       subCategory: "hd",
+      qty: "1",
+
       src: Wig8,
       alt: "HD",
     },
@@ -101,11 +117,15 @@ const initialState = {
       type: "wig",
       category: "custom",
       subCategory: "watercolor",
+      qty: "1",
+
       src: Wig9,
       alt: "WATERCOLOR",
     },
     {
       _id: 11,
+      qty: "1",
+
       src: Wig2,
       alt: "RAW",
       name: "Lace Raw",
@@ -115,6 +135,8 @@ const initialState = {
       subCategory: "raw",
     },
     {
+      qty: "1",
+
       src: Wig1,
       alt: "VIRGIN",
       _id: 12,
@@ -125,6 +147,8 @@ const initialState = {
       subCategory: "virgin",
     },
     {
+      qty: "1",
+
       src: Wig3,
       alt: "613",
       _id: 13,
@@ -136,6 +160,8 @@ const initialState = {
     },
 
     {
+      qty: "1",
+
       src: Wig5,
       alt: "RAW",
       _id: 14,
@@ -146,6 +172,8 @@ const initialState = {
       subCategory: "raw",
     },
     {
+      qty: "1",
+
       src: Wig4,
       alt: "VIRGIN",
       _id: 15,
@@ -156,6 +184,8 @@ const initialState = {
       subCategory: "virgin",
     },
     {
+      qty: "1",
+
       src: Wig6,
       alt: "613",
       _id: 16,
@@ -170,6 +200,8 @@ const initialState = {
       name: "Lace transparent",
       price: "70",
       type: "wig",
+      qty: "1",
+
       src: Wig7,
       alt: "TRANSPARENT",
       category: "custom",
@@ -182,6 +214,8 @@ const initialState = {
       type: "wig",
       category: "custom",
       subCategory: "hd",
+      qty: "1",
+
       src: Wig8,
       alt: "HD",
     },
@@ -192,6 +226,8 @@ const initialState = {
       type: "wig",
       category: "custom",
       subCategory: "watercolor",
+      qty: "1",
+
       src: Wig9,
       alt: "WATERCOLOR",
     },

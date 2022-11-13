@@ -17,9 +17,10 @@ import wig2 from "assets/images/wigs/2.png";
 import wig3 from "assets/images/wigs/3.png";
 import HeartButton from "components/features/wishlist/heartButton";
 import Carousel from "components/carousels/products";
+import ProductQty from "components/features/cart/productQty";
 
 const Product = ({ query }) => {
-  const [qty, setQty] = useState(1);
+  // const [qty, setQty] = useState(1);
 
   const { data, loading, message } = useSelector((state) => state.products);
   const product = data.filter((product) => product._id == query)[0];
@@ -39,6 +40,23 @@ const Product = ({ query }) => {
               />
               {/* <Image sx={styles.product.src} src={product.src} alt={"wig"} /> */}
               <Carousel data={imgArray} />
+              <Box sx={styles.product.footer}>
+                <Text as="h3" sx={styles.product.footer.price}>
+                  ${product.price} usd
+                </Text>
+                <Text as="h3" sx={styles.product.footer.price}>
+                  cap selection
+                </Text>
+                <Box sx={styles.product.footer.addToCart}>
+                  <ProductQty
+                    id={product._id}
+                    qty={product.qty}
+                    countInStock={product.countInStock}
+                  />
+
+                  <AddToCart product={{ ...product }} />
+                </Box>
+              </Box>
               <Box sx={styles.product.header}>
                 <Heading as="h2">{product.name}</Heading>
                 <Rating numReviews={87} rating={5} />
@@ -72,30 +90,7 @@ const Product = ({ query }) => {
                   Morbi nec enim nunc.{" "}
                 </ShowMoreText>
               </Box>
-              <Box sx={styles.product.footer}>
-                <Text as="h3" sx={styles.product.footer.price}>
-                  ${product.price}
-                </Text>
-                <Box sx={styles.product.footer.addToCart}>
-                  <Box sx={styles.product.footer.productQty}>
-                    <Button
-                      variant="white"
-                      onClick={() => setQty((prev) => prev + 1)}
-                    >
-                      +
-                    </Button>
-                    {qty}
-                    <Button
-                      variant="white"
-                      onClick={() => qty > 1 && setQty((prev) => prev - 1)}
-                    >
-                      -
-                    </Button>
-                  </Box>
 
-                  <AddToCart product={{ ...product, qty }} />
-                </Box>
-              </Box>
               <AddReview />
             </>
           ) : null}
@@ -109,15 +104,13 @@ export default Product;
 
 const styles = {
   section: {
-    minHeight: "100vh",
     width: "100%",
     position: "absolute",
     top: "0",
     // backgroundImage: [`url(${blurryGradient})`],
     backgroundImage: `url(${marble})`,
-    backgroundPosition: "right",
     backgroundSize: ["contain"],
-    backgroundRepeat: ["repeat"],
+    backgroundRepeat: ["repeat-y"],
     // "&:before": {
     //   content: '""',
     //   position: "absolute",
@@ -195,9 +188,10 @@ const styles = {
       },
     },
     footer: {
-      mt: "30px",
+      mt: "25px",
       display: "flex",
-      justifyContent: " space-between",
+      justifyContent: "space-between",
+      flexDirection: "column",
       alignItems: " center",
       price: {
         fontSize: "1rem",
@@ -207,26 +201,24 @@ const styles = {
         justifyContent: "center",
         alignItems: " center",
       },
-      button: {
-        borderRadius: "20px",
-      },
-      productQty: {
-        padding: "0",
-        border: "1px solid #ec5d55",
-        borderRadius: "20px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        fontSize: "18px",
-        mr: 2,
 
-        button: {
-          backgroundColor: "transparent",
-          color: "lightRed",
-          fontSize: "25px",
-          py: 0,
-        },
-      },
+      // productQty: {
+      //   padding: "0",
+      //   border: "1px solid #ec5d55",
+      //   borderRadius: "20px",
+      //   display: "flex",
+      //   justifyContent: "space-between",
+      //   alignItems: "center",
+      //   fontSize: "18px",
+      //   mr: 2,
+
+      //   button: {
+      //     backgroundColor: "transparent",
+      //     color: "lightRed",
+      //     fontSize: "25px",
+      //     py: 0,
+      //   },
+      // },
     },
   },
 };
