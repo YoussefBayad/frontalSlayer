@@ -25,8 +25,8 @@ const Shelf = ({ data }) => {
         ))}
       </Box>
       <Box sx={styles.shelfWrapper}>
-        <Image sx={styles.shelfWrapper.shelf} src={shelf} />
-        <Link path={data.path} label={data.title} />
+        <Image sx={styles.shelfWrapper.shelf} src={data.shelf} />
+        {/* <Link path={data.path} label={data.title} /> */}
 
         {/* <Image
             // sx={data.path == "/products/custom" ? styles.customImage : ""}
@@ -83,8 +83,10 @@ const styles = {
     zIndex: "2",
     shelf: {
       width: ["100%"],
-      height: "20px",
-      filter: "drop-shadow(0px 4px 1px #fff9b7)",
+      objectFit: "contain",
+
+      // height: "20px",
+      // filter: "drop-shadow(0px 4px 1px #fff9b7)",
     },
     a: {
       position: "absolute",

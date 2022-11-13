@@ -33,6 +33,9 @@ import virgin from "assets/images/wigs/virgin.png";
 import hd from "assets/images/wigs/hd.png";
 import transparent from "assets/images/wigs/transparent.png";
 import watercolor from "assets/images/wigs/watercolorpng.png";
+import shelfTransparent from "assets/images/shelfTransparentLace.png";
+import shelfHd from "assets/images/shelfHdLace.png";
+import shelfCustom from "assets/images/shelfCustomWigs.png";
 
 const data = {
   rowOne: {
@@ -60,6 +63,8 @@ const data = {
     ],
     title: "HD LACE",
     src: hdLace,
+    shelf: shelfHd,
+
     path: "/shop/hd",
   },
   rowTwo: {
@@ -87,6 +92,8 @@ const data = {
     ],
     title: "TRANSPARENT LACE",
     src: transparentLace,
+    shelf: shelfTransparent,
+
     path: "/shop/transparent",
   },
   rowThree: {
@@ -114,6 +121,8 @@ const data = {
     ],
     title: "CUSTOM WIGS",
     src: customWig,
+    shelf: shelfCustom,
+
     path: "/shop/custom",
   },
 };
