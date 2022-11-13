@@ -188,7 +188,7 @@ const styles = {
     // width: "100vh",
     backgroundImage: [`url(${landing})`],
     backgroundPosition: "center",
-    backgroundSize: ["contain"],
+    backgroundSize: ["cover"],
     backgroundRepeat: ["no-repeat"],
     position: "absolute",
     top: "0",
