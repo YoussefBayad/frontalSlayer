@@ -241,7 +241,7 @@ const styles = {
     shelf: {
       position: "absolute",
       right: ["20%"],
-      bottom: [" 15.5vh !important"],
+      bottom: [" 11.5vh !important"],
       width: [" 60%", " 70%", " 70%", " 55%"],
       zIndex: "3",
       mx: "auto",
